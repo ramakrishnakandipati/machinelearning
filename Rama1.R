@@ -58,3 +58,4 @@ summary(iris)
 qplot(iris$Petal.Length,iris$Sepal.Width)
 qplot(iris$Petal.Length,iris$Sepal.Width,col=iris$Species)
 ?qplot()
+

@@ -1,0 +1,14 @@
+numpy
+pandas
+scikit-learn
+lightgbm
+econml
+matplotlib
+seaborn
+joblib
+pydantic>=2
+fastapi
+uvicorn
+httpx
+redis
+pytest

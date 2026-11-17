@@ -1,0 +1,180 @@
+{
+  "model_version": "nba-20261117T233218Z",
+  "training_timestamp": "2026-11-17T23:32:18.752814+00:00",
+  "feature_columns": [
+    "recency_days",
+    "freq_30d",
+    "freq_90d",
+    "freq_365d",
+    "monetary_30d",
+    "monetary_90d",
+    "monetary_365d",
+    "aov_365d",
+    "markdown_share",
+    "discount_tier",
+    "top_affinity_cat",
+    "affinity_top_share",
+    "size_availability_score",
+    "online_spend_ratio",
+    "cart_abandon_recency_days",
+    "n_sessions_90d",
+    "app_active_30d",
+    "is_cold_start"
+  ],
+  "action_costs": {
+    "0": 0.0,
+    "1": 0.0,
+    "2": 8.0,
+    "3": 0.5,
+    "4": 2.0
+  },
+  "risk_aversion_lambda": 100.0,
+  "exploration_epsilon": 0.05,
+  "global_ate_margin": [
+    0.6271910904473741,
+    1.7423387036204316,
+    0.7753051124507454,
+    1.2028594294410149
+  ],
+  "global_ate_unsub": [
+    0.001028652486903806,
+    0.0012193953842107319,
+    0.01378606744774647,
+    -0.0008015079492833644
+  ],
+  "cross_validation_metrics": {
+    "propensity_logloss": 1.422289558534963,
+    "propensity_auc_ovr": 0.6105710451546872,
+    "margin_outcome_r2": 0.05502907441714552,
+    "unsub_outcome_auc": 0.7015052907124003,
+    "cv_folds": 3
+  },
+  "holdout_metrics": {
+    "auuc_lift_a1": 1833.7861044311721,
+    "auuc_lift_a2": 11013.052203122676,
+    "auuc_lift_a3": 11602.756331579156,
+    "auuc_lift_a4": 2527.587395550632,
+    "decile_spearman_a1": 0.34545454545454546,
+    "decile_spearman_a2": 0.7333333333333332,
+    "decile_spearman_a3": 0.8181818181818182,
+    "decile_spearman_a4": -0.13939393939393938,
+    "cate_truth_corr": {
+      "a1": 0.00990265413389956,
+      "a2": 0.08243403277729063,
+      "a3": 0.5101070702411749,
+      "a4": 0.07663798823240858
+    },
+    "policy_snips_net_margin": {
+      "(a) Historical Rule-Based CRM": 4.70679319986329,
+      "(b) Naive Propensity Targeting": 5.045511825193164,
+      "(c) Unconstrained Uplift Policy": 3.9305425472401043,
+      "(d) Guardrailed Margin-Aware NBA": 5.764129022222601
+    },
+    "lambda_sweep": [
+      {
+        "lambda": 0,
+        "net_margin": 6.1228,
+        "ci_low": 5.62432,
+        "ci_high": 6.63644,
+        "unsub_rate": 0.0097,
+        "treat_rate": 0.85794,
+        "oracle": 0.66935
+      },
+      {
+        "lambda": 5,
+        "net_margin": 6.13115,
+        "ci_low": 5.63812,
+        "ci_high": 6.64079,
+        "unsub_rate": 0.00963,
+        "treat_rate": 0.85617,
+        "oracle": 0.66414
+      },
+      {
+        "lambda": 10,
+        "net_margin": 6.15442,
+        "ci_low": 5.66035,
+        "ci_high": 6.67122,
+        "unsub_rate": 0.00955,
+        "treat_rate": 0.85448,
+        "oracle": 0.66192
+      },
+      {
+        "lambda": 25,
+        "net_margin": 6.1169,
+        "ci_low": 5.61965,
+        "ci_high": 6.62329,
+        "unsub_rate": 0.00927,
+        "treat_rate": 0.84849,
+        "oracle": 0.64725
+      },
+      {
+        "lambda": 50,
+        "net_margin": 5.95349,
+        "ci_low": 5.4638,
+        "ci_high": 6.49152,
+        "unsub_rate": 0.00807,
+        "treat_rate": 0.82954,
+        "oracle": 0.59943
+      },
+      {
+        "lambda": 100,
+        "net_margin": 5.76413,
+        "ci_low": 5.22447,
+        "ci_high": 6.30788,
+        "unsub_rate": 0.00467,
+        "treat_rate": 0.75957,
+        "oracle": 0.40178
+      },
+      {
+        "lambda": 200,
+        "net_margin": 5.5273,
+        "ci_low": 4.94507,
+        "ci_high": 6.08217,
+        "unsub_rate": 0.00316,
+        "treat_rate": 0.6666,
+        "oracle": 0.24903
+      },
+      {
+        "lambda": 400,
+        "net_margin": 5.47647,
+        "ci_low": 4.929,
+        "ci_high": 6.05311,
+        "unsub_rate": 0.00281,
+        "treat_rate": 0.59621,
+        "oracle": 0.19835
+      },
+      {
+        "lambda": 800,
+        "net_margin": 5.55512,
+        "ci_low": 4.99654,
+        "ci_high": 6.11158,
+        "unsub_rate": 0.00268,
+        "treat_rate": 0.53986,
+        "oracle": 0.16935
+      },
+      {
+        "lambda": 1600,
+        "net_margin": 5.46802,
+        "ci_low": 4.9112,
+        "ci_high": 6.03162,
+        "unsub_rate": 0.0026,
+        "treat_rate": 0.46683,
+        "oracle": 0.13321
+      },
+      {
+        "lambda": 3200,
+        "net_margin": 5.51723,
+        "ci_low": 4.98012,
+        "ci_high": 6.08437,
+        "unsub_rate": 0.00256,
+        "treat_rate": 0.42034,
+        "oracle": 0.11137
+      }
+    ]
+  },
+  "libraries": {
+    "econml": "0.17.0",
+    "lightgbm": "4.7.0",
+    "sklearn": "1.9.1"
+  }
+}

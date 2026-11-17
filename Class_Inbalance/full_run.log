@@ -1,0 +1,79 @@
+﻿python 3.12.16 | xgboost 3.4.1 | env: uplift
+[WARN] expected the `causal-gpu` conda env; check `conda activate causal-gpu`.
+
+==============================================================================
+[START] GPU verification & model probing
+[GPU ] NVIDIA GeForce RTX 3090, 24576 MiB, 610.60
+[ OK ] XGBoost_GPU: GPU probe passed
+[SKIP] LightGBM_GPU: GPU unavailable -> excluded (GPU Tree Learner was not enabled in this build.)
+python.exe : [LightGBM] [Fatal] GPU Tree Learner was not enabled in this build.
+At line:1 char:302
++ ... tch {} } }; & "C:\Users\RamaKrishna\anaconda3\envs\causal-gpu\python. ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([LightGBM] [Fat... in this build.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Please recompile with CMake option -DUSE_GPU=1
+[ OK ] CatBoost_GPU: GPU probe passed
+[ OK ] Resample+XGB_GPU: GPU probe passed
+[DONE ] GPU verification & model probing  (3.3s)
+
+==============================================================================
+[START] Data loading
+rows=100,000  positives=542 (0.542%)
+[DONE ] Data loading  (0.1s)
+
+==============================================================================
+[START] Stratified train/val/test split
+train:  69,999 rows,  380 positives (0.543%)
+val  :  15,001 rows,   81 positives (0.540%)
+test :  15,000 rows,   81 positives (0.540%)
+[DONE ] Stratified train/val/test split  (0.1s)
+
+==============================================================================
+[START] EDA plots
+saved 3 plots to outputs\data_plots
+[DONE ] EDA plots  (7.1s)
+train neg/pos ratio = 183.2
+
+==============================================================================
+[START] Feature engineering (fit on train only)
+features: 30 raw -> 74 engineered
+[DONE ] Feature engineering (fit on train only)  (6.4s)
+leak-free CV folds prepared (20.6s)
+
+==============================================================================
+[START] Hyper-parameter tuning + final training
+
+--- XGBoost_GPU: 15 Optuna trials ---
+best CV PR-AUC = 0.4820
+saved -> outputs\saved_models\xgboost_gpu.json  (72.7s)
+
+--- CatBoost_GPU: 15 Optuna trials ---
+best CV PR-AUC = 0.5804
+saved -> outputs\saved_models\catboost_gpu.cbm  (322.9s)
+
+--- Resample+XGB_GPU: 6 Optuna trials ---
+best CV PR-AUC = 0.4424
+saved -> outputs\saved_models\resample_xgb_gpu_pipeline.joblib  (63.8s)
+[DONE ] Hyper-parameter tuning + final training  (459.5s)
+
+==============================================================================
+[START] Evaluation & threshold tuning
+
+TEST-SET RESULTS (threshold tuned on validation)
+                  Threshold  Val F2  Val PR-AUC  PR-AUC  ROC-AUC      F1      F2  Precision  Recall     MCC
+Model                                                                                                      
+XGBoost_GPU          0.1666  0.6250      0.6390  0.5864   0.9182  0.5931  0.5541     0.6719  0.5309  0.5953
+CatBoost_GPU         0.4255  0.6667      0.6860  0.6247   0.9365  0.6429  0.5875     0.7627  0.5556  0.6494
+Resample+XGB_GPU     0.0875  0.5756      0.5769  0.5163   0.9078  0.4488  0.5134     0.3710  0.5679  0.4554
+
+Best model (by validation PR-AUC): CatBoost_GPU
+[DONE ] Evaluation & threshold tuning  (0.4s)
+
+==============================================================================
+[START] Evaluation plots
+saved 5 plots to outputs\eval_plots
+[DONE ] Evaluation plots  (8.3s)
+
+Total runtime: 505.7s | outputs in ./outputs

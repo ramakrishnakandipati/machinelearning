@@ -1,0 +1,33 @@
+{
+  "XGBoost_GPU": {
+    "n_estimators": 459,
+    "learning_rate": 0.032676358492948435,
+    "max_depth": 6,
+    "min_child_weight": 1.2026170917188919,
+    "subsample": 0.7817873308237732,
+    "colsample_bytree": 0.5769383569564112,
+    "reg_lambda": 0.2330944767580547,
+    "gamma": 3.0427271385041896,
+    "scale_pos_weight": 13.6459024026734
+  },
+  "CatBoost_GPU": {
+    "iterations": 454,
+    "learning_rate": 0.021146536167031597,
+    "depth": 9,
+    "l2_leaf_reg": 16.967533607196547,
+    "auto_class_weights": "Balanced",
+    "border_count": 254
+  },
+  "Resample+XGB_GPU": {
+    "n_estimators": 585,
+    "learning_rate": 0.12106896936002161,
+    "max_depth": 4,
+    "min_child_weight": 0.9778325945801385,
+    "subsample": 0.6733618039413735,
+    "colsample_bytree": 0.6521211214797689,
+    "reg_lambda": 0.8730885649333644,
+    "gamma": 2.1597250932105787,
+    "sampler": "smotetomek",
+    "sampling_ratio": 0.031335313528540555
+  }
+}

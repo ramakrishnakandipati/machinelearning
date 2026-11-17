@@ -1,0 +1,15 @@
+# Environment: conda env `causal-gpu` (Python 3.12, RTX 3090)
+# Already installed there:
+numpy
+pandas
+scipy
+scikit-learn
+xgboost>=2.0        # CUDA verified (3.4.1)
+lightgbm            # installed build has NO GPU support -> model is excluded automatically
+matplotlib
+seaborn
+joblib
+# Missing in causal-gpu -> install:
+imbalanced-learn
+optuna
+catboost

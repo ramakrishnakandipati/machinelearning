@@ -1,0 +1,20 @@
+{
+  "n_users": 10000,
+  "n_items": 2500,
+  "n_interactions": 150199,
+  "user_types": {
+    "warm": 8600,
+    "cold": 1000,
+    "session": 400
+  },
+  "n_cold_items": 200,
+  "splits": {
+    "train": 104656,
+    "test_warm": 21284,
+    "val": 11581,
+    "test_cold_user": 8466,
+    "test_cold_item": 2023,
+    "test_session": 1200,
+    "session_ctx": 989
+  }
+}

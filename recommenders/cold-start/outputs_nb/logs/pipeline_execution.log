@@ -1,0 +1,26 @@
+17:31:46 | INFO    | > START  hardware_diagnostics
+17:31:46 | INFO    | OK DONE  hardware_diagnostics (0.003s)
+17:31:46 | INFO    | > START  generate_data
+17:31:55 | INFO    | OK DONE  generate_data (8.751s)
+17:31:55 | INFO    | > START  eda_charts
+17:31:56 | INFO    | OK DONE  eda_charts (0.362s)
+17:31:56 | INFO    | > START  preprocess
+17:31:59 | INFO    | OK DONE  preprocess (2.945s)
+17:31:59 | INFO    | embeddings=tfidf_svd content_dim=160 train=63320 val=7100 cases={'warm': 1500, 'cold_user': 999, 'cold_item': 922, 'session': 382}
+17:31:59 | INFO    | > START  fit_popularity_content_bandit
+17:32:02 | INFO    | OK DONE  fit_popularity_content_bandit (2.747s)
+17:32:02 | INFO    | faiss=faiss-cpu popularity segments=25 bandit replay events=60000
+17:32:02 | INFO    | > START  train_two_tower
+17:32:04 | INFO    |   epoch 01 train_loss=7.7402 val_loss=7.5598 val_R@10=0.1667 (0.97s, amp=True)
+17:32:04 | INFO    |   epoch 02 train_loss=7.0795 val_loss=7.1218 val_R@10=0.1940 (0.37s, amp=True)
+17:32:04 | INFO    |   epoch 03 train_loss=6.7656 val_loss=7.0966 val_R@10=0.1987 (0.4s, amp=True)
+17:32:05 | INFO    |   epoch 04 train_loss=6.5654 val_loss=6.9501 val_R@10=0.1923 (0.37s, amp=True)
+17:32:05 | INFO    |   epoch 05 train_loss=6.4576 val_loss=6.9929 val_R@10=0.1832 (0.38s, amp=True)
+17:32:06 | INFO    |   epoch 06 train_loss=6.3912 val_loss=7.0434 val_R@10=0.1740 (0.39s, amp=True)
+17:32:06 | INFO    | OK DONE  train_two_tower (4.009s)
+17:32:06 | INFO    | > START  evaluate_strategies
+17:32:20 | INFO    | OK DONE  evaluate_strategies (13.843s)
+17:32:20 | INFO    | > START  coverage_novelty_sweep
+17:32:41 | INFO    | OK DONE  coverage_novelty_sweep (21.262s)
+17:32:41 | INFO    | > START  latency_benchmark
+17:32:42 | INFO    | OK DONE  latency_benchmark (1.161s)

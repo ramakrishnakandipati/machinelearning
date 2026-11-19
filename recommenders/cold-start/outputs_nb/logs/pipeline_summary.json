@@ -1,0 +1,52 @@
+{
+  "total_seconds": 56.616,
+  "stages": [
+    {
+      "stage": "hardware_diagnostics",
+      "status": "ok",
+      "seconds": 0.003
+    },
+    {
+      "stage": "generate_data",
+      "status": "ok",
+      "seconds": 8.751
+    },
+    {
+      "stage": "eda_charts",
+      "status": "ok",
+      "seconds": 0.362
+    },
+    {
+      "stage": "preprocess",
+      "status": "ok",
+      "seconds": 2.945
+    },
+    {
+      "stage": "fit_popularity_content_bandit",
+      "status": "ok",
+      "seconds": 2.747
+    },
+    {
+      "stage": "train_two_tower",
+      "status": "ok",
+      "seconds": 4.009
+    },
+    {
+      "stage": "evaluate_strategies",
+      "status": "ok",
+      "seconds": 13.843
+    },
+    {
+      "stage": "coverage_novelty_sweep",
+      "status": "ok",
+      "seconds": 21.262
+    },
+    {
+      "stage": "latency_benchmark",
+      "status": "ok",
+      "seconds": 1.161
+    }
+  ],
+  "all_ok": true,
+  "notebook": true
+}

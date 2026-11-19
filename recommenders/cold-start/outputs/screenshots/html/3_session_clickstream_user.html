@@ -1,0 +1,36 @@
+<!doctype html><meta charset=utf-8><style>
+body{font-family:Segoe UI,Arial,sans-serif;margin:24px;color:#1F2328;background:#fff;max-width:1180px}
+h1{font-size:22px;margin:0 0 4px} .sub{color:#656D76;margin-bottom:16px}
+.badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;color:#fff;margin-right:6px}
+.cold_zero_history{background:#CC3311}.semi_cold_session{background:#E69F00;color:#1F2328}.warm_personalized{background:#0072B2}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13px} th,td{padding:6px 8px;border-bottom:1px solid #E4E7EB;text-align:left}
+th{color:#656D76;font-weight:600}.tag{display:inline-block;background:#EEF2F6;border-radius:4px;padding:1px 6px;margin:1px 3px 1px 0;font-size:11.5px}
+.new{background:#E6F4EA;color:#0B5D2A;font-weight:600} pre{background:#F6F8FA;padding:12px;border-radius:6px;font-size:12px;overflow:auto}
+.row{display:flex;gap:16px}.row>div{flex:1;min-width:0} h2{font-size:14px;color:#656D76;margin:16px 0 4px}
+</style>
+<h1>Session Clickstream User</h1><div class=sub>Anonymous shopper with 3 real-time clicks on running shoes</div>
+<span class="badge semi_cold_session">semi_cold_session</span><span class="badge" style="background:#656D76">interactions: 3</span>
+<span class="badge" style="background:#009E73">2.394 ms</span>
+<table><tr><th>#</th><th>Item</th><th>Title</th><th>Sub-category</th><th>Price</th><th>Score</th><th>Why (explainability)</th></tr><tr><td>1</td><td>SKU00006</td><td>Volt &amp;Sons Pro White Trail Runner</td><td>Running Shoes</td><td>63.92</td><td>0.911</td><td><span class="tag">Session-Aware Two-Tower</span><span class="tag">Session Content Similarity</span></td></tr><tr><td>2</td><td>SKU00175</td><td>Atlas Works Classic Teal Road Racer</td><td>Running Shoes</td><td>61.70</td><td>0.840</td><td><span class="tag">Session-Aware Two-Tower</span><span class="tag">Session Content Similarity</span></td></tr><tr><td>3</td><td>SKU00032</td><td>Echo Works Classic Sand Marathon Flat</td><td>Running Shoes</td><td>111.11</td><td>0.827</td><td><span class="tag">Session-Aware Two-Tower</span><span class="tag">Session Content Similarity</span></td></tr><tr><td>4</td><td>SKU00853</td><td>Volt &amp;Sons Classic Teal Flip Flop</td><td>Sandals</td><td>108.81</td><td>0.754</td><td><span class="tag">Session-Aware Two-Tower</span><span class="tag">Session Content Similarity</span></td></tr><tr><td>5</td><td>SKU00664</td><td>Echo Works Vintage Red Slip-On</td><td>Casual Sneakers</td><td>128.41</td><td>0.742</td><td><span class="tag">Session-Aware Two-Tower</span><span class="tag">Session Content Similarity</span></td></tr><tr><td>6</td><td>SKU00898</td><td>Echo Works Bold Olive Rain Boot</td><td>Boots</td><td>106.77</td><td>0.722</td><td><span class="tag">Session-Aware Two-Tower</span><span class="tag">Session Content Similarity</span></td></tr><tr><td>7</td><td>SKU00317</td><td>Atlas Works Eco Sand Road Racer</td><td>Running Shoes</td><td>26.05</td><td>0.697</td><td><span class="tag">Session-Aware Two-Tower</span><span class="tag">Session Content Similarity</span></td></tr><tr><td>8</td><td>SKU00205</td><td>Echo Works Bold Red Road Racer</td><td>Running Shoes</td><td>72.17</td><td>0.695</td><td><span class="tag">Session-Aware Two-Tower</span><span class="tag">Session Content Similarity</span></td></tr></table>
+<div class=row><div><h2>POST body</h2><pre>{
+  &quot;session_item_ids&quot;: [
+    &quot;SKU00006&quot;,
+    &quot;SKU00021&quot;,
+    &quot;SKU00032&quot;
+  ],
+  &quot;user_context&quot;: {
+    &quot;channel&quot;: &quot;web&quot;,
+    &quot;hour&quot;: 14
+  },
+  &quot;k&quot;: 8
+}</pre></div>
+<div><h2>Routing weights &amp; warnings</h2><pre>{
+  &quot;weights&quot;: {
+    &quot;pop&quot;: 0.1,
+    &quot;tt&quot;: 0.5,
+    &quot;content&quot;: 0.3,
+    &quot;bandit&quot;: 0.1
+  },
+  &quot;warnings&quot;: [],
+  &quot;cached&quot;: false
+}</pre></div></div>

@@ -1,0 +1,142 @@
+{
+  "total_seconds": 61.694,
+  "stages": [
+    {
+      "stage": "hardware_diagnostics",
+      "status": "ok",
+      "device": "cuda",
+      "gpu": [
+        "NVIDIA GeForce RTX 3090"
+      ],
+      "faiss": "CPU",
+      "seconds": 0.02
+    },
+    {
+      "stage": "generate_data",
+      "status": "ok",
+      "n_users": 10000,
+      "n_items": 2500,
+      "n_interactions": 150199,
+      "user_types": {
+        "warm": 8600,
+        "cold": 1000,
+        "session": 400
+      },
+      "n_cold_items": 200,
+      "splits": {
+        "train": 104656,
+        "test_warm": 21284,
+        "val": 11581,
+        "test_cold_user": 8466,
+        "test_cold_item": 2023,
+        "test_session": 1200,
+        "session_ctx": 989
+      },
+      "seconds": 8.56
+    },
+    {
+      "stage": "eda_charts",
+      "status": "ok",
+      "seconds": 0.363
+    },
+    {
+      "stage": "preprocess",
+      "status": "ok",
+      "embedding_backend": "tfidf_svd",
+      "content_dim": 160,
+      "train_rows": 63320,
+      "val_rows": 7100,
+      "cases": {
+        "warm": 1500,
+        "cold_user": 999,
+        "cold_item": 922,
+        "session": 382
+      },
+      "seconds": 2.959
+    },
+    {
+      "stage": "fit_popularity_content_bandit",
+      "status": "ok",
+      "faiss_backend": "faiss-cpu",
+      "bandit_replay_events": 60000,
+      "popularity_segments": 25,
+      "seconds": 2.789
+    },
+    {
+      "stage": "train_two_tower",
+      "status": "ok",
+      "epochs": 6,
+      "best_val_recall": 0.19866666197776794,
+      "amp": true,
+      "seconds": 4.152
+    },
+    {
+      "stage": "evaluate_strategies",
+      "status": "ok",
+      "recall_table": {
+        "cold_item": {
+          "Content-Based": 0.3177,
+          "Hybrid Meta-Router": 0.2127,
+          "Popularity": 0.0493,
+          "Random": 0.0613,
+          "Two-Tower (ID Dropout)": 0.1913
+        },
+        "cold_user": {
+          "Content-Based": 0.0186,
+          "Hybrid Meta-Router": 0.1786,
+          "Popularity": 0.1452,
+          "Random": 0.0052,
+          "Two-Tower (ID Dropout)": 0.1305
+        },
+        "session": {
+          "Content-Based": 0.014,
+          "Hybrid Meta-Router": 0.1099,
+          "Popularity": 0.1353,
+          "Random": 0.0039,
+          "Two-Tower (ID Dropout)": 0.1248
+        },
+        "warm": {
+          "Content-Based": 0.0246,
+          "Hybrid Meta-Router": 0.1193,
+          "Popularity": 0.1152,
+          "Random": 0.0042,
+          "Two-Tower (ID Dropout)": 0.1202
+        }
+      },
+      "seconds": 13.982
+    },
+    {
+      "stage": "coverage_novelty_sweep",
+      "status": "ok",
+      "seconds": 20.298
+    },
+    {
+      "stage": "save_artifacts",
+      "status": "ok",
+      "seconds": 0.348
+    },
+    {
+      "stage": "latency_benchmark",
+      "status": "ok",
+      "p50": 3.9180000021588057,
+      "p99": 7.637923000147565,
+      "rps": 251.95,
+      "seconds": 2.526
+    },
+    {
+      "stage": "playwright_visual_verification",
+      "status": "ok",
+      "screenshots": [
+        "1_anonymous_zero_history.png",
+        "2_onboarding_new_user.png",
+        "3_session_clickstream_user.png",
+        "4_new_sku_injection.png",
+        "5_health.png",
+        "6_swagger_docs.png"
+      ],
+      "seconds": 5.631
+    }
+  ],
+  "all_ok": true,
+  "fast": false
+}

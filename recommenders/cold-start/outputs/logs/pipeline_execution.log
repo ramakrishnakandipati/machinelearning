@@ -1,0 +1,59 @@
+17:26:47 | INFO    | Cold-start pipeline (fast=False) -> D:\Ramakrishna_D\Python\GitProjects\machinelearning\recommenders\cold-start\outputs
+17:26:47 | INFO    | > START  hardware_diagnostics
+17:26:47 | INFO    |   torch 2.15.0+cu132 cuda=True faiss=CPU
+17:26:47 | INFO    | OK DONE  hardware_diagnostics (0.02s)
+17:26:47 | INFO    | > START  generate_data
+17:26:56 | INFO    |   {'n_users': 10000, 'n_items': 2500, 'n_interactions': 150199, 'user_types': {'warm': 8600, 'cold': 1000, 'session': 400}, 'n_cold_items': 200, 'splits': {'train': 104656, 'test_warm': 21284, 'val': 11581, 'test_cold_user': 8466, 'test_cold_item': 2023, 'test_session': 1200, 'session_ctx': 989}}
+17:26:56 | INFO    | OK DONE  generate_data (8.56s)
+17:26:56 | INFO    | > START  eda_charts
+17:26:56 | INFO    | OK DONE  eda_charts (0.363s)
+17:26:56 | INFO    | > START  preprocess
+17:26:59 | INFO    |   embeddings=tfidf_svd content_dim=160 cases={'warm': 1500, 'cold_user': 999, 'cold_item': 922, 'session': 382}
+17:26:59 | INFO    | OK DONE  preprocess (2.959s)
+17:26:59 | INFO    | > START  fit_popularity_content_bandit
+17:27:02 | INFO    |   faiss=faiss-cpu segments=25 bandit replay=60000
+17:27:02 | INFO    | OK DONE  fit_popularity_content_bandit (2.789s)
+17:27:02 | INFO    | > START  train_two_tower
+17:27:04 | INFO    |   epoch 01 train_loss=7.7402 val_loss=7.5598 val_R@10=0.1667 (0.88s, amp=True)
+17:27:04 | INFO    |   epoch 02 train_loss=7.0795 val_loss=7.1218 val_R@10=0.1940 (0.47s, amp=True)
+17:27:05 | INFO    |   epoch 03 train_loss=6.7656 val_loss=7.0966 val_R@10=0.1987 (0.43s, amp=True)
+17:27:05 | INFO    |   epoch 04 train_loss=6.5654 val_loss=6.9501 val_R@10=0.1923 (0.44s, amp=True)
+17:27:05 | INFO    |   epoch 05 train_loss=6.4576 val_loss=6.9929 val_R@10=0.1832 (0.4s, amp=True)
+17:27:06 | INFO    |   epoch 06 train_loss=6.3912 val_loss=7.0434 val_R@10=0.1740 (0.45s, amp=True)
+17:27:06 | INFO    | OK DONE  train_two_tower (4.152s)
+17:27:06 | INFO    | > START  evaluate_strategies
+17:27:06 | INFO    |   Random                     0.2s
+17:27:06 | INFO    |   Popularity                 0.2s
+17:27:08 | INFO    |   Content-Based              1.0s
+17:27:12 | INFO    |   Two-Tower (ID Dropout)     4.0s
+17:27:20 | INFO    |   Hybrid Meta-Router         8.3s
+17:27:20 | INFO    | 
+tier                    cold_item  cold_user  session    warm
+strategy                                                     
+Content-Based              0.3177     0.0186   0.0140  0.0246
+Hybrid Meta-Router         0.2127     0.1786   0.1099  0.1193
+Popularity                 0.0493     0.1452   0.1353  0.1152
+Random                     0.0613     0.0052   0.0039  0.0042
+Two-Tower (ID Dropout)     0.1913     0.1305   0.1248  0.1202
+17:27:20 | INFO    | OK DONE  evaluate_strategies (13.982s)
+17:27:20 | INFO    | > START  coverage_novelty_sweep
+17:27:40 | INFO    | 
+  label  slots  recall  cold_item_coverage
+0 slots      0  0.1135               0.290
+1 slots      1  0.1077               0.790
+2 slots      2  0.1036               0.925
+3 slots      3  0.0981               0.945
+4 slots      4  0.0933               0.980
+5 slots      5  0.0850               0.985
+17:27:40 | INFO    | OK DONE  coverage_novelty_sweep (20.298s)
+17:27:40 | INFO    | > START  save_artifacts
+17:27:41 | INFO    |   saved: ['bandit.pkl', 'config_used.yaml', 'item_index.faiss', 'items_catalog.csv', 'preprocessor.pkl', 'scalers.json', 'serving_state.pkl', 'two_tower.pt']
+17:27:41 | INFO    | OK DONE  save_artifacts (0.348s)
+17:27:41 | INFO    | > START  latency_benchmark
+17:27:43 | INFO    |   /recommend p50=3.9ms p95=6.1ms p99=7.6ms rps=251.95 | faiss p99=0.062ms
+17:27:43 | INFO    | OK DONE  latency_benchmark (2.526s)
+17:27:43 | INFO    | > START  playwright_visual_verification
+17:27:49 | INFO    | screenshots: 1_anonymous_zero_history.png, 2_onboarding_new_user.png, 3_session_clickstream_user.png, 4_new_sku_injection.png, 5_health.png, 6_swagger_docs.png
+
+17:27:49 | INFO    | OK DONE  playwright_visual_verification (5.631s)
+17:27:49 | INFO    | Pipeline finished in 61.694s  all_ok=True

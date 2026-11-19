@@ -1,0 +1,74 @@
+seed: 42
+
+paths:
+  outputs: outputs
+  charts: outputs/charts
+  logs: outputs/logs
+  metrics: outputs/metrics
+  models: outputs/models
+  screenshots: outputs/screenshots
+
+hardware:
+  use_gpu: true          # use CUDA when available
+  use_amp: true          # torch.cuda.amp mixed precision (CUDA only)
+  faiss_gpu: true        # use faiss-gpu when installed
+
+data:
+  n_users: 10000
+  n_items: 2500
+  n_interactions: 150000
+  cold_user_frac: 0.10        # users with zero training interactions
+  cold_item_frac: 0.08        # newly launched SKUs with zero training interactions
+  session_user_frac: 0.04     # anonymous session-only users
+  test_frac_warm: 0.15
+  popularity_exponent: 1.1
+
+embeddings:
+  prefer_transformer: true    # all-MiniLM-L6-v2 if installed and loadable, else TF-IDF + SVD
+  transformer_name: all-MiniLM-L6-v2
+  text_dim: 64                # SVD dim (the transformer dim is projected to this by SVD too)
+
+popularity:
+  half_life_days: 14
+  bayes_prior_strength: 20
+  min_segment_support: 30
+  trending_window_days: 7
+  trending_weight: 0.3
+
+two_tower:
+  embed_dim: 64
+  hidden_dim: 128
+  id_dim: 32
+  id_dropout_user: 0.5
+  id_dropout_item: 0.4
+  epochs: 12
+  batch_size: 1024
+  lr: 0.002
+  weight_decay: 1.0e-5
+  temperature: 0.1
+  patience: 3
+
+bandit:
+  alpha: 0.6                  # LinUCB exploration strength
+  ridge: 1.0
+  policy: linucb              # linucb | thompson
+
+router:
+  warm_threshold: 5           # >= this many interactions -> fully personalised
+  cold_threshold: 1           # 0 -> zero history; 1..warm-1 -> semi-cold
+  candidate_pool: 200
+  new_item_slots: 2           # slots reserved for new SKUs when boost enabled
+  new_item_max_sales: 0
+
+serving:
+  host: 127.0.0.1
+  port: 8000
+  redis_url: redis://localhost:6379/0
+  redis_timeout_s: 0.2
+  cache_ttl_s: 60
+  lru_capacity: 2048
+
+eval:
+  k: 10
+  n_eval_users: 1500
+  latency_requests: 400

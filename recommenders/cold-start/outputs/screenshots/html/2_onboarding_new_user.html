@@ -1,0 +1,37 @@
+<!doctype html><meta charset=utf-8><style>
+body{font-family:Segoe UI,Arial,sans-serif;margin:24px;color:#1F2328;background:#fff;max-width:1180px}
+h1{font-size:22px;margin:0 0 4px} .sub{color:#656D76;margin-bottom:16px}
+.badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;color:#fff;margin-right:6px}
+.cold_zero_history{background:#CC3311}.semi_cold_session{background:#E69F00;color:#1F2328}.warm_personalized{background:#0072B2}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13px} th,td{padding:6px 8px;border-bottom:1px solid #E4E7EB;text-align:left}
+th{color:#656D76;font-weight:600}.tag{display:inline-block;background:#EEF2F6;border-radius:4px;padding:1px 6px;margin:1px 3px 1px 0;font-size:11.5px}
+.new{background:#E6F4EA;color:#0B5D2A;font-weight:600} pre{background:#F6F8FA;padding:12px;border-radius:6px;font-size:12px;overflow:auto}
+.row{display:flex;gap:16px}.row>div{flex:1;min-width:0} h2{font-size:14px;color:#656D76;margin:16px 0 4px}
+</style>
+<h1>Onboarding New User</h1><div class=sub>Zero purchases; onboarding categories + acquisition channel drive the two-tower</div>
+<span class="badge cold_zero_history">cold_zero_history</span><span class="badge" style="background:#656D76">interactions: 0</span>
+<span class="badge" style="background:#009E73">2.548 ms</span>
+<table><tr><th>#</th><th>Item</th><th>Title</th><th>Sub-category</th><th>Price</th><th>Score</th><th>Why (explainability)</th></tr><tr><td>1</td><td>SKU02113</td><td>Halo Co Classic Navy Wireless Earbuds</td><td>Audio</td><td>114.68</td><td>0.875</td><td><span class="tag">Onboarding Category + Two-Tower</span><span class="tag">Onboarding Category Similarity</span></td></tr><tr><td>2</td><td>SKU01703</td><td>Halo Co Pro Teal Soundbar</td><td>Audio</td><td>176.23</td><td>0.825</td><td><span class="tag">Onboarding Category + Two-Tower</span><span class="tag">Onboarding Category Similarity</span></td></tr><tr><td>3</td><td>SKU01701</td><td>Halo Co Eco Pink Smartwatch</td><td>Wearables</td><td>150.29</td><td>0.781</td><td><span class="tag">Onboarding Category + Two-Tower</span><span class="tag">Onboarding Category Similarity</span></td></tr><tr><td>4</td><td>SKU00574</td><td>Halo Co Classic Sand Smartwatch</td><td>Wearables</td><td>145.29</td><td>0.772</td><td><span class="tag">Onboarding Category + Two-Tower</span><span class="tag">Onboarding Category Similarity</span></td></tr><tr><td>5</td><td>SKU02388</td><td>Kite Goods Vintage Pink Over-Ear Headphones</td><td>Audio</td><td>220.98</td><td>0.744</td><td><span class="tag">Onboarding Category + Two-Tower</span><span class="tag">Onboarding Category Similarity</span></td></tr><tr><td>6</td><td>SKU01060</td><td>Maple Labs Eco Navy Bluetooth Speaker</td><td>Audio</td><td>161.79</td><td>0.733</td><td><span class="tag">Onboarding Category + Two-Tower</span><span class="tag">Onboarding Category Similarity</span></td></tr><tr><td>7</td><td>SKU00487</td><td>Crest Studio Casual Tan Fitness Tracker</td><td>Wearables</td><td>81.64</td><td>0.731</td><td><span class="tag">Onboarding Category + Two-Tower</span><span class="tag">Onboarding Category Similarity</span></td></tr><tr><td>8</td><td>SKU00344</td><td>Kite Goods Casual Teal Over-Ear Headphones</td><td>Audio</td><td>122.12</td><td>0.723</td><td><span class="tag">Onboarding Category + Two-Tower</span><span class="tag">Onboarding Category Similarity</span></td></tr></table>
+<div class=row><div><h2>POST body</h2><pre>{
+  &quot;user_context&quot;: {
+    &quot;region&quot;: &quot;west&quot;,
+    &quot;device&quot;: &quot;android&quot;,
+    &quot;acquisition_channel&quot;: &quot;paid_social&quot;,
+    &quot;onboarding_categories&quot;: [
+      &quot;Audio&quot;,
+      &quot;Wearables&quot;
+    ],
+    &quot;hour&quot;: 9
+  },
+  &quot;k&quot;: 8
+}</pre></div>
+<div><h2>Routing weights &amp; warnings</h2><pre>{
+  &quot;weights&quot;: {
+    &quot;pop&quot;: 0.15,
+    &quot;tt&quot;: 0.4,
+    &quot;content&quot;: 0.3,
+    &quot;bandit&quot;: 0.15
+  },
+  &quot;warnings&quot;: [],
+  &quot;cached&quot;: false
+}</pre></div></div>

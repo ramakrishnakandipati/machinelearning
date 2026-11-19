@@ -1,0 +1,17 @@
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+scikit-learn>=1.3
+pyyaml>=6.0
+matplotlib>=3.8
+seaborn>=0.13
+torch>=2.2
+faiss-cpu>=1.8          # replace with faiss-gpu on Linux/CUDA hosts
+sentence-transformers>=2.7   # optional: falls back to TF-IDF + SVD if absent/offline
+fastapi>=0.110
+uvicorn>=0.29
+pydantic>=2.6
+httpx>=0.27
+redis>=5.0              # optional: in-memory LRU fallback if unavailable
+pytest>=8.0
+playwright>=1.44

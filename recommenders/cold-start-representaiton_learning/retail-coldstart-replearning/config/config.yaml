@@ -1,0 +1,51 @@
+seed: 42
+embedding_dim: 128
+paths:
+  data_dir: data/generated
+  outputs: outputs
+hardware:
+  device: auto        # auto | cuda | mps | cpu
+  amp: true
+data:
+  n_users: 5000
+  n_items: 2500
+  n_stores: 25
+  n_interactions: 50000
+  item_cold_frac: 0.15
+  user_cold_frac: 0.15
+  zero_shot_user_share: 0.5
+  system_cold_stores: 2
+  visual_dim: 64
+features:
+  text_svd_dim: 64
+  tfidf_max_features: 4000
+  use_transformer_text: false
+train:
+  quick_epochs_scale: 0.25
+  two_tower: {epochs: 25, batch_size: 512, lr: 0.002, weight_decay: 0.00001, history_dropout: 0.3, max_history: 20, temperature: 0.07}
+  graphsage: {epochs: 40, batch_size: 1024, lr: 0.003, fanout: 12, layers: 2, hidden: 128, num_neg: 1}
+  maml: {epochs: 30, episodes_per_epoch: 60, tasks_per_batch: 32, inner_lr: 0.1, inner_steps: 2, lr: 0.002, query_size: 4}
+  ssl: {epochs: 40, batch_size: 256, lr: 0.002, temperature: 0.2, mask_prob: 0.25, crop_prob: 0.3}
+fusion:
+  weights_content: 0.6
+  weights_graph: 0.4
+  history_alpha: 0.5
+faiss:
+  hnsw_m: 32
+  ef_construction: 200
+  ef_search_sweep: [8, 16, 32, 64, 128, 256]
+  ef_search: 128
+  ivfpq: {nlist: 32, m: 16, nbits: 6}
+  n_bench_queries: 500
+eval:
+  ks: [10, 20]
+  max_users_per_slice: 1500
+api:
+  host: 127.0.0.1
+  port: 8000
+  default_k: 10
+  max_k: 100
+redis:
+  url: redis://localhost:6379/0
+  ttl_seconds: 300
+  enabled: true

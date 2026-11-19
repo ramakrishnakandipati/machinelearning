@@ -1,0 +1,76 @@
+{
+  "n_requests": 300,
+  "scenarios": {
+    "warm|cache=False": {
+      "p50_ms": 7.533399999374524,
+      "p95_ms": 11.109009999199769,
+      "p99_ms": 14.57133199932288,
+      "n": 75
+    },
+    "zero_shot_user|cache=False": {
+      "p50_ms": 6.8614000047091395,
+      "p95_ms": 10.418599999684373,
+      "p99_ms": 11.688221998629162,
+      "n": 75
+    },
+    "few_shot_user|cache=False": {
+      "p50_ms": 6.869800010463223,
+      "p95_ms": 10.574469999119174,
+      "p99_ms": 11.515936000796504,
+      "n": 75
+    },
+    "anonymous_session|cache=False": {
+      "p50_ms": 6.950599999981932,
+      "p95_ms": 10.65943000576226,
+      "p99_ms": 16.05861799878775,
+      "n": 75
+    },
+    "warm|cache=True": {
+      "p50_ms": 3.204699998605065,
+      "p95_ms": 9.420750003482654,
+      "p99_ms": 10.546491000422975,
+      "n": 150
+    },
+    "zero_shot_user|cache=True": {
+      "p50_ms": 2.754499997536186,
+      "p95_ms": 9.513484998751665,
+      "p99_ms": 10.5707119955332,
+      "n": 150
+    },
+    "few_shot_user|cache=True": {
+      "p50_ms": 2.7628499956335872,
+      "p95_ms": 8.418804996472316,
+      "p99_ms": 10.071326003671855,
+      "n": 150
+    },
+    "anonymous_session|cache=True": {
+      "p50_ms": 4.190100007690489,
+      "p95_ms": 8.575590002874378,
+      "p99_ms": 10.334018995490618,
+      "n": 150
+    }
+  },
+  "cache_backend": "memory",
+  "server_side": {
+    "requests": 900,
+    "cache_hits": 310,
+    "latency_ms": {
+      "p50": 3.849549997539725,
+      "p95": 7.414565007638885,
+      "p99": 8.35416699075722
+    },
+    "by_strategy": {
+      "multimodal+contrastive_ensemble": 157,
+      "meta_adapter+graph": 516,
+      "content+graph": 227
+    },
+    "by_cold_start_type": {
+      "warm": 157,
+      "user_cold_few_shot": 516,
+      "user_cold_zero_shot": 227
+    },
+    "index_size": 2500,
+    "cache_backend": "memory"
+  },
+  "max_uncached_p95_ms": 11.109009999199769
+}

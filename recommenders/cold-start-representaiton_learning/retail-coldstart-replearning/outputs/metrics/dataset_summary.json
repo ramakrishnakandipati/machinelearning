@@ -1,0 +1,41 @@
+{
+  "n_users": 5000,
+  "n_items": 2500,
+  "n_stores": 25,
+  "n_interactions": 50172,
+  "train_rows": 24000,
+  "val_rows": 11593,
+  "test_rows": 10938,
+  "slices": {
+    "warm": {
+      "val": 5050,
+      "test": 4953
+    },
+    "item_cold": {
+      "val": 851,
+      "test": 875
+    },
+    "user_cold": {
+      "val": 2941,
+      "test": 2695
+    },
+    "system_cold": {
+      "val": 646,
+      "test": 677
+    }
+  },
+  "user_groups": {
+    "warm": 3850,
+    "system_cold": 400,
+    "zero_shot": 375,
+    "few_shot": 375
+  },
+  "cold_items": 375,
+  "system_cold_stores": [
+    "S10",
+    "S00"
+  ],
+  "t_val": 1746489600,
+  "t_test": 1748908800,
+  "leakage_checks": "passed"
+}

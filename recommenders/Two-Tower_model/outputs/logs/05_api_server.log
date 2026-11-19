@@ -1,0 +1,258 @@
+
+=== uvicorn start Thu Nov 19 15:49:55 2026 port=55470 ===
+INFO:     Started server process [43016]
+INFO:     Waiting for application startup.
+C:\Users\RamaKrishna\anaconda3\envs\causal-gpu\Lib\site-packages\torch\jit\_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+2026-11-19 15:50:02,392 | INFO | api | startup OK in 4.52s | device=cuda model=two-tower-1795121380 items=5000 faiss_ntotal=5000 store=fakeredis users=19997
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:55470 (Press CTRL+C to quit)
+2026-11-19 15:50:02,631 | INFO | api | GET /health -> 200 (1.57 ms)
+INFO:     127.0.0.1:55860 - "GET /health HTTP/1.1" 200 OK
+2026-11-19 15:50:02,647 | INFO | api | GET /openapi.json -> 200 (8.87 ms)
+INFO:     127.0.0.1:55861 - "GET /openapi.json HTTP/1.1" 200 OK
+2026-11-19 15:50:02,979 | INFO | api | GET /docs -> 200 (0.17 ms)
+INFO:     127.0.0.1:55864 - "GET /docs HTTP/1.1" 200 OK
+2026-11-19 15:50:12,696 | INFO | api | GET /openapi.json -> 200 (0.23 ms)
+INFO:     127.0.0.1:52879 - "GET /openapi.json HTTP/1.1" 200 OK
+2026-11-19 15:50:13,395 | INFO | api | GET /health -> 200 (0.67 ms)
+INFO:     127.0.0.1:52880 - "GET /health HTTP/1.1" 200 OK
+2026-11-19 15:50:13,879 | INFO | api | POST /recommend/user -> 200 (5.73 ms)
+INFO:     127.0.0.1:52880 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:13,884 | INFO | api | POST /recommend/user -> 200 (3.50 ms)
+INFO:     127.0.0.1:52880 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:13,886 | INFO | api | POST /recommend/user -> 200 (1.04 ms)
+INFO:     127.0.0.1:52880 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:13,888 | INFO | api | POST /recommend/user -> 200 (0.67 ms)
+INFO:     127.0.0.1:52880 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:14,619 | INFO | api | POST /recommend/similar-items -> 200 (0.98 ms)
+INFO:     127.0.0.1:52880 - "POST /recommend/similar-items HTTP/1.1" 200 OK
+2026-11-19 15:50:14,620 | INFO | api | POST /recommend/similar-items -> 404 (0.42 ms)
+INFO:     127.0.0.1:52880 - "POST /recommend/similar-items HTTP/1.1" 404 Not Found
+2026-11-19 15:50:15,150 | INFO | api | POST /recommend/user -> 422 (0.45 ms)
+INFO:     127.0.0.1:52880 - "POST /recommend/user HTTP/1.1" 422 Unprocessable Entity
+2026-11-19 15:50:15,152 | INFO | api | POST /recommend/user -> 422 (0.31 ms)
+INFO:     127.0.0.1:52880 - "POST /recommend/user HTTP/1.1" 422 Unprocessable Entity
+2026-11-19 15:50:15,154 | INFO | api | POST /recommend/user -> 422 (0.28 ms)
+INFO:     127.0.0.1:52880 - "POST /recommend/user HTTP/1.1" 422 Unprocessable Entity
+2026-11-19 15:50:15,156 | INFO | api | GET /health -> 200 (0.44 ms)
+INFO:     127.0.0.1:52880 - "GET /health HTTP/1.1" 200 OK
+C:\Users\RamaKrishna\anaconda3\envs\causal-gpu\Lib\site-packages\torch\jit\_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+2026-11-19 15:50:15,421 | INFO | api | hot-reload: two-tower-1795121380 -> two-tower-1795121380 (264.4 ms)
+2026-11-19 15:50:15,421 | INFO | api | POST /index/reload -> 200 (265.17 ms)
+INFO:     127.0.0.1:52880 - "POST /index/reload HTTP/1.1" 200 OK
+2026-11-19 15:50:15,425 | INFO | api | POST /recommend/user -> 200 (2.53 ms)
+INFO:     127.0.0.1:52880 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,458 | INFO | api | POST /recommend/user -> 200 (2.81 ms)
+INFO:     127.0.0.1:52888 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,463 | INFO | api | POST /recommend/user -> 200 (4.03 ms)
+INFO:     127.0.0.1:52888 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,466 | INFO | api | POST /recommend/user -> 200 (2.28 ms)
+INFO:     127.0.0.1:52888 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,469 | INFO | api | POST /recommend/user -> 200 (2.20 ms)
+INFO:     127.0.0.1:52888 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,473 | INFO | api | POST /recommend/user -> 200 (2.60 ms)
+INFO:     127.0.0.1:52888 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,497 | INFO | api | POST /recommend/user -> 200 (16.60 ms)
+INFO:     127.0.0.1:52890 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,502 | INFO | api | POST /recommend/user -> 200 (18.75 ms)
+INFO:     127.0.0.1:52891 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,509 | INFO | api | POST /recommend/user -> 200 (21.67 ms)
+INFO:     127.0.0.1:52892 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,510 | INFO | api | POST /recommend/user -> 200 (21.93 ms)
+INFO:     127.0.0.1:52893 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,510 | INFO | api | POST /recommend/user -> 200 (21.87 ms)
+INFO:     127.0.0.1:52894 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,513 | INFO | api | POST /recommend/user -> 200 (23.14 ms)
+INFO:     127.0.0.1:52896 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,513 | INFO | api | POST /recommend/user -> 200 (24.66 ms)
+INFO:     127.0.0.1:52895 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,516 | INFO | api | POST /recommend/user -> 200 (24.40 ms)
+INFO:     127.0.0.1:52899 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,517 | INFO | api | POST /recommend/user -> 200 (25.90 ms)
+INFO:     127.0.0.1:52898 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,520 | INFO | api | POST /recommend/user -> 200 (28.85 ms)
+INFO:     127.0.0.1:52897 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,524 | INFO | api | POST /recommend/user -> 200 (30.57 ms)
+INFO:     127.0.0.1:52900 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,529 | INFO | api | POST /recommend/user -> 200 (37.82 ms)
+INFO:     127.0.0.1:52889 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,532 | INFO | api | POST /recommend/user -> 200 (36.52 ms)
+INFO:     127.0.0.1:52902 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,533 | INFO | api | POST /recommend/user -> 200 (38.11 ms)
+INFO:     127.0.0.1:52901 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,535 | INFO | api | POST /recommend/user -> 200 (27.08 ms)
+INFO:     127.0.0.1:52905 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,540 | INFO | api | POST /recommend/user -> 200 (34.88 ms)
+INFO:     127.0.0.1:52903 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,541 | INFO | api | POST /recommend/user -> 200 (23.14 ms)
+INFO:     127.0.0.1:52904 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,543 | INFO | api | POST /recommend/user -> 200 (30.56 ms)
+INFO:     127.0.0.1:52906 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,544 | INFO | api | POST /recommend/user -> 200 (23.02 ms)
+INFO:     127.0.0.1:52908 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,545 | INFO | api | POST /recommend/user -> 200 (25.28 ms)
+INFO:     127.0.0.1:52907 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,546 | INFO | api | POST /recommend/user -> 200 (23.66 ms)
+INFO:     127.0.0.1:52909 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,547 | INFO | api | POST /recommend/user -> 200 (23.75 ms)
+INFO:     127.0.0.1:52910 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,548 | INFO | api | POST /recommend/user -> 200 (24.69 ms)
+INFO:     127.0.0.1:52911 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,551 | INFO | api | POST /recommend/user -> 200 (21.66 ms)
+INFO:     127.0.0.1:52913 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,552 | INFO | api | POST /recommend/user -> 200 (20.51 ms)
+INFO:     127.0.0.1:52914 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,552 | INFO | api | POST /recommend/user -> 200 (24.50 ms)
+INFO:     127.0.0.1:52912 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,554 | INFO | api | POST /recommend/user -> 200 (19.05 ms)
+INFO:     127.0.0.1:52915 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,555 | INFO | api | POST /recommend/user -> 200 (15.11 ms)
+INFO:     127.0.0.1:52916 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,559 | INFO | api | POST /recommend/user -> 200 (16.31 ms)
+INFO:     127.0.0.1:52917 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,567 | INFO | api | POST /recommend/user -> 200 (19.47 ms)
+INFO:     127.0.0.1:52918 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,574 | INFO | api | POST /recommend/user -> 200 (23.57 ms)
+INFO:     127.0.0.1:52919 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,577 | INFO | api | POST /recommend/user -> 200 (20.71 ms)
+INFO:     127.0.0.1:52921 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,579 | INFO | api | POST /recommend/user -> 200 (22.01 ms)
+INFO:     127.0.0.1:52922 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,579 | INFO | api | POST /recommend/user -> 200 (24.48 ms)
+INFO:     127.0.0.1:52920 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,581 | INFO | api | POST /recommend/user -> 200 (23.38 ms)
+INFO:     127.0.0.1:52923 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,583 | INFO | api | POST /recommend/user -> 200 (22.04 ms)
+INFO:     127.0.0.1:52927 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,584 | INFO | api | POST /recommend/user -> 200 (23.60 ms)
+INFO:     127.0.0.1:52926 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,586 | INFO | api | POST /recommend/user -> 200 (22.73 ms)
+INFO:     127.0.0.1:52928 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,593 | INFO | api | POST /recommend/user -> 200 (33.70 ms)
+INFO:     127.0.0.1:52924 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,593 | INFO | api | POST /recommend/user -> 200 (33.22 ms)
+INFO:     127.0.0.1:52925 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,594 | INFO | api | POST /recommend/user -> 200 (29.61 ms)
+INFO:     127.0.0.1:52929 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,595 | INFO | api | POST /recommend/user -> 200 (27.24 ms)
+INFO:     127.0.0.1:52931 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,596 | INFO | api | POST /recommend/user -> 200 (29.74 ms)
+INFO:     127.0.0.1:52930 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,596 | INFO | api | POST /recommend/user -> 200 (26.47 ms)
+INFO:     127.0.0.1:52932 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,599 | INFO | api | POST /recommend/user -> 200 (16.97 ms)
+INFO:     127.0.0.1:52935 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,600 | INFO | api | POST /recommend/user -> 200 (25.20 ms)
+INFO:     127.0.0.1:52933 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,602 | INFO | api | POST /recommend/user -> 200 (24.30 ms)
+INFO:     127.0.0.1:52934 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,608 | INFO | api | POST /recommend/user -> 200 (18.25 ms)
+INFO:     127.0.0.1:52938 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,609 | INFO | api | POST /recommend/user -> 200 (19.37 ms)
+INFO:     127.0.0.1:52937 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,609 | INFO | api | POST /recommend/user -> 200 (18.39 ms)
+INFO:     127.0.0.1:52939 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,613 | INFO | api | POST /recommend/user -> 200 (20.78 ms)
+INFO:     127.0.0.1:52940 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,615 | INFO | api | POST /recommend/user -> 200 (16.71 ms)
+INFO:     127.0.0.1:52936 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,618 | INFO | api | POST /recommend/user -> 200 (20.27 ms)
+INFO:     127.0.0.1:52942 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,619 | INFO | api | POST /recommend/user -> 200 (13.00 ms)
+INFO:     127.0.0.1:52946 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,621 | INFO | api | POST /recommend/user -> 200 (17.45 ms)
+INFO:     127.0.0.1:52943 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,628 | INFO | api | POST /recommend/user -> 200 (22.82 ms)
+INFO:     127.0.0.1:52944 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,632 | INFO | api | POST /recommend/user -> 200 (21.52 ms)
+INFO:     127.0.0.1:52947 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,632 | INFO | api | POST /recommend/user -> 200 (27.28 ms)
+INFO:     127.0.0.1:52945 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,635 | INFO | api | POST /recommend/user -> 200 (20.46 ms)
+INFO:     127.0.0.1:52941 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,638 | INFO | api | POST /recommend/user -> 200 (21.29 ms)
+INFO:     127.0.0.1:52949 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,639 | INFO | api | POST /recommend/user -> 200 (24.87 ms)
+INFO:     127.0.0.1:52948 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,645 | INFO | api | POST /recommend/user -> 200 (21.09 ms)
+INFO:     127.0.0.1:52952 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,648 | INFO | api | POST /recommend/user -> 200 (23.30 ms)
+INFO:     127.0.0.1:52954 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,649 | INFO | api | POST /recommend/user -> 200 (26.52 ms)
+INFO:     127.0.0.1:52950 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,650 | INFO | api | POST /recommend/user -> 200 (27.87 ms)
+INFO:     127.0.0.1:52951 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,653 | INFO | api | POST /recommend/user -> 200 (26.35 ms)
+INFO:     127.0.0.1:52955 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,653 | INFO | api | POST /recommend/user -> 200 (25.22 ms)
+INFO:     127.0.0.1:52957 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,654 | INFO | api | POST /recommend/user -> 200 (26.40 ms)
+INFO:     127.0.0.1:52956 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,654 | INFO | api | POST /recommend/user -> 200 (28.10 ms)
+INFO:     127.0.0.1:52953 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,656 | INFO | api | POST /recommend/user -> 200 (25.18 ms)
+INFO:     127.0.0.1:52958 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,656 | INFO | api | POST /recommend/user -> 200 (24.20 ms)
+INFO:     127.0.0.1:52959 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,659 | INFO | api | POST /recommend/user -> 200 (19.22 ms)
+INFO:     127.0.0.1:52960 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,660 | INFO | api | POST /recommend/user -> 200 (16.59 ms)
+INFO:     127.0.0.1:52961 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,661 | INFO | api | POST /recommend/user -> 200 (17.47 ms)
+INFO:     127.0.0.1:52962 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,666 | INFO | api | POST /recommend/user -> 200 (21.62 ms)
+INFO:     127.0.0.1:52963 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,674 | INFO | api | POST /recommend/user -> 200 (17.24 ms)
+INFO:     127.0.0.1:52964 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,675 | INFO | api | POST /recommend/user -> 200 (17.63 ms)
+INFO:     127.0.0.1:52965 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,686 | INFO | api | POST /recommend/user -> 200 (22.00 ms)
+INFO:     127.0.0.1:52966 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,688 | INFO | api | POST /recommend/user -> 200 (23.23 ms)
+INFO:     127.0.0.1:52967 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,688 | INFO | api | POST /recommend/user -> 200 (23.22 ms)
+INFO:     127.0.0.1:52969 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,689 | INFO | api | POST /recommend/user -> 200 (24.92 ms)
+INFO:     127.0.0.1:52968 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,693 | INFO | api | POST /recommend/user -> 200 (26.14 ms)
+INFO:     127.0.0.1:52970 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,693 | INFO | api | POST /recommend/user -> 200 (23.31 ms)
+INFO:     127.0.0.1:52974 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,694 | INFO | api | POST /recommend/user -> 200 (22.72 ms)
+INFO:     127.0.0.1:52975 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,694 | INFO | api | POST /recommend/user -> 200 (25.47 ms)
+INFO:     127.0.0.1:52973 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,695 | INFO | api | POST /recommend/user -> 200 (18.74 ms)
+INFO:     127.0.0.1:52978 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,696 | INFO | api | POST /recommend/user -> 200 (27.62 ms)
+INFO:     127.0.0.1:52972 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,696 | INFO | api | POST /recommend/user -> 200 (22.75 ms)
+INFO:     127.0.0.1:52977 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,696 | INFO | api | POST /recommend/user -> 200 (24.28 ms)
+INFO:     127.0.0.1:52976 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,697 | INFO | api | POST /recommend/user -> 200 (29.89 ms)
+INFO:     127.0.0.1:52971 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,699 | INFO | api | POST /recommend/user -> 200 (20.30 ms)
+INFO:     127.0.0.1:52979 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,700 | INFO | api | POST /recommend/user -> 200 (16.57 ms)
+INFO:     127.0.0.1:52982 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,712 | INFO | api | POST /recommend/user -> 200 (15.62 ms)
+INFO:     127.0.0.1:52984 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,713 | INFO | api | POST /recommend/user -> 200 (17.75 ms)
+INFO:     127.0.0.1:52983 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,715 | INFO | api | POST /recommend/user -> 200 (16.05 ms)
+INFO:     127.0.0.1:52986 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,715 | INFO | api | POST /recommend/user -> 200 (13.09 ms)
+INFO:     127.0.0.1:52987 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,715 | INFO | api | POST /recommend/user -> 200 (11.85 ms)
+INFO:     127.0.0.1:52989 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,715 | INFO | api | POST /recommend/user -> 200 (12.71 ms)
+INFO:     127.0.0.1:52988 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,716 | INFO | api | POST /recommend/user -> 200 (9.95 ms)
+INFO:     127.0.0.1:52981 - "POST /recommend/user HTTP/1.1" 200 OK
+2026-11-19 15:50:15,716 | INFO | api | POST /recommend/user -> 200 (18.26 ms)
+INFO:     127.0.0.1:52985 - "POST /recommend/user HTTP/1.1" 200 OK
+18.26 ms)
+=== uvicorn stopped Thu Nov 19 15:50:15 2026 ===

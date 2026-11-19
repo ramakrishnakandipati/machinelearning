@@ -1,0 +1,19 @@
+{
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": "3.12.16",
+  "nvidia_smi": "NVIDIA GeForce RTX 3090, 24576 MiB, 610.60",
+  "torch_version": "2.15.0+cu132",
+  "torch_cuda_available": true,
+  "cuda_version": "13.2",
+  "cudnn": 92600,
+  "gpu_name": "NVIDIA GeForce RTX 3090",
+  "vram_gb": 24.0,
+  "compute_capability": "8.6",
+  "amp_matmul_ok": true,
+  "faiss_version": "1.16.0",
+  "faiss_gpu_count": 0,
+  "faiss_gpu_resources": false,
+  "cupy": false,
+  "cudf": false,
+  "ann_backend": "faiss-cpu"
+}

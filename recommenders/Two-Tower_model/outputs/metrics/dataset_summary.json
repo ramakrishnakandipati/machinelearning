@@ -1,0 +1,44 @@
+{
+  "rows": {
+    "users": 20000,
+    "items": 5000,
+    "events_total": 1200044,
+    "positive_events": 616676,
+    "views": 583368,
+    "purchases": 92294
+  },
+  "sparsity_pct": 99.423981,
+  "split_boundaries_day": {
+    "train": [
+      0,
+      126
+    ],
+    "val": [
+      126,
+      153
+    ],
+    "test": [
+      153,
+      180
+    ]
+  },
+  "split_examples": {
+    "train": 411655,
+    "val": 102611,
+    "test": 102410
+  },
+  "cold_start": {
+    "users_unseen_in_train_pct": 5.064999999999998,
+    "items_unseen_in_train_pct": 2.0000000000000018,
+    "test_examples_from_unseen_users_pct": 14.400937408456205,
+    "test_examples_on_unseen_items_pct": 1.737135045405722,
+    "test_unique_users": 18627
+  },
+  "train_examples_with_hard_negative_pct": 91.41587008538703,
+  "history_len": 20,
+  "leakage_check": {
+    "train_max_day": 125.0,
+    "val_min_day": 126.0,
+    "passed": true
+  }
+}

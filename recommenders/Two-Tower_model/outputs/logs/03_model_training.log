@@ -1,0 +1,97 @@
+2026-11-19 15:49:19,067 | INFO | train | START training | rss=1633MB vram_alloc=0MB vram_peak=18MB
+2026-11-19 15:49:19,069 | INFO | train | device=cuda amp=True cfg=TrainCfg(epochs=30, batch_size=4096, lr=0.002, weight_decay=1e-05, patience=4, init_temperature=0.07, hard_neg=True, logq=True, dropout=0.1)
+2026-11-19 15:49:19,084 | INFO | train | params=2163093 sizes={'tier': 5, 'chan': 4, 'region': 7, 'device': 5, 'cat1': 9, 'cat2': 25, 'brand': 41, 'season': 5, 'user': 18989, 'item': 4902}
+2026-11-19 15:49:22,167 | INFO | train | epoch 01 | train_loss=8.4469 val_loss=8.7082 R@10=0.0287 R@50=0.0740 NDCG@10=0.0150 MRR@10=0.0107 | lr=2.00e-03 tau=0.0711 amp_scale=65536.0 | 2.1s peak_vram=613MB
+2026-11-19 15:49:22,183 | INFO | train | checkpoint saved (best val Recall@50=0.0740 @ epoch 1)
+2026-11-19 15:49:23,459 | INFO | train | epoch 02 | train_loss=8.3344 val_loss=8.7363 R@10=0.0298 R@50=0.0752 NDCG@10=0.0163 MRR@10=0.0121 | lr=1.99e-03 tau=0.0711 amp_scale=65536.0 | 1.3s peak_vram=623MB
+2026-11-19 15:49:23,470 | INFO | train | checkpoint saved (best val Recall@50=0.0752 @ epoch 2)
+2026-11-19 15:49:24,807 | INFO | train | epoch 03 | train_loss=8.2725 val_loss=8.6773 R@10=0.0342 R@50=0.0870 NDCG@10=0.0198 MRR@10=0.0154 | lr=1.97e-03 tau=0.0712 amp_scale=65536.0 | 1.3s peak_vram=623MB
+2026-11-19 15:49:24,816 | INFO | train | checkpoint saved (best val Recall@50=0.0870 @ epoch 3)
+2026-11-19 15:49:26,078 | INFO | train | epoch 04 | train_loss=8.1585 val_loss=8.5630 R@10=0.0409 R@50=0.1010 NDCG@10=0.0237 MRR@10=0.0185 | lr=1.93e-03 tau=0.0714 amp_scale=65536.0 | 1.3s peak_vram=623MB
+2026-11-19 15:49:26,088 | INFO | train | checkpoint saved (best val Recall@50=0.1010 @ epoch 4)
+2026-11-19 15:49:27,413 | INFO | train | epoch 05 | train_loss=8.0512 val_loss=8.4964 R@10=0.0432 R@50=0.1097 NDCG@10=0.0252 MRR@10=0.0197 | lr=1.89e-03 tau=0.0715 amp_scale=65536.0 | 1.3s peak_vram=623MB
+2026-11-19 15:49:27,423 | INFO | train | checkpoint saved (best val Recall@50=0.1097 @ epoch 5)
+2026-11-19 15:49:28,685 | INFO | train | epoch 06 | train_loss=7.9613 val_loss=8.4513 R@10=0.0467 R@50=0.1143 NDCG@10=0.0269 MRR@10=0.0209 | lr=1.84e-03 tau=0.0717 amp_scale=65536.0 | 1.3s peak_vram=624MB
+2026-11-19 15:49:28,696 | INFO | train | checkpoint saved (best val Recall@50=0.1143 @ epoch 6)
+2026-11-19 15:49:29,929 | INFO | train | epoch 07 | train_loss=7.8795 val_loss=8.4060 R@10=0.0493 R@50=0.1186 NDCG@10=0.0287 MRR@10=0.0224 | lr=1.77e-03 tau=0.0719 amp_scale=65536.0 | 1.2s peak_vram=624MB
+2026-11-19 15:49:29,938 | INFO | train | checkpoint saved (best val Recall@50=0.1186 @ epoch 7)
+2026-11-19 15:49:31,162 | INFO | train | epoch 08 | train_loss=7.8042 val_loss=8.3597 R@10=0.0505 R@50=0.1238 NDCG@10=0.0294 MRR@10=0.0229 | lr=1.70e-03 tau=0.0720 amp_scale=65536.0 | 1.2s peak_vram=624MB
+2026-11-19 15:49:31,172 | INFO | train | checkpoint saved (best val Recall@50=0.1238 @ epoch 8)
+2026-11-19 15:49:32,507 | INFO | train | epoch 09 | train_loss=7.7336 val_loss=8.3557 R@10=0.0515 R@50=0.1235 NDCG@10=0.0303 MRR@10=0.0238 | lr=1.63e-03 tau=0.0722 amp_scale=65536.0 | 1.3s peak_vram=624MB
+2026-11-19 15:49:33,830 | INFO | train | epoch 10 | train_loss=7.6647 val_loss=8.3472 R@10=0.0505 R@50=0.1238 NDCG@10=0.0302 MRR@10=0.0239 | lr=1.54e-03 tau=0.0723 amp_scale=65536.0 | 1.3s peak_vram=624MB
+2026-11-19 15:49:33,840 | INFO | train | checkpoint saved (best val Recall@50=0.1238 @ epoch 10)
+2026-11-19 15:49:35,174 | INFO | train | epoch 11 | train_loss=7.6000 val_loss=8.3564 R@10=0.0531 R@50=0.1242 NDCG@10=0.0309 MRR@10=0.0241 | lr=1.45e-03 tau=0.0723 amp_scale=65536.0 | 1.3s peak_vram=624MB
+2026-11-19 15:49:35,204 | INFO | train | checkpoint saved (best val Recall@50=0.1242 @ epoch 11)
+2026-11-19 15:49:36,536 | INFO | train | epoch 12 | train_loss=7.5386 val_loss=8.3646 R@10=0.0551 R@50=0.1285 NDCG@10=0.0319 MRR@10=0.0249 | lr=1.35e-03 tau=0.0723 amp_scale=65536.0 | 1.3s peak_vram=624MB
+2026-11-19 15:49:36,571 | INFO | train | checkpoint saved (best val Recall@50=0.1285 @ epoch 12)
+2026-11-19 15:49:37,932 | INFO | train | epoch 13 | train_loss=7.4807 val_loss=8.3865 R@10=0.0548 R@50=0.1272 NDCG@10=0.0317 MRR@10=0.0247 | lr=1.25e-03 tau=0.0721 amp_scale=65536.0 | 1.4s peak_vram=625MB
+2026-11-19 15:49:39,215 | INFO | train | epoch 14 | train_loss=7.4261 val_loss=8.3752 R@10=0.0543 R@50=0.1282 NDCG@10=0.0316 MRR@10=0.0248 | lr=1.15e-03 tau=0.0718 amp_scale=65536.0 | 1.3s peak_vram=625MB
+2026-11-19 15:49:40,442 | INFO | train | epoch 15 | train_loss=7.3737 val_loss=8.4004 R@10=0.0540 R@50=0.1286 NDCG@10=0.0317 MRR@10=0.0250 | lr=1.05e-03 tau=0.0714 amp_scale=65536.0 | 1.2s peak_vram=625MB
+2026-11-19 15:49:40,452 | INFO | train | checkpoint saved (best val Recall@50=0.1286 @ epoch 15)
+2026-11-19 15:49:41,675 | INFO | train | epoch 16 | train_loss=7.3286 val_loss=8.4189 R@10=0.0521 R@50=0.1271 NDCG@10=0.0305 MRR@10=0.0239 | lr=9.42e-04 tau=0.0709 amp_scale=65536.0 | 1.2s peak_vram=625MB
+2026-11-19 15:49:42,892 | INFO | train | epoch 17 | train_loss=7.2844 val_loss=8.4216 R@10=0.0534 R@50=0.1277 NDCG@10=0.0307 MRR@10=0.0238 | lr=8.38e-04 tau=0.0703 amp_scale=65536.0 | 1.2s peak_vram=625MB
+2026-11-19 15:49:44,231 | INFO | train | epoch 18 | train_loss=7.2442 val_loss=8.4295 R@10=0.0524 R@50=0.1278 NDCG@10=0.0301 MRR@10=0.0233 | lr=7.37e-04 tau=0.0696 amp_scale=65536.0 | 1.3s peak_vram=626MB
+2026-11-19 15:49:45,428 | INFO | train | epoch 19 | train_loss=7.2068 val_loss=8.4518 R@10=0.0540 R@50=0.1275 NDCG@10=0.0310 MRR@10=0.0240 | lr=6.39e-04 tau=0.0689 amp_scale=65536.0 | 1.2s peak_vram=626MB
+2026-11-19 15:49:45,429 | INFO | train | early stopping at epoch 19 (best epoch 15)
+2026-11-19 15:49:45,436 | INFO | train | END   training | 26.37s | rss=2403MB vram_alloc=17MB vram_peak=626MB
+2026-11-19 15:49:45,437 | INFO | train | START export | rss=2403MB vram_alloc=17MB vram_peak=626MB
+2026-11-19 15:49:45,513 | INFO | train | exported item_embeddings (5000, 128), user_tower_serving.pt (max diff vs eager 0.00e+00)
+2026-11-19 15:49:45,612 | INFO | train | END   export | 0.17s | rss=2435MB vram_alloc=17MB vram_peak=626MB
+2026-11-19 15:49:45,612 | INFO | evaluate | START test evaluation + charts | rss=2435MB vram_alloc=17MB vram_peak=626MB
+2026-11-19 15:49:45,969 | INFO | evaluate | TEST overall: R@10=0.0506 R@50=0.1270 NDCG@10=0.0288 MRR@10=0.0222 | popularity R@50=0.0695 | random R@50=0.0100
+2026-11-19 15:49:45,969 | INFO | evaluate |   segment overall            n=102410 R@10=0.0506 R@50=0.1270 NDCG@10=0.0288
+2026-11-19 15:49:45,969 | INFO | evaluate |   segment warm_users         n=87662  R@10=0.0523 R@50=0.1302 NDCG@10=0.0298
+2026-11-19 15:49:45,969 | INFO | evaluate |   segment cold_start_users   n=14748  R@10=0.0403 R@50=0.1077 NDCG@10=0.0230
+2026-11-19 15:49:45,969 | INFO | evaluate |   segment channel_In-Store   n=20552  R@10=0.0518 R@50=0.1283 NDCG@10=0.0292
+2026-11-19 15:49:45,969 | INFO | evaluate |   segment channel_Mobile     n=34994  R@10=0.0505 R@50=0.1261 NDCG@10=0.0290
+2026-11-19 15:49:45,969 | INFO | evaluate |   segment channel_Web        n=46864  R@10=0.0502 R@50=0.1270 NDCG@10=0.0285
+2026-11-19 15:49:52,642 | INFO | evaluate | END   test evaluation + charts | 7.03s | rss=2499MB vram_alloc=17MB vram_peak=626MB
+2026-11-19 16:49:29,720 | INFO | train | START training | rss=1647MB vram_alloc=0MB vram_peak=18MB
+2026-11-19 16:49:29,722 | INFO | train | device=cuda amp=True cfg=TrainCfg(epochs=30, batch_size=4096, lr=0.002, weight_decay=1e-05, patience=4, init_temperature=0.07, hard_neg=True, logq=True, dropout=0.1)
+2026-11-19 16:49:29,739 | INFO | train | params=2163093 sizes={'tier': 5, 'chan': 4, 'region': 7, 'device': 5, 'cat1': 9, 'cat2': 25, 'brand': 41, 'season': 5, 'user': 18989, 'item': 4902}
+2026-11-19 16:49:32,581 | INFO | train | epoch 01 | train_loss=8.4469 val_loss=8.7082 R@10=0.0287 R@50=0.0740 NDCG@10=0.0150 MRR@10=0.0107 | lr=2.00e-03 tau=0.0711 amp_scale=65536.0 | 1.7s peak_vram=613MB
+2026-11-19 16:49:32,594 | INFO | train | checkpoint saved (best val Recall@50=0.0740 @ epoch 1)
+2026-11-19 16:49:33,872 | INFO | train | epoch 02 | train_loss=8.3344 val_loss=8.7363 R@10=0.0298 R@50=0.0752 NDCG@10=0.0163 MRR@10=0.0121 | lr=1.99e-03 tau=0.0711 amp_scale=65536.0 | 1.3s peak_vram=623MB
+2026-11-19 16:49:33,882 | INFO | train | checkpoint saved (best val Recall@50=0.0752 @ epoch 2)
+2026-11-19 16:49:35,206 | INFO | train | epoch 03 | train_loss=8.2725 val_loss=8.6773 R@10=0.0342 R@50=0.0870 NDCG@10=0.0198 MRR@10=0.0154 | lr=1.97e-03 tau=0.0712 amp_scale=65536.0 | 1.3s peak_vram=623MB
+2026-11-19 16:49:35,216 | INFO | train | checkpoint saved (best val Recall@50=0.0870 @ epoch 3)
+2026-11-19 16:49:36,563 | INFO | train | epoch 04 | train_loss=8.1585 val_loss=8.5630 R@10=0.0409 R@50=0.1010 NDCG@10=0.0237 MRR@10=0.0185 | lr=1.93e-03 tau=0.0714 amp_scale=65536.0 | 1.3s peak_vram=623MB
+2026-11-19 16:49:36,573 | INFO | train | checkpoint saved (best val Recall@50=0.1010 @ epoch 4)
+2026-11-19 16:49:37,867 | INFO | train | epoch 05 | train_loss=8.0512 val_loss=8.4964 R@10=0.0432 R@50=0.1097 NDCG@10=0.0252 MRR@10=0.0197 | lr=1.89e-03 tau=0.0715 amp_scale=65536.0 | 1.3s peak_vram=623MB
+2026-11-19 16:49:37,879 | INFO | train | checkpoint saved (best val Recall@50=0.1097 @ epoch 5)
+2026-11-19 16:49:39,208 | INFO | train | epoch 06 | train_loss=7.9613 val_loss=8.4513 R@10=0.0468 R@50=0.1142 NDCG@10=0.0270 MRR@10=0.0209 | lr=1.84e-03 tau=0.0717 amp_scale=65536.0 | 1.3s peak_vram=624MB
+2026-11-19 16:49:39,219 | INFO | train | checkpoint saved (best val Recall@50=0.1142 @ epoch 6)
+2026-11-19 16:49:40,531 | INFO | train | epoch 07 | train_loss=7.8795 val_loss=8.4059 R@10=0.0493 R@50=0.1185 NDCG@10=0.0287 MRR@10=0.0224 | lr=1.77e-03 tau=0.0719 amp_scale=65536.0 | 1.3s peak_vram=624MB
+2026-11-19 16:49:40,542 | INFO | train | checkpoint saved (best val Recall@50=0.1185 @ epoch 7)
+2026-11-19 16:49:41,783 | INFO | train | epoch 08 | train_loss=7.8042 val_loss=8.3597 R@10=0.0505 R@50=0.1238 NDCG@10=0.0294 MRR@10=0.0230 | lr=1.70e-03 tau=0.0720 amp_scale=65536.0 | 1.2s peak_vram=624MB
+2026-11-19 16:49:41,794 | INFO | train | checkpoint saved (best val Recall@50=0.1238 @ epoch 8)
+2026-11-19 16:49:43,178 | INFO | train | epoch 09 | train_loss=7.7336 val_loss=8.3558 R@10=0.0514 R@50=0.1234 NDCG@10=0.0303 MRR@10=0.0238 | lr=1.63e-03 tau=0.0722 amp_scale=65536.0 | 1.4s peak_vram=624MB
+2026-11-19 16:49:44,475 | INFO | train | epoch 10 | train_loss=7.6647 val_loss=8.3471 R@10=0.0505 R@50=0.1239 NDCG@10=0.0302 MRR@10=0.0239 | lr=1.54e-03 tau=0.0723 amp_scale=65536.0 | 1.3s peak_vram=624MB
+2026-11-19 16:49:44,488 | INFO | train | checkpoint saved (best val Recall@50=0.1239 @ epoch 10)
+2026-11-19 16:49:45,779 | INFO | train | epoch 11 | train_loss=7.6000 val_loss=8.3563 R@10=0.0532 R@50=0.1242 NDCG@10=0.0309 MRR@10=0.0242 | lr=1.45e-03 tau=0.0723 amp_scale=65536.0 | 1.3s peak_vram=624MB
+2026-11-19 16:49:45,789 | INFO | train | checkpoint saved (best val Recall@50=0.1242 @ epoch 11)
+2026-11-19 16:49:47,033 | INFO | train | epoch 12 | train_loss=7.5386 val_loss=8.3645 R@10=0.0550 R@50=0.1283 NDCG@10=0.0319 MRR@10=0.0249 | lr=1.35e-03 tau=0.0723 amp_scale=65536.0 | 1.2s peak_vram=624MB
+2026-11-19 16:49:47,043 | INFO | train | checkpoint saved (best val Recall@50=0.1283 @ epoch 12)
+2026-11-19 16:49:48,321 | INFO | train | epoch 13 | train_loss=7.4807 val_loss=8.3865 R@10=0.0548 R@50=0.1271 NDCG@10=0.0317 MRR@10=0.0247 | lr=1.25e-03 tau=0.0721 amp_scale=65536.0 | 1.3s peak_vram=625MB
+2026-11-19 16:49:49,572 | INFO | train | epoch 14 | train_loss=7.4261 val_loss=8.3752 R@10=0.0545 R@50=0.1284 NDCG@10=0.0317 MRR@10=0.0248 | lr=1.15e-03 tau=0.0718 amp_scale=65536.0 | 1.3s peak_vram=625MB
+2026-11-19 16:49:49,583 | INFO | train | checkpoint saved (best val Recall@50=0.1284 @ epoch 14)
+2026-11-19 16:49:50,765 | INFO | train | epoch 15 | train_loss=7.3737 val_loss=8.4004 R@10=0.0540 R@50=0.1287 NDCG@10=0.0317 MRR@10=0.0249 | lr=1.05e-03 tau=0.0714 amp_scale=65536.0 | 1.2s peak_vram=625MB
+2026-11-19 16:49:50,777 | INFO | train | checkpoint saved (best val Recall@50=0.1287 @ epoch 15)
+2026-11-19 16:49:52,035 | INFO | train | epoch 16 | train_loss=7.3286 val_loss=8.4189 R@10=0.0521 R@50=0.1273 NDCG@10=0.0305 MRR@10=0.0239 | lr=9.42e-04 tau=0.0709 amp_scale=65536.0 | 1.3s peak_vram=625MB
+2026-11-19 16:49:53,316 | INFO | train | epoch 17 | train_loss=7.2844 val_loss=8.4216 R@10=0.0533 R@50=0.1278 NDCG@10=0.0307 MRR@10=0.0238 | lr=8.38e-04 tau=0.0703 amp_scale=65536.0 | 1.3s peak_vram=625MB
+2026-11-19 16:49:54,560 | INFO | train | epoch 18 | train_loss=7.2442 val_loss=8.4294 R@10=0.0524 R@50=0.1276 NDCG@10=0.0301 MRR@10=0.0233 | lr=7.37e-04 tau=0.0696 amp_scale=65536.0 | 1.2s peak_vram=625MB
+2026-11-19 16:49:55,815 | INFO | train | epoch 19 | train_loss=7.2068 val_loss=8.4518 R@10=0.0539 R@50=0.1275 NDCG@10=0.0309 MRR@10=0.0240 | lr=6.39e-04 tau=0.0689 amp_scale=65536.0 | 1.3s peak_vram=625MB
+2026-11-19 16:49:55,816 | INFO | train | early stopping at epoch 19 (best epoch 15)
+2026-11-19 16:49:55,822 | INFO | train | END   training | 26.10s | rss=2476MB vram_alloc=17MB vram_peak=625MB
+2026-11-19 16:49:55,824 | INFO | train | START export | rss=2476MB vram_alloc=17MB vram_peak=625MB
+2026-11-19 16:49:55,910 | INFO | train | exported item_embeddings (5000, 128), user_tower_serving.pt (max diff vs eager 0.00e+00)
+2026-11-19 16:49:56,022 | INFO | train | END   export | 0.20s | rss=2483MB vram_alloc=17MB vram_peak=625MB
+2026-11-19 16:49:56,171 | INFO | evaluate | START test evaluation + charts | rss=2489MB vram_alloc=17MB vram_peak=625MB
+2026-11-19 16:49:56,523 | INFO | evaluate | TEST overall: R@10=0.0506 R@50=0.1269 NDCG@10=0.0288 MRR@10=0.0222 | popularity R@50=0.0695 | random R@50=0.0100
+2026-11-19 16:49:56,524 | INFO | evaluate |   segment overall            n=102410 R@10=0.0506 R@50=0.1269 NDCG@10=0.0288
+2026-11-19 16:49:56,525 | INFO | evaluate |   segment warm_users         n=87662  R@10=0.0523 R@50=0.1301 NDCG@10=0.0298
+2026-11-19 16:49:56,526 | INFO | evaluate |   segment cold_start_users   n=14748  R@10=0.0405 R@50=0.1078 NDCG@10=0.0231
+2026-11-19 16:49:56,526 | INFO | evaluate |   segment channel_In-Store   n=20552  R@10=0.0519 R@50=0.1282 NDCG@10=0.0292
+2026-11-19 16:49:56,527 | INFO | evaluate |   segment channel_Mobile     n=34994  R@10=0.0505 R@50=0.1261 NDCG@10=0.0290
+2026-11-19 16:49:56,529 | INFO | evaluate |   segment channel_Web        n=46864  R@10=0.0501 R@50=0.1270 NDCG@10=0.0285
+2026-11-19 16:50:03,236 | INFO | evaluate | END   test evaluation + charts | 7.06s | rss=2561MB vram_alloc=17MB vram_peak=625MB

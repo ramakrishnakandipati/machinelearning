@@ -1,0 +1,42 @@
+2026-11-19 15:49:52,642 | INFO | ann | faiss=1.16.0 gpu_available=False -> backend=faiss-cpu
+2026-11-19 15:49:52,648 | INFO | ann | START build IndexFlatIP | rss=2502MB vram_alloc=17MB vram_peak=626MB
+2026-11-19 15:49:52,648 | INFO | ann | END   build IndexFlatIP | 0.00s | rss=2504MB vram_alloc=17MB vram_peak=626MB
+2026-11-19 15:49:52,711 | INFO | ann | START build IndexHNSWFlat(M=32, efC=200) | rss=2510MB vram_alloc=17MB vram_peak=626MB
+2026-11-19 15:49:53,128 | INFO | ann | END   build IndexHNSWFlat(M=32, efC=200) | 0.42s | rss=2514MB vram_alloc=17MB vram_peak=626MB
+2026-11-19 15:49:53,473 | INFO | ann | START build IndexIVFPQ(nlist=32, m=16, nbits=6) | rss=2515MB vram_alloc=17MB vram_peak=626MB
+2026-11-19 15:49:53,526 | INFO | ann | END   build IndexIVFPQ(nlist=32, m=16, nbits=6) | 0.05s | rss=2516MB vram_alloc=17MB vram_peak=626MB
+2026-11-19 15:49:53,857 | INFO | ann | IndexFlatIP    exact          recall@10=1.000 qps=   19166 p50=0.049ms p99=0.107ms size=2.44MB [cpu]
+2026-11-19 15:49:53,857 | INFO | ann | IndexHNSWFlat  efSearch=8     recall@10=0.726 qps=   70233 p50=0.014ms p99=0.019ms size=3.74MB [cpu]
+2026-11-19 15:49:53,857 | INFO | ann | IndexHNSWFlat  efSearch=16    recall@10=0.861 qps=   52599 p50=0.019ms p99=0.025ms size=3.74MB [cpu]
+2026-11-19 15:49:53,857 | INFO | ann | IndexHNSWFlat  efSearch=32    recall@10=0.952 qps=   22685 p50=0.043ms p99=0.067ms size=3.74MB [cpu]
+2026-11-19 15:49:53,857 | INFO | ann | IndexHNSWFlat  efSearch=64    recall@10=0.987 qps=   14091 p50=0.070ms p99=0.094ms size=3.74MB [cpu]
+2026-11-19 15:49:53,858 | INFO | ann | IndexHNSWFlat  efSearch=128   recall@10=0.997 qps=   10101 p50=0.099ms p99=0.115ms size=3.74MB [cpu]
+2026-11-19 15:49:53,858 | INFO | ann | IndexHNSWFlat  efSearch=256   recall@10=0.999 qps=    4853 p50=0.205ms p99=0.232ms size=3.74MB [cpu]
+2026-11-19 15:49:53,858 | INFO | ann | IndexIVFPQ     nprobe=1       recall@10=0.252 qps=   73283 p50=0.013ms p99=0.017ms size=0.14MB [cpu]
+2026-11-19 15:49:53,858 | INFO | ann | IndexIVFPQ     nprobe=2       recall@10=0.325 qps=   32891 p50=0.030ms p99=0.039ms size=0.14MB [cpu]
+2026-11-19 15:49:53,858 | INFO | ann | IndexIVFPQ     nprobe=4       recall@10=0.372 qps=   22673 p50=0.044ms p99=0.058ms size=0.14MB [cpu]
+2026-11-19 15:49:53,858 | INFO | ann | IndexIVFPQ     nprobe=8       recall@10=0.394 qps=   13801 p50=0.071ms p99=0.098ms size=0.14MB [cpu]
+2026-11-19 15:49:53,858 | INFO | ann | IndexIVFPQ     nprobe=16      recall@10=0.398 qps=   12262 p50=0.081ms p99=0.092ms size=0.14MB [cpu]
+2026-11-19 15:49:53,858 | INFO | ann | IndexIVFPQ     nprobe=32      recall@10=0.398 qps=    4802 p50=0.226ms p99=0.258ms size=0.14MB [cpu]
+2026-11-19 15:49:54,649 | INFO | ann | persisted retail_items.faiss (HNSW efSearch=32) + item_metadata.parquet
+2026-11-19 16:50:03,266 | INFO | ann | faiss=1.16.0 gpu_available=False -> backend=faiss-cpu
+2026-11-19 16:50:03,275 | INFO | ann | START build IndexFlatIP | rss=2564MB vram_alloc=17MB vram_peak=625MB
+2026-11-19 16:50:03,277 | INFO | ann | END   build IndexFlatIP | 0.00s | rss=2567MB vram_alloc=17MB vram_peak=625MB
+2026-11-19 16:50:03,345 | INFO | ann | START build IndexHNSWFlat(M=32, efC=200) | rss=2573MB vram_alloc=17MB vram_peak=625MB
+2026-11-19 16:50:03,797 | INFO | ann | END   build IndexHNSWFlat(M=32, efC=200) | 0.45s | rss=2577MB vram_alloc=17MB vram_peak=625MB
+2026-11-19 16:50:04,134 | INFO | ann | START build IndexIVFPQ(nlist=32, m=16, nbits=6) | rss=2577MB vram_alloc=17MB vram_peak=625MB
+2026-11-19 16:50:04,188 | INFO | ann | END   build IndexIVFPQ(nlist=32, m=16, nbits=6) | 0.05s | rss=2579MB vram_alloc=17MB vram_peak=625MB
+2026-11-19 16:50:04,511 | INFO | ann | IndexFlatIP    exact          recall@10=1.000 qps=   18035 p50=0.054ms p99=0.072ms size=2.44MB [cpu]
+2026-11-19 16:50:04,512 | INFO | ann | IndexHNSWFlat  efSearch=8     recall@10=0.727 qps=   45486 p50=0.022ms p99=0.033ms size=3.74MB [cpu]
+2026-11-19 16:50:04,513 | INFO | ann | IndexHNSWFlat  efSearch=16    recall@10=0.861 qps=   35545 p50=0.028ms p99=0.051ms size=3.74MB [cpu]
+2026-11-19 16:50:04,514 | INFO | ann | IndexHNSWFlat  efSearch=32    recall@10=0.952 qps=   33601 p50=0.029ms p99=0.037ms size=3.74MB [cpu]
+2026-11-19 16:50:04,515 | INFO | ann | IndexHNSWFlat  efSearch=64    recall@10=0.987 qps=   18007 p50=0.053ms p99=0.078ms size=3.74MB [cpu]
+2026-11-19 16:50:04,516 | INFO | ann | IndexHNSWFlat  efSearch=128   recall@10=0.997 qps=    9680 p50=0.102ms p99=0.123ms size=3.74MB [cpu]
+2026-11-19 16:50:04,516 | INFO | ann | IndexHNSWFlat  efSearch=256   recall@10=0.999 qps=    4785 p50=0.208ms p99=0.240ms size=3.74MB [cpu]
+2026-11-19 16:50:04,517 | INFO | ann | IndexIVFPQ     nprobe=1       recall@10=0.251 qps=   41062 p50=0.024ms p99=0.036ms size=0.14MB [cpu]
+2026-11-19 16:50:04,517 | INFO | ann | IndexIVFPQ     nprobe=2       recall@10=0.325 qps=   32765 p50=0.030ms p99=0.039ms size=0.14MB [cpu]
+2026-11-19 16:50:04,518 | INFO | ann | IndexIVFPQ     nprobe=4       recall@10=0.377 qps=   22345 p50=0.044ms p99=0.057ms size=0.14MB [cpu]
+2026-11-19 16:50:04,518 | INFO | ann | IndexIVFPQ     nprobe=8       recall@10=0.403 qps=   22016 p50=0.045ms p99=0.054ms size=0.14MB [cpu]
+2026-11-19 16:50:04,520 | INFO | ann | IndexIVFPQ     nprobe=16      recall@10=0.407 qps=    8361 p50=0.122ms p99=0.150ms size=0.14MB [cpu]
+2026-11-19 16:50:04,520 | INFO | ann | IndexIVFPQ     nprobe=32      recall@10=0.408 qps=    6501 p50=0.153ms p99=0.177ms size=0.14MB [cpu]
+2026-11-19 16:50:05,441 | INFO | ann | persisted retail_items.faiss (HNSW efSearch=32) + item_metadata.parquet

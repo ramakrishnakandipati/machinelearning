@@ -1,0 +1,20 @@
+{
+ "model_version": "ibcf-ca75a092",
+ "reference_time": "2025-06-29T04:45:48.880648372",
+ "beta": 5,
+ "K": 10,
+ "half_life_days": 30.0,
+ "staple_item_ids": [
+  "SKU0481",
+  "SKU0482",
+  "SKU0483",
+  "SKU0484",
+  "SKU0485",
+  "SKU0486",
+  "SKU0487",
+  "SKU0488"
+ ],
+ "consumable_repurchase_days": 14,
+ "n_items": 488,
+ "n_users": 3000
+}

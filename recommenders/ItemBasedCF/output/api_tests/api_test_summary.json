@@ -1,0 +1,175 @@
+{
+ "failures": 0,
+ "results": [
+  {
+   "screenshot": "test_01_health_and_metrics.png",
+   "passed": true,
+   "assertions": [
+    {
+     "ok": true,
+     "msg": "health status == ok"
+    },
+    {
+     "ok": true,
+     "msg": "metrics model_version matches artifact meta"
+    },
+    {
+     "ok": true,
+     "msg": "artifact_status == loaded"
+    },
+    {
+     "ok": true,
+     "msg": "catalog_coverage in (0,1]: 0.9098"
+    },
+    {
+     "ok": true,
+     "msg": "recommend p99 latency < 30 ms (observed 0.686 ms over warm-up)"
+    },
+    {
+     "ok": true,
+     "msg": "GET /health -> HTTP 200"
+    },
+    {
+     "ok": true,
+     "msg": "GET /metrics -> HTTP 200"
+    }
+   ]
+  },
+  {
+   "screenshot": "test_02_item_pdp_recommendations.png",
+   "passed": true,
+   "assertions": [
+    {
+     "ok": true,
+     "msg": "returned 3 items"
+    },
+    {
+     "ok": true,
+     "msg": "seed item not recommended to itself"
+    },
+    {
+     "ok": true,
+     "msg": "scores sorted descending"
+    },
+    {
+     "ok": true,
+     "msg": "strategy == item_similarity"
+    },
+    {
+     "ok": true,
+     "msg": "all items in stock"
+    },
+    {
+     "ok": true,
+     "msg": "sub-category diversity cap (<=3) holds"
+    },
+    {
+     "ok": true,
+     "msg": "GET /v1/recommend/item/SKU0001?limit=8&in_stock_only=true -> HTTP 200"
+    }
+   ]
+  },
+  {
+   "screenshot": "test_03_user_personalized_with_session.png",
+   "passed": true,
+   "assertions": [
+    {
+     "ok": true,
+     "msg": "strategy == personalized"
+    },
+    {
+     "ok": true,
+     "msg": "returned 10 items"
+    },
+    {
+     "ok": true,
+     "msg": "durable purchases suppressed (15 durable items bought by user)"
+    },
+    {
+     "ok": true,
+     "msg": "session items not echoed back"
+    },
+    {
+     "ok": true,
+     "msg": "explicit exclude_item_ids honored"
+    },
+    {
+     "ok": true,
+     "msg": "all items in stock"
+    },
+    {
+     "ok": true,
+     "msg": "sub-category diversity cap (<=3) holds"
+    },
+    {
+     "ok": true,
+     "msg": "POST /v1/recommend/user -> HTTP 200"
+    }
+   ]
+  },
+  {
+   "screenshot": "test_04_cold_start_fallback.png",
+   "passed": true,
+   "assertions": [
+    {
+     "ok": true,
+     "msg": "strategy == \"fallback\""
+    },
+    {
+     "ok": true,
+     "msg": "returned 10 items"
+    },
+    {
+     "ok": true,
+     "msg": "all fallback items in stock"
+    },
+    {
+     "ok": true,
+     "msg": "reason == popular_margin_weighted"
+    },
+    {
+     "ok": true,
+     "msg": "sub-category diversity cap (<=3) holds"
+    },
+    {
+     "ok": true,
+     "msg": "POST /v1/recommend/user -> HTTP 200"
+    }
+   ]
+  },
+  {
+   "screenshot": "test_05_guardrails_out_of_stock_and_validation_error.png",
+   "passed": true,
+   "assertions": [
+    {
+     "ok": true,
+     "msg": "in_stock_only=false CAN surface out-of-stock items (control)"
+    },
+    {
+     "ok": true,
+     "msg": "in_stock_only=true excludes every out_of_stock item"
+    },
+    {
+     "ok": true,
+     "msg": "422 body has error == \"validation_error\""
+    },
+    {
+     "ok": true,
+     "msg": "structured details list (3 issues)"
+    },
+    {
+     "ok": true,
+     "msg": "GET /v1/recommend/item/SKU0049?limit=10&in_stock_only=false -> HTTP 200"
+    },
+    {
+     "ok": true,
+     "msg": "GET /v1/recommend/item/SKU0049?limit=10&in_stock_only=true -> HTTP 200"
+    },
+    {
+     "ok": true,
+     "msg": "POST /v1/recommend/user -> HTTP 422"
+    }
+   ]
+  }
+ ]
+}

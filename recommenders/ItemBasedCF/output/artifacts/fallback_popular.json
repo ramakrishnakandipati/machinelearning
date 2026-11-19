@@ -1,0 +1,2930 @@
+[
+ {
+  "item_id": "SKU0210",
+  "score": 6297.549,
+  "category": "Electronics",
+  "sub_category": "Electronics-S2"
+ },
+ {
+  "item_id": "SKU0317",
+  "score": 4923.1345,
+  "category": "Footwear",
+  "sub_category": "Footwear-S2"
+ },
+ {
+  "item_id": "SKU0239",
+  "score": 3999.279,
+  "category": "Electronics",
+  "sub_category": "Electronics-S3"
+ },
+ {
+  "item_id": "SKU0237",
+  "score": 3861.754,
+  "category": "Electronics",
+  "sub_category": "Electronics-S3"
+ },
+ {
+  "item_id": "SKU0213",
+  "score": 3054.6157,
+  "category": "Electronics",
+  "sub_category": "Electronics-S2"
+ },
+ {
+  "item_id": "SKU0390",
+  "score": 2794.7171,
+  "category": "Sports",
+  "sub_category": "Sports-S1"
+ },
+ {
+  "item_id": "SKU0206",
+  "score": 2640.6996,
+  "category": "Electronics",
+  "sub_category": "Electronics-S1"
+ },
+ {
+  "item_id": "SKU0418",
+  "score": 2408.9813,
+  "category": "Sports",
+  "sub_category": "Sports-S3"
+ },
+ {
+  "item_id": "SKU0327",
+  "score": 2396.0329,
+  "category": "Footwear",
+  "sub_category": "Footwear-S3"
+ },
+ {
+  "item_id": "SKU0286",
+  "score": 2324.7384,
+  "category": "Apparel",
+  "sub_category": "Apparel-S3"
+ },
+ {
+  "item_id": "SKU0266",
+  "score": 1921.1965,
+  "category": "Apparel",
+  "sub_category": "Apparel-S2"
+ },
+ {
+  "item_id": "SKU0211",
+  "score": 1883.225,
+  "category": "Electronics",
+  "sub_category": "Electronics-S2"
+ },
+ {
+  "item_id": "SKU0301",
+  "score": 1852.2196,
+  "category": "Footwear",
+  "sub_category": "Footwear-S1"
+ },
+ {
+  "item_id": "SKU0308",
+  "score": 1771.4863,
+  "category": "Footwear",
+  "sub_category": "Footwear-S2"
+ },
+ {
+  "item_id": "SKU0241",
+  "score": 1610.1797,
+  "category": "Apparel",
+  "sub_category": "Apparel-S1"
+ },
+ {
+  "item_id": "SKU0227",
+  "score": 1535.9267,
+  "category": "Electronics",
+  "sub_category": "Electronics-S3"
+ },
+ {
+  "item_id": "SKU0416",
+  "score": 1438.9493,
+  "category": "Sports",
+  "sub_category": "Sports-S2"
+ },
+ {
+  "item_id": "SKU0228",
+  "score": 1352.8176,
+  "category": "Electronics",
+  "sub_category": "Electronics-S3"
+ },
+ {
+  "item_id": "SKU0223",
+  "score": 1348.5544,
+  "category": "Electronics",
+  "sub_category": "Electronics-S2"
+ },
+ {
+  "item_id": "SKU0200",
+  "score": 1093.6944,
+  "category": "Electronics",
+  "sub_category": "Electronics-S1"
+ },
+ {
+  "item_id": "SKU0194",
+  "score": 1041.7954,
+  "category": "Electronics",
+  "sub_category": "Electronics-S1"
+ },
+ {
+  "item_id": "SKU0396",
+  "score": 1041.1364,
+  "category": "Sports",
+  "sub_category": "Sports-S1"
+ },
+ {
+  "item_id": "SKU0323",
+  "score": 1022.8933,
+  "category": "Footwear",
+  "sub_category": "Footwear-S3"
+ },
+ {
+  "item_id": "SKU0378",
+  "score": 908.982,
+  "category": "Toys",
+  "sub_category": "Toys-S3"
+ },
+ {
+  "item_id": "SKU0270",
+  "score": 880.1438,
+  "category": "Apparel",
+  "sub_category": "Apparel-S2"
+ },
+ {
+  "item_id": "SKU0197",
+  "score": 874.0478,
+  "category": "Electronics",
+  "sub_category": "Electronics-S1"
+ },
+ {
+  "item_id": "SKU0221",
+  "score": 863.4317,
+  "category": "Electronics",
+  "sub_category": "Electronics-S2"
+ },
+ {
+  "item_id": "SKU0307",
+  "score": 809.7861,
+  "category": "Footwear",
+  "sub_category": "Footwear-S2"
+ },
+ {
+  "item_id": "SKU0235",
+  "score": 807.2103,
+  "category": "Electronics",
+  "sub_category": "Electronics-S3"
+ },
+ {
+  "item_id": "SKU0283",
+  "score": 796.693,
+  "category": "Apparel",
+  "sub_category": "Apparel-S3"
+ },
+ {
+  "item_id": "SKU0314",
+  "score": 789.8925,
+  "category": "Footwear",
+  "sub_category": "Footwear-S2"
+ },
+ {
+  "item_id": "SKU0330",
+  "score": 787.089,
+  "category": "Footwear",
+  "sub_category": "Footwear-S3"
+ },
+ {
+  "item_id": "SKU0295",
+  "score": 739.6809,
+  "category": "Footwear",
+  "sub_category": "Footwear-S1"
+ },
+ {
+  "item_id": "SKU0231",
+  "score": 735.9437,
+  "category": "Electronics",
+  "sub_category": "Electronics-S3"
+ },
+ {
+  "item_id": "SKU0205",
+  "score": 708.5316,
+  "category": "Electronics",
+  "sub_category": "Electronics-S1"
+ },
+ {
+  "item_id": "SKU0238",
+  "score": 696.853,
+  "category": "Electronics",
+  "sub_category": "Electronics-S3"
+ },
+ {
+  "item_id": "SKU0252",
+  "score": 695.2092,
+  "category": "Apparel",
+  "sub_category": "Apparel-S1"
+ },
+ {
+  "item_id": "SKU0229",
+  "score": 674.219,
+  "category": "Electronics",
+  "sub_category": "Electronics-S3"
+ },
+ {
+  "item_id": "SKU0292",
+  "score": 673.4379,
+  "category": "Footwear",
+  "sub_category": "Footwear-S1"
+ },
+ {
+  "item_id": "SKU0208",
+  "score": 669.9357,
+  "category": "Electronics",
+  "sub_category": "Electronics-S1"
+ },
+ {
+  "item_id": "SKU0201",
+  "score": 647.9622,
+  "category": "Electronics",
+  "sub_category": "Electronics-S1"
+ },
+ {
+  "item_id": "SKU0385",
+  "score": 647.717,
+  "category": "Sports",
+  "sub_category": "Sports-S1"
+ },
+ {
+  "item_id": "SKU0313",
+  "score": 595.1896,
+  "category": "Footwear",
+  "sub_category": "Footwear-S2"
+ },
+ {
+  "item_id": "SKU0291",
+  "score": 582.8128,
+  "category": "Footwear",
+  "sub_category": "Footwear-S1"
+ },
+ {
+  "item_id": "SKU0261",
+  "score": 538.6231,
+  "category": "Apparel",
+  "sub_category": "Apparel-S2"
+ },
+ {
+  "item_id": "SKU0212",
+  "score": 536.9556,
+  "category": "Electronics",
+  "sub_category": "Electronics-S2"
+ },
+ {
+  "item_id": "SKU0196",
+  "score": 534.2458,
+  "category": "Electronics",
+  "sub_category": "Electronics-S1"
+ },
+ {
+  "item_id": "SKU0341",
+  "score": 532.9837,
+  "category": "Toys",
+  "sub_category": "Toys-S1"
+ },
+ {
+  "item_id": "SKU0232",
+  "score": 531.4659,
+  "category": "Electronics",
+  "sub_category": "Electronics-S3"
+ },
+ {
+  "item_id": "SKU0415",
+  "score": 529.9999,
+  "category": "Sports",
+  "sub_category": "Sports-S2"
+ },
+ {
+  "item_id": "SKU0209",
+  "score": 529.3568,
+  "category": "Electronics",
+  "sub_category": "Electronics-S2"
+ },
+ {
+  "item_id": "SKU0405",
+  "score": 521.8337,
+  "category": "Sports",
+  "sub_category": "Sports-S2"
+ },
+ {
+  "item_id": "SKU0423",
+  "score": 515.7758,
+  "category": "Sports",
+  "sub_category": "Sports-S3"
+ },
+ {
+  "item_id": "SKU0478",
+  "score": 512.0955,
+  "category": "Books",
+  "sub_category": "Books-S3"
+ },
+ {
+  "item_id": "SKU0326",
+  "score": 510.7548,
+  "category": "Footwear",
+  "sub_category": "Footwear-S3"
+ },
+ {
+  "item_id": "SKU0216",
+  "score": 507.1853,
+  "category": "Electronics",
+  "sub_category": "Electronics-S2"
+ },
+ {
+  "item_id": "SKU0217",
+  "score": 500.6506,
+  "category": "Electronics",
+  "sub_category": "Electronics-S2"
+ },
+ {
+  "item_id": "SKU0337",
+  "score": 493.2368,
+  "category": "Toys",
+  "sub_category": "Toys-S1"
+ },
+ {
+  "item_id": "SKU0218",
+  "score": 466.8444,
+  "category": "Electronics",
+  "sub_category": "Electronics-S2"
+ },
+ {
+  "item_id": "SKU0449",
+  "score": 458.2723,
+  "category": "Books",
+  "sub_category": "Books-S2"
+ },
+ {
+  "item_id": "SKU0176",
+  "score": 452.7476,
+  "category": "Home Care",
+  "sub_category": "Home Care-S2"
+ },
+ {
+  "item_id": "SKU0214",
+  "score": 448.397,
+  "category": "Electronics",
+  "sub_category": "Electronics-S2"
+ },
+ {
+  "item_id": "SKU0226",
+  "score": 441.9323,
+  "category": "Electronics",
+  "sub_category": "Electronics-S3"
+ },
+ {
+  "item_id": "SKU0202",
+  "score": 427.0795,
+  "category": "Electronics",
+  "sub_category": "Electronics-S1"
+ },
+ {
+  "item_id": "SKU0336",
+  "score": 416.6878,
+  "category": "Footwear",
+  "sub_category": "Footwear-S3"
+ },
+ {
+  "item_id": "SKU0242",
+  "score": 410.0341,
+  "category": "Apparel",
+  "sub_category": "Apparel-S1"
+ },
+ {
+  "item_id": "SKU0230",
+  "score": 397.1005,
+  "category": "Electronics",
+  "sub_category": "Electronics-S3"
+ },
+ {
+  "item_id": "SKU0296",
+  "score": 386.9134,
+  "category": "Footwear",
+  "sub_category": "Footwear-S1"
+ },
+ {
+  "item_id": "SKU0253",
+  "score": 378.9509,
+  "category": "Apparel",
+  "sub_category": "Apparel-S1"
+ },
+ {
+  "item_id": "SKU0110",
+  "score": 369.435,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0399",
+  "score": 364.9113,
+  "category": "Sports",
+  "sub_category": "Sports-S1"
+ },
+ {
+  "item_id": "SKU0311",
+  "score": 357.8885,
+  "category": "Footwear",
+  "sub_category": "Footwear-S2"
+ },
+ {
+  "item_id": "SKU0355",
+  "score": 356.2299,
+  "category": "Toys",
+  "sub_category": "Toys-S2"
+ },
+ {
+  "item_id": "SKU0155",
+  "score": 354.5372,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0203",
+  "score": 351.04,
+  "category": "Electronics",
+  "sub_category": "Electronics-S1"
+ },
+ {
+  "item_id": "SKU0193",
+  "score": 344.2112,
+  "category": "Electronics",
+  "sub_category": "Electronics-S1"
+ },
+ {
+  "item_id": "SKU0409",
+  "score": 335.7903,
+  "category": "Sports",
+  "sub_category": "Sports-S2"
+ },
+ {
+  "item_id": "SKU0204",
+  "score": 334.358,
+  "category": "Electronics",
+  "sub_category": "Electronics-S1"
+ },
+ {
+  "item_id": "SKU0302",
+  "score": 329.8862,
+  "category": "Footwear",
+  "sub_category": "Footwear-S1"
+ },
+ {
+  "item_id": "SKU0403",
+  "score": 326.8605,
+  "category": "Sports",
+  "sub_category": "Sports-S2"
+ },
+ {
+  "item_id": "SKU0452",
+  "score": 315.7103,
+  "category": "Books",
+  "sub_category": "Books-S2"
+ },
+ {
+  "item_id": "SKU0444",
+  "score": 313.8162,
+  "category": "Books",
+  "sub_category": "Books-S1"
+ },
+ {
+  "item_id": "SKU0294",
+  "score": 311.4104,
+  "category": "Footwear",
+  "sub_category": "Footwear-S1"
+ },
+ {
+  "item_id": "SKU0334",
+  "score": 310.1097,
+  "category": "Footwear",
+  "sub_category": "Footwear-S3"
+ },
+ {
+  "item_id": "SKU0273",
+  "score": 300.6413,
+  "category": "Apparel",
+  "sub_category": "Apparel-S3"
+ },
+ {
+  "item_id": "SKU0366",
+  "score": 297.4336,
+  "category": "Toys",
+  "sub_category": "Toys-S2"
+ },
+ {
+  "item_id": "SKU0460",
+  "score": 296.8011,
+  "category": "Books",
+  "sub_category": "Books-S2"
+ },
+ {
+  "item_id": "SKU0179",
+  "score": 284.5972,
+  "category": "Home Care",
+  "sub_category": "Home Care-S3"
+ },
+ {
+  "item_id": "SKU0215",
+  "score": 275.6613,
+  "category": "Electronics",
+  "sub_category": "Electronics-S2"
+ },
+ {
+  "item_id": "SKU0391",
+  "score": 265.315,
+  "category": "Sports",
+  "sub_category": "Sports-S1"
+ },
+ {
+  "item_id": "SKU0424",
+  "score": 264.8834,
+  "category": "Sports",
+  "sub_category": "Sports-S3"
+ },
+ {
+  "item_id": "SKU0191",
+  "score": 264.4102,
+  "category": "Home Care",
+  "sub_category": "Home Care-S3"
+ },
+ {
+  "item_id": "SKU0145",
+  "score": 263.7207,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0300",
+  "score": 262.5993,
+  "category": "Footwear",
+  "sub_category": "Footwear-S1"
+ },
+ {
+  "item_id": "SKU0233",
+  "score": 261.4156,
+  "category": "Electronics",
+  "sub_category": "Electronics-S3"
+ },
+ {
+  "item_id": "SKU0413",
+  "score": 257.1014,
+  "category": "Sports",
+  "sub_category": "Sports-S2"
+ },
+ {
+  "item_id": "SKU0400",
+  "score": 245.7343,
+  "category": "Sports",
+  "sub_category": "Sports-S1"
+ },
+ {
+  "item_id": "SKU0345",
+  "score": 241.9299,
+  "category": "Toys",
+  "sub_category": "Toys-S1"
+ },
+ {
+  "item_id": "SKU0282",
+  "score": 240.5276,
+  "category": "Apparel",
+  "sub_category": "Apparel-S3"
+ },
+ {
+  "item_id": "SKU0402",
+  "score": 239.0123,
+  "category": "Sports",
+  "sub_category": "Sports-S2"
+ },
+ {
+  "item_id": "SKU0401",
+  "score": 238.414,
+  "category": "Sports",
+  "sub_category": "Sports-S2"
+ },
+ {
+  "item_id": "SKU0220",
+  "score": 237.7458,
+  "category": "Electronics",
+  "sub_category": "Electronics-S2"
+ },
+ {
+  "item_id": "SKU0381",
+  "score": 235.6694,
+  "category": "Toys",
+  "sub_category": "Toys-S3"
+ },
+ {
+  "item_id": "SKU0007",
+  "score": 234.8898,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0304",
+  "score": 224.8396,
+  "category": "Footwear",
+  "sub_category": "Footwear-S1"
+ },
+ {
+  "item_id": "SKU0382",
+  "score": 224.681,
+  "category": "Toys",
+  "sub_category": "Toys-S3"
+ },
+ {
+  "item_id": "SKU0141",
+  "score": 222.4195,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S3"
+ },
+ {
+  "item_id": "SKU0298",
+  "score": 221.9515,
+  "category": "Footwear",
+  "sub_category": "Footwear-S1"
+ },
+ {
+  "item_id": "SKU0297",
+  "score": 221.9292,
+  "category": "Footwear",
+  "sub_category": "Footwear-S1"
+ },
+ {
+  "item_id": "SKU0199",
+  "score": 220.925,
+  "category": "Electronics",
+  "sub_category": "Electronics-S1"
+ },
+ {
+  "item_id": "SKU0386",
+  "score": 218.7142,
+  "category": "Sports",
+  "sub_category": "Sports-S1"
+ },
+ {
+  "item_id": "SKU0255",
+  "score": 216.9229,
+  "category": "Apparel",
+  "sub_category": "Apparel-S1"
+ },
+ {
+  "item_id": "SKU0269",
+  "score": 213.2946,
+  "category": "Apparel",
+  "sub_category": "Apparel-S2"
+ },
+ {
+  "item_id": "SKU0114",
+  "score": 210.7649,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S2"
+ },
+ {
+  "item_id": "SKU0476",
+  "score": 208.5447,
+  "category": "Books",
+  "sub_category": "Books-S3"
+ },
+ {
+  "item_id": "SKU0318",
+  "score": 207.2857,
+  "category": "Footwear",
+  "sub_category": "Footwear-S2"
+ },
+ {
+  "item_id": "SKU0267",
+  "score": 204.9321,
+  "category": "Apparel",
+  "sub_category": "Apparel-S2"
+ },
+ {
+  "item_id": "SKU0260",
+  "score": 202.2328,
+  "category": "Apparel",
+  "sub_category": "Apparel-S2"
+ },
+ {
+  "item_id": "SKU0240",
+  "score": 202.0332,
+  "category": "Electronics",
+  "sub_category": "Electronics-S3"
+ },
+ {
+  "item_id": "SKU0316",
+  "score": 201.1111,
+  "category": "Footwear",
+  "sub_category": "Footwear-S2"
+ },
+ {
+  "item_id": "SKU0427",
+  "score": 200.9763,
+  "category": "Sports",
+  "sub_category": "Sports-S3"
+ },
+ {
+  "item_id": "SKU0285",
+  "score": 199.1165,
+  "category": "Apparel",
+  "sub_category": "Apparel-S3"
+ },
+ {
+  "item_id": "SKU0309",
+  "score": 198.9111,
+  "category": "Footwear",
+  "sub_category": "Footwear-S2"
+ },
+ {
+  "item_id": "SKU0350",
+  "score": 196.9137,
+  "category": "Toys",
+  "sub_category": "Toys-S1"
+ },
+ {
+  "item_id": "SKU0358",
+  "score": 196.7532,
+  "category": "Toys",
+  "sub_category": "Toys-S2"
+ },
+ {
+  "item_id": "SKU0364",
+  "score": 194.3829,
+  "category": "Toys",
+  "sub_category": "Toys-S2"
+ },
+ {
+  "item_id": "SKU0236",
+  "score": 193.6741,
+  "category": "Electronics",
+  "sub_category": "Electronics-S3"
+ },
+ {
+  "item_id": "SKU0320",
+  "score": 192.1051,
+  "category": "Footwear",
+  "sub_category": "Footwear-S2"
+ },
+ {
+  "item_id": "SKU0263",
+  "score": 187.3004,
+  "category": "Apparel",
+  "sub_category": "Apparel-S2"
+ },
+ {
+  "item_id": "SKU0222",
+  "score": 186.4878,
+  "category": "Electronics",
+  "sub_category": "Electronics-S2"
+ },
+ {
+  "item_id": "SKU0299",
+  "score": 185.5809,
+  "category": "Footwear",
+  "sub_category": "Footwear-S1"
+ },
+ {
+  "item_id": "SKU0250",
+  "score": 185.3824,
+  "category": "Apparel",
+  "sub_category": "Apparel-S1"
+ },
+ {
+  "item_id": "SKU0393",
+  "score": 181.305,
+  "category": "Sports",
+  "sub_category": "Sports-S1"
+ },
+ {
+  "item_id": "SKU0259",
+  "score": 178.3513,
+  "category": "Apparel",
+  "sub_category": "Apparel-S2"
+ },
+ {
+  "item_id": "SKU0284",
+  "score": 177.7785,
+  "category": "Apparel",
+  "sub_category": "Apparel-S3"
+ },
+ {
+  "item_id": "SKU0389",
+  "score": 173.8966,
+  "category": "Sports",
+  "sub_category": "Sports-S1"
+ },
+ {
+  "item_id": "SKU0312",
+  "score": 172.8396,
+  "category": "Footwear",
+  "sub_category": "Footwear-S2"
+ },
+ {
+  "item_id": "SKU0280",
+  "score": 172.5561,
+  "category": "Apparel",
+  "sub_category": "Apparel-S3"
+ },
+ {
+  "item_id": "SKU0407",
+  "score": 170.7292,
+  "category": "Sports",
+  "sub_category": "Sports-S2"
+ },
+ {
+  "item_id": "SKU0258",
+  "score": 164.7027,
+  "category": "Apparel",
+  "sub_category": "Apparel-S2"
+ },
+ {
+  "item_id": "SKU0353",
+  "score": 164.6452,
+  "category": "Toys",
+  "sub_category": "Toys-S2"
+ },
+ {
+  "item_id": "SKU0375",
+  "score": 163.9908,
+  "category": "Toys",
+  "sub_category": "Toys-S3"
+ },
+ {
+  "item_id": "SKU0243",
+  "score": 163.9282,
+  "category": "Apparel",
+  "sub_category": "Apparel-S1"
+ },
+ {
+  "item_id": "SKU0349",
+  "score": 163.3866,
+  "category": "Toys",
+  "sub_category": "Toys-S1"
+ },
+ {
+  "item_id": "SKU0247",
+  "score": 158.5262,
+  "category": "Apparel",
+  "sub_category": "Apparel-S1"
+ },
+ {
+  "item_id": "SKU0245",
+  "score": 157.6115,
+  "category": "Apparel",
+  "sub_category": "Apparel-S1"
+ },
+ {
+  "item_id": "SKU0234",
+  "score": 155.1932,
+  "category": "Electronics",
+  "sub_category": "Electronics-S3"
+ },
+ {
+  "item_id": "SKU0361",
+  "score": 154.1218,
+  "category": "Toys",
+  "sub_category": "Toys-S2"
+ },
+ {
+  "item_id": "SKU0198",
+  "score": 152.6526,
+  "category": "Electronics",
+  "sub_category": "Electronics-S1"
+ },
+ {
+  "item_id": "SKU0414",
+  "score": 152.4987,
+  "category": "Sports",
+  "sub_category": "Sports-S2"
+ },
+ {
+  "item_id": "SKU0426",
+  "score": 152.4494,
+  "category": "Sports",
+  "sub_category": "Sports-S3"
+ },
+ {
+  "item_id": "SKU0306",
+  "score": 148.8549,
+  "category": "Footwear",
+  "sub_category": "Footwear-S2"
+ },
+ {
+  "item_id": "SKU0397",
+  "score": 139.5005,
+  "category": "Sports",
+  "sub_category": "Sports-S1"
+ },
+ {
+  "item_id": "SKU0257",
+  "score": 137.4109,
+  "category": "Apparel",
+  "sub_category": "Apparel-S2"
+ },
+ {
+  "item_id": "SKU0128",
+  "score": 136.4987,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S2"
+ },
+ {
+  "item_id": "SKU0329",
+  "score": 136.4819,
+  "category": "Footwear",
+  "sub_category": "Footwear-S3"
+ },
+ {
+  "item_id": "SKU0319",
+  "score": 132.6277,
+  "category": "Footwear",
+  "sub_category": "Footwear-S2"
+ },
+ {
+  "item_id": "SKU0287",
+  "score": 132.299,
+  "category": "Apparel",
+  "sub_category": "Apparel-S3"
+ },
+ {
+  "item_id": "SKU0453",
+  "score": 131.2288,
+  "category": "Books",
+  "sub_category": "Books-S2"
+ },
+ {
+  "item_id": "SKU0470",
+  "score": 130.706,
+  "category": "Books",
+  "sub_category": "Books-S3"
+ },
+ {
+  "item_id": "SKU0310",
+  "score": 129.405,
+  "category": "Footwear",
+  "sub_category": "Footwear-S2"
+ },
+ {
+  "item_id": "SKU0052",
+  "score": 128.9302,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ },
+ {
+  "item_id": "SKU0195",
+  "score": 124.9027,
+  "category": "Electronics",
+  "sub_category": "Electronics-S1"
+ },
+ {
+  "item_id": "SKU0225",
+  "score": 124.747,
+  "category": "Electronics",
+  "sub_category": "Electronics-S3"
+ },
+ {
+  "item_id": "SKU0438",
+  "score": 123.6561,
+  "category": "Books",
+  "sub_category": "Books-S1"
+ },
+ {
+  "item_id": "SKU0315",
+  "score": 123.4347,
+  "category": "Footwear",
+  "sub_category": "Footwear-S2"
+ },
+ {
+  "item_id": "SKU0108",
+  "score": 121.2525,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0331",
+  "score": 119.4417,
+  "category": "Footwear",
+  "sub_category": "Footwear-S3"
+ },
+ {
+  "item_id": "SKU0324",
+  "score": 118.3725,
+  "category": "Footwear",
+  "sub_category": "Footwear-S3"
+ },
+ {
+  "item_id": "SKU0384",
+  "score": 117.6335,
+  "category": "Toys",
+  "sub_category": "Toys-S3"
+ },
+ {
+  "item_id": "SKU0376",
+  "score": 117.4385,
+  "category": "Toys",
+  "sub_category": "Toys-S3"
+ },
+ {
+  "item_id": "SKU0174",
+  "score": 117.2348,
+  "category": "Home Care",
+  "sub_category": "Home Care-S2"
+ },
+ {
+  "item_id": "SKU0183",
+  "score": 116.9743,
+  "category": "Home Care",
+  "sub_category": "Home Care-S3"
+ },
+ {
+  "item_id": "SKU0369",
+  "score": 116.2642,
+  "category": "Toys",
+  "sub_category": "Toys-S3"
+ },
+ {
+  "item_id": "SKU0303",
+  "score": 115.4002,
+  "category": "Footwear",
+  "sub_category": "Footwear-S1"
+ },
+ {
+  "item_id": "SKU0362",
+  "score": 115.0216,
+  "category": "Toys",
+  "sub_category": "Toys-S2"
+ },
+ {
+  "item_id": "SKU0154",
+  "score": 114.5602,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0419",
+  "score": 114.1156,
+  "category": "Sports",
+  "sub_category": "Sports-S3"
+ },
+ {
+  "item_id": "SKU0392",
+  "score": 113.7845,
+  "category": "Sports",
+  "sub_category": "Sports-S1"
+ },
+ {
+  "item_id": "SKU0348",
+  "score": 113.2341,
+  "category": "Toys",
+  "sub_category": "Toys-S1"
+ },
+ {
+  "item_id": "SKU0219",
+  "score": 112.241,
+  "category": "Electronics",
+  "sub_category": "Electronics-S2"
+ },
+ {
+  "item_id": "SKU0146",
+  "score": 111.35,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0359",
+  "score": 108.8453,
+  "category": "Toys",
+  "sub_category": "Toys-S2"
+ },
+ {
+  "item_id": "SKU0167",
+  "score": 108.5165,
+  "category": "Home Care",
+  "sub_category": "Home Care-S2"
+ },
+ {
+  "item_id": "SKU0207",
+  "score": 108.1169,
+  "category": "Electronics",
+  "sub_category": "Electronics-S1"
+ },
+ {
+  "item_id": "SKU0372",
+  "score": 107.7739,
+  "category": "Toys",
+  "sub_category": "Toys-S3"
+ },
+ {
+  "item_id": "SKU0431",
+  "score": 106.5561,
+  "category": "Sports",
+  "sub_category": "Sports-S3"
+ },
+ {
+  "item_id": "SKU0066",
+  "score": 105.5313,
+  "category": "Beverages",
+  "sub_category": "Beverages-S2"
+ },
+ {
+  "item_id": "SKU0461",
+  "score": 104.4698,
+  "category": "Books",
+  "sub_category": "Books-S2"
+ },
+ {
+  "item_id": "SKU0462",
+  "score": 103.9607,
+  "category": "Books",
+  "sub_category": "Books-S2"
+ },
+ {
+  "item_id": "SKU0440",
+  "score": 103.658,
+  "category": "Books",
+  "sub_category": "Books-S1"
+ },
+ {
+  "item_id": "SKU0262",
+  "score": 103.5309,
+  "category": "Apparel",
+  "sub_category": "Apparel-S2"
+ },
+ {
+  "item_id": "SKU0116",
+  "score": 102.7849,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S2"
+ },
+ {
+  "item_id": "SKU0163",
+  "score": 102.7601,
+  "category": "Home Care",
+  "sub_category": "Home Care-S2"
+ },
+ {
+  "item_id": "SKU0439",
+  "score": 101.2293,
+  "category": "Books",
+  "sub_category": "Books-S1"
+ },
+ {
+  "item_id": "SKU0411",
+  "score": 101.0917,
+  "category": "Sports",
+  "sub_category": "Sports-S2"
+ },
+ {
+  "item_id": "SKU0293",
+  "score": 99.7533,
+  "category": "Footwear",
+  "sub_category": "Footwear-S1"
+ },
+ {
+  "item_id": "SKU0379",
+  "score": 98.5505,
+  "category": "Toys",
+  "sub_category": "Toys-S3"
+ },
+ {
+  "item_id": "SKU0365",
+  "score": 96.9723,
+  "category": "Toys",
+  "sub_category": "Toys-S2"
+ },
+ {
+  "item_id": "SKU0395",
+  "score": 96.5595,
+  "category": "Sports",
+  "sub_category": "Sports-S1"
+ },
+ {
+  "item_id": "SKU0425",
+  "score": 95.0589,
+  "category": "Sports",
+  "sub_category": "Sports-S3"
+ },
+ {
+  "item_id": "SKU0484",
+  "score": 93.8115,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0224",
+  "score": 93.782,
+  "category": "Electronics",
+  "sub_category": "Electronics-S2"
+ },
+ {
+  "item_id": "SKU0406",
+  "score": 93.253,
+  "category": "Sports",
+  "sub_category": "Sports-S2"
+ },
+ {
+  "item_id": "SKU0275",
+  "score": 92.1316,
+  "category": "Apparel",
+  "sub_category": "Apparel-S3"
+ },
+ {
+  "item_id": "SKU0351",
+  "score": 91.3468,
+  "category": "Toys",
+  "sub_category": "Toys-S1"
+ },
+ {
+  "item_id": "SKU0394",
+  "score": 90.2762,
+  "category": "Sports",
+  "sub_category": "Sports-S1"
+ },
+ {
+  "item_id": "SKU0421",
+  "score": 90.1865,
+  "category": "Sports",
+  "sub_category": "Sports-S3"
+ },
+ {
+  "item_id": "SKU0135",
+  "score": 88.6327,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S3"
+ },
+ {
+  "item_id": "SKU0488",
+  "score": 87.5251,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0412",
+  "score": 87.2743,
+  "category": "Sports",
+  "sub_category": "Sports-S2"
+ },
+ {
+  "item_id": "SKU0434",
+  "score": 86.6764,
+  "category": "Books",
+  "sub_category": "Books-S1"
+ },
+ {
+  "item_id": "SKU0109",
+  "score": 86.4253,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0356",
+  "score": 82.6128,
+  "category": "Toys",
+  "sub_category": "Toys-S2"
+ },
+ {
+  "item_id": "SKU0368",
+  "score": 82.0788,
+  "category": "Toys",
+  "sub_category": "Toys-S2"
+ },
+ {
+  "item_id": "SKU0432",
+  "score": 81.9762,
+  "category": "Sports",
+  "sub_category": "Sports-S3"
+ },
+ {
+  "item_id": "SKU0354",
+  "score": 81.4376,
+  "category": "Toys",
+  "sub_category": "Toys-S2"
+ },
+ {
+  "item_id": "SKU0276",
+  "score": 80.6632,
+  "category": "Apparel",
+  "sub_category": "Apparel-S3"
+ },
+ {
+  "item_id": "SKU0268",
+  "score": 80.5166,
+  "category": "Apparel",
+  "sub_category": "Apparel-S2"
+ },
+ {
+  "item_id": "SKU0321",
+  "score": 79.9704,
+  "category": "Footwear",
+  "sub_category": "Footwear-S3"
+ },
+ {
+  "item_id": "SKU0166",
+  "score": 79.6686,
+  "category": "Home Care",
+  "sub_category": "Home Care-S2"
+ },
+ {
+  "item_id": "SKU0465",
+  "score": 78.7799,
+  "category": "Books",
+  "sub_category": "Books-S3"
+ },
+ {
+  "item_id": "SKU0455",
+  "score": 78.7411,
+  "category": "Books",
+  "sub_category": "Books-S2"
+ },
+ {
+  "item_id": "SKU0039",
+  "score": 77.5596,
+  "category": "Grocery",
+  "sub_category": "Grocery-S3"
+ },
+ {
+  "item_id": "SKU0118",
+  "score": 77.0624,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S2"
+ },
+ {
+  "item_id": "SKU0472",
+  "score": 76.4986,
+  "category": "Books",
+  "sub_category": "Books-S3"
+ },
+ {
+  "item_id": "SKU0244",
+  "score": 76.1657,
+  "category": "Apparel",
+  "sub_category": "Apparel-S1"
+ },
+ {
+  "item_id": "SKU0443",
+  "score": 75.7793,
+  "category": "Books",
+  "sub_category": "Books-S1"
+ },
+ {
+  "item_id": "SKU0332",
+  "score": 75.3208,
+  "category": "Footwear",
+  "sub_category": "Footwear-S3"
+ },
+ {
+  "item_id": "SKU0305",
+  "score": 74.4756,
+  "category": "Footwear",
+  "sub_category": "Footwear-S2"
+ },
+ {
+  "item_id": "SKU0340",
+  "score": 74.0816,
+  "category": "Toys",
+  "sub_category": "Toys-S1"
+ },
+ {
+  "item_id": "SKU0011",
+  "score": 74.0296,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0094",
+  "score": 73.7726,
+  "category": "Beverages",
+  "sub_category": "Beverages-S3"
+ },
+ {
+  "item_id": "SKU0132",
+  "score": 73.3732,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S3"
+ },
+ {
+  "item_id": "SKU0122",
+  "score": 72.9206,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S2"
+ },
+ {
+  "item_id": "SKU0466",
+  "score": 72.7243,
+  "category": "Books",
+  "sub_category": "Books-S3"
+ },
+ {
+  "item_id": "SKU0422",
+  "score": 71.7112,
+  "category": "Sports",
+  "sub_category": "Sports-S3"
+ },
+ {
+  "item_id": "SKU0474",
+  "score": 71.4745,
+  "category": "Books",
+  "sub_category": "Books-S3"
+ },
+ {
+  "item_id": "SKU0068",
+  "score": 70.6687,
+  "category": "Beverages",
+  "sub_category": "Beverages-S2"
+ },
+ {
+  "item_id": "SKU0481",
+  "score": 68.8973,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0077",
+  "score": 66.9862,
+  "category": "Beverages",
+  "sub_category": "Beverages-S2"
+ },
+ {
+  "item_id": "SKU0445",
+  "score": 66.97,
+  "category": "Books",
+  "sub_category": "Books-S1"
+ },
+ {
+  "item_id": "SKU0471",
+  "score": 66.6083,
+  "category": "Books",
+  "sub_category": "Books-S3"
+ },
+ {
+  "item_id": "SKU0249",
+  "score": 64.2622,
+  "category": "Apparel",
+  "sub_category": "Apparel-S1"
+ },
+ {
+  "item_id": "SKU0037",
+  "score": 64.0226,
+  "category": "Grocery",
+  "sub_category": "Grocery-S3"
+ },
+ {
+  "item_id": "SKU0288",
+  "score": 63.6281,
+  "category": "Apparel",
+  "sub_category": "Apparel-S3"
+ },
+ {
+  "item_id": "SKU0277",
+  "score": 63.4728,
+  "category": "Apparel",
+  "sub_category": "Apparel-S3"
+ },
+ {
+  "item_id": "SKU0469",
+  "score": 63.4709,
+  "category": "Books",
+  "sub_category": "Books-S3"
+ },
+ {
+  "item_id": "SKU0322",
+  "score": 63.3274,
+  "category": "Footwear",
+  "sub_category": "Footwear-S3"
+ },
+ {
+  "item_id": "SKU0098",
+  "score": 62.5414,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0333",
+  "score": 62.2221,
+  "category": "Footwear",
+  "sub_category": "Footwear-S3"
+ },
+ {
+  "item_id": "SKU0417",
+  "score": 61.9115,
+  "category": "Sports",
+  "sub_category": "Sports-S3"
+ },
+ {
+  "item_id": "SKU0290",
+  "score": 61.9053,
+  "category": "Footwear",
+  "sub_category": "Footwear-S1"
+ },
+ {
+  "item_id": "SKU0265",
+  "score": 60.7307,
+  "category": "Apparel",
+  "sub_category": "Apparel-S2"
+ },
+ {
+  "item_id": "SKU0035",
+  "score": 60.6704,
+  "category": "Grocery",
+  "sub_category": "Grocery-S3"
+ },
+ {
+  "item_id": "SKU0113",
+  "score": 60.4297,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S2"
+ },
+ {
+  "item_id": "SKU0281",
+  "score": 59.7856,
+  "category": "Apparel",
+  "sub_category": "Apparel-S3"
+ },
+ {
+  "item_id": "SKU0486",
+  "score": 59.205,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0430",
+  "score": 59.1132,
+  "category": "Sports",
+  "sub_category": "Sports-S3"
+ },
+ {
+  "item_id": "SKU0477",
+  "score": 57.2028,
+  "category": "Books",
+  "sub_category": "Books-S3"
+ },
+ {
+  "item_id": "SKU0408",
+  "score": 56.6548,
+  "category": "Sports",
+  "sub_category": "Sports-S2"
+ },
+ {
+  "item_id": "SKU0279",
+  "score": 56.1974,
+  "category": "Apparel",
+  "sub_category": "Apparel-S3"
+ },
+ {
+  "item_id": "SKU0112",
+  "score": 56.1529,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0483",
+  "score": 55.7492,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0278",
+  "score": 54.6815,
+  "category": "Apparel",
+  "sub_category": "Apparel-S3"
+ },
+ {
+  "item_id": "SKU0437",
+  "score": 53.8725,
+  "category": "Books",
+  "sub_category": "Books-S1"
+ },
+ {
+  "item_id": "SKU0142",
+  "score": 52.7943,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S3"
+ },
+ {
+  "item_id": "SKU0184",
+  "score": 52.481,
+  "category": "Home Care",
+  "sub_category": "Home Care-S3"
+ },
+ {
+  "item_id": "SKU0067",
+  "score": 52.2455,
+  "category": "Beverages",
+  "sub_category": "Beverages-S2"
+ },
+ {
+  "item_id": "SKU0274",
+  "score": 51.7694,
+  "category": "Apparel",
+  "sub_category": "Apparel-S3"
+ },
+ {
+  "item_id": "SKU0428",
+  "score": 51.3778,
+  "category": "Sports",
+  "sub_category": "Sports-S3"
+ },
+ {
+  "item_id": "SKU0454",
+  "score": 51.2966,
+  "category": "Books",
+  "sub_category": "Books-S2"
+ },
+ {
+  "item_id": "SKU0178",
+  "score": 49.9529,
+  "category": "Home Care",
+  "sub_category": "Home Care-S3"
+ },
+ {
+  "item_id": "SKU0404",
+  "score": 49.9529,
+  "category": "Sports",
+  "sub_category": "Sports-S2"
+ },
+ {
+  "item_id": "SKU0463",
+  "score": 49.6297,
+  "category": "Books",
+  "sub_category": "Books-S2"
+ },
+ {
+  "item_id": "SKU0338",
+  "score": 48.076,
+  "category": "Toys",
+  "sub_category": "Toys-S1"
+ },
+ {
+  "item_id": "SKU0189",
+  "score": 47.0228,
+  "category": "Home Care",
+  "sub_category": "Home Care-S3"
+ },
+ {
+  "item_id": "SKU0335",
+  "score": 47.0216,
+  "category": "Footwear",
+  "sub_category": "Footwear-S3"
+ },
+ {
+  "item_id": "SKU0367",
+  "score": 46.6523,
+  "category": "Toys",
+  "sub_category": "Toys-S2"
+ },
+ {
+  "item_id": "SKU0018",
+  "score": 46.5133,
+  "category": "Grocery",
+  "sub_category": "Grocery-S2"
+ },
+ {
+  "item_id": "SKU0272",
+  "score": 46.1146,
+  "category": "Apparel",
+  "sub_category": "Apparel-S2"
+ },
+ {
+  "item_id": "SKU0177",
+  "score": 45.7545,
+  "category": "Home Care",
+  "sub_category": "Home Care-S3"
+ },
+ {
+  "item_id": "SKU0459",
+  "score": 45.5279,
+  "category": "Books",
+  "sub_category": "Books-S2"
+ },
+ {
+  "item_id": "SKU0099",
+  "score": 45.4558,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0467",
+  "score": 44.4584,
+  "category": "Books",
+  "sub_category": "Books-S3"
+ },
+ {
+  "item_id": "SKU0017",
+  "score": 44.2511,
+  "category": "Grocery",
+  "sub_category": "Grocery-S2"
+ },
+ {
+  "item_id": "SKU0061",
+  "score": 44.0351,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ },
+ {
+  "item_id": "SKU0088",
+  "score": 43.8285,
+  "category": "Beverages",
+  "sub_category": "Beverages-S3"
+ },
+ {
+  "item_id": "SKU0147",
+  "score": 43.8106,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0342",
+  "score": 43.6123,
+  "category": "Toys",
+  "sub_category": "Toys-S1"
+ },
+ {
+  "item_id": "SKU0130",
+  "score": 43.5165,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S3"
+ },
+ {
+  "item_id": "SKU0254",
+  "score": 43.3871,
+  "category": "Apparel",
+  "sub_category": "Apparel-S1"
+ },
+ {
+  "item_id": "SKU0157",
+  "score": 43.3458,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0479",
+  "score": 43.2493,
+  "category": "Books",
+  "sub_category": "Books-S3"
+ },
+ {
+  "item_id": "SKU0123",
+  "score": 42.9984,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S2"
+ },
+ {
+  "item_id": "SKU0343",
+  "score": 42.6029,
+  "category": "Toys",
+  "sub_category": "Toys-S1"
+ },
+ {
+  "item_id": "SKU0435",
+  "score": 42.4785,
+  "category": "Books",
+  "sub_category": "Books-S1"
+ },
+ {
+  "item_id": "SKU0246",
+  "score": 42.4411,
+  "category": "Apparel",
+  "sub_category": "Apparel-S1"
+ },
+ {
+  "item_id": "SKU0105",
+  "score": 42.3808,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0143",
+  "score": 42.2519,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S3"
+ },
+ {
+  "item_id": "SKU0055",
+  "score": 42.0108,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ },
+ {
+  "item_id": "SKU0161",
+  "score": 41.5045,
+  "category": "Home Care",
+  "sub_category": "Home Care-S2"
+ },
+ {
+  "item_id": "SKU0012",
+  "score": 41.3642,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0485",
+  "score": 41.1158,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ },
+ {
+  "item_id": "SKU0271",
+  "score": 40.8634,
+  "category": "Apparel",
+  "sub_category": "Apparel-S2"
+ },
+ {
+  "item_id": "SKU0346",
+  "score": 40.7478,
+  "category": "Toys",
+  "sub_category": "Toys-S1"
+ },
+ {
+  "item_id": "SKU0081",
+  "score": 40.635,
+  "category": "Beverages",
+  "sub_category": "Beverages-S3"
+ },
+ {
+  "item_id": "SKU0420",
+  "score": 40.1153,
+  "category": "Sports",
+  "sub_category": "Sports-S3"
+ },
+ {
+  "item_id": "SKU0040",
+  "score": 39.9706,
+  "category": "Grocery",
+  "sub_category": "Grocery-S3"
+ },
+ {
+  "item_id": "SKU0482",
+  "score": 39.8257,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0001",
+  "score": 39.6557,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0131",
+  "score": 39.5817,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S3"
+ },
+ {
+  "item_id": "SKU0363",
+  "score": 39.4357,
+  "category": "Toys",
+  "sub_category": "Toys-S2"
+ },
+ {
+  "item_id": "SKU0457",
+  "score": 39.3395,
+  "category": "Books",
+  "sub_category": "Books-S2"
+ },
+ {
+  "item_id": "SKU0014",
+  "score": 38.9429,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0325",
+  "score": 38.6022,
+  "category": "Footwear",
+  "sub_category": "Footwear-S3"
+ },
+ {
+  "item_id": "SKU0388",
+  "score": 38.5292,
+  "category": "Sports",
+  "sub_category": "Sports-S1"
+ },
+ {
+  "item_id": "SKU0134",
+  "score": 38.0234,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S3"
+ },
+ {
+  "item_id": "SKU0248",
+  "score": 37.8153,
+  "category": "Apparel",
+  "sub_category": "Apparel-S1"
+ },
+ {
+  "item_id": "SKU0127",
+  "score": 37.7642,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S2"
+ },
+ {
+  "item_id": "SKU0149",
+  "score": 37.6623,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0377",
+  "score": 36.7459,
+  "category": "Toys",
+  "sub_category": "Toys-S3"
+ },
+ {
+  "item_id": "SKU0387",
+  "score": 36.633,
+  "category": "Sports",
+  "sub_category": "Sports-S1"
+ },
+ {
+  "item_id": "SKU0371",
+  "score": 36.5298,
+  "category": "Toys",
+  "sub_category": "Toys-S3"
+ },
+ {
+  "item_id": "SKU0019",
+  "score": 35.7515,
+  "category": "Grocery",
+  "sub_category": "Grocery-S2"
+ },
+ {
+  "item_id": "SKU0442",
+  "score": 35.5946,
+  "category": "Books",
+  "sub_category": "Books-S1"
+ },
+ {
+  "item_id": "SKU0169",
+  "score": 35.5633,
+  "category": "Home Care",
+  "sub_category": "Home Care-S2"
+ },
+ {
+  "item_id": "SKU0136",
+  "score": 34.636,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S3"
+ },
+ {
+  "item_id": "SKU0475",
+  "score": 34.4204,
+  "category": "Books",
+  "sub_category": "Books-S3"
+ },
+ {
+  "item_id": "SKU0101",
+  "score": 34.3688,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0036",
+  "score": 34.1274,
+  "category": "Grocery",
+  "sub_category": "Grocery-S3"
+ },
+ {
+  "item_id": "SKU0360",
+  "score": 34.1049,
+  "category": "Toys",
+  "sub_category": "Toys-S2"
+ },
+ {
+  "item_id": "SKU0158",
+  "score": 33.8497,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0447",
+  "score": 33.5109,
+  "category": "Books",
+  "sub_category": "Books-S1"
+ },
+ {
+  "item_id": "SKU0264",
+  "score": 32.8057,
+  "category": "Apparel",
+  "sub_category": "Apparel-S2"
+ },
+ {
+  "item_id": "SKU0152",
+  "score": 32.053,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0398",
+  "score": 32.0259,
+  "category": "Sports",
+  "sub_category": "Sports-S1"
+ },
+ {
+  "item_id": "SKU0173",
+  "score": 31.5346,
+  "category": "Home Care",
+  "sub_category": "Home Care-S2"
+ },
+ {
+  "item_id": "SKU0289",
+  "score": 31.2353,
+  "category": "Footwear",
+  "sub_category": "Footwear-S1"
+ },
+ {
+  "item_id": "SKU0162",
+  "score": 31.2013,
+  "category": "Home Care",
+  "sub_category": "Home Care-S2"
+ },
+ {
+  "item_id": "SKU0464",
+  "score": 30.7068,
+  "category": "Books",
+  "sub_category": "Books-S2"
+ },
+ {
+  "item_id": "SKU0058",
+  "score": 30.3517,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ },
+ {
+  "item_id": "SKU0097",
+  "score": 30.1224,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0468",
+  "score": 30.071,
+  "category": "Books",
+  "sub_category": "Books-S3"
+ },
+ {
+  "item_id": "SKU0159",
+  "score": 29.6841,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0448",
+  "score": 29.6642,
+  "category": "Books",
+  "sub_category": "Books-S1"
+ },
+ {
+  "item_id": "SKU0339",
+  "score": 29.5639,
+  "category": "Toys",
+  "sub_category": "Toys-S1"
+ },
+ {
+  "item_id": "SKU0473",
+  "score": 29.4753,
+  "category": "Books",
+  "sub_category": "Books-S3"
+ },
+ {
+  "item_id": "SKU0256",
+  "score": 28.7772,
+  "category": "Apparel",
+  "sub_category": "Apparel-S1"
+ },
+ {
+  "item_id": "SKU0328",
+  "score": 28.3926,
+  "category": "Footwear",
+  "sub_category": "Footwear-S3"
+ },
+ {
+  "item_id": "SKU0180",
+  "score": 27.4005,
+  "category": "Home Care",
+  "sub_category": "Home Care-S3"
+ },
+ {
+  "item_id": "SKU0005",
+  "score": 26.4599,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0487",
+  "score": 26.0356,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0023",
+  "score": 25.9967,
+  "category": "Grocery",
+  "sub_category": "Grocery-S2"
+ },
+ {
+  "item_id": "SKU0046",
+  "score": 25.535,
+  "category": "Grocery",
+  "sub_category": "Grocery-S3"
+ },
+ {
+  "item_id": "SKU0164",
+  "score": 25.3662,
+  "category": "Home Care",
+  "sub_category": "Home Care-S2"
+ },
+ {
+  "item_id": "SKU0168",
+  "score": 25.2571,
+  "category": "Home Care",
+  "sub_category": "Home Care-S2"
+ },
+ {
+  "item_id": "SKU0352",
+  "score": 24.8982,
+  "category": "Toys",
+  "sub_category": "Toys-S1"
+ },
+ {
+  "item_id": "SKU0429",
+  "score": 24.6981,
+  "category": "Sports",
+  "sub_category": "Sports-S3"
+ },
+ {
+  "item_id": "SKU0380",
+  "score": 24.6381,
+  "category": "Toys",
+  "sub_category": "Toys-S3"
+ },
+ {
+  "item_id": "SKU0172",
+  "score": 24.5842,
+  "category": "Home Care",
+  "sub_category": "Home Care-S2"
+ },
+ {
+  "item_id": "SKU0192",
+  "score": 24.3617,
+  "category": "Home Care",
+  "sub_category": "Home Care-S3"
+ },
+ {
+  "item_id": "SKU0433",
+  "score": 24.1623,
+  "category": "Books",
+  "sub_category": "Books-S1"
+ },
+ {
+  "item_id": "SKU0370",
+  "score": 24.0654,
+  "category": "Toys",
+  "sub_category": "Toys-S3"
+ },
+ {
+  "item_id": "SKU0049",
+  "score": 23.9308,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ },
+ {
+  "item_id": "SKU0044",
+  "score": 23.924,
+  "category": "Grocery",
+  "sub_category": "Grocery-S3"
+ },
+ {
+  "item_id": "SKU0171",
+  "score": 23.9087,
+  "category": "Home Care",
+  "sub_category": "Home Care-S2"
+ },
+ {
+  "item_id": "SKU0139",
+  "score": 23.8767,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S3"
+ },
+ {
+  "item_id": "SKU0120",
+  "score": 23.6747,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S2"
+ },
+ {
+  "item_id": "SKU0100",
+  "score": 23.5674,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0111",
+  "score": 23.5137,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0104",
+  "score": 23.4556,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0185",
+  "score": 23.4399,
+  "category": "Home Care",
+  "sub_category": "Home Care-S3"
+ },
+ {
+  "item_id": "SKU0344",
+  "score": 23.0963,
+  "category": "Toys",
+  "sub_category": "Toys-S1"
+ },
+ {
+  "item_id": "SKU0160",
+  "score": 22.7289,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0374",
+  "score": 22.4367,
+  "category": "Toys",
+  "sub_category": "Toys-S3"
+ },
+ {
+  "item_id": "SKU0096",
+  "score": 22.3257,
+  "category": "Beverages",
+  "sub_category": "Beverages-S3"
+ },
+ {
+  "item_id": "SKU0373",
+  "score": 21.6304,
+  "category": "Toys",
+  "sub_category": "Toys-S3"
+ },
+ {
+  "item_id": "SKU0027",
+  "score": 21.4898,
+  "category": "Grocery",
+  "sub_category": "Grocery-S2"
+ },
+ {
+  "item_id": "SKU0170",
+  "score": 21.4244,
+  "category": "Home Care",
+  "sub_category": "Home Care-S2"
+ },
+ {
+  "item_id": "SKU0165",
+  "score": 21.147,
+  "category": "Home Care",
+  "sub_category": "Home Care-S2"
+ },
+ {
+  "item_id": "SKU0148",
+  "score": 21.0451,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0451",
+  "score": 20.9988,
+  "category": "Books",
+  "sub_category": "Books-S2"
+ },
+ {
+  "item_id": "SKU0441",
+  "score": 20.7173,
+  "category": "Books",
+  "sub_category": "Books-S1"
+ },
+ {
+  "item_id": "SKU0182",
+  "score": 20.6421,
+  "category": "Home Care",
+  "sub_category": "Home Care-S3"
+ },
+ {
+  "item_id": "SKU0133",
+  "score": 20.4513,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S3"
+ },
+ {
+  "item_id": "SKU0383",
+  "score": 20.1387,
+  "category": "Toys",
+  "sub_category": "Toys-S3"
+ },
+ {
+  "item_id": "SKU0436",
+  "score": 20.0538,
+  "category": "Books",
+  "sub_category": "Books-S1"
+ },
+ {
+  "item_id": "SKU0410",
+  "score": 19.6393,
+  "category": "Sports",
+  "sub_category": "Sports-S2"
+ },
+ {
+  "item_id": "SKU0480",
+  "score": 19.6005,
+  "category": "Books",
+  "sub_category": "Books-S3"
+ },
+ {
+  "item_id": "SKU0029",
+  "score": 19.197,
+  "category": "Grocery",
+  "sub_category": "Grocery-S2"
+ },
+ {
+  "item_id": "SKU0076",
+  "score": 18.8838,
+  "category": "Beverages",
+  "sub_category": "Beverages-S2"
+ },
+ {
+  "item_id": "SKU0048",
+  "score": 18.4588,
+  "category": "Grocery",
+  "sub_category": "Grocery-S3"
+ },
+ {
+  "item_id": "SKU0156",
+  "score": 18.2134,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0137",
+  "score": 17.9311,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S3"
+ },
+ {
+  "item_id": "SKU0115",
+  "score": 17.6795,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S2"
+ },
+ {
+  "item_id": "SKU0010",
+  "score": 17.3885,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0458",
+  "score": 16.412,
+  "category": "Books",
+  "sub_category": "Books-S2"
+ },
+ {
+  "item_id": "SKU0181",
+  "score": 16.2168,
+  "category": "Home Care",
+  "sub_category": "Home Care-S3"
+ },
+ {
+  "item_id": "SKU0073",
+  "score": 15.9832,
+  "category": "Beverages",
+  "sub_category": "Beverages-S2"
+ },
+ {
+  "item_id": "SKU0347",
+  "score": 15.7208,
+  "category": "Toys",
+  "sub_category": "Toys-S1"
+ },
+ {
+  "item_id": "SKU0140",
+  "score": 15.4494,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S3"
+ },
+ {
+  "item_id": "SKU0042",
+  "score": 15.4129,
+  "category": "Grocery",
+  "sub_category": "Grocery-S3"
+ },
+ {
+  "item_id": "SKU0188",
+  "score": 15.2863,
+  "category": "Home Care",
+  "sub_category": "Home Care-S3"
+ },
+ {
+  "item_id": "SKU0026",
+  "score": 15.1105,
+  "category": "Grocery",
+  "sub_category": "Grocery-S2"
+ },
+ {
+  "item_id": "SKU0153",
+  "score": 14.957,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0006",
+  "score": 14.886,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0175",
+  "score": 14.5784,
+  "category": "Home Care",
+  "sub_category": "Home Care-S2"
+ },
+ {
+  "item_id": "SKU0450",
+  "score": 14.5195,
+  "category": "Books",
+  "sub_category": "Books-S2"
+ },
+ {
+  "item_id": "SKU0053",
+  "score": 14.3137,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ },
+ {
+  "item_id": "SKU0075",
+  "score": 13.45,
+  "category": "Beverages",
+  "sub_category": "Beverages-S2"
+ },
+ {
+  "item_id": "SKU0144",
+  "score": 13.3454,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S3"
+ },
+ {
+  "item_id": "SKU0126",
+  "score": 13.2489,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S2"
+ },
+ {
+  "item_id": "SKU0028",
+  "score": 13.1375,
+  "category": "Grocery",
+  "sub_category": "Grocery-S2"
+ },
+ {
+  "item_id": "SKU0074",
+  "score": 13.0713,
+  "category": "Beverages",
+  "sub_category": "Beverages-S2"
+ },
+ {
+  "item_id": "SKU0107",
+  "score": 13.0295,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0047",
+  "score": 13.0227,
+  "category": "Grocery",
+  "sub_category": "Grocery-S3"
+ },
+ {
+  "item_id": "SKU0087",
+  "score": 12.871,
+  "category": "Beverages",
+  "sub_category": "Beverages-S3"
+ },
+ {
+  "item_id": "SKU0080",
+  "score": 12.6388,
+  "category": "Beverages",
+  "sub_category": "Beverages-S2"
+ },
+ {
+  "item_id": "SKU0095",
+  "score": 12.6021,
+  "category": "Beverages",
+  "sub_category": "Beverages-S3"
+ },
+ {
+  "item_id": "SKU0043",
+  "score": 12.3906,
+  "category": "Grocery",
+  "sub_category": "Grocery-S3"
+ },
+ {
+  "item_id": "SKU0446",
+  "score": 12.0639,
+  "category": "Books",
+  "sub_category": "Books-S1"
+ },
+ {
+  "item_id": "SKU0091",
+  "score": 11.9203,
+  "category": "Beverages",
+  "sub_category": "Beverages-S3"
+ },
+ {
+  "item_id": "SKU0125",
+  "score": 11.7814,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S2"
+ },
+ {
+  "item_id": "SKU0186",
+  "score": 11.6765,
+  "category": "Home Care",
+  "sub_category": "Home Care-S3"
+ },
+ {
+  "item_id": "SKU0078",
+  "score": 11.5005,
+  "category": "Beverages",
+  "sub_category": "Beverages-S2"
+ },
+ {
+  "item_id": "SKU0015",
+  "score": 11.4446,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0003",
+  "score": 11.3078,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0190",
+  "score": 11.258,
+  "category": "Home Care",
+  "sub_category": "Home Care-S3"
+ },
+ {
+  "item_id": "SKU0103",
+  "score": 11.2401,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0124",
+  "score": 11.0316,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S2"
+ },
+ {
+  "item_id": "SKU0033",
+  "score": 10.8546,
+  "category": "Grocery",
+  "sub_category": "Grocery-S3"
+ },
+ {
+  "item_id": "SKU0106",
+  "score": 10.6121,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0093",
+  "score": 10.5662,
+  "category": "Beverages",
+  "sub_category": "Beverages-S3"
+ },
+ {
+  "item_id": "SKU0071",
+  "score": 10.5447,
+  "category": "Beverages",
+  "sub_category": "Beverages-S2"
+ },
+ {
+  "item_id": "SKU0456",
+  "score": 10.4581,
+  "category": "Books",
+  "sub_category": "Books-S2"
+ },
+ {
+  "item_id": "SKU0051",
+  "score": 10.4529,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ },
+ {
+  "item_id": "SKU0102",
+  "score": 10.3418,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S1"
+ },
+ {
+  "item_id": "SKU0357",
+  "score": 10.2211,
+  "category": "Toys",
+  "sub_category": "Toys-S2"
+ },
+ {
+  "item_id": "SKU0082",
+  "score": 10.1854,
+  "category": "Beverages",
+  "sub_category": "Beverages-S3"
+ },
+ {
+  "item_id": "SKU0004",
+  "score": 10.0677,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0009",
+  "score": 10.0145,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0119",
+  "score": 9.9262,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S2"
+ },
+ {
+  "item_id": "SKU0016",
+  "score": 9.6427,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0129",
+  "score": 9.5844,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S3"
+ },
+ {
+  "item_id": "SKU0060",
+  "score": 9.4479,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ },
+ {
+  "item_id": "SKU0251",
+  "score": 9.349,
+  "category": "Apparel",
+  "sub_category": "Apparel-S1"
+ },
+ {
+  "item_id": "SKU0063",
+  "score": 9.2672,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ },
+ {
+  "item_id": "SKU0045",
+  "score": 9.2108,
+  "category": "Grocery",
+  "sub_category": "Grocery-S3"
+ },
+ {
+  "item_id": "SKU0059",
+  "score": 8.7632,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ },
+ {
+  "item_id": "SKU0041",
+  "score": 8.4339,
+  "category": "Grocery",
+  "sub_category": "Grocery-S3"
+ },
+ {
+  "item_id": "SKU0121",
+  "score": 8.2114,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S2"
+ },
+ {
+  "item_id": "SKU0187",
+  "score": 7.904,
+  "category": "Home Care",
+  "sub_category": "Home Care-S3"
+ },
+ {
+  "item_id": "SKU0024",
+  "score": 7.6085,
+  "category": "Grocery",
+  "sub_category": "Grocery-S2"
+ },
+ {
+  "item_id": "SKU0083",
+  "score": 7.4241,
+  "category": "Beverages",
+  "sub_category": "Beverages-S3"
+ },
+ {
+  "item_id": "SKU0020",
+  "score": 7.3204,
+  "category": "Grocery",
+  "sub_category": "Grocery-S2"
+ },
+ {
+  "item_id": "SKU0032",
+  "score": 7.2734,
+  "category": "Grocery",
+  "sub_category": "Grocery-S2"
+ },
+ {
+  "item_id": "SKU0034",
+  "score": 7.2584,
+  "category": "Grocery",
+  "sub_category": "Grocery-S3"
+ },
+ {
+  "item_id": "SKU0085",
+  "score": 7.2358,
+  "category": "Beverages",
+  "sub_category": "Beverages-S3"
+ },
+ {
+  "item_id": "SKU0022",
+  "score": 7.0759,
+  "category": "Grocery",
+  "sub_category": "Grocery-S2"
+ },
+ {
+  "item_id": "SKU0030",
+  "score": 6.9679,
+  "category": "Grocery",
+  "sub_category": "Grocery-S2"
+ },
+ {
+  "item_id": "SKU0002",
+  "score": 6.6961,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0025",
+  "score": 6.4521,
+  "category": "Grocery",
+  "sub_category": "Grocery-S2"
+ },
+ {
+  "item_id": "SKU0117",
+  "score": 6.3126,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S2"
+ },
+ {
+  "item_id": "SKU0086",
+  "score": 6.2529,
+  "category": "Beverages",
+  "sub_category": "Beverages-S3"
+ },
+ {
+  "item_id": "SKU0084",
+  "score": 6.1822,
+  "category": "Beverages",
+  "sub_category": "Beverages-S3"
+ },
+ {
+  "item_id": "SKU0050",
+  "score": 5.8422,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ },
+ {
+  "item_id": "SKU0150",
+  "score": 5.418,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0054",
+  "score": 5.2098,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ },
+ {
+  "item_id": "SKU0008",
+  "score": 5.1698,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0062",
+  "score": 4.637,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ },
+ {
+  "item_id": "SKU0069",
+  "score": 4.3865,
+  "category": "Beverages",
+  "sub_category": "Beverages-S2"
+ },
+ {
+  "item_id": "SKU0056",
+  "score": 4.2718,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ },
+ {
+  "item_id": "SKU0151",
+  "score": 4.0068,
+  "category": "Home Care",
+  "sub_category": "Home Care-S1"
+ },
+ {
+  "item_id": "SKU0070",
+  "score": 3.8248,
+  "category": "Beverages",
+  "sub_category": "Beverages-S2"
+ },
+ {
+  "item_id": "SKU0013",
+  "score": 3.6366,
+  "category": "Grocery",
+  "sub_category": "Grocery-S1"
+ },
+ {
+  "item_id": "SKU0031",
+  "score": 3.5963,
+  "category": "Grocery",
+  "sub_category": "Grocery-S2"
+ },
+ {
+  "item_id": "SKU0065",
+  "score": 3.5855,
+  "category": "Beverages",
+  "sub_category": "Beverages-S2"
+ },
+ {
+  "item_id": "SKU0021",
+  "score": 3.4857,
+  "category": "Grocery",
+  "sub_category": "Grocery-S2"
+ },
+ {
+  "item_id": "SKU0064",
+  "score": 3.3018,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ },
+ {
+  "item_id": "SKU0138",
+  "score": 3.1699,
+  "category": "Personal Care",
+  "sub_category": "Personal Care-S3"
+ },
+ {
+  "item_id": "SKU0079",
+  "score": 2.754,
+  "category": "Beverages",
+  "sub_category": "Beverages-S2"
+ },
+ {
+  "item_id": "SKU0090",
+  "score": 2.746,
+  "category": "Beverages",
+  "sub_category": "Beverages-S3"
+ },
+ {
+  "item_id": "SKU0092",
+  "score": 2.5182,
+  "category": "Beverages",
+  "sub_category": "Beverages-S3"
+ },
+ {
+  "item_id": "SKU0038",
+  "score": 1.9611,
+  "category": "Grocery",
+  "sub_category": "Grocery-S3"
+ },
+ {
+  "item_id": "SKU0089",
+  "score": 1.6111,
+  "category": "Beverages",
+  "sub_category": "Beverages-S3"
+ },
+ {
+  "item_id": "SKU0072",
+  "score": 1.6053,
+  "category": "Beverages",
+  "sub_category": "Beverages-S2"
+ },
+ {
+  "item_id": "SKU0057",
+  "score": 1.0336,
+  "category": "Beverages",
+  "sub_category": "Beverages-S1"
+ }
+]

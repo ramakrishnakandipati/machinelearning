@@ -1,0 +1,160 @@
+{"model": "dec", "phase": "pretrain", "epoch": 1, "recon": 0.903431, "kl": null, "total": 0.903431}
+{"model": "dec", "phase": "pretrain", "epoch": 2, "recon": 0.535677, "kl": null, "total": 0.535677}
+{"model": "dec", "phase": "pretrain", "epoch": 3, "recon": 0.307584, "kl": null, "total": 0.307584}
+{"model": "dec", "phase": "pretrain", "epoch": 4, "recon": 0.261055, "kl": null, "total": 0.261055}
+{"model": "dec", "phase": "pretrain", "epoch": 5, "recon": 0.241416, "kl": null, "total": 0.241416}
+{"model": "dec", "phase": "pretrain", "epoch": 6, "recon": 0.22432, "kl": null, "total": 0.22432}
+{"model": "dec", "phase": "pretrain", "epoch": 7, "recon": 0.195822, "kl": null, "total": 0.195822}
+{"model": "dec", "phase": "pretrain", "epoch": 8, "recon": 0.159757, "kl": null, "total": 0.159757}
+{"model": "dec", "phase": "pretrain", "epoch": 9, "recon": 0.139036, "kl": null, "total": 0.139036}
+{"model": "dec", "phase": "pretrain", "epoch": 10, "recon": 0.126864, "kl": null, "total": 0.126864}
+{"model": "dec", "phase": "pretrain", "epoch": 11, "recon": 0.113191, "kl": null, "total": 0.113191}
+{"model": "dec", "phase": "pretrain", "epoch": 12, "recon": 0.103582, "kl": null, "total": 0.103582}
+{"model": "dec", "phase": "pretrain", "epoch": 13, "recon": 0.098267, "kl": null, "total": 0.098267}
+{"model": "dec", "phase": "pretrain", "epoch": 14, "recon": 0.094447, "kl": null, "total": 0.094447}
+{"model": "dec", "phase": "pretrain", "epoch": 15, "recon": 0.091472, "kl": null, "total": 0.091472}
+{"model": "dec", "phase": "pretrain", "epoch": 16, "recon": 0.088669, "kl": null, "total": 0.088669}
+{"model": "dec", "phase": "pretrain", "epoch": 17, "recon": 0.086414, "kl": null, "total": 0.086414}
+{"model": "dec", "phase": "pretrain", "epoch": 18, "recon": 0.084568, "kl": null, "total": 0.084568}
+{"model": "dec", "phase": "pretrain", "epoch": 19, "recon": 0.082186, "kl": null, "total": 0.082186}
+{"model": "dec", "phase": "pretrain", "epoch": 20, "recon": 0.079662, "kl": null, "total": 0.079662}
+{"model": "dec", "phase": "pretrain", "epoch": 21, "recon": 0.077194, "kl": null, "total": 0.077194}
+{"model": "dec", "phase": "pretrain", "epoch": 22, "recon": 0.074684, "kl": null, "total": 0.074684}
+{"model": "dec", "phase": "pretrain", "epoch": 23, "recon": 0.071288, "kl": null, "total": 0.071288}
+{"model": "dec", "phase": "pretrain", "epoch": 24, "recon": 0.068293, "kl": null, "total": 0.068293}
+{"model": "dec", "phase": "pretrain", "epoch": 25, "recon": 0.06632, "kl": null, "total": 0.06632}
+{"model": "dec", "phase": "pretrain", "epoch": 26, "recon": 0.065189, "kl": null, "total": 0.065189}
+{"model": "dec", "phase": "pretrain", "epoch": 27, "recon": 0.064221, "kl": null, "total": 0.064221}
+{"model": "dec", "phase": "pretrain", "epoch": 28, "recon": 0.063085, "kl": null, "total": 0.063085}
+{"model": "dec", "phase": "pretrain", "epoch": 29, "recon": 0.062162, "kl": null, "total": 0.062162}
+{"model": "dec", "phase": "pretrain", "epoch": 30, "recon": 0.061556, "kl": null, "total": 0.061556}
+{"model": "dec", "phase": "pretrain", "epoch": 31, "recon": 0.061414, "kl": null, "total": 0.061414}
+{"model": "dec", "phase": "pretrain", "epoch": 32, "recon": 0.060877, "kl": null, "total": 0.060877}
+{"model": "dec", "phase": "pretrain", "epoch": 33, "recon": 0.060382, "kl": null, "total": 0.060382}
+{"model": "dec", "phase": "pretrain", "epoch": 34, "recon": 0.060043, "kl": null, "total": 0.060043}
+{"model": "dec", "phase": "pretrain", "epoch": 35, "recon": 0.059577, "kl": null, "total": 0.059577}
+{"model": "dec", "phase": "pretrain", "epoch": 36, "recon": 0.059447, "kl": null, "total": 0.059447}
+{"model": "dec", "phase": "pretrain", "epoch": 37, "recon": 0.058794, "kl": null, "total": 0.058794}
+{"model": "dec", "phase": "pretrain", "epoch": 38, "recon": 0.058578, "kl": null, "total": 0.058578}
+{"model": "dec", "phase": "pretrain", "epoch": 39, "recon": 0.058308, "kl": null, "total": 0.058308}
+{"model": "dec", "phase": "pretrain", "epoch": 40, "recon": 0.058139, "kl": null, "total": 0.058139}
+{"model": "dec", "phase": "pretrain", "epoch": 41, "recon": 0.057805, "kl": null, "total": 0.057805}
+{"model": "dec", "phase": "pretrain", "epoch": 42, "recon": 0.057588, "kl": null, "total": 0.057588}
+{"model": "dec", "phase": "pretrain", "epoch": 43, "recon": 0.057394, "kl": null, "total": 0.057394}
+{"model": "dec", "phase": "pretrain", "epoch": 44, "recon": 0.057011, "kl": null, "total": 0.057011}
+{"model": "dec", "phase": "pretrain", "epoch": 45, "recon": 0.056815, "kl": null, "total": 0.056815}
+{"model": "dec", "phase": "pretrain", "epoch": 46, "recon": 0.056615, "kl": null, "total": 0.056615}
+{"model": "dec", "phase": "pretrain", "epoch": 47, "recon": 0.056381, "kl": null, "total": 0.056381}
+{"model": "dec", "phase": "pretrain", "epoch": 48, "recon": 0.056145, "kl": null, "total": 0.056145}
+{"model": "dec", "phase": "pretrain", "epoch": 49, "recon": 0.055699, "kl": null, "total": 0.055699}
+{"model": "dec", "phase": "pretrain", "epoch": 50, "recon": 0.055729, "kl": null, "total": 0.055729}
+{"model": "dec", "phase": "pretrain", "epoch": 51, "recon": 0.055381, "kl": null, "total": 0.055381}
+{"model": "dec", "phase": "pretrain", "epoch": 52, "recon": 0.055249, "kl": null, "total": 0.055249}
+{"model": "dec", "phase": "pretrain", "epoch": 53, "recon": 0.05483, "kl": null, "total": 0.05483}
+{"model": "dec", "phase": "pretrain", "epoch": 54, "recon": 0.054546, "kl": null, "total": 0.054546}
+{"model": "dec", "phase": "pretrain", "epoch": 55, "recon": 0.054503, "kl": null, "total": 0.054503}
+{"model": "dec", "phase": "pretrain", "epoch": 56, "recon": 0.054243, "kl": null, "total": 0.054243}
+{"model": "dec", "phase": "pretrain", "epoch": 57, "recon": 0.053861, "kl": null, "total": 0.053861}
+{"model": "dec", "phase": "pretrain", "epoch": 58, "recon": 0.05388, "kl": null, "total": 0.05388}
+{"model": "dec", "phase": "pretrain", "epoch": 59, "recon": 0.053701, "kl": null, "total": 0.053701}
+{"model": "dec", "phase": "pretrain", "epoch": 60, "recon": 0.053193, "kl": null, "total": 0.053193}
+{"model": "dec", "phase": "finetune", "epoch": 1, "recon": 0.053937, "kl": 0.145611, "total": 0.145611}
+{"model": "dec", "phase": "finetune", "epoch": 2, "recon": 0.060839, "kl": 0.121176, "total": 0.121176}
+{"model": "dec", "phase": "finetune", "epoch": 3, "recon": 0.06886, "kl": 0.103099, "total": 0.103099}
+{"model": "dec", "phase": "finetune", "epoch": 4, "recon": 0.078915, "kl": 0.089523, "total": 0.089523}
+{"model": "dec", "phase": "finetune", "epoch": 5, "recon": 0.088924, "kl": 0.078892, "total": 0.078892}
+{"model": "dec", "phase": "finetune", "epoch": 6, "recon": 0.102248, "kl": 0.144466, "total": 0.144466}
+{"model": "dec", "phase": "finetune", "epoch": 7, "recon": 0.116201, "kl": 0.126001, "total": 0.126001}
+{"model": "dec", "phase": "finetune", "epoch": 8, "recon": 0.129612, "kl": 0.112715, "total": 0.112715}
+{"model": "dec", "phase": "finetune", "epoch": 9, "recon": 0.141709, "kl": 0.102896, "total": 0.102896}
+{"model": "dec", "phase": "finetune", "epoch": 10, "recon": 0.153045, "kl": 0.09523, "total": 0.09523}
+{"model": "dec", "phase": "finetune", "epoch": 11, "recon": 0.165184, "kl": 0.131066, "total": 0.131066}
+{"model": "dec", "phase": "finetune", "epoch": 12, "recon": 0.17712, "kl": 0.119819, "total": 0.119819}
+{"model": "dec", "phase": "finetune", "epoch": 13, "recon": 0.188933, "kl": 0.111885, "total": 0.111885}
+{"model": "dec", "phase": "finetune", "epoch": 14, "recon": 0.19884, "kl": 0.105965, "total": 0.105965}
+{"model": "dec", "phase": "finetune", "epoch": 15, "recon": 0.207822, "kl": 0.101354, "total": 0.101354}
+{"model": "dec", "phase": "finetune", "epoch": 16, "recon": 0.216768, "kl": 0.120031, "total": 0.120031}
+{"model": "dec", "phase": "finetune", "epoch": 17, "recon": 0.225287, "kl": 0.114861, "total": 0.114861}
+{"model": "dec", "phase": "finetune", "epoch": 18, "recon": 0.233072, "kl": 0.110781, "total": 0.110781}
+{"model": "dec", "phase": "finetune", "epoch": 19, "recon": 0.239655, "kl": 0.1074, "total": 0.1074}
+{"model": "dec", "phase": "finetune", "epoch": 20, "recon": 0.245109, "kl": 0.104432, "total": 0.104432}
+{"model": "vae", "phase": "train", "epoch": 1, "recon": 12.579335, "kl": 0.341195, "total": 12.613454, "beta": 0.1}
+{"model": "vae", "phase": "train", "epoch": 2, "recon": 8.344255, "kl": 3.565893, "total": 9.057433, "beta": 0.2}
+{"model": "vae", "phase": "train", "epoch": 3, "recon": 5.717733, "kl": 4.270673, "total": 6.998935, "beta": 0.3}
+{"model": "vae", "phase": "train", "epoch": 4, "recon": 4.832225, "kl": 3.757704, "total": 6.335307, "beta": 0.4}
+{"model": "vae", "phase": "train", "epoch": 5, "recon": 4.510735, "kl": 3.374995, "total": 6.198232, "beta": 0.5}
+{"model": "vae", "phase": "train", "epoch": 6, "recon": 4.354802, "kl": 3.057305, "total": 6.189185, "beta": 0.6}
+{"model": "vae", "phase": "train", "epoch": 7, "recon": 4.283081, "kl": 2.714265, "total": 6.183066, "beta": 0.7}
+{"model": "vae", "phase": "train", "epoch": 8, "recon": 4.24379, "kl": 2.520965, "total": 6.260562, "beta": 0.8}
+{"model": "vae", "phase": "train", "epoch": 9, "recon": 4.212694, "kl": 2.338885, "total": 6.31769, "beta": 0.9}
+{"model": "vae", "phase": "train", "epoch": 10, "recon": 4.229277, "kl": 2.20102, "total": 6.430297, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 11, "recon": 4.184133, "kl": 2.172951, "total": 6.357084, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 12, "recon": 4.14488, "kl": 2.156976, "total": 6.301856, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 13, "recon": 4.106777, "kl": 2.138363, "total": 6.24514, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 14, "recon": 4.089055, "kl": 2.144189, "total": 6.233244, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 15, "recon": 4.060224, "kl": 2.119771, "total": 6.179994, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 16, "recon": 4.034874, "kl": 2.135748, "total": 6.170622, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 17, "recon": 4.037792, "kl": 2.106756, "total": 6.144549, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 18, "recon": 3.994485, "kl": 2.158939, "total": 6.153424, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 19, "recon": 3.963252, "kl": 2.137921, "total": 6.101173, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 20, "recon": 3.974922, "kl": 2.104049, "total": 6.078971, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 21, "recon": 3.931237, "kl": 2.112361, "total": 6.043598, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 22, "recon": 3.956843, "kl": 2.106804, "total": 6.063647, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 23, "recon": 3.911875, "kl": 2.130276, "total": 6.04215, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 24, "recon": 3.91241, "kl": 2.133737, "total": 6.046147, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 25, "recon": 3.909592, "kl": 2.123153, "total": 6.032744, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 26, "recon": 3.918962, "kl": 2.086852, "total": 6.005814, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 27, "recon": 3.872346, "kl": 2.125707, "total": 5.998053, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 28, "recon": 3.857596, "kl": 2.157949, "total": 6.015545, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 29, "recon": 3.876319, "kl": 2.129151, "total": 6.005469, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 30, "recon": 3.849804, "kl": 2.144879, "total": 5.994684, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 31, "recon": 3.844665, "kl": 2.086744, "total": 5.93141, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 32, "recon": 3.832473, "kl": 2.120228, "total": 5.952701, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 33, "recon": 3.784013, "kl": 2.149802, "total": 5.933815, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 34, "recon": 3.817222, "kl": 2.137689, "total": 5.95491, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 35, "recon": 3.792108, "kl": 2.14497, "total": 5.937078, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 36, "recon": 3.833515, "kl": 2.13843, "total": 5.971945, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 37, "recon": 3.794172, "kl": 2.149642, "total": 5.943814, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 38, "recon": 3.794128, "kl": 2.120454, "total": 5.914583, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 39, "recon": 3.780235, "kl": 2.141395, "total": 5.921629, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 40, "recon": 3.788825, "kl": 2.123972, "total": 5.912797, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 41, "recon": 3.778067, "kl": 2.138502, "total": 5.916569, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 42, "recon": 3.759987, "kl": 2.145758, "total": 5.905745, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 43, "recon": 3.76108, "kl": 2.142651, "total": 5.903731, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 44, "recon": 3.752698, "kl": 2.13323, "total": 5.885928, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 45, "recon": 3.764355, "kl": 2.139035, "total": 5.90339, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 46, "recon": 3.761926, "kl": 2.12327, "total": 5.885196, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 47, "recon": 3.741634, "kl": 2.137434, "total": 5.879068, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 48, "recon": 3.745663, "kl": 2.137569, "total": 5.883232, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 49, "recon": 3.757012, "kl": 2.135775, "total": 5.892786, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 50, "recon": 3.737543, "kl": 2.131893, "total": 5.869436, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 51, "recon": 3.730075, "kl": 2.148331, "total": 5.878406, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 52, "recon": 3.726007, "kl": 2.12266, "total": 5.848668, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 53, "recon": 3.708524, "kl": 2.151626, "total": 5.86015, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 54, "recon": 3.716579, "kl": 2.137706, "total": 5.854285, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 55, "recon": 3.70114, "kl": 2.170813, "total": 5.871953, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 56, "recon": 3.709291, "kl": 2.140609, "total": 5.8499, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 57, "recon": 3.694129, "kl": 2.138565, "total": 5.832695, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 58, "recon": 3.713042, "kl": 2.115544, "total": 5.828587, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 59, "recon": 3.71248, "kl": 2.130752, "total": 5.843233, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 60, "recon": 3.710491, "kl": 2.151808, "total": 5.862299, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 61, "recon": 3.700081, "kl": 2.132415, "total": 5.832495, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 62, "recon": 3.713539, "kl": 2.114815, "total": 5.828354, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 63, "recon": 3.675633, "kl": 2.139527, "total": 5.81516, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 64, "recon": 3.677089, "kl": 2.153389, "total": 5.830478, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 65, "recon": 3.650862, "kl": 2.19128, "total": 5.842142, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 66, "recon": 3.668449, "kl": 2.153163, "total": 5.821612, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 67, "recon": 3.68736, "kl": 2.140334, "total": 5.827694, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 68, "recon": 3.661348, "kl": 2.164781, "total": 5.826129, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 69, "recon": 3.677635, "kl": 2.118966, "total": 5.796601, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 70, "recon": 3.674973, "kl": 2.174041, "total": 5.849014, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 71, "recon": 3.653694, "kl": 2.131029, "total": 5.784723, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 72, "recon": 3.656851, "kl": 2.150037, "total": 5.806889, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 73, "recon": 3.658704, "kl": 2.105119, "total": 5.763823, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 74, "recon": 3.669887, "kl": 2.153439, "total": 5.823325, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 75, "recon": 3.676871, "kl": 2.13211, "total": 5.808981, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 76, "recon": 3.659195, "kl": 2.1573, "total": 5.816495, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 77, "recon": 3.63474, "kl": 2.155144, "total": 5.789885, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 78, "recon": 3.652366, "kl": 2.161725, "total": 5.814091, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 79, "recon": 3.664694, "kl": 2.147251, "total": 5.811945, "beta": 1.0}
+{"model": "vae", "phase": "train", "epoch": 80, "recon": 3.640873, "kl": 2.167968, "total": 5.808841, "beta": 1.0}

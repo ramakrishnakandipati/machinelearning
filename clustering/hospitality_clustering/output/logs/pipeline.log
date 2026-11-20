@@ -1,0 +1,74 @@
+2026-11-20 11:41:34,240 | INFO | Device: cuda
+2026-11-20 11:41:34,240 | INFO | torch 2.15.0+cu132 | CUDA available: True
+2026-11-20 11:41:34,241 | INFO | GPU: NVIDIA GeForce RTX 3090
+2026-11-20 11:41:34,242 | INFO | RAPIDS cuml/cudf: not installed -> scikit-learn CPU fallback
+2026-11-20 11:41:35,644 | INFO | === 1/5 data & preprocessing ===
+2026-11-20 11:41:35,758 | INFO | train=(8000, 13) test=(2000, 13)
+2026-11-20 11:41:35,758 | INFO | === 2/5 classical ML models ===
+2026-11-20 11:41:38,941 | INFO | K selection: silhouettes=[0.346, 0.372, 0.367, 0.371, 0.3, 0.244, 0.201, 0.138, 0.198] -> best_k=3
+2026-11-20 11:41:38,993 | INFO | kmeans         fit in 0.1s
+2026-11-20 11:41:39,137 | INFO | gmm            fit in 0.1s
+2026-11-20 11:41:40,821 | INFO | agglomerative  fit in 1.7s
+2026-11-20 11:41:42,149 | INFO | Density clustering via hdbscan: 2 clusters, noise=5.2%
+2026-11-20 11:41:42,152 | INFO | dbscan         fit in 1.3s
+2026-11-20 11:41:42,152 | INFO | === 3/5 deep models (cuda) ===
+2026-11-20 11:41:50,450 | INFO | DEC pretrain final recon MSE: 0.0532
+2026-11-20 11:41:52,052 | INFO | DEC converged at epoch 11 (label change 0.0004)
+2026-11-20 11:41:52,061 | INFO | dec      trained on cuda in 9.9s
+2026-11-20 11:42:04,469 | INFO | VAE final recon=3.664 KL=2.152
+2026-11-20 11:42:04,598 | INFO | vae_gmm  trained on cuda in 12.5s
+2026-11-20 11:42:04,598 | INFO | === 4/5 evaluation & plots ===
+2026-11-20 11:42:04,989 | INFO | kmeans         sil=0.373 CH=4747.982 DB=1.056 k=3 noise=0.0% lat=0.18ms/1k
+2026-11-20 11:42:05,413 | INFO | gmm            sil=0.371 CH=4743.161 DB=1.056 k=3 noise=0.0% lat=0.64ms/1k
+2026-11-20 11:42:05,799 | INFO | agglomerative  sil=0.370 CH=4747.938 DB=1.056 k=3 noise=0.0% lat=0.15ms/1k
+2026-11-20 11:42:06,184 | INFO | dbscan         sil=0.355 CH=4516.380 DB=1.255 k=2 noise=5.2% lat=0.11ms/1k
+2026-11-20 11:42:07,010 | INFO | dec            sil=0.374 CH=4744.054 DB=1.056 k=3 noise=0.0% lat=0.69ms/1k
+2026-11-20 11:42:07,787 | INFO | vae_gmm        sil=0.310 CH=3908.144 DB=1.243 k=3 noise=0.0% lat=1.01ms/1k
+2026-11-20 11:42:07,789 | INFO | Best model (rank aggregate of sil/CH/DB): dec
+2026-11-20 11:42:10,690 | INFO | saved plot 01_eda_distributions.png
+2026-11-20 11:42:12,577 | INFO | saved plot 02_feature_correlation_importance.png
+2026-11-20 11:42:13,242 | INFO | saved plot 03_dl_training_losses.png
+2026-11-20 11:42:37,504 | INFO | saved plot 04_umap_cluster_projections.png
+2026-11-20 11:42:38,775 | INFO | saved plot 05_model_metrics_comparison.png
+2026-11-20 11:42:39,388 | INFO | saved plot 06_cluster_persona_heatmap.png
+2026-11-20 11:42:39,388 | INFO | === 5/5 API screenshots ===
+2026-11-20 11:42:43,109 | INFO | API up at http://127.0.0.1:51299
+2026-11-20 11:42:43,326 | INFO | /predict -> {'model': 'dec', 'cluster_id': 2, 'persona': 'Business Road Warrior', 'confidence': 0.8889, 'probabilities': {'0': 0.0249, '1': 0.0862, '2': 0.8889}, 'latency_ms': 193.054, 'device': 'cuda'}
+2026-11-20 11:42:45,980 | INFO | Done in 70.3s. Missing outputs: none
+2026-11-20 11:42:54,626 | INFO | Device: cuda
+2026-11-20 11:42:54,626 | INFO | torch 2.15.0+cu132 | CUDA available: True
+2026-11-20 11:42:54,627 | INFO | GPU: NVIDIA GeForce RTX 3090
+2026-11-20 11:42:54,627 | INFO | RAPIDS cuml/cudf: not installed -> scikit-learn CPU fallback
+2026-11-20 11:42:55,991 | INFO | === 1/5 data & preprocessing ===
+2026-11-20 11:42:56,099 | INFO | train=(8000, 13) test=(2000, 13)
+2026-11-20 11:42:56,100 | INFO | === 2/5 classical ML models ===
+2026-11-20 11:42:59,124 | INFO | K selection: silhouettes=[0.346, 0.372, 0.367, 0.371, 0.3, 0.244, 0.201, 0.138, 0.198] -> best_k=3
+2026-11-20 11:42:59,195 | INFO | kmeans         fit in 0.1s
+2026-11-20 11:42:59,569 | INFO | gmm            fit in 0.4s
+2026-11-20 11:43:01,190 | INFO | agglomerative  fit in 1.6s
+2026-11-20 11:43:02,500 | INFO | Density clustering via hdbscan: 2 clusters, noise=5.2%
+2026-11-20 11:43:02,502 | INFO | dbscan         fit in 1.3s
+2026-11-20 11:43:02,502 | INFO | === 3/5 deep models (cuda) ===
+2026-11-20 11:43:11,037 | INFO | DEC pretrain final recon MSE: 0.0532
+2026-11-20 11:43:13,997 | INFO | DEC converged at epoch 21 (label change 0.0006)
+2026-11-20 11:43:14,006 | INFO | dec      trained on cuda in 11.5s
+2026-11-20 11:43:25,793 | INFO | VAE final recon=3.641 KL=2.168
+2026-11-20 11:43:25,940 | INFO | vae_gmm  trained on cuda in 11.9s
+2026-11-20 11:43:25,940 | INFO | === 4/5 evaluation & plots ===
+2026-11-20 11:43:26,288 | INFO | kmeans         sil=0.376 CH=4947.491 DB=1.124 k=5 noise=0.0% lat=0.13ms/1k
+2026-11-20 11:43:26,666 | INFO | gmm            sil=0.373 CH=4941.686 DB=1.126 k=5 noise=0.0% lat=0.77ms/1k
+2026-11-20 11:43:27,035 | INFO | agglomerative  sil=0.374 CH=4947.453 DB=1.124 k=5 noise=0.0% lat=0.23ms/1k
+2026-11-20 11:43:27,431 | INFO | dbscan         sil=0.355 CH=4516.380 DB=1.255 k=2 noise=5.2% lat=0.11ms/1k
+2026-11-20 11:43:28,195 | INFO | dec            sil=0.374 CH=4942.608 DB=1.125 k=5 noise=0.0% lat=0.66ms/1k
+2026-11-20 11:43:28,954 | INFO | vae_gmm        sil=0.371 CH=4943.481 DB=1.125 k=5 noise=0.0% lat=1.33ms/1k
+2026-11-20 11:43:28,957 | INFO | Best model (rank aggregate of sil/CH/DB): kmeans
+2026-11-20 11:43:31,932 | INFO | saved plot 01_eda_distributions.png
+2026-11-20 11:43:33,770 | INFO | saved plot 02_feature_correlation_importance.png
+2026-11-20 11:43:34,434 | INFO | saved plot 03_dl_training_losses.png
+2026-11-20 11:43:59,030 | INFO | saved plot 04_umap_cluster_projections.png
+2026-11-20 11:44:00,022 | INFO | saved plot 05_model_metrics_comparison.png
+2026-11-20 11:44:00,818 | INFO | saved plot 06_cluster_persona_heatmap.png
+2026-11-20 11:44:00,818 | INFO | === 5/5 API screenshots ===
+2026-11-20 11:44:04,478 | INFO | API up at http://127.0.0.1:62517
+2026-11-20 11:44:04,555 | INFO | /predict -> {'model': 'kmeans', 'cluster_id': 1, 'persona': 'Business Road Warrior', 'confidence': 0.9186, 'probabilities': {'0': 0.0009, '1': 0.9186, '2': 0.0005, '3': 0.0007, '4': 0.0793}, 'latency_ms': 28.187, 'device': 'cuda'}
+2026-11-20 11:44:07,172 | INFO | Done in 71.2s. Missing outputs: none

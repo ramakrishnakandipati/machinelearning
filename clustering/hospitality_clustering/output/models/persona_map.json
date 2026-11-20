@@ -1,0 +1,41 @@
+{
+  "kmeans": {
+    "0": "Weekend Family Getaway",
+    "1": "Business Road Warrior",
+    "2": "Luxury Leisure Spender",
+    "3": "Budget OTA Shopper",
+    "4": "Loyal Direct Regular"
+  },
+  "gmm": {
+    "0": "Weekend Family Getaway",
+    "1": "Business Road Warrior",
+    "2": "Loyal Direct Regular",
+    "3": "Luxury Leisure Spender",
+    "4": "Budget OTA Shopper"
+  },
+  "agglomerative": {
+    "0": "Budget OTA Shopper",
+    "1": "Loyal Direct Regular",
+    "2": "Business Road Warrior",
+    "3": "Weekend Family Getaway",
+    "4": "Luxury Leisure Spender"
+  },
+  "dbscan": {
+    "0": "Loyal Direct Regular",
+    "1": "Budget OTA Shopper"
+  },
+  "dec": {
+    "0": "Budget OTA Shopper",
+    "1": "Business Road Warrior",
+    "2": "Luxury Leisure Spender",
+    "3": "Weekend Family Getaway",
+    "4": "Loyal Direct Regular"
+  },
+  "vae_gmm": {
+    "0": "Weekend Family Getaway",
+    "1": "Business Road Warrior",
+    "2": "Luxury Leisure Spender",
+    "3": "Budget OTA Shopper",
+    "4": "Loyal Direct Regular"
+  }
+}

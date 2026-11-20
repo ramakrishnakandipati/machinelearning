@@ -1,0 +1,16 @@
+torch
+scikit-learn>=1.3
+pandas
+numpy
+scipy
+umap-learn
+matplotlib
+seaborn
+fastapi
+uvicorn
+pydantic>=2
+joblib
+httpx
+playwright
+# Optional GPU acceleration (CUDA machines): cuml-cu12 cudf-cu12  (auto-detected, falls back to scikit-learn)
+# After install: playwright install chromium

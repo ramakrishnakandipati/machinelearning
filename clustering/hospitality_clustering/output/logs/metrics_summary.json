@@ -1,0 +1,108 @@
+{
+  "kmeans": {
+    "n_clusters": 5,
+    "noise_fraction": 0.0,
+    "silhouette": 0.37576156854629517,
+    "calinski_harabasz": 4947.491459232816,
+    "davies_bouldin": 1.124063430280736,
+    "latency_ms_per_1k": 0.13014999785809778,
+    "ari_vs_simulated_truth": 0.994437804458251
+  },
+  "gmm": {
+    "n_clusters": 5,
+    "noise_fraction": 0.0,
+    "silhouette": 0.37262460589408875,
+    "calinski_harabasz": 4941.685831559221,
+    "davies_bouldin": 1.1255821747228936,
+    "latency_ms_per_1k": 0.7711500002187677,
+    "ari_vs_simulated_truth": 0.9993997612483142
+  },
+  "agglomerative": {
+    "n_clusters": 5,
+    "noise_fraction": 0.0,
+    "silhouette": 0.37408697605133057,
+    "calinski_harabasz": 4947.452537598917,
+    "davies_bouldin": 1.124082252801827,
+    "latency_ms_per_1k": 0.23040000087348744,
+    "ari_vs_simulated_truth": 0.994437804458251
+  },
+  "dbscan": {
+    "n_clusters": 2,
+    "noise_fraction": 0.05174999999999996,
+    "silhouette": 0.3550618290901184,
+    "calinski_harabasz": 4516.379986978764,
+    "davies_bouldin": 1.2554993146975608,
+    "latency_ms_per_1k": 0.11294999785604887,
+    "ari_vs_simulated_truth": 0.4248448391797655
+  },
+  "dec": {
+    "n_clusters": 5,
+    "noise_fraction": 0.0,
+    "silhouette": 0.37373724579811096,
+    "calinski_harabasz": 4942.607847458716,
+    "davies_bouldin": 1.1253057566413454,
+    "latency_ms_per_1k": 0.663650000205962,
+    "ari_vs_simulated_truth": 0.9985498606174694,
+    "latent_space": {
+      "n_clusters": 5,
+      "noise_fraction": 0.0,
+      "silhouette": 0.7805721163749695,
+      "calinski_harabasz": 82268.72544424233,
+      "davies_bouldin": 0.31362431278648323
+    }
+  },
+  "vae_gmm": {
+    "n_clusters": 5,
+    "noise_fraction": 0.0,
+    "silhouette": 0.3712497055530548,
+    "calinski_harabasz": 4943.481387355924,
+    "davies_bouldin": 1.125434462197923,
+    "latency_ms_per_1k": 1.3330000001587905,
+    "ari_vs_simulated_truth": 0.9934174151606721,
+    "latent_space": {
+      "n_clusters": 5,
+      "noise_fraction": 0.0,
+      "silhouette": 0.6128584146499634,
+      "calinski_harabasz": 17517.855001793003,
+      "davies_bouldin": 0.5583610282582745
+    }
+  },
+  "_best_model": "kmeans",
+  "_k_selection": {
+    "ks": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "inertia": [
+      66071.3125,
+      47544.14453125,
+      35977.578125,
+      29925.5390625,
+      28876.859375,
+      28079.3515625,
+      27297.474609375,
+      26712.544921875,
+      26185.798828125
+    ],
+    "silhouette": [
+      0.34627312421798706,
+      0.3723164200782776,
+      0.3670314848423004,
+      0.3712720274925232,
+      0.30034101009368896,
+      0.24381692707538605,
+      0.20079560577869415,
+      0.1379767507314682,
+      0.19830045104026794
+    ],
+    "best_k": 5
+  },
+  "_device": "cuda"
+}

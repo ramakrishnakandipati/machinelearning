@@ -995,7 +995,7 @@
     "final": {
       "best_val_recon": 0.1125776618719101,
       "epochs_run": 66,
-      "train_seconds": 4.029058456420898,
+      "train_seconds": 3.9435369968414307,
       "cold_item_recon": 0.11622750014066696,
       "val_recon": 0.1125776618719101
     }
@@ -4912,7 +4912,7 @@
     "final": {
       "best_val_recon": 0.03296465426683426,
       "epochs_run": 186,
-      "train_seconds": 13.385571479797363,
+      "train_seconds": 17.16907024383545,
       "cold_item_recon": 0.03283417597413063,
       "val_recon": 0.03296465426683426
     }

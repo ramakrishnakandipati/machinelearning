@@ -1,0 +1,55 @@
+seed: 42
+use_gpu: true
+paths:
+  output: output
+  data: data
+data:
+  n_guests: 25000
+  seq_len: 10
+model:
+  n_clusters: 5
+  k_sweep: [3, 4, 5, 6, 7, 8]
+  latent_dim: 8
+  hidden: [128, 64]
+training:
+  batch_size: 512
+  ae_pretrain_epochs: 40
+  dec_epochs: 40
+  dec_update_interval: 5
+  vae_epochs: 60
+  vae_beta: 2.0
+  vae_anneal_epochs: 20
+  seq_epochs: 25
+  seq_d_model: 32
+  lr: 0.001
+  quick:
+    ae_pretrain_epochs: 5
+    dec_epochs: 5
+    vae_epochs: 6
+    seq_epochs: 3
+    n_guests: 4000
+evaluation:
+  silhouette_sample: 8000
+  stability_bootstraps: 5
+# Archetype profiles (z-score-ish targets) used to name clusters
+personas:
+  "Corporate Road Warriors":
+    playbook: "Fast mobile check-in, late checkout, corporate-rate bundles, business-center perks."
+    next_best_offer: "Corporate rate + guaranteed late checkout"
+    churn_risk: 0.25
+  "Luxury Resort Families":
+    playbook: "Villa/suite upgrades, kids club, dining packages, early-booking family offers."
+    next_best_offer: "Suite upgrade + family dining credit"
+    churn_risk: 0.20
+  "Weekend Spa Couples":
+    playbook: "Spa packages, romantic weekend bundles, Sunday-night extension discounts."
+    next_best_offer: "Couples spa package + weekend stay"
+    churn_risk: 0.30
+  "OTA Price-Sensitive Travelers":
+    playbook: "Push direct-booking incentives, member rates, points sign-up bonus."
+    next_best_offer: "Member-only direct rate + 500 bonus points"
+    churn_risk: 0.55
+  "At-Risk Dormant VIPs":
+    playbook: "Personal outreach, win-back points, status-match, exclusive experiences."
+    next_best_offer: "Status-match + win-back points bonus"
+    churn_risk: 0.75

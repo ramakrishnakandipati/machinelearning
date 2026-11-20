@@ -1,0 +1,16 @@
+{
+  "n_users": 5000,
+  "n_items": 2000,
+  "n_interactions": 50063,
+  "n_cold_items": 200,
+  "n_cold_users": 500,
+  "feature_dim": 158,
+  "split_counts": {
+    "train": 30958,
+    "test": 5136,
+    "item_cold_test": 4859,
+    "val": 4368,
+    "user_cold_test": 4243,
+    "user_cold_history": 499
+  }
+}

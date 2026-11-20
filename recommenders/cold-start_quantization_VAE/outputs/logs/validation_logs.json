@@ -1,0 +1,5024 @@
+{
+  "vq_vae": {
+    "epochs": [
+      {
+        "recon": 0.35370802879333496,
+        "commit": 0.054874420166015625,
+        "loss": 0.4085824489593506,
+        "perplexity": 46.36798095703125,
+        "level_perplexity": [
+          46.36798095703125
+        ],
+        "epoch": 1,
+        "codebook_utilization_pct": 36.328125,
+        "level_utilization_pct": [
+          36.328125
+        ],
+        "collision_rate": 0.9876543209876543
+      },
+      {
+        "recon": 0.29246577620506287,
+        "commit": 0.058087658137083054,
+        "loss": 0.350553423166275,
+        "perplexity": 47.52048110961914,
+        "level_perplexity": [
+          47.52048110961914
+        ],
+        "epoch": 2,
+        "codebook_utilization_pct": 37.890625,
+        "level_utilization_pct": [
+          37.890625
+        ],
+        "collision_rate": 0.987037037037037
+      },
+      {
+        "recon": 0.25071364641189575,
+        "commit": 0.062209226191043854,
+        "loss": 0.312922865152359,
+        "perplexity": 52.26873779296875,
+        "level_perplexity": [
+          52.26873779296875
+        ],
+        "epoch": 3,
+        "codebook_utilization_pct": 36.71875,
+        "level_utilization_pct": [
+          36.71875
+        ],
+        "collision_rate": 0.9938271604938271
+      },
+      {
+        "recon": 0.22413720190525055,
+        "commit": 0.06444790214300156,
+        "loss": 0.2885850965976715,
+        "perplexity": 50.643306732177734,
+        "level_perplexity": [
+          50.643306732177734
+        ],
+        "epoch": 4,
+        "codebook_utilization_pct": 36.328125,
+        "level_utilization_pct": [
+          36.328125
+        ],
+        "collision_rate": 0.9932098765432099
+      },
+      {
+        "recon": 0.20952145755290985,
+        "commit": 0.06529131531715393,
+        "loss": 0.2748127579689026,
+        "perplexity": 49.428489685058594,
+        "level_perplexity": [
+          49.428489685058594
+        ],
+        "epoch": 5,
+        "codebook_utilization_pct": 35.9375,
+        "level_utilization_pct": [
+          35.9375
+        ],
+        "collision_rate": 0.9944444444444445
+      },
+      {
+        "recon": 0.1923818439245224,
+        "commit": 0.048215676099061966,
+        "loss": 0.24059751629829407,
+        "perplexity": 84.80519104003906,
+        "level_perplexity": [
+          84.80519104003906
+        ],
+        "epoch": 6,
+        "codebook_utilization_pct": 80.859375,
+        "level_utilization_pct": [
+          80.859375
+        ],
+        "collision_rate": 0.9858024691358025
+      },
+      {
+        "recon": 0.1756523847579956,
+        "commit": 0.04495007172226906,
+        "loss": 0.22060245275497437,
+        "perplexity": 87.83617401123047,
+        "level_perplexity": [
+          87.83617401123047
+        ],
+        "epoch": 7,
+        "codebook_utilization_pct": 91.015625,
+        "level_utilization_pct": [
+          91.015625
+        ],
+        "collision_rate": 0.9783950617283951
+      },
+      {
+        "recon": 0.16768334805965424,
+        "commit": 0.04429100081324577,
+        "loss": 0.2119743525981903,
+        "perplexity": 101.49188995361328,
+        "level_perplexity": [
+          101.49188995361328
+        ],
+        "epoch": 8,
+        "codebook_utilization_pct": 90.625,
+        "level_utilization_pct": [
+          90.625
+        ],
+        "collision_rate": 0.9827160493827161
+      },
+      {
+        "recon": 0.15650206804275513,
+        "commit": 0.04325593262910843,
+        "loss": 0.19975799322128296,
+        "perplexity": 97.84237670898438,
+        "level_perplexity": [
+          97.84237670898438
+        ],
+        "epoch": 9,
+        "codebook_utilization_pct": 93.359375,
+        "level_utilization_pct": [
+          93.359375
+        ],
+        "collision_rate": 0.9808641975308642
+      },
+      {
+        "recon": 0.14929088950157166,
+        "commit": 0.04311501234769821,
+        "loss": 0.19240590929985046,
+        "perplexity": 98.59886169433594,
+        "level_perplexity": [
+          98.59886169433594
+        ],
+        "epoch": 10,
+        "codebook_utilization_pct": 93.75,
+        "level_utilization_pct": [
+          93.75
+        ],
+        "collision_rate": 0.9808641975308642
+      },
+      {
+        "recon": 0.1451292186975479,
+        "commit": 0.04268728941679001,
+        "loss": 0.18781650066375732,
+        "perplexity": 99.94051361083984,
+        "level_perplexity": [
+          99.94051361083984
+        ],
+        "epoch": 11,
+        "codebook_utilization_pct": 95.703125,
+        "level_utilization_pct": [
+          95.703125
+        ],
+        "collision_rate": 0.9783950617283951
+      },
+      {
+        "recon": 0.14053887128829956,
+        "commit": 0.042431510984897614,
+        "loss": 0.18297037482261658,
+        "perplexity": 105.79395294189453,
+        "level_perplexity": [
+          105.79395294189453
+        ],
+        "epoch": 12,
+        "codebook_utilization_pct": 98.046875,
+        "level_utilization_pct": [
+          98.046875
+        ],
+        "collision_rate": 0.9808641975308642
+      },
+      {
+        "recon": 0.13647635281085968,
+        "commit": 0.04267638176679611,
+        "loss": 0.1791527271270752,
+        "perplexity": 109.78218078613281,
+        "level_perplexity": [
+          109.78218078613281
+        ],
+        "epoch": 13,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          99.21875
+        ],
+        "collision_rate": 0.9814814814814815
+      },
+      {
+        "recon": 0.13438889384269714,
+        "commit": 0.04398287087678909,
+        "loss": 0.17837175726890564,
+        "perplexity": 105.12975311279297,
+        "level_perplexity": [
+          105.12975311279297
+        ],
+        "epoch": 14,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          99.21875
+        ],
+        "collision_rate": 0.9864197530864197
+      },
+      {
+        "recon": 0.13265177607536316,
+        "commit": 0.0433427169919014,
+        "loss": 0.17599448561668396,
+        "perplexity": 106.45169067382812,
+        "level_perplexity": [
+          106.45169067382812
+        ],
+        "epoch": 15,
+        "codebook_utilization_pct": 98.4375,
+        "level_utilization_pct": [
+          98.4375
+        ],
+        "collision_rate": 0.9888888888888889
+      },
+      {
+        "recon": 0.12864446640014648,
+        "commit": 0.043317727744579315,
+        "loss": 0.1719622015953064,
+        "perplexity": 110.42227935791016,
+        "level_perplexity": [
+          110.42227935791016
+        ],
+        "epoch": 16,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          99.21875
+        ],
+        "collision_rate": 0.987037037037037
+      },
+      {
+        "recon": 0.1271599978208542,
+        "commit": 0.04356161504983902,
+        "loss": 0.1707216203212738,
+        "perplexity": 109.05097198486328,
+        "level_perplexity": [
+          109.05097198486328
+        ],
+        "epoch": 17,
+        "codebook_utilization_pct": 98.828125,
+        "level_utilization_pct": [
+          98.828125
+        ],
+        "collision_rate": 0.9901234567901235
+      },
+      {
+        "recon": 0.12426742911338806,
+        "commit": 0.044552549719810486,
+        "loss": 0.16881997883319855,
+        "perplexity": 110.534912109375,
+        "level_perplexity": [
+          110.534912109375
+        ],
+        "epoch": 18,
+        "codebook_utilization_pct": 98.828125,
+        "level_utilization_pct": [
+          98.828125
+        ],
+        "collision_rate": 0.9895061728395061
+      },
+      {
+        "recon": 0.12845644354820251,
+        "commit": 0.04544103890657425,
+        "loss": 0.17389747500419617,
+        "perplexity": 112.79016876220703,
+        "level_perplexity": [
+          112.79016876220703
+        ],
+        "epoch": 19,
+        "codebook_utilization_pct": 99.609375,
+        "level_utilization_pct": [
+          99.609375
+        ],
+        "collision_rate": 0.9901234567901235
+      },
+      {
+        "recon": 0.128365620970726,
+        "commit": 0.0441354438662529,
+        "loss": 0.17250105738639832,
+        "perplexity": 113.49146270751953,
+        "level_perplexity": [
+          113.49146270751953
+        ],
+        "epoch": 20,
+        "codebook_utilization_pct": 99.609375,
+        "level_utilization_pct": [
+          99.609375
+        ],
+        "collision_rate": 0.9901234567901235
+      },
+      {
+        "recon": 0.12229622155427933,
+        "commit": 0.04503417760133743,
+        "loss": 0.16733039915561676,
+        "perplexity": 114.36893463134766,
+        "level_perplexity": [
+          114.36893463134766
+        ],
+        "epoch": 21,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.991358024691358
+      },
+      {
+        "recon": 0.12028633803129196,
+        "commit": 0.04464158043265343,
+        "loss": 0.1649279147386551,
+        "perplexity": 113.82183837890625,
+        "level_perplexity": [
+          113.82183837890625
+        ],
+        "epoch": 22,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9925925925925926
+      },
+      {
+        "recon": 0.1202029138803482,
+        "commit": 0.045127078890800476,
+        "loss": 0.16532999277114868,
+        "perplexity": 112.94857025146484,
+        "level_perplexity": [
+          112.94857025146484
+        ],
+        "epoch": 23,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9932098765432099
+      },
+      {
+        "recon": 0.1203688532114029,
+        "commit": 0.045488953590393066,
+        "loss": 0.16585780680179596,
+        "perplexity": 111.54595184326172,
+        "level_perplexity": [
+          111.54595184326172
+        ],
+        "epoch": 24,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9938271604938271
+      },
+      {
+        "recon": 0.12148180603981018,
+        "commit": 0.046247102320194244,
+        "loss": 0.16772890090942383,
+        "perplexity": 112.62071990966797,
+        "level_perplexity": [
+          112.62071990966797
+        ],
+        "epoch": 25,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9925925925925926
+      },
+      {
+        "recon": 0.11948581039905548,
+        "commit": 0.04584387689828873,
+        "loss": 0.1653296947479248,
+        "perplexity": 113.27741241455078,
+        "level_perplexity": [
+          113.27741241455078
+        ],
+        "epoch": 26,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9925925925925926
+      },
+      {
+        "recon": 0.11824943125247955,
+        "commit": 0.04514618590474129,
+        "loss": 0.16339561343193054,
+        "perplexity": 113.49146270751953,
+        "level_perplexity": [
+          113.49146270751953
+        ],
+        "epoch": 27,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9925925925925926
+      },
+      {
+        "recon": 0.12144997715950012,
+        "commit": 0.047274261713027954,
+        "loss": 0.16872423887252808,
+        "perplexity": 115.25313568115234,
+        "level_perplexity": [
+          115.25313568115234
+        ],
+        "epoch": 28,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          99.21875
+        ],
+        "collision_rate": 0.9932098765432099
+      },
+      {
+        "recon": 0.11851247400045395,
+        "commit": 0.046704962849617004,
+        "loss": 0.16521742939949036,
+        "perplexity": 116.8214111328125,
+        "level_perplexity": [
+          116.8214111328125
+        ],
+        "epoch": 29,
+        "codebook_utilization_pct": 99.609375,
+        "level_utilization_pct": [
+          99.609375
+        ],
+        "collision_rate": 0.9938271604938271
+      },
+      {
+        "recon": 0.11643832921981812,
+        "commit": 0.0451781339943409,
+        "loss": 0.1616164594888687,
+        "perplexity": 114.36893463134766,
+        "level_perplexity": [
+          114.36893463134766
+        ],
+        "epoch": 30,
+        "codebook_utilization_pct": 99.609375,
+        "level_utilization_pct": [
+          99.609375
+        ],
+        "collision_rate": 0.9950617283950617
+      },
+      {
+        "recon": 0.12029420584440231,
+        "commit": 0.047803234308958054,
+        "loss": 0.16809743642807007,
+        "perplexity": 115.58869934082031,
+        "level_perplexity": [
+          115.58869934082031
+        ],
+        "epoch": 31,
+        "codebook_utilization_pct": 99.609375,
+        "level_utilization_pct": [
+          99.609375
+        ],
+        "collision_rate": 0.9938271604938271
+      },
+      {
+        "recon": 0.1155456006526947,
+        "commit": 0.047866757959127426,
+        "loss": 0.16341236233711243,
+        "perplexity": 111.75672149658203,
+        "level_perplexity": [
+          111.75672149658203
+        ],
+        "epoch": 32,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9944444444444445
+      },
+      {
+        "recon": 0.1164085641503334,
+        "commit": 0.04780593141913414,
+        "loss": 0.16421449184417725,
+        "perplexity": 115.25313568115234,
+        "level_perplexity": [
+          115.25313568115234
+        ],
+        "epoch": 33,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9950617283950617
+      },
+      {
+        "recon": 0.11374838650226593,
+        "commit": 0.04745487868785858,
+        "loss": 0.1612032651901245,
+        "perplexity": 113.82183837890625,
+        "level_perplexity": [
+          113.82183837890625
+        ],
+        "epoch": 34,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9944444444444445
+      },
+      {
+        "recon": 0.1162833571434021,
+        "commit": 0.04837912693619728,
+        "loss": 0.16466248035430908,
+        "perplexity": 114.70186614990234,
+        "level_perplexity": [
+          114.70186614990234
+        ],
+        "epoch": 35,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.995679012345679
+      },
+      {
+        "recon": 0.1125776618719101,
+        "commit": 0.04800825193524361,
+        "loss": 0.1605859100818634,
+        "perplexity": 112.29383087158203,
+        "level_perplexity": [
+          112.29383087158203
+        ],
+        "epoch": 36,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.995679012345679
+      },
+      {
+        "recon": 0.11593935638666153,
+        "commit": 0.04671764001250267,
+        "loss": 0.1626569926738739,
+        "perplexity": 115.25313568115234,
+        "level_perplexity": [
+          115.25313568115234
+        ],
+        "epoch": 37,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9944444444444445
+      },
+      {
+        "recon": 0.11317864805459976,
+        "commit": 0.0492735281586647,
+        "loss": 0.16245217621326447,
+        "perplexity": 114.70186614990234,
+        "level_perplexity": [
+          114.70186614990234
+        ],
+        "epoch": 38,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9944444444444445
+      },
+      {
+        "recon": 0.1125996932387352,
+        "commit": 0.04733578488230705,
+        "loss": 0.15993547439575195,
+        "perplexity": 112.83353424072266,
+        "level_perplexity": [
+          112.83353424072266
+        ],
+        "epoch": 39,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9944444444444445
+      },
+      {
+        "recon": 0.11279235035181046,
+        "commit": 0.04854630306363106,
+        "loss": 0.1613386571407318,
+        "perplexity": 114.36893463134766,
+        "level_perplexity": [
+          114.36893463134766
+        ],
+        "epoch": 40,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.995679012345679
+      },
+      {
+        "recon": 0.11324425786733627,
+        "commit": 0.04845370352268219,
+        "loss": 0.16169795393943787,
+        "perplexity": 111.9678955078125,
+        "level_perplexity": [
+          111.9678955078125
+        ],
+        "epoch": 41,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.995679012345679
+      },
+      {
+        "recon": 0.11520350724458694,
+        "commit": 0.04909748584032059,
+        "loss": 0.16430099308490753,
+        "perplexity": 114.58499145507812,
+        "level_perplexity": [
+          114.58499145507812
+        ],
+        "epoch": 42,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9969135802469136
+      },
+      {
+        "recon": 0.11545850336551666,
+        "commit": 0.04970245435833931,
+        "loss": 0.16516095399856567,
+        "perplexity": 114.15323638916016,
+        "level_perplexity": [
+          114.15323638916016
+        ],
+        "epoch": 43,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9969135802469136
+      },
+      {
+        "recon": 0.1136445626616478,
+        "commit": 0.04931839555501938,
+        "loss": 0.16296295821666718,
+        "perplexity": 115.25313568115234,
+        "level_perplexity": [
+          115.25313568115234
+        ],
+        "epoch": 44,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9950617283950617
+      },
+      {
+        "recon": 0.11445654928684235,
+        "commit": 0.050198040902614594,
+        "loss": 0.16465458273887634,
+        "perplexity": 115.2530746459961,
+        "level_perplexity": [
+          115.2530746459961
+        ],
+        "epoch": 45,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9950617283950617
+      },
+      {
+        "recon": 0.11432051658630371,
+        "commit": 0.04967620596289635,
+        "loss": 0.16399672627449036,
+        "perplexity": 115.25313568115234,
+        "level_perplexity": [
+          115.25313568115234
+        ],
+        "epoch": 46,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.995679012345679
+      },
+      {
+        "recon": 0.11301932483911514,
+        "commit": 0.0504213385283947,
+        "loss": 0.16344065964221954,
+        "perplexity": 117.04216003417969,
+        "level_perplexity": [
+          117.04216003417969
+        ],
+        "epoch": 47,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9962962962962963
+      },
+      {
+        "recon": 0.11607236415147781,
+        "commit": 0.050216443836688995,
+        "loss": 0.1662888079881668,
+        "perplexity": 114.36893463134766,
+        "level_perplexity": [
+          114.36893463134766
+        ],
+        "epoch": 48,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.995679012345679
+      },
+      {
+        "recon": 0.11517442762851715,
+        "commit": 0.049950871616601944,
+        "loss": 0.1651252955198288,
+        "perplexity": 113.16204071044922,
+        "level_perplexity": [
+          113.16204071044922
+        ],
+        "epoch": 49,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.995679012345679
+      },
+      {
+        "recon": 0.1148376613855362,
+        "commit": 0.049984563142061234,
+        "loss": 0.16482222080230713,
+        "perplexity": 118.2904281616211,
+        "level_perplexity": [
+          118.2904281616211
+        ],
+        "epoch": 50,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9969135802469136
+      },
+      {
+        "recon": 0.11264213174581528,
+        "commit": 0.05010218173265457,
+        "loss": 0.16274431347846985,
+        "perplexity": 116.70243072509766,
+        "level_perplexity": [
+          116.70243072509766
+        ],
+        "epoch": 51,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9969135802469136
+      },
+      {
+        "recon": 0.11396395415067673,
+        "commit": 0.048534832894802094,
+        "loss": 0.16249878704547882,
+        "perplexity": 116.14417266845703,
+        "level_perplexity": [
+          116.14417266845703
+        ],
+        "epoch": 52,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9975308641975309
+      },
+      {
+        "recon": 0.11408758163452148,
+        "commit": 0.04919438064098358,
+        "loss": 0.16328196227550507,
+        "perplexity": 112.29383087158203,
+        "level_perplexity": [
+          112.29383087158203
+        ],
+        "epoch": 53,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9969135802469136
+      },
+      {
+        "recon": 0.11639445275068283,
+        "commit": 0.050290796905756,
+        "loss": 0.16668525338172913,
+        "perplexity": 118.39323425292969,
+        "level_perplexity": [
+          118.39323425292969
+        ],
+        "epoch": 54,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9969135802469136
+      },
+      {
+        "recon": 0.11263924092054367,
+        "commit": 0.05006710812449455,
+        "loss": 0.16270634531974792,
+        "perplexity": 114.91860961914062,
+        "level_perplexity": [
+          114.91860961914062
+        ],
+        "epoch": 55,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9962962962962963
+      },
+      {
+        "recon": 0.11349796503782272,
+        "commit": 0.05114474892616272,
+        "loss": 0.16464272141456604,
+        "perplexity": 110.57740020751953,
+        "level_perplexity": [
+          110.57740020751953
+        ],
+        "epoch": 56,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9969135802469136
+      },
+      {
+        "recon": 0.11588739603757858,
+        "commit": 0.050274308770895004,
+        "loss": 0.1661617010831833,
+        "perplexity": 117.48489379882812,
+        "level_perplexity": [
+          117.48489379882812
+        ],
+        "epoch": 57,
+        "codebook_utilization_pct": 99.609375,
+        "level_utilization_pct": [
+          99.609375
+        ],
+        "collision_rate": 0.9975308641975309
+      },
+      {
+        "recon": 0.11352416127920151,
+        "commit": 0.05036802589893341,
+        "loss": 0.16389217972755432,
+        "perplexity": 113.9207763671875,
+        "level_perplexity": [
+          113.9207763671875
+        ],
+        "epoch": 58,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9981481481481481
+      },
+      {
+        "recon": 0.11415112763643265,
+        "commit": 0.050981443375349045,
+        "loss": 0.1651325672864914,
+        "perplexity": 112.5060806274414,
+        "level_perplexity": [
+          112.5060806274414
+        ],
+        "epoch": 59,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9981481481481481
+      },
+      {
+        "recon": 0.11605982482433319,
+        "commit": 0.05067068710923195,
+        "loss": 0.16673050820827484,
+        "perplexity": 110.89933776855469,
+        "level_perplexity": [
+          110.89933776855469
+        ],
+        "epoch": 60,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9975308641975309
+      },
+      {
+        "recon": 0.11721652001142502,
+        "commit": 0.04975390434265137,
+        "loss": 0.16697043180465698,
+        "perplexity": 115.13574981689453,
+        "level_perplexity": [
+          115.13574981689453
+        ],
+        "epoch": 61,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9975308641975309
+      },
+      {
+        "recon": 0.11620642989873886,
+        "commit": 0.05097108706831932,
+        "loss": 0.16717751324176788,
+        "perplexity": 111.75672149658203,
+        "level_perplexity": [
+          111.75672149658203
+        ],
+        "epoch": 62,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9981481481481481
+      },
+      {
+        "recon": 0.11612606793642044,
+        "commit": 0.051496267318725586,
+        "loss": 0.16762232780456543,
+        "perplexity": 113.70591735839844,
+        "level_perplexity": [
+          113.70591735839844
+        ],
+        "epoch": 63,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9981481481481481
+      },
+      {
+        "recon": 0.11375182121992111,
+        "commit": 0.050583627074956894,
+        "loss": 0.1643354445695877,
+        "perplexity": 114.9185562133789,
+        "level_perplexity": [
+          114.9185562133789
+        ],
+        "epoch": 64,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9981481481481481
+      },
+      {
+        "recon": 0.1155485212802887,
+        "commit": 0.050187092274427414,
+        "loss": 0.1657356172800064,
+        "perplexity": 111.9678955078125,
+        "level_perplexity": [
+          111.9678955078125
+        ],
+        "epoch": 65,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9962962962962963
+      },
+      {
+        "recon": 0.11425799131393433,
+        "commit": 0.051850419491529465,
+        "loss": 0.1661084145307541,
+        "perplexity": 115.13574981689453,
+        "level_perplexity": [
+          115.13574981689453
+        ],
+        "epoch": 66,
+        "codebook_utilization_pct": 100.0,
+        "level_utilization_pct": [
+          100.0
+        ],
+        "collision_rate": 0.9975308641975309
+      }
+    ],
+    "final": {
+      "best_val_recon": 0.1125776618719101,
+      "epochs_run": 66,
+      "train_seconds": 4.029058456420898,
+      "cold_item_recon": 0.11622750014066696,
+      "val_recon": 0.1125776618719101
+    }
+  },
+  "rq_vae": {
+    "epochs": [
+      {
+        "recon": 0.330775648355484,
+        "commit": 0.0716063380241394,
+        "loss": 0.4023819863796234,
+        "perplexity": 17.955039978027344,
+        "level_perplexity": [
+          55.64307403564453,
+          4.9173784255981445,
+          6.057954788208008,
+          5.201757431030273
+        ],
+        "epoch": 1,
+        "codebook_utilization_pct": 17.08984375,
+        "level_utilization_pct": [
+          60.15625,
+          2.734375,
+          2.734375,
+          2.734375
+        ],
+        "collision_rate": 0.5901234567901235
+      },
+      {
+        "recon": 0.2448236495256424,
+        "commit": 0.04081955552101135,
+        "loss": 0.28564321994781494,
+        "perplexity": 21.056575775146484,
+        "level_perplexity": [
+          50.05057144165039,
+          10.433594703674316,
+          11.413254737854004,
+          12.32888412475586
+        ],
+        "epoch": 2,
+        "codebook_utilization_pct": 16.6015625,
+        "level_utilization_pct": [
+          50.0,
+          5.46875,
+          5.46875,
+          5.46875
+        ],
+        "collision_rate": 0.4302469135802469
+      },
+      {
+        "recon": 0.18985150754451752,
+        "commit": 0.03033437207341194,
+        "loss": 0.22018587589263916,
+        "perplexity": 24.310874938964844,
+        "level_perplexity": [
+          52.34682083129883,
+          14.305227279663086,
+          16.000694274902344,
+          14.590750694274902
+        ],
+        "epoch": 3,
+        "codebook_utilization_pct": 17.578125,
+        "level_utilization_pct": [
+          48.046875,
+          6.640625,
+          7.8125,
+          7.8125
+        ],
+        "collision_rate": 0.3851851851851852
+      },
+      {
+        "recon": 0.15589670836925507,
+        "commit": 0.02634047344326973,
+        "loss": 0.1822371780872345,
+        "perplexity": 27.739439010620117,
+        "level_perplexity": [
+          54.42619323730469,
+          16.734140396118164,
+          19.79983139038086,
+          19.997589111328125
+        ],
+        "epoch": 4,
+        "codebook_utilization_pct": 19.04296875,
+        "level_utilization_pct": [
+          47.265625,
+          8.59375,
+          9.765625,
+          10.546875
+        ],
+        "collision_rate": 0.35246913580246914
+      },
+      {
+        "recon": 0.13689085841178894,
+        "commit": 0.024941351264715195,
+        "loss": 0.16183221340179443,
+        "perplexity": 31.041072845458984,
+        "level_perplexity": [
+          56.403419494628906,
+          19.677202224731445,
+          22.428190231323242,
+          25.655473709106445
+        ],
+        "epoch": 5,
+        "codebook_utilization_pct": 20.41015625,
+        "level_utilization_pct": [
+          46.484375,
+          10.546875,
+          12.109375,
+          12.5
+        ],
+        "collision_rate": 0.35987654320987655
+      },
+      {
+        "recon": 0.12035512924194336,
+        "commit": 0.02048480324447155,
+        "loss": 0.14083993434906006,
+        "perplexity": 47.22808074951172,
+        "level_perplexity": [
+          78.35336303710938,
+          55.79738998413086,
+          28.554983139038086,
+          26.206584930419922
+        ],
+        "epoch": 6,
+        "codebook_utilization_pct": 59.5703125,
+        "level_utilization_pct": [
+          76.953125,
+          77.34375,
+          44.921875,
+          39.0625
+        ],
+        "collision_rate": 0.20308641975308642
+      },
+      {
+        "recon": 0.10764912515878677,
+        "commit": 0.01884709857404232,
+        "loss": 0.12649622559547424,
+        "perplexity": 52.45020294189453,
+        "level_perplexity": [
+          88.78726959228516,
+          57.292686462402344,
+          36.550357818603516,
+          27.170490264892578
+        ],
+        "epoch": 7,
+        "codebook_utilization_pct": 60.15625,
+        "level_utilization_pct": [
+          91.015625,
+          70.3125,
+          42.96875,
+          36.328125
+        ],
+        "collision_rate": 0.1345679012345679
+      },
+      {
+        "recon": 0.09820041060447693,
+        "commit": 0.017471861094236374,
+        "loss": 0.1156722754240036,
+        "perplexity": 49.99755096435547,
+        "level_perplexity": [
+          86.7593765258789,
+          53.19554901123047,
+          31.334218978881836,
+          28.701066970825195
+        ],
+        "epoch": 8,
+        "codebook_utilization_pct": 55.56640625,
+        "level_utilization_pct": [
+          94.140625,
+          64.453125,
+          35.546875,
+          28.125
+        ],
+        "collision_rate": 0.11851851851851852
+      },
+      {
+        "recon": 0.09148474782705307,
+        "commit": 0.017071373760700226,
+        "loss": 0.1085561215877533,
+        "perplexity": 54.0722770690918,
+        "level_perplexity": [
+          96.4917984008789,
+          54.62783432006836,
+          37.07317352294922,
+          28.096303939819336
+        ],
+        "epoch": 9,
+        "codebook_utilization_pct": 55.56640625,
+        "level_utilization_pct": [
+          94.140625,
+          64.0625,
+          38.671875,
+          25.390625
+        ],
+        "collision_rate": 0.09444444444444444
+      },
+      {
+        "recon": 0.08464304357767105,
+        "commit": 0.01557992585003376,
+        "loss": 0.10022296756505966,
+        "perplexity": 52.563663482666016,
+        "level_perplexity": [
+          97.5208969116211,
+          50.301300048828125,
+          34.4386100769043,
+          27.993854522705078
+        ],
+        "epoch": 10,
+        "codebook_utilization_pct": 53.90625,
+        "level_utilization_pct": [
+          95.3125,
+          62.890625,
+          35.15625,
+          22.265625
+        ],
+        "collision_rate": 0.06666666666666667
+      },
+      {
+        "recon": 0.08015429228544235,
+        "commit": 0.015053577721118927,
+        "loss": 0.09520787000656128,
+        "perplexity": 53.23674774169922,
+        "level_perplexity": [
+          99.80030822753906,
+          50.72792434692383,
+          34.39430236816406,
+          28.024446487426758
+        ],
+        "epoch": 11,
+        "codebook_utilization_pct": 55.46875,
+        "level_utilization_pct": [
+          96.09375,
+          62.5,
+          39.0625,
+          24.21875
+        ],
+        "collision_rate": 0.06790123456790123
+      },
+      {
+        "recon": 0.07571431994438171,
+        "commit": 0.014326116070151329,
+        "loss": 0.09004043787717819,
+        "perplexity": 61.19440460205078,
+        "level_perplexity": [
+          101.45279693603516,
+          60.43257141113281,
+          42.81289291381836,
+          40.079368591308594
+        ],
+        "epoch": 12,
+        "codebook_utilization_pct": 75.78125,
+        "level_utilization_pct": [
+          98.046875,
+          89.0625,
+          71.09375,
+          44.921875
+        ],
+        "collision_rate": 0.040740740740740744
+      },
+      {
+        "recon": 0.07174788415431976,
+        "commit": 0.013234121724963188,
+        "loss": 0.0849820077419281,
+        "perplexity": 66.60086059570312,
+        "level_perplexity": [
+          102.72860717773438,
+          63.17338562011719,
+          54.477455139160156,
+          46.024017333984375
+        ],
+        "epoch": 13,
+        "codebook_utilization_pct": 80.859375,
+        "level_utilization_pct": [
+          98.828125,
+          93.359375,
+          75.78125,
+          55.46875
+        ],
+        "collision_rate": 0.016666666666666666
+      },
+      {
+        "recon": 0.06976445019245148,
+        "commit": 0.013149301521480083,
+        "loss": 0.08291374891996384,
+        "perplexity": 67.22215270996094,
+        "level_perplexity": [
+          103.02764129638672,
+          68.38394927978516,
+          52.571250915527344,
+          44.9057502746582
+        ],
+        "epoch": 14,
+        "codebook_utilization_pct": 81.34765625,
+        "level_utilization_pct": [
+          99.21875,
+          94.921875,
+          78.125,
+          53.125
+        ],
+        "collision_rate": 0.013580246913580247
+      },
+      {
+        "recon": 0.0670798122882843,
+        "commit": 0.012959122657775879,
+        "loss": 0.08003893494606018,
+        "perplexity": 68.04629516601562,
+        "level_perplexity": [
+          102.23719024658203,
+          75.95188903808594,
+          52.043914794921875,
+          41.95219421386719
+        ],
+        "epoch": 15,
+        "codebook_utilization_pct": 80.17578125,
+        "level_utilization_pct": [
+          98.828125,
+          94.140625,
+          76.953125,
+          50.78125
+        ],
+        "collision_rate": 0.016049382716049384
+      },
+      {
+        "recon": 0.06472792476415634,
+        "commit": 0.012780018150806427,
+        "loss": 0.07750794291496277,
+        "perplexity": 70.76324462890625,
+        "level_perplexity": [
+          104.5762710571289,
+          78.6370849609375,
+          53.011329650878906,
+          46.82830047607422
+        ],
+        "epoch": 16,
+        "codebook_utilization_pct": 78.80859375,
+        "level_utilization_pct": [
+          100.0,
+          94.921875,
+          73.4375,
+          46.875
+        ],
+        "collision_rate": 0.012345679012345678
+      },
+      {
+        "recon": 0.06253255158662796,
+        "commit": 0.012468229979276657,
+        "loss": 0.07500077784061432,
+        "perplexity": 72.73951721191406,
+        "level_perplexity": [
+          103.66824340820312,
+          77.49674987792969,
+          59.799808502197266,
+          49.99326705932617
+        ],
+        "epoch": 17,
+        "codebook_utilization_pct": 77.63671875,
+        "level_utilization_pct": [
+          100.0,
+          92.1875,
+          71.09375,
+          47.265625
+        ],
+        "collision_rate": 0.012345679012345678
+      },
+      {
+        "recon": 0.06083694472908974,
+        "commit": 0.012566735967993736,
+        "loss": 0.07340367883443832,
+        "perplexity": 74.21563720703125,
+        "level_perplexity": [
+          105.07887268066406,
+          79.86264038085938,
+          58.066131591796875,
+          53.854923248291016
+        ],
+        "epoch": 18,
+        "codebook_utilization_pct": 89.84375,
+        "level_utilization_pct": [
+          100.0,
+          93.75,
+          90.234375,
+          75.390625
+        ],
+        "collision_rate": 0.009876543209876543
+      },
+      {
+        "recon": 0.058787956833839417,
+        "commit": 0.012536905705928802,
+        "loss": 0.07132486253976822,
+        "perplexity": 79.69829559326172,
+        "level_perplexity": [
+          105.58389282226562,
+          82.5559310913086,
+          75.22783660888672,
+          55.425506591796875
+        ],
+        "epoch": 19,
+        "codebook_utilization_pct": 91.11328125,
+        "level_utilization_pct": [
+          100.0,
+          95.3125,
+          93.75,
+          75.390625
+        ],
+        "collision_rate": 0.007407407407407408
+      },
+      {
+        "recon": 0.05738082528114319,
+        "commit": 0.012416111305356026,
+        "loss": 0.06979693472385406,
+        "perplexity": 81.30467987060547,
+        "level_perplexity": [
+          104.46971130371094,
+          84.41311645507812,
+          77.95423889160156,
+          58.38166046142578
+        ],
+        "epoch": 20,
+        "codebook_utilization_pct": 90.91796875,
+        "level_utilization_pct": [
+          100.0,
+          98.046875,
+          89.84375,
+          75.78125
+        ],
+        "collision_rate": 0.003703703703703704
+      },
+      {
+        "recon": 0.05578024312853813,
+        "commit": 0.01249235961586237,
+        "loss": 0.06827260553836823,
+        "perplexity": 81.74447631835938,
+        "level_perplexity": [
+          102.53480529785156,
+          85.68194580078125,
+          75.08595275878906,
+          63.675201416015625
+        ],
+        "epoch": 21,
+        "codebook_utilization_pct": 90.4296875,
+        "level_utilization_pct": [
+          100.0,
+          96.09375,
+          91.40625,
+          74.21875
+        ],
+        "collision_rate": 0.007407407407407408
+      },
+      {
+        "recon": 0.05540207028388977,
+        "commit": 0.012856191024184227,
+        "loss": 0.06825826317071915,
+        "perplexity": 81.54922485351562,
+        "level_perplexity": [
+          102.72860717773438,
+          81.31524658203125,
+          73.10626220703125,
+          69.04676818847656
+        ],
+        "epoch": 22,
+        "codebook_utilization_pct": 89.84375,
+        "level_utilization_pct": [
+          99.609375,
+          96.484375,
+          90.625,
+          72.65625
+        ],
+        "collision_rate": 0.0024691358024691358
+      },
+      {
+        "recon": 0.05184084177017212,
+        "commit": 0.013086501508951187,
+        "loss": 0.06492733955383301,
+        "perplexity": 82.13883209228516,
+        "level_perplexity": [
+          102.53485107421875,
+          80.63214111328125,
+          76.96133422851562,
+          68.42700958251953
+        ],
+        "epoch": 23,
+        "codebook_utilization_pct": 90.625,
+        "level_utilization_pct": [
+          99.609375,
+          95.3125,
+          92.1875,
+          75.390625
+        ],
+        "collision_rate": 0.0049382716049382715
+      },
+      {
+        "recon": 0.050661955028772354,
+        "commit": 0.01288251206278801,
+        "loss": 0.06354446709156036,
+        "perplexity": 85.01074981689453,
+        "level_perplexity": [
+          102.9880599975586,
+          82.26407623291016,
+          80.31625366210938,
+          74.47460174560547
+        ],
+        "epoch": 24,
+        "codebook_utilization_pct": 92.08984375,
+        "level_utilization_pct": [
+          100.0,
+          96.484375,
+          93.359375,
+          78.515625
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.04870259761810303,
+        "commit": 0.012870743870735168,
+        "loss": 0.061573341488838196,
+        "perplexity": 88.42282104492188,
+        "level_perplexity": [
+          105.90186309814453,
+          89.2005844116211,
+          83.84255981445312,
+          74.74626922607422
+        ],
+        "epoch": 25,
+        "codebook_utilization_pct": 92.28515625,
+        "level_utilization_pct": [
+          100.0,
+          97.65625,
+          92.578125,
+          78.90625
+        ],
+        "collision_rate": 0.0024691358024691358
+      },
+      {
+        "recon": 0.0477064810693264,
+        "commit": 0.013021670281887054,
+        "loss": 0.060728151351213455,
+        "perplexity": 90.25648498535156,
+        "level_perplexity": [
+          105.90186309814453,
+          90.8975601196289,
+          83.17561340332031,
+          81.05088806152344
+        ],
+        "epoch": 26,
+        "codebook_utilization_pct": 92.87109375,
+        "level_utilization_pct": [
+          100.0,
+          99.21875,
+          94.140625,
+          78.125
+        ],
+        "collision_rate": 0.003703703703703704
+      },
+      {
+        "recon": 0.0474151074886322,
+        "commit": 0.013077308423817158,
+        "loss": 0.060492414981126785,
+        "perplexity": 91.21630096435547,
+        "level_perplexity": [
+          106.7206039428711,
+          87.72708892822266,
+          87.07353210449219,
+          83.343994140625
+        ],
+        "epoch": 27,
+        "codebook_utilization_pct": 91.6015625,
+        "level_utilization_pct": [
+          100.0,
+          98.828125,
+          93.359375,
+          74.21875
+        ],
+        "collision_rate": 0.0024691358024691358
+      },
+      {
+        "recon": 0.046000611037015915,
+        "commit": 0.012951777316629887,
+        "loss": 0.05895238742232323,
+        "perplexity": 93.46772766113281,
+        "level_perplexity": [
+          104.58663940429688,
+          96.24870300292969,
+          87.85033416748047,
+          85.18523406982422
+        ],
+        "epoch": 28,
+        "codebook_utilization_pct": 91.6015625,
+        "level_utilization_pct": [
+          100.0,
+          98.4375,
+          93.75,
+          74.21875
+        ],
+        "collision_rate": 0.0024691358024691358
+      },
+      {
+        "recon": 0.045703548938035965,
+        "commit": 0.013142759911715984,
+        "loss": 0.058846309781074524,
+        "perplexity": 93.63047790527344,
+        "level_perplexity": [
+          102.9880599975586,
+          94.3698501586914,
+          94.1918716430664,
+          82.97212219238281
+        ],
+        "epoch": 29,
+        "codebook_utilization_pct": 91.015625,
+        "level_utilization_pct": [
+          100.0,
+          98.4375,
+          93.75,
+          71.875
+        ],
+        "collision_rate": 0.0024691358024691358
+      },
+      {
+        "recon": 0.044968388974666595,
+        "commit": 0.012989042326807976,
+        "loss": 0.05795743316411972,
+        "perplexity": 92.92485046386719,
+        "level_perplexity": [
+          105.395263671875,
+          94.52608489990234,
+          87.05406951904297,
+          84.72398376464844
+        ],
+        "epoch": 30,
+        "codebook_utilization_pct": 91.50390625,
+        "level_utilization_pct": [
+          100.0,
+          98.4375,
+          93.359375,
+          74.21875
+        ],
+        "collision_rate": 0.0049382716049382715
+      },
+      {
+        "recon": 0.04306568577885628,
+        "commit": 0.013014526106417179,
+        "loss": 0.05608021095395088,
+        "perplexity": 91.5528335571289,
+        "level_perplexity": [
+          102.98800659179688,
+          89.8602523803711,
+          93.97814178466797,
+          79.38493347167969
+        ],
+        "epoch": 31,
+        "codebook_utilization_pct": 92.96875,
+        "level_utilization_pct": [
+          100.0,
+          98.828125,
+          94.921875,
+          78.125
+        ],
+        "collision_rate": 0.0024691358024691358
+      },
+      {
+        "recon": 0.042861852794885635,
+        "commit": 0.012902766466140747,
+        "loss": 0.05576461926102638,
+        "perplexity": 96.47470092773438,
+        "level_perplexity": [
+          103.48302459716797,
+          94.48966979980469,
+          96.7354965209961,
+          91.19060516357422
+        ],
+        "epoch": 32,
+        "codebook_utilization_pct": 93.9453125,
+        "level_utilization_pct": [
+          100.0,
+          98.4375,
+          95.3125,
+          82.03125
+        ],
+        "collision_rate": 0.0024691358024691358
+      },
+      {
+        "recon": 0.042658112943172455,
+        "commit": 0.012783761136233807,
+        "loss": 0.055441875010728836,
+        "perplexity": 97.63899230957031,
+        "level_perplexity": [
+          104.28307342529297,
+          94.9709243774414,
+          98.60868835449219,
+          92.69327545166016
+        ],
+        "epoch": 33,
+        "codebook_utilization_pct": 94.7265625,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          96.484375,
+          82.8125
+        ],
+        "collision_rate": 0.0049382716049382715
+      },
+      {
+        "recon": 0.04159899801015854,
+        "commit": 0.013061261735856533,
+        "loss": 0.054660260677337646,
+        "perplexity": 93.52548217773438,
+        "level_perplexity": [
+          102.09376525878906,
+          89.8602523803711,
+          92.89167785644531,
+          89.25623321533203
+        ],
+        "epoch": 34,
+        "codebook_utilization_pct": 94.3359375,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          95.703125,
+          82.03125
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.04140684753656387,
+        "commit": 0.012401554733514786,
+        "loss": 0.05380840227007866,
+        "perplexity": 100.41429138183594,
+        "level_perplexity": [
+          102.3910140991211,
+          102.96227264404297,
+          92.84673309326172,
+          103.45716857910156
+        ],
+        "epoch": 35,
+        "codebook_utilization_pct": 95.1171875,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          96.484375,
+          84.375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.04041340574622154,
+        "commit": 0.012391725555062294,
+        "loss": 0.052805133163928986,
+        "perplexity": 97.37481689453125,
+        "level_perplexity": [
+          102.09376525878906,
+          99.18367767333984,
+          92.08409881591797,
+          96.13774871826172
+        ],
+        "epoch": 36,
+        "codebook_utilization_pct": 94.7265625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          95.3125,
+          83.59375
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03985295444726944,
+        "commit": 0.012638436630368233,
+        "loss": 0.05249138921499252,
+        "perplexity": 99.87437438964844,
+        "level_perplexity": [
+          102.68912506103516,
+          105.22112274169922,
+          98.73125457763672,
+          92.8559799194336
+        ],
+        "epoch": 37,
+        "codebook_utilization_pct": 95.21484375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          95.703125,
+          85.15625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.0408729650080204,
+        "commit": 0.01211346872150898,
+        "loss": 0.05298643559217453,
+        "perplexity": 99.01221466064453,
+        "level_perplexity": [
+          104.1768569946289,
+          97.00247955322266,
+          91.94680786132812,
+          102.92271423339844
+        ],
+        "epoch": 38,
+        "codebook_utilization_pct": 95.80078125,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          95.3125,
+          88.28125
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03876177594065666,
+        "commit": 0.012489423155784607,
+        "loss": 0.05125119909644127,
+        "perplexity": 100.0804214477539,
+        "level_perplexity": [
+          106.10192108154297,
+          103.3119888305664,
+          100.57192993164062,
+          90.33584594726562
+        ],
+        "epoch": 39,
+        "codebook_utilization_pct": 95.3125,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          96.484375,
+          85.15625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03919918090105057,
+        "commit": 0.012137724086642265,
+        "loss": 0.05133690685033798,
+        "perplexity": 99.38802337646484,
+        "level_perplexity": [
+          104.17681884765625,
+          102.17237091064453,
+          91.1270980834961,
+          100.07579803466797
+        ],
+        "epoch": 40,
+        "codebook_utilization_pct": 95.99609375,
+        "level_utilization_pct": [
+          100.0,
+          98.828125,
+          98.046875,
+          87.109375
+        ],
+        "collision_rate": 0.0024691358024691358
+      },
+      {
+        "recon": 0.03919239342212677,
+        "commit": 0.012462548911571503,
+        "loss": 0.05165494233369827,
+        "perplexity": 101.75010681152344,
+        "level_perplexity": [
+          105.08934783935547,
+          103.4571304321289,
+          101.09418487548828,
+          97.3597640991211
+        ],
+        "epoch": 41,
+        "codebook_utilization_pct": 95.01953125,
+        "level_utilization_pct": [
+          100.0,
+          98.828125,
+          95.3125,
+          85.9375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03934190794825554,
+        "commit": 0.012133834883570671,
+        "loss": 0.05147574096918106,
+        "perplexity": 101.93653869628906,
+        "level_perplexity": [
+          105.28787231445312,
+          103.15682983398438,
+          101.34951782226562,
+          97.95194244384766
+        ],
+        "epoch": 42,
+        "codebook_utilization_pct": 95.21484375,
+        "level_utilization_pct": [
+          99.609375,
+          98.828125,
+          96.875,
+          85.546875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03867115080356598,
+        "commit": 0.012198624201118946,
+        "loss": 0.05086977407336235,
+        "perplexity": 96.84590148925781,
+        "level_perplexity": [
+          106.72055053710938,
+          95.9693374633789,
+          91.31966400146484,
+          93.3740463256836
+        ],
+        "epoch": 43,
+        "codebook_utilization_pct": 95.60546875,
+        "level_utilization_pct": [
+          99.609375,
+          99.609375,
+          97.65625,
+          85.546875
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.038079895079135895,
+        "commit": 0.011988820508122444,
+        "loss": 0.05006871372461319,
+        "perplexity": 101.87101745605469,
+        "level_perplexity": [
+          109.72906494140625,
+          100.55571746826172,
+          96.62734985351562,
+          100.57192993164062
+        ],
+        "epoch": 44,
+        "codebook_utilization_pct": 96.19140625,
+        "level_utilization_pct": [
+          99.609375,
+          99.21875,
+          97.265625,
+          88.671875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03928210213780403,
+        "commit": 0.011882323771715164,
+        "loss": 0.051164425909519196,
+        "perplexity": 104.04432678222656,
+        "level_perplexity": [
+          105.90180969238281,
+          105.36888122558594,
+          101.64454650878906,
+          103.26205444335938
+        ],
+        "epoch": 45,
+        "codebook_utilization_pct": 96.58203125,
+        "level_utilization_pct": [
+          99.609375,
+          99.609375,
+          98.046875,
+          89.0625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03887725993990898,
+        "commit": 0.011979924514889717,
+        "loss": 0.05085718631744385,
+        "perplexity": 103.45878601074219,
+        "level_perplexity": [
+          107.38414764404297,
+          104.91571044921875,
+          101.83660888671875,
+          99.69866943359375
+        ],
+        "epoch": 46,
+        "codebook_utilization_pct": 96.77734375,
+        "level_utilization_pct": [
+          99.609375,
+          100.0,
+          97.65625,
+          89.84375
+        ],
+        "collision_rate": 0.0024691358024691358
+      },
+      {
+        "recon": 0.03782959282398224,
+        "commit": 0.011883130297064781,
+        "loss": 0.04971272498369217,
+        "perplexity": 101.08242797851562,
+        "level_perplexity": [
+          107.74888610839844,
+          97.5208969116211,
+          95.79788208007812,
+          103.26205444335938
+        ],
+        "epoch": 47,
+        "codebook_utilization_pct": 95.80078125,
+        "level_utilization_pct": [
+          99.609375,
+          99.609375,
+          96.484375,
+          87.5
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03838406875729561,
+        "commit": 0.011692965403199196,
+        "loss": 0.050077036023139954,
+        "perplexity": 102.2171401977539,
+        "level_perplexity": [
+          106.41078186035156,
+          101.83656311035156,
+          106.87052154541016,
+          93.75067901611328
+        ],
+        "epoch": 48,
+        "codebook_utilization_pct": 96.77734375,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          98.4375,
+          89.0625
+        ],
+        "collision_rate": 0.0024691358024691358
+      },
+      {
+        "recon": 0.037740159779787064,
+        "commit": 0.01174313947558403,
+        "loss": 0.049483299255371094,
+        "perplexity": 103.35490417480469,
+        "level_perplexity": [
+          105.08934783935547,
+          103.56266021728516,
+          106.49270629882812,
+          98.27489471435547
+        ],
+        "epoch": 49,
+        "codebook_utilization_pct": 96.58203125,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          97.65625,
+          89.0625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03785141184926033,
+        "commit": 0.011485293507575989,
+        "loss": 0.04933670535683632,
+        "perplexity": 101.97749328613281,
+        "level_perplexity": [
+          107.9002456665039,
+          100.61058807373047,
+          100.22532653808594,
+          99.17378997802734
+        ],
+        "epoch": 50,
+        "codebook_utilization_pct": 96.875,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          98.046875,
+          89.84375
+        ],
+        "collision_rate": 0.0024691358024691358
+      },
+      {
+        "recon": 0.038853906095027924,
+        "commit": 0.01152065023779869,
+        "loss": 0.050374556332826614,
+        "perplexity": 101.38548278808594,
+        "level_perplexity": [
+          107.74883270263672,
+          104.95603942871094,
+          100.31856536865234,
+          92.51849365234375
+        ],
+        "epoch": 51,
+        "codebook_utilization_pct": 97.16796875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          98.828125,
+          89.84375
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03687369450926781,
+        "commit": 0.011599831283092499,
+        "loss": 0.048473525792360306,
+        "perplexity": 100.57972717285156,
+        "level_perplexity": [
+          109.257080078125,
+          101.77200317382812,
+          104.61112976074219,
+          86.6787109375
+        ],
+        "epoch": 52,
+        "codebook_utilization_pct": 97.16796875,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          98.4375,
+          90.625
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03779851272702217,
+        "commit": 0.011612026020884514,
+        "loss": 0.049410536885261536,
+        "perplexity": 105.68580627441406,
+        "level_perplexity": [
+          110.309814453125,
+          101.59017944335938,
+          102.53485107421875,
+          108.30836486816406
+        ],
+        "epoch": 53,
+        "codebook_utilization_pct": 96.97265625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          98.046875,
+          89.84375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.037536948919296265,
+        "commit": 0.011435501277446747,
+        "loss": 0.04897245019674301,
+        "perplexity": 104.08731079101562,
+        "level_perplexity": [
+          110.14408874511719,
+          106.49270629882812,
+          99.95047760009766,
+          99.761962890625
+        ],
+        "epoch": 54,
+        "codebook_utilization_pct": 97.55859375,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          98.828125,
+          91.796875
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03675972670316696,
+        "commit": 0.01111547090113163,
+        "loss": 0.04787519574165344,
+        "perplexity": 106.34553527832031,
+        "level_perplexity": [
+          111.31879425048828,
+          104.93147277832031,
+          108.62370300292969,
+          100.50817108154297
+        ],
+        "epoch": 55,
+        "codebook_utilization_pct": 96.97265625,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          98.4375,
+          89.84375
+        ],
+        "collision_rate": 0.0024691358024691358
+      },
+      {
+        "recon": 0.03829912096261978,
+        "commit": 0.01130622811615467,
+        "loss": 0.0496053472161293,
+        "perplexity": 103.31358337402344,
+        "level_perplexity": [
+          111.31879425048828,
+          100.61058807373047,
+          100.31856536865234,
+          101.00639343261719
+        ],
+        "epoch": 56,
+        "codebook_utilization_pct": 97.16796875,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          98.828125,
+          90.234375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.035949889570474625,
+        "commit": 0.011116971261799335,
+        "loss": 0.047066859900951385,
+        "perplexity": 104.10574340820312,
+        "level_perplexity": [
+          109.29907989501953,
+          103.06725311279297,
+          104.0204086303711,
+          100.03624725341797
+        ],
+        "epoch": 57,
+        "codebook_utilization_pct": 97.36328125,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          98.4375,
+          91.40625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03722615912556648,
+        "commit": 0.010888532735407352,
+        "loss": 0.04811469092965126,
+        "perplexity": 103.49443054199219,
+        "level_perplexity": [
+          106.34332275390625,
+          99.8387222290039,
+          100.72319793701172,
+          107.07245635986328
+        ],
+        "epoch": 58,
+        "codebook_utilization_pct": 97.75390625,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          98.4375,
+          92.96875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03711484372615814,
+        "commit": 0.010973647236824036,
+        "loss": 0.04808849096298218,
+        "perplexity": 104.14263153076172,
+        "level_perplexity": [
+          109.98963165283203,
+          98.59886169433594,
+          103.11714935302734,
+          104.8648910522461
+        ],
+        "epoch": 59,
+        "codebook_utilization_pct": 97.8515625,
+        "level_utilization_pct": [
+          100.0,
+          99.21875,
+          98.4375,
+          93.75
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.036561019718647,
+        "commit": 0.010727116838097572,
+        "loss": 0.047288134694099426,
+        "perplexity": 101.21904754638672,
+        "level_perplexity": [
+          108.6237564086914,
+          97.13874816894531,
+          100.3285140991211,
+          98.78516387939453
+        ],
+        "epoch": 60,
+        "codebook_utilization_pct": 97.0703125,
+        "level_utilization_pct": [
+          100.0,
+          99.21875,
+          97.65625,
+          91.40625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03585193678736687,
+        "commit": 0.010708002373576164,
+        "loss": 0.04655993729829788,
+        "perplexity": 102.41404724121094,
+        "level_perplexity": [
+          110.1441421508789,
+          98.27489471435547,
+          106.7616195678711,
+          94.47552490234375
+        ],
+        "epoch": 61,
+        "codebook_utilization_pct": 97.0703125,
+        "level_utilization_pct": [
+          99.609375,
+          98.828125,
+          98.4375,
+          91.40625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.036081213504076004,
+        "commit": 0.010714685544371605,
+        "loss": 0.04679589718580246,
+        "perplexity": 104.98451232910156,
+        "level_perplexity": [
+          111.85380554199219,
+          98.74716186523438,
+          108.8289566040039,
+          100.50811767578125
+        ],
+        "epoch": 62,
+        "codebook_utilization_pct": 96.97265625,
+        "level_utilization_pct": [
+          99.609375,
+          99.21875,
+          98.046875,
+          91.015625
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03620001673698425,
+        "commit": 0.010746103711426258,
+        "loss": 0.046946119517087936,
+        "perplexity": 101.62397766113281,
+        "level_perplexity": [
+          109.46353912353516,
+          95.15042114257812,
+          104.17681884765625,
+          97.70512390136719
+        ],
+        "epoch": 63,
+        "codebook_utilization_pct": 97.16796875,
+        "level_utilization_pct": [
+          99.609375,
+          99.21875,
+          99.21875,
+          90.625
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03562283515930176,
+        "commit": 0.010601717978715897,
+        "loss": 0.046224553138017654,
+        "perplexity": 102.86184692382812,
+        "level_perplexity": [
+          108.77629089355469,
+          98.4984359741211,
+          99.61214447021484,
+          104.56050872802734
+        ],
+        "epoch": 64,
+        "codebook_utilization_pct": 97.65625,
+        "level_utilization_pct": [
+          99.609375,
+          99.609375,
+          99.21875,
+          92.1875
+        ],
+        "collision_rate": 0.0024691358024691358
+      },
+      {
+        "recon": 0.036978580057621,
+        "commit": 0.010577809996902943,
+        "loss": 0.04755638912320137,
+        "perplexity": 100.13931274414062,
+        "level_perplexity": [
+          108.2560043334961,
+          100.90347290039062,
+          100.3285140991211,
+          91.06928253173828
+        ],
+        "epoch": 65,
+        "codebook_utilization_pct": 97.265625,
+        "level_utilization_pct": [
+          99.609375,
+          100.0,
+          98.828125,
+          90.625
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03546767681837082,
+        "commit": 0.010574791580438614,
+        "loss": 0.04604246839880943,
+        "perplexity": 103.56491088867188,
+        "level_perplexity": [
+          109.61725616455078,
+          102.6634292602539,
+          102.62393188476562,
+          99.35502624511719
+        ],
+        "epoch": 66,
+        "codebook_utilization_pct": 97.36328125,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          89.84375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03569186106324196,
+        "commit": 0.010409057140350342,
+        "loss": 0.0461009182035923,
+        "perplexity": 103.43792724609375,
+        "level_perplexity": [
+          108.77629089355469,
+          98.27489471435547,
+          102.28668212890625,
+          104.41383361816406
+        ],
+        "epoch": 67,
+        "codebook_utilization_pct": 96.97265625,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.609375,
+          88.671875
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03556837514042854,
+        "commit": 0.010359179228544235,
+        "loss": 0.04592755436897278,
+        "perplexity": 101.94772338867188,
+        "level_perplexity": [
+          107.90019989013672,
+          98.21253967285156,
+          103.11719512939453,
+          98.56096649169922
+        ],
+        "epoch": 68,
+        "codebook_utilization_pct": 97.65625,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.609375,
+          91.40625
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.034224625676870346,
+        "commit": 0.01017650868743658,
+        "loss": 0.0444011352956295,
+        "perplexity": 102.00865936279297,
+        "level_perplexity": [
+          109.257080078125,
+          100.76197814941406,
+          95.84320831298828,
+          102.17237091064453
+        ],
+        "epoch": 69,
+        "codebook_utilization_pct": 96.875,
+        "level_utilization_pct": [
+          100.0,
+          99.21875,
+          99.609375,
+          88.671875
+        ],
+        "collision_rate": 0.0024691358024691358
+      },
+      {
+        "recon": 0.035567570477724075,
+        "commit": 0.010349017567932606,
+        "loss": 0.045916587114334106,
+        "perplexity": 102.62130737304688,
+        "level_perplexity": [
+          107.54566955566406,
+          102.36543273925781,
+          97.98963928222656,
+          102.58448791503906
+        ],
+        "epoch": 70,
+        "codebook_utilization_pct": 97.55859375,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.21875,
+          91.40625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03625895082950592,
+        "commit": 0.010074391961097717,
+        "loss": 0.04633334279060364,
+        "perplexity": 103.59820556640625,
+        "level_perplexity": [
+          106.41083526611328,
+          102.3260498046875,
+          106.18355560302734,
+          99.47239685058594
+        ],
+        "epoch": 71,
+        "codebook_utilization_pct": 97.8515625,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.21875,
+          92.578125
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03543917462229729,
+        "commit": 0.009970257058739662,
+        "loss": 0.0454094335436821,
+        "perplexity": 106.77503204345703,
+        "level_perplexity": [
+          106.41083526611328,
+          104.75808715820312,
+          95.70026397705078,
+          120.23094177246094
+        ],
+        "epoch": 72,
+        "codebook_utilization_pct": 98.14453125,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.21875,
+          93.75
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03466669097542763,
+        "commit": 0.009903078898787498,
+        "loss": 0.04456976801156998,
+        "perplexity": 106.81098175048828,
+        "level_perplexity": [
+          107.03126525878906,
+          108.41883850097656,
+          103.75829315185547,
+          108.0355453491211
+        ],
+        "epoch": 73,
+        "codebook_utilization_pct": 98.046875,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.21875,
+          93.359375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03492109850049019,
+        "commit": 0.00992940366268158,
+        "loss": 0.04485050216317177,
+        "perplexity": 105.2898178100586,
+        "level_perplexity": [
+          109.53303527832031,
+          102.0125961303711,
+          101.55109405517578,
+          108.06254577636719
+        ],
+        "epoch": 74,
+        "codebook_utilization_pct": 98.4375,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.609375,
+          94.53125
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03595733270049095,
+        "commit": 0.009865416213870049,
+        "loss": 0.04582274705171585,
+        "perplexity": 104.72921752929688,
+        "level_perplexity": [
+          109.10381317138672,
+          108.14569091796875,
+          103.20681762695312,
+          98.46054077148438
+        ],
+        "epoch": 75,
+        "codebook_utilization_pct": 98.33984375,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.21875,
+          94.53125
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03384804353117943,
+        "commit": 0.0096539705991745,
+        "loss": 0.04350201413035393,
+        "perplexity": 105.70947265625,
+        "level_perplexity": [
+          107.23351287841797,
+          100.13933563232422,
+          108.46051025390625,
+          107.00453186035156
+        ],
+        "epoch": 76,
+        "codebook_utilization_pct": 98.4375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          93.75
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.034674592316150665,
+        "commit": 0.00974231492727995,
+        "loss": 0.04441690817475319,
+        "perplexity": 104.39787292480469,
+        "level_perplexity": [
+          107.74888610839844,
+          97.98959350585938,
+          98.3066177368164,
+          113.54640197753906
+        ],
+        "epoch": 77,
+        "codebook_utilization_pct": 98.53515625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          94.53125
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03477524220943451,
+        "commit": 0.009519590064883232,
+        "loss": 0.04429483413696289,
+        "perplexity": 106.64857482910156,
+        "level_perplexity": [
+          106.41078186035156,
+          99.59712982177734,
+          104.56050872802734,
+          116.02587890625
+        ],
+        "epoch": 78,
+        "codebook_utilization_pct": 98.53515625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          94.53125
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.034534186124801636,
+        "commit": 0.009568963199853897,
+        "loss": 0.04410314932465553,
+        "perplexity": 102.82769775390625,
+        "level_perplexity": [
+          108.89804077148438,
+          97.66757202148438,
+          100.02737426757812,
+          104.71778869628906
+        ],
+        "epoch": 79,
+        "codebook_utilization_pct": 98.53515625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          94.140625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03501753881573677,
+        "commit": 0.00942282471805811,
+        "loss": 0.044440362602472305,
+        "perplexity": 104.11196899414062,
+        "level_perplexity": [
+          109.73994445800781,
+          101.14312744140625,
+          105.22112274169922,
+          100.34367370605469
+        ],
+        "epoch": 80,
+        "codebook_utilization_pct": 98.33984375,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.609375,
+          94.140625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03385459631681442,
+        "commit": 0.009479056112468243,
+        "loss": 0.04333365336060524,
+        "perplexity": 102.77976989746094,
+        "level_perplexity": [
+          106.57089233398438,
+          96.4917984008789,
+          102.22178649902344,
+          105.8346176147461
+        ],
+        "epoch": 81,
+        "codebook_utilization_pct": 98.73046875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          95.703125
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03425157442688942,
+        "commit": 0.009474299848079681,
+        "loss": 0.0437258742749691,
+        "perplexity": 106.00331115722656,
+        "level_perplexity": [
+          107.74888610839844,
+          102.14324188232422,
+          107.62841796875,
+          106.49270629882812
+        ],
+        "epoch": 82,
+        "codebook_utilization_pct": 98.73046875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          94.921875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03438778966665268,
+        "commit": 0.00937392096966505,
+        "loss": 0.043761711567640305,
+        "perplexity": 104.83541107177734,
+        "level_perplexity": [
+          106.72055053710938,
+          98.74720764160156,
+          101.5800552368164,
+          112.29383087158203
+        ],
+        "epoch": 83,
+        "codebook_utilization_pct": 98.92578125,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          96.09375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.034406907856464386,
+        "commit": 0.009360386058688164,
+        "loss": 0.0437672957777977,
+        "perplexity": 102.38330841064453,
+        "level_perplexity": [
+          106.72055053710938,
+          92.9864273071289,
+          100.13933563232422,
+          109.68690490722656
+        ],
+        "epoch": 84,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          97.265625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03444472327828407,
+        "commit": 0.0092166718095541,
+        "loss": 0.043661393225193024,
+        "perplexity": 103.531005859375,
+        "level_perplexity": [
+          106.41078186035156,
+          97.66757202148438,
+          104.82460021972656,
+          105.2210693359375
+        ],
+        "epoch": 85,
+        "codebook_utilization_pct": 98.2421875,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.609375,
+          93.75
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03381764516234398,
+        "commit": 0.009385809302330017,
+        "loss": 0.043203454464673996,
+        "perplexity": 104.04021453857422,
+        "level_perplexity": [
+          110.05945587158203,
+          98.59886169433594,
+          103.35175323486328,
+          104.15078735351562
+        ],
+        "epoch": 86,
+        "codebook_utilization_pct": 98.92578125,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.21875,
+          96.875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03446055203676224,
+        "commit": 0.009185859933495522,
+        "loss": 0.04364641010761261,
+        "perplexity": 100.94275665283203,
+        "level_perplexity": [
+          108.69266510009766,
+          95.67791748046875,
+          105.52742767333984,
+          93.8730239868164
+        ],
+        "epoch": 87,
+        "codebook_utilization_pct": 98.73046875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          98.828125,
+          96.09375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03412127494812012,
+        "commit": 0.009088495746254921,
+        "loss": 0.04320976883172989,
+        "perplexity": 100.56751251220703,
+        "level_perplexity": [
+          110.05945587158203,
+          90.63367462158203,
+          98.19928741455078,
+          103.37763214111328
+        ],
+        "epoch": 88,
+        "codebook_utilization_pct": 98.4375,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          98.4375,
+          95.703125
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.033936332911252975,
+        "commit": 0.009131910279393196,
+        "loss": 0.04306824505329132,
+        "perplexity": 102.82138061523438,
+        "level_perplexity": [
+          108.06254577636719,
+          94.52608489990234,
+          104.33355712890625,
+          104.36331176757812
+        ],
+        "epoch": 89,
+        "codebook_utilization_pct": 98.4375,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          96.875,
+          97.265625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.033934447914361954,
+        "commit": 0.00893704779446125,
+        "loss": 0.04287149757146835,
+        "perplexity": 103.0755615234375,
+        "level_perplexity": [
+          107.23351287841797,
+          97.98959350585938,
+          104.52033233642578,
+          102.5588150024414
+        ],
+        "epoch": 90,
+        "codebook_utilization_pct": 98.33984375,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          98.4375,
+          95.3125
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03493104875087738,
+        "commit": 0.009157483465969563,
+        "loss": 0.04408853128552437,
+        "perplexity": 102.30195617675781,
+        "level_perplexity": [
+          109.21510314941406,
+          94.56241607666016,
+          101.35956573486328,
+          104.07071685791016
+        ],
+        "epoch": 91,
+        "codebook_utilization_pct": 98.6328125,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          98.828125,
+          95.703125
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.033972155302762985,
+        "commit": 0.008971139788627625,
+        "loss": 0.04294329509139061,
+        "perplexity": 99.25225067138672,
+        "level_perplexity": [
+          107.23351287841797,
+          92.48294067382812,
+          101.54102325439453,
+          95.75153350830078
+        ],
+        "epoch": 92,
+        "codebook_utilization_pct": 99.0234375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          96.484375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03419535234570503,
+        "commit": 0.008959486149251461,
+        "loss": 0.04315483942627907,
+        "perplexity": 103.0302734375,
+        "level_perplexity": [
+          106.10192108154297,
+          96.35643005371094,
+          103.07752227783203,
+          106.58522033691406
+        ],
+        "epoch": 93,
+        "codebook_utilization_pct": 98.6328125,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.609375,
+          95.3125
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03423967584967613,
+        "commit": 0.008992860093712807,
+        "loss": 0.04323253780603409,
+        "perplexity": 98.62449645996094,
+        "level_perplexity": [
+          108.37712860107422,
+          95.29349517822266,
+          96.0862808227539,
+          94.74109649658203
+        ],
+        "epoch": 94,
+        "codebook_utilization_pct": 98.6328125,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          94.53125
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03527586907148361,
+        "commit": 0.008791214786469936,
+        "loss": 0.04406708478927612,
+        "perplexity": 105.68061828613281,
+        "level_perplexity": [
+          107.03126525878906,
+          97.16307067871094,
+          111.9678955078125,
+          106.56026458740234
+        ],
+        "epoch": 95,
+        "codebook_utilization_pct": 98.33984375,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.21875,
+          94.53125
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.034318745136260986,
+        "commit": 0.008934952318668365,
+        "loss": 0.04325369745492935,
+        "perplexity": 103.06982421875,
+        "level_perplexity": [
+          108.89799499511719,
+          95.04757690429688,
+          99.03466033935547,
+          109.29907989501953
+        ],
+        "epoch": 96,
+        "codebook_utilization_pct": 98.53515625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          94.921875
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03405313938856125,
+        "commit": 0.008679738268256187,
+        "loss": 0.042732879519462585,
+        "perplexity": 104.27046203613281,
+        "level_perplexity": [
+          109.2149887084961,
+          96.52893829345703,
+          107.831787109375,
+          103.5061264038086
+        ],
+        "epoch": 97,
+        "codebook_utilization_pct": 98.828125,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          96.09375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03445423021912575,
+        "commit": 0.008680910803377628,
+        "loss": 0.0431351400911808,
+        "perplexity": 101.26007080078125,
+        "level_perplexity": [
+          109.2149887084961,
+          94.5118408203125,
+          105.98329162597656,
+          95.33016967773438
+        ],
+        "epoch": 98,
+        "codebook_utilization_pct": 98.828125,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          95.703125
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03442529961466789,
+        "commit": 0.008657185360789299,
+        "loss": 0.04308248311281204,
+        "perplexity": 101.9752197265625,
+        "level_perplexity": [
+          109.73994445800781,
+          92.88241577148438,
+          100.86470794677734,
+          104.41383361816406
+        ],
+        "epoch": 99,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          98.046875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03386019542813301,
+        "commit": 0.008729478344321251,
+        "loss": 0.04258967190980911,
+        "perplexity": 103.745361328125,
+        "level_perplexity": [
+          109.73994445800781,
+          93.32881927490234,
+          108.35009002685547,
+          103.56260681152344
+        ],
+        "epoch": 100,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.609375,
+          97.65625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03396239131689072,
+        "commit": 0.008473302237689495,
+        "loss": 0.042435694485902786,
+        "perplexity": 104.27792358398438,
+        "level_perplexity": [
+          108.69266510009766,
+          95.47355651855469,
+          106.14276123046875,
+          106.8027114868164
+        ],
+        "epoch": 101,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.609375,
+          97.65625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03417333588004112,
+        "commit": 0.008574836887419224,
+        "loss": 0.04274817183613777,
+        "perplexity": 101.45773315429688,
+        "level_perplexity": [
+          110.58841705322266,
+          88.78726959228516,
+          103.41736602783203,
+          103.0378646850586
+        ],
+        "epoch": 102,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          100.0,
+          97.65625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03491343930363655,
+        "commit": 0.00851103663444519,
+        "loss": 0.04342447593808174,
+        "perplexity": 98.50568389892578,
+        "level_perplexity": [
+          110.91034698486328,
+          88.85562133789062,
+          103.80857849121094,
+          90.44817352294922
+        ],
+        "epoch": 103,
+        "codebook_utilization_pct": 99.0234375,
+        "level_utilization_pct": [
+          99.609375,
+          99.609375,
+          99.609375,
+          97.265625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03455215319991112,
+        "commit": 0.008577368222177029,
+        "loss": 0.04312952235341072,
+        "perplexity": 105.53639221191406,
+        "level_perplexity": [
+          109.53303527832031,
+          96.71133422851562,
+          103.18260955810547,
+          112.7186050415039
+        ],
+        "epoch": 104,
+        "codebook_utilization_pct": 99.0234375,
+        "level_utilization_pct": [
+          99.609375,
+          99.609375,
+          99.609375,
+          97.265625
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03401949256658554,
+        "commit": 0.008317328058183193,
+        "loss": 0.04233682155609131,
+        "perplexity": 102.01884460449219,
+        "level_perplexity": [
+          108.37716674804688,
+          94.01426696777344,
+          104.67755126953125,
+          101.00639343261719
+        ],
+        "epoch": 105,
+        "codebook_utilization_pct": 99.0234375,
+        "level_utilization_pct": [
+          99.609375,
+          99.609375,
+          99.609375,
+          97.265625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.034621965140104294,
+        "commit": 0.008383754640817642,
+        "loss": 0.043005719780921936,
+        "perplexity": 104.61759185791016,
+        "level_perplexity": [
+          110.05940246582031,
+          92.27301025390625,
+          105.99381256103516,
+          110.1441421508789
+        ],
+        "epoch": 106,
+        "codebook_utilization_pct": 99.12109375,
+        "level_utilization_pct": [
+          99.609375,
+          100.0,
+          99.609375,
+          97.265625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03529934957623482,
+        "commit": 0.008397569879889488,
+        "loss": 0.043696917593479156,
+        "perplexity": 104.93065643310547,
+        "level_perplexity": [
+          110.91034698486328,
+          92.0405502319336,
+          107.831787109375,
+          108.93994903564453
+        ],
+        "epoch": 107,
+        "codebook_utilization_pct": 98.92578125,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.21875,
+          96.875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03377192094922066,
+        "commit": 0.008257459849119186,
+        "loss": 0.042029380798339844,
+        "perplexity": 103.35137939453125,
+        "level_perplexity": [
+          108.5819091796875,
+          93.02217102050781,
+          100.84844207763672,
+          110.9529800415039
+        ],
+        "epoch": 108,
+        "codebook_utilization_pct": 99.12109375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          96.484375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03486583009362221,
+        "commit": 0.008284119889140129,
+        "loss": 0.04314994812011719,
+        "perplexity": 104.91475677490234,
+        "level_perplexity": [
+          108.69266510009766,
+          94.3241958618164,
+          103.80857849121094,
+          112.83358001708984
+        ],
+        "epoch": 109,
+        "codebook_utilization_pct": 99.12109375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          96.484375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.035190045833587646,
+        "commit": 0.008136846125125885,
+        "loss": 0.04332689195871353,
+        "perplexity": 102.66156768798828,
+        "level_perplexity": [
+          108.69266510009766,
+          96.4917984008789,
+          98.4984359741211,
+          106.96336364746094
+        ],
+        "epoch": 110,
+        "codebook_utilization_pct": 98.828125,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          95.3125
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03443242609500885,
+        "commit": 0.008308637887239456,
+        "loss": 0.042741063982248306,
+        "perplexity": 103.12258911132812,
+        "level_perplexity": [
+          110.37979125976562,
+          95.65400695800781,
+          103.89771270751953,
+          102.55886840820312
+        ],
+        "epoch": 111,
+        "codebook_utilization_pct": 98.73046875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          98.828125,
+          96.09375
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03443526104092598,
+        "commit": 0.008282951079308987,
+        "loss": 0.04271821305155754,
+        "perplexity": 104.25547790527344,
+        "level_perplexity": [
+          108.69266510009766,
+          92.89167785644531,
+          106.29181671142578,
+          109.145751953125
+        ],
+        "epoch": 112,
+        "codebook_utilization_pct": 99.12109375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          98.828125,
+          97.65625
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.035714585334062576,
+        "commit": 0.008113376796245575,
+        "loss": 0.04382796213030815,
+        "perplexity": 103.59810638427734,
+        "level_perplexity": [
+          108.37716674804688,
+          96.21172332763672,
+          106.94612121582031,
+          102.85741424560547
+        ],
+        "epoch": 113,
+        "codebook_utilization_pct": 99.0234375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          96.875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.034510642290115356,
+        "commit": 0.008200911805033684,
+        "loss": 0.04271155595779419,
+        "perplexity": 104.48796081542969,
+        "level_perplexity": [
+          110.37989807128906,
+          96.24874877929688,
+          109.78218078613281,
+          101.54102325439453
+        ],
+        "epoch": 114,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          97.65625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03595540300011635,
+        "commit": 0.008218090049922466,
+        "loss": 0.04417349398136139,
+        "perplexity": 106.49372863769531,
+        "level_perplexity": [
+          109.85188293457031,
+          100.86470794677734,
+          101.43649291992188,
+          113.82183837890625
+        ],
+        "epoch": 115,
+        "codebook_utilization_pct": 99.609375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          99.21875
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.034601617604494095,
+        "commit": 0.008063447661697865,
+        "loss": 0.042665064334869385,
+        "perplexity": 108.11176300048828,
+        "level_perplexity": [
+          107.85873413085938,
+          99.30803680419922,
+          112.11824035644531,
+          113.16204071044922
+        ],
+        "epoch": 116,
+        "codebook_utilization_pct": 99.4140625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          98.4375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.0345294214785099,
+        "commit": 0.008126497268676758,
+        "loss": 0.04265591874718666,
+        "perplexity": 105.56673431396484,
+        "level_perplexity": [
+          108.17277526855469,
+          100.2164306640625,
+          107.47748565673828,
+          106.40023040771484
+        ],
+        "epoch": 117,
+        "codebook_utilization_pct": 99.51171875,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.609375,
+          98.828125
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03460167348384857,
+        "commit": 0.00804258231073618,
+        "loss": 0.042644254863262177,
+        "perplexity": 103.76870727539062,
+        "level_perplexity": [
+          109.21510314941406,
+          98.93379974365234,
+          104.56050872802734,
+          102.36543273925781
+        ],
+        "epoch": 118,
+        "codebook_utilization_pct": 99.51171875,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.609375,
+          98.828125
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03409796953201294,
+        "commit": 0.008140167221426964,
+        "loss": 0.04223813861608505,
+        "perplexity": 104.76483154296875,
+        "level_perplexity": [
+          108.69266510009766,
+          99.5106430053711,
+          104.36331176757812,
+          106.49270629882812
+        ],
+        "epoch": 119,
+        "codebook_utilization_pct": 99.4140625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          98.046875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03475223854184151,
+        "commit": 0.007989439181983471,
+        "loss": 0.04274167865514755,
+        "perplexity": 104.91205596923828,
+        "level_perplexity": [
+          109.00907135009766,
+          104.56050872802734,
+          98.39811706542969,
+          107.6805191040039
+        ],
+        "epoch": 120,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.21875,
+          98.4375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03405417129397392,
+        "commit": 0.007986405864357948,
+        "loss": 0.04204057902097702,
+        "perplexity": 106.55685424804688,
+        "level_perplexity": [
+          109.00907135009766,
+          102.55886840820312,
+          107.58706665039062,
+          107.0724105834961
+        ],
+        "epoch": 121,
+        "codebook_utilization_pct": 99.12109375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          96.484375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03422532230615616,
+        "commit": 0.007958553731441498,
+        "loss": 0.042183876037597656,
+        "perplexity": 107.4517822265625,
+        "level_perplexity": [
+          107.54566955566406,
+          103.07752227783203,
+          107.00447845458984,
+          112.1794662475586
+        ],
+        "epoch": 122,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          97.65625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.034723516553640366,
+        "commit": 0.007946843281388283,
+        "loss": 0.0426703616976738,
+        "perplexity": 106.821533203125,
+        "level_perplexity": [
+          109.21504974365234,
+          104.75808715820312,
+          102.43037414550781,
+          110.88263702392578
+        ],
+        "epoch": 123,
+        "codebook_utilization_pct": 99.0234375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          96.484375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.033561863005161285,
+        "commit": 0.007966853678226471,
+        "loss": 0.041528716683387756,
+        "perplexity": 105.0778579711914,
+        "level_perplexity": [
+          106.72055053710938,
+          101.83660888671875,
+          103.17237091064453,
+          108.5819091796875
+        ],
+        "epoch": 124,
+        "codebook_utilization_pct": 98.828125,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          96.09375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.035237040370702744,
+        "commit": 0.007983135990798473,
+        "loss": 0.04322017729282379,
+        "perplexity": 103.91107177734375,
+        "level_perplexity": [
+          108.69266510009766,
+          102.63410186767578,
+          98.17479705810547,
+          106.14270782470703
+        ],
+        "epoch": 125,
+        "codebook_utilization_pct": 99.0234375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          96.484375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03477631136775017,
+        "commit": 0.007914367131888866,
+        "loss": 0.04269067943096161,
+        "perplexity": 103.06047058105469,
+        "level_perplexity": [
+          109.21504974365234,
+          102.47996520996094,
+          96.68274688720703,
+          103.8641357421875
+        ],
+        "epoch": 126,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          97.65625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03443757817149162,
+        "commit": 0.00791822001338005,
+        "loss": 0.042355798184871674,
+        "perplexity": 104.11553955078125,
+        "level_perplexity": [
+          107.85873413085938,
+          101.15837097167969,
+          100.9523696899414,
+          106.49270629882812
+        ],
+        "epoch": 127,
+        "codebook_utilization_pct": 99.4140625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          98.046875
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.034570179879665375,
+        "commit": 0.007892955094575882,
+        "loss": 0.04246313497424126,
+        "perplexity": 103.53944396972656,
+        "level_perplexity": [
+          108.89804077148438,
+          98.70922088623047,
+          103.02764129638672,
+          103.52285766601562
+        ],
+        "epoch": 128,
+        "codebook_utilization_pct": 99.12109375,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.609375,
+          97.265625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03465096279978752,
+        "commit": 0.007842624559998512,
+        "loss": 0.04249358922243118,
+        "perplexity": 104.83094024658203,
+        "level_perplexity": [
+          107.54566955566406,
+          99.66031646728516,
+          100.19292449951172,
+          111.92486572265625
+        ],
+        "epoch": 129,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          99.609375,
+          99.609375,
+          98.046875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.034610819071531296,
+        "commit": 0.007795142009854317,
+        "loss": 0.04240596294403076,
+        "perplexity": 103.19234466552734,
+        "level_perplexity": [
+          107.85873413085938,
+          97.23783111572266,
+          103.71842193603516,
+          103.95440673828125
+        ],
+        "epoch": 130,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          97.265625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03409532085061073,
+        "commit": 0.00786630529910326,
+        "loss": 0.04196162521839142,
+        "perplexity": 104.2239990234375,
+        "level_perplexity": [
+          106.72055053710938,
+          103.83451843261719,
+          103.56266021728516,
+          102.77828216552734
+        ],
+        "epoch": 131,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          97.265625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.034625343978405,
+        "commit": 0.007763880304992199,
+        "loss": 0.04238922521471977,
+        "perplexity": 104.05459594726562,
+        "level_perplexity": [
+          107.85873413085938,
+          96.27275848388672,
+          101.54096984863281,
+          110.54592895507812
+        ],
+        "epoch": 132,
+        "codebook_utilization_pct": 99.51171875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          98.046875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.034781746566295624,
+        "commit": 0.00784428883343935,
+        "loss": 0.0426260344684124,
+        "perplexity": 104.24819946289062,
+        "level_perplexity": [
+          107.03126525878906,
+          99.03466033935547,
+          104.21691131591797,
+          106.70996856689453
+        ],
+        "epoch": 133,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          96.875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03526756167411804,
+        "commit": 0.007644818630069494,
+        "loss": 0.042912378907203674,
+        "perplexity": 100.43704986572266,
+        "level_perplexity": [
+          107.03126525878906,
+          95.9693374633789,
+          100.61058807373047,
+          98.13702392578125
+        ],
+        "epoch": 134,
+        "codebook_utilization_pct": 99.51171875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          98.4375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03360448405146599,
+        "commit": 0.007862375117838383,
+        "loss": 0.041466858237981796,
+        "perplexity": 104.41862487792969,
+        "level_perplexity": [
+          107.03126525878906,
+          99.03470611572266,
+          103.57292938232422,
+          108.03559875488281
+        ],
+        "epoch": 135,
+        "codebook_utilization_pct": 99.12109375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          96.875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03507428243756294,
+        "commit": 0.007544451393187046,
+        "loss": 0.042618732899427414,
+        "perplexity": 106.13864135742188,
+        "level_perplexity": [
+          108.37716674804688,
+          99.69872283935547,
+          103.54705047607422,
+          112.93160247802734
+        ],
+        "epoch": 136,
+        "codebook_utilization_pct": 99.51171875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          98.046875
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.033465299755334854,
+        "commit": 0.007702077738940716,
+        "loss": 0.041167378425598145,
+        "perplexity": 103.89873504638672,
+        "level_perplexity": [
+          107.03126525878906,
+          97.95194244384766,
+          104.52033233642578,
+          106.09139251708984
+        ],
+        "epoch": 137,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          96.875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.034879256039857864,
+        "commit": 0.007652944419533014,
+        "loss": 0.04253220185637474,
+        "perplexity": 105.9563980102539,
+        "level_perplexity": [
+          107.03126525878906,
+          98.32241821289062,
+          104.66716003417969,
+          113.80474853515625
+        ],
+        "epoch": 138,
+        "codebook_utilization_pct": 99.12109375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          96.875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03359399735927582,
+        "commit": 0.007647800724953413,
+        "loss": 0.04124179854989052,
+        "perplexity": 107.4397964477539,
+        "level_perplexity": [
+          107.03126525878906,
+          99.8387222290039,
+          109.29907989501953,
+          113.59010314941406
+        ],
+        "epoch": 139,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          97.65625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03341016545891762,
+        "commit": 0.007595428265631199,
+        "loss": 0.04100559279322624,
+        "perplexity": 101.99156188964844,
+        "level_perplexity": [
+          107.03126525878906,
+          97.85218048095703,
+          101.24624633789062,
+          101.83656311035156
+        ],
+        "epoch": 140,
+        "codebook_utilization_pct": 99.4140625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          98.046875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03368300944566727,
+        "commit": 0.007514958269894123,
+        "loss": 0.041197966784238815,
+        "perplexity": 106.46495056152344,
+        "level_perplexity": [
+          107.03131866455078,
+          98.70922088623047,
+          105.98329162597656,
+          114.13597869873047
+        ],
+        "epoch": 141,
+        "codebook_utilization_pct": 99.51171875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          98.828125
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.0333075225353241,
+        "commit": 0.007540296297520399,
+        "loss": 0.04084781929850578,
+        "perplexity": 102.55197143554688,
+        "level_perplexity": [
+          106.21014404296875,
+          99.2599868774414,
+          100.91352844238281,
+          103.82421875
+        ],
+        "epoch": 142,
+        "codebook_utilization_pct": 99.609375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          99.21875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03388596326112747,
+        "commit": 0.007412559352815151,
+        "loss": 0.0412985235452652,
+        "perplexity": 105.82770538330078,
+        "level_perplexity": [
+          107.03126525878906,
+          94.92012023925781,
+          111.8538589477539,
+          109.50556182861328
+        ],
+        "epoch": 143,
+        "codebook_utilization_pct": 99.70703125,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          99.21875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03360772505402565,
+        "commit": 0.007558956276625395,
+        "loss": 0.04116668179631233,
+        "perplexity": 106.11557006835938,
+        "level_perplexity": [
+          109.53303527832031,
+          95.75157928466797,
+          109.145751953125,
+          110.03190612792969
+        ],
+        "epoch": 144,
+        "codebook_utilization_pct": 99.609375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          98.828125
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03331613913178444,
+        "commit": 0.007436261512339115,
+        "loss": 0.04075239971280098,
+        "perplexity": 107.61580657958984,
+        "level_perplexity": [
+          109.53303527832031,
+          95.47355651855469,
+          109.0929946899414,
+          116.36363983154297
+        ],
+        "epoch": 145,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          97.65625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.033960357308387756,
+        "commit": 0.007521762512624264,
+        "loss": 0.041482120752334595,
+        "perplexity": 105.44535827636719,
+        "level_perplexity": [
+          109.53303527832031,
+          93.16688537597656,
+          107.1136245727539,
+          111.9678955078125
+        ],
+        "epoch": 146,
+        "codebook_utilization_pct": 99.12109375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          97.265625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03416965529322624,
+        "commit": 0.00736127607524395,
+        "loss": 0.04153092950582504,
+        "perplexity": 106.00264739990234,
+        "level_perplexity": [
+          109.3263931274414,
+          97.8047866821289,
+          108.41883850097656,
+          108.46056365966797
+        ],
+        "epoch": 147,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          97.65625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03472521901130676,
+        "commit": 0.007468102965503931,
+        "loss": 0.042193323373794556,
+        "perplexity": 105.44215393066406,
+        "level_perplexity": [
+          110.70121765136719,
+          95.12324523925781,
+          102.46979522705078,
+          113.474365234375
+        ],
+        "epoch": 148,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          97.265625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.033201996237039566,
+        "commit": 0.0074509489350020885,
+        "loss": 0.04065294563770294,
+        "perplexity": 103.95603942871094,
+        "level_perplexity": [
+          109.3263931274414,
+          98.56096649169922,
+          105.67566680908203,
+          102.26112365722656
+        ],
+        "epoch": 149,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          97.65625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.034398406744003296,
+        "commit": 0.007385185454040766,
+        "loss": 0.041783593595027924,
+        "perplexity": 104.64759826660156,
+        "level_perplexity": [
+          109.3263931274414,
+          95.12324523925781,
+          103.71842193603516,
+          110.42232513427734
+        ],
+        "epoch": 150,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          97.265625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03312186524271965,
+        "commit": 0.007379475980997086,
+        "loss": 0.040501341223716736,
+        "perplexity": 104.83135986328125,
+        "level_perplexity": [
+          109.3263931274414,
+          97.38409423828125,
+          107.79035949707031,
+          104.82460021972656
+        ],
+        "epoch": 151,
+        "codebook_utilization_pct": 99.51171875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          98.046875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.033930860459804535,
+        "commit": 0.007396847940981388,
+        "loss": 0.04132770746946335,
+        "perplexity": 105.81327819824219,
+        "level_perplexity": [
+          109.53303527832031,
+          97.00252532958984,
+          103.4571304321289,
+          113.2603988647461
+        ],
+        "epoch": 152,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          96.875
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.033008553087711334,
+        "commit": 0.007419823668897152,
+        "loss": 0.04042837768793106,
+        "perplexity": 105.66071319580078,
+        "level_perplexity": [
+          108.17277526855469,
+          97.38409423828125,
+          108.10414123535156,
+          108.9818344116211
+        ],
+        "epoch": 153,
+        "codebook_utilization_pct": 99.12109375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          96.484375
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03333307430148125,
+        "commit": 0.007370477542281151,
+        "loss": 0.04070354998111725,
+        "perplexity": 107.11188507080078,
+        "level_perplexity": [
+          111.06614685058594,
+          96.6741714477539,
+          103.22232818603516,
+          117.48489379882812
+        ],
+        "epoch": 154,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          97.265625
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.033006347715854645,
+        "commit": 0.007366245146840811,
+        "loss": 0.040372591465711594,
+        "perplexity": 110.58056640625,
+        "level_perplexity": [
+          109.89411926269531,
+          98.41294860839844,
+          114.58499145507812,
+          119.43018341064453
+        ],
+        "epoch": 155,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          97.65625
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03296465426683426,
+        "commit": 0.007452833466231823,
+        "loss": 0.04041748866438866,
+        "perplexity": 105.02572631835938,
+        "level_perplexity": [
+          108.52937316894531,
+          97.13874816894531,
+          102.62393188476562,
+          111.81082916259766
+        ],
+        "epoch": 156,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          97.265625
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.034020714461803436,
+        "commit": 0.007403229828923941,
+        "loss": 0.041423942893743515,
+        "perplexity": 105.65667724609375,
+        "level_perplexity": [
+          109.05097198486328,
+          97.48342895507812,
+          108.77629089355469,
+          107.3160171508789
+        ],
+        "epoch": 157,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          97.65625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03341245278716087,
+        "commit": 0.007432929240167141,
+        "loss": 0.04084538295865059,
+        "perplexity": 109.40202331542969,
+        "level_perplexity": [
+          110.42232513427734,
+          95.65400695800781,
+          119.56387329101562,
+          111.9678955078125
+        ],
+        "epoch": 158,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          97.265625
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03340746834874153,
+        "commit": 0.007372874766588211,
+        "loss": 0.04078034311532974,
+        "perplexity": 108.03472900390625,
+        "level_perplexity": [
+          109.05097198486328,
+          93.84630584716797,
+          115.98124694824219,
+          113.2603988647461
+        ],
+        "epoch": 159,
+        "codebook_utilization_pct": 99.12109375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          96.875
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03331144526600838,
+        "commit": 0.007336379028856754,
+        "loss": 0.04064782336354256,
+        "perplexity": 109.04148864746094,
+        "level_perplexity": [
+          109.89411926269531,
+          98.4227066040039,
+          117.21820068359375,
+          110.63092803955078
+        ],
+        "epoch": 160,
+        "codebook_utilization_pct": 98.92578125,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          98.828125,
+          96.875
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03344884142279625,
+        "commit": 0.00741533562541008,
+        "loss": 0.04086417704820633,
+        "perplexity": 102.7784652709961,
+        "level_perplexity": [
+          111.27601623535156,
+          95.4974594116211,
+          104.06038665771484,
+          100.2800064086914
+        ],
+        "epoch": 161,
+        "codebook_utilization_pct": 98.828125,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          96.09375
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03380051627755165,
+        "commit": 0.007296557538211346,
+        "loss": 0.04109707474708557,
+        "perplexity": 107.03456115722656,
+        "level_perplexity": [
+          109.89411926269531,
+          94.98033905029297,
+          113.16204071044922,
+          110.10176086425781
+        ],
+        "epoch": 162,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          97.65625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03359956666827202,
+        "commit": 0.007347738370299339,
+        "loss": 0.04094730317592621,
+        "perplexity": 106.767822265625,
+        "level_perplexity": [
+          111.27601623535156,
+          95.71469116210938,
+          110.1441421508789,
+          109.93641662597656
+        ],
+        "epoch": 163,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          97.65625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03343338891863823,
+        "commit": 0.007433712482452393,
+        "loss": 0.04086710140109062,
+        "perplexity": 103.70503997802734,
+        "level_perplexity": [
+          111.27601623535156,
+          93.08123016357422,
+          104.52033233642578,
+          105.94256591796875
+        ],
+        "epoch": 164,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          97.65625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03327323868870735,
+        "commit": 0.007317863870412111,
+        "loss": 0.040591102093458176,
+        "perplexity": 105.10244750976562,
+        "level_perplexity": [
+          109.89411926269531,
+          100.67451477050781,
+          103.33786010742188,
+          106.5032730102539
+        ],
+        "epoch": 165,
+        "codebook_utilization_pct": 99.609375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          98.828125
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03398166224360466,
+        "commit": 0.007317936513572931,
+        "loss": 0.04129960015416145,
+        "perplexity": 105.17103576660156,
+        "level_perplexity": [
+          111.27601623535156,
+          97.5208969116211,
+          107.32671356201172,
+          104.56050872802734
+        ],
+        "epoch": 166,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          97.65625
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.033656045794487,
+        "commit": 0.007348754443228245,
+        "loss": 0.04100479930639267,
+        "perplexity": 106.3142318725586,
+        "level_perplexity": [
+          109.57513427734375,
+          96.95559692382812,
+          110.15505981445312,
+          108.5711441040039
+        ],
+        "epoch": 167,
+        "codebook_utilization_pct": 99.4140625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          98.4375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03384771570563316,
+        "commit": 0.007329641375690699,
+        "loss": 0.041177358478307724,
+        "perplexity": 109.32075500488281,
+        "level_perplexity": [
+          109.05097198486328,
+          102.46979522705078,
+          110.74376678466797,
+          115.01849365234375
+        ],
+        "epoch": 168,
+        "codebook_utilization_pct": 99.51171875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          98.4375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03344351798295975,
+        "commit": 0.007368749938905239,
+        "loss": 0.04081226885318756,
+        "perplexity": 105.89682006835938,
+        "level_perplexity": [
+          110.42232513427734,
+          97.70521545410156,
+          101.20733642578125,
+          114.25239562988281
+        ],
+        "epoch": 169,
+        "codebook_utilization_pct": 99.70703125,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          99.21875
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.03357228264212608,
+        "commit": 0.007328653708100319,
+        "loss": 0.04090093821287155,
+        "perplexity": 106.8956298828125,
+        "level_perplexity": [
+          109.05097198486328,
+          102.13306427001953,
+          113.04673767089844,
+          103.35175323486328
+        ],
+        "epoch": 170,
+        "codebook_utilization_pct": 99.609375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          98.4375
+        ],
+        "collision_rate": 0.0
+      },
+      {
+        "recon": 0.032964423298835754,
+        "commit": 0.007296627853065729,
+        "loss": 0.040261052548885345,
+        "perplexity": 105.88088989257812,
+        "level_perplexity": [
+          109.05097198486328,
+          97.75247192382812,
+          110.57740020751953,
+          106.14270782470703
+        ],
+        "epoch": 171,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          97.265625
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.033475108444690704,
+        "commit": 0.007295290939509869,
+        "loss": 0.04077040031552315,
+        "perplexity": 105.76969146728516,
+        "level_perplexity": [
+          110.42232513427734,
+          92.56329345703125,
+          107.58706665039062,
+          112.5060806274414
+        ],
+        "epoch": 172,
+        "codebook_utilization_pct": 99.51171875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          98.046875
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.033548031002283096,
+        "commit": 0.007271543610841036,
+        "loss": 0.040819574147462845,
+        "perplexity": 105.16871643066406,
+        "level_perplexity": [
+          109.05097198486328,
+          98.21249389648438,
+          108.9818344116211,
+          104.4295654296875
+        ],
+        "epoch": 173,
+        "codebook_utilization_pct": 99.21875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          97.265625
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03368806466460228,
+        "commit": 0.007296970579773188,
+        "loss": 0.04098503664135933,
+        "perplexity": 104.54872131347656,
+        "level_perplexity": [
+          109.05097198486328,
+          98.68455505371094,
+          105.59441375732422,
+          104.86494445800781
+        ],
+        "epoch": 174,
+        "codebook_utilization_pct": 99.12109375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          96.875
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.033839449286460876,
+        "commit": 0.00731189688667655,
+        "loss": 0.041151344776153564,
+        "perplexity": 108.51952362060547,
+        "level_perplexity": [
+          111.59994506835938,
+          97.85218048095703,
+          109.82439422607422,
+          114.80155944824219
+        ],
+        "epoch": 175,
+        "codebook_utilization_pct": 99.12109375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          96.875
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03365562483668327,
+        "commit": 0.007244219072163105,
+        "loss": 0.040899842977523804,
+        "perplexity": 106.7960205078125,
+        "level_perplexity": [
+          110.21406555175781,
+          98.60868835449219,
+          108.93990325927734,
+          109.42142486572266
+        ],
+        "epoch": 176,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          98.046875
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03368748351931572,
+        "commit": 0.007228182628750801,
+        "loss": 0.04091566801071167,
+        "perplexity": 106.11241149902344,
+        "level_perplexity": [
+          110.21406555175781,
+          100.46949768066406,
+          106.7616195678711,
+          107.00447845458984
+        ],
+        "epoch": 177,
+        "codebook_utilization_pct": 98.92578125,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          96.484375
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03369942680001259,
+        "commit": 0.007247629575431347,
+        "loss": 0.04094705730676651,
+        "perplexity": 105.90873718261719,
+        "level_perplexity": [
+          111.59994506835938,
+          96.819580078125,
+          107.62841796875,
+          107.5870132446289
+        ],
+        "epoch": 178,
+        "codebook_utilization_pct": 98.73046875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          98.4375,
+          96.484375
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.033239662647247314,
+        "commit": 0.007237895391881466,
+        "loss": 0.040477558970451355,
+        "perplexity": 106.07859802246094,
+        "level_perplexity": [
+          110.21406555175781,
+          104.56050872802734,
+          105.67566680908203,
+          103.8641357421875
+        ],
+        "epoch": 179,
+        "codebook_utilization_pct": 99.12109375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          97.265625
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.0338473916053772,
+        "commit": 0.007186021655797958,
+        "loss": 0.041033413261175156,
+        "perplexity": 106.8700180053711,
+        "level_perplexity": [
+          111.06614685058594,
+          104.8648910522461,
+          106.21014404296875,
+          105.3388900756836
+        ],
+        "epoch": 180,
+        "codebook_utilization_pct": 99.609375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          98.4375
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03411617875099182,
+        "commit": 0.00717504695057869,
+        "loss": 0.04129122570157051,
+        "perplexity": 106.14939880371094,
+        "level_perplexity": [
+          112.46279907226562,
+          100.71321105957031,
+          105.12975311279297,
+          106.29181671142578
+        ],
+        "epoch": 181,
+        "codebook_utilization_pct": 99.609375,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          98.4375
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.032959990203380585,
+        "commit": 0.007203149143606424,
+        "loss": 0.04016314074397087,
+        "perplexity": 107.69149017333984,
+        "level_perplexity": [
+          111.06614685058594,
+          104.36331176757812,
+          108.77623748779297,
+          106.56026458740234
+        ],
+        "epoch": 182,
+        "codebook_utilization_pct": 99.4140625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          98.4375
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03318336606025696,
+        "commit": 0.007240501698106527,
+        "loss": 0.04042386636137962,
+        "perplexity": 109.28919219970703,
+        "level_perplexity": [
+          109.05097198486328,
+          102.46979522705078,
+          111.64289855957031,
+          113.99310302734375
+        ],
+        "epoch": 183,
+        "codebook_utilization_pct": 99.31640625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          98.828125,
+          98.4375
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03334825113415718,
+        "commit": 0.007213263306766748,
+        "loss": 0.04056151583790779,
+        "perplexity": 106.24871063232422,
+        "level_perplexity": [
+          109.05097198486328,
+          95.69078063964844,
+          106.7616195678711,
+          113.49146270751953
+        ],
+        "epoch": 184,
+        "codebook_utilization_pct": 99.4140625,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.609375,
+          98.046875
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.03389690816402435,
+        "commit": 0.007176930550485849,
+        "loss": 0.041073840111494064,
+        "perplexity": 105.58601379394531,
+        "level_perplexity": [
+          109.05097198486328,
+          95.71469116210938,
+          107.1136245727539,
+          110.46477508544922
+        ],
+        "epoch": 185,
+        "codebook_utilization_pct": 99.51171875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          98.828125
+        ],
+        "collision_rate": 0.0012345679012345679
+      },
+      {
+        "recon": 0.033507492393255234,
+        "commit": 0.007196258753538132,
+        "loss": 0.040703751146793365,
+        "perplexity": 105.62967681884766,
+        "level_perplexity": [
+          109.051025390625,
+          99.32300567626953,
+          110.88263702392578,
+          103.26205444335938
+        ],
+        "epoch": 186,
+        "codebook_utilization_pct": 99.51171875,
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          99.21875,
+          98.828125
+        ],
+        "collision_rate": 0.0012345679012345679
+      }
+    ],
+    "final": {
+      "best_val_recon": 0.03296465426683426,
+      "epochs_run": 186,
+      "train_seconds": 13.385571479797363,
+      "cold_item_recon": 0.03283417597413063,
+      "val_recon": 0.03296465426683426
+    }
+  },
+  "tokenizer_summary": {
+    "vq_vae": {
+      "all_items": {
+        "level_perplexity": [
+          219.23309571706224
+        ],
+        "level_utilization_pct": [
+          100.0
+        ],
+        "mean_perplexity": 219.23309571706224,
+        "mean_utilization_pct": 100.0,
+        "unique_ids": 256,
+        "n_items": 2000,
+        "collision_rate": 0.997
+      },
+      "warm_items": {
+        "level_perplexity": [
+          221.328242283673
+        ],
+        "level_utilization_pct": [
+          100.0
+        ],
+        "mean_perplexity": 221.328242283673,
+        "mean_utilization_pct": 100.0,
+        "unique_ids": 256,
+        "n_items": 1800,
+        "collision_rate": 0.9966666666666667
+      },
+      "cold_items": {
+        "level_perplexity": [
+          110.95184496809138
+        ],
+        "level_utilization_pct": [
+          49.609375
+        ],
+        "mean_perplexity": 110.95184496809138,
+        "mean_utilization_pct": 49.609375,
+        "unique_ids": 127,
+        "n_items": 200,
+        "collision_rate": 0.615
+      },
+      "cold_items_new_id_rate": 0.0
+    },
+    "rq_vae": {
+      "all_items": {
+        "level_perplexity": [
+          219.88843989779593,
+          216.77808975258094,
+          206.02982807472193,
+          191.89670331003921
+        ],
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          98.4375
+        ],
+        "mean_perplexity": 208.6482652587845,
+        "mean_utilization_pct": 99.609375,
+        "unique_ids": 1998,
+        "n_items": 2000,
+        "collision_rate": 0.002
+      },
+      "warm_items": {
+        "level_perplexity": [
+          220.5923541676031,
+          216.53673970329504,
+          205.2633799897722,
+          188.00680909282306
+        ],
+        "level_utilization_pct": [
+          100.0,
+          100.0,
+          100.0,
+          98.046875
+        ],
+        "mean_perplexity": 207.59982073837335,
+        "mean_utilization_pct": 99.51171875,
+        "unique_ids": 1798,
+        "n_items": 1800,
+        "collision_rate": 0.0022222222222222222
+      },
+      "cold_items": {
+        "level_perplexity": [
+          111.99104972463182,
+          115.35096412624154,
+          116.70643491327203,
+          116.45757637249326
+        ],
+        "level_utilization_pct": [
+          49.21875,
+          50.78125,
+          51.171875,
+          51.5625
+        ],
+        "mean_perplexity": 115.12650628415966,
+        "mean_utilization_pct": 50.68359375,
+        "unique_ids": 200,
+        "n_items": 200,
+        "collision_rate": 0.0
+      },
+      "cold_items_new_id_rate": 1.0
+    }
+  }
+}

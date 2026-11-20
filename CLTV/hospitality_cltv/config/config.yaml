@@ -1,0 +1,21 @@
+seed: 42
+paths:
+  output: output
+data:
+  n_guests: 50000
+  target_bookings: 220000
+  start_date: "2023-01-01"
+  months_total: 36
+  calibration_months: 24
+  horizon_months: 12
+  seq_len: 16
+split: {train: 0.70, val: 0.15, test: 0.15}
+gpu: {enabled: true}
+models:
+  xgboost: {n_estimators: 1500, learning_rate: 0.03, max_depth: 6, subsample: 0.8, colsample_bytree: 0.8, tweedie_variance_power: 1.4, early_stopping_rounds: 60}
+  catboost: {iterations: 1500, learning_rate: 0.08, depth: 6, loss_function: "Tweedie:variance_power=1.4", early_stopping_rounds: 60}
+  lightgbm_hurdle: {n_estimators: 800, learning_rate: 0.04, num_leaves: 48, early_stopping_rounds: 50}
+  ft_ziln: {d_token: 48, n_blocks: 3, n_heads: 4, dropout: 0.15, epochs: 60, batch_size: 512, lr: 0.001, weight_decay: 0.0001, patience: 8}
+  seq_ziln: {d_model: 64, n_heads: 4, epochs: 50, batch_size: 512, lr: 0.002, weight_decay: 0.0001, dropout: 0.1, patience: 8}
+  survival: {hidden: 128, epochs: 60, batch_size: 512, lr: 0.002, weight_decay: 0.0001, patience: 8}
+api: {host: "127.0.0.1", port: 8000}

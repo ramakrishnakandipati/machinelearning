@@ -1,0 +1,30 @@
+{
+  "bgnbd_gg": {
+    "train_time_s": 0.42185849999805214,
+    "latency_ms_per_1k": 0.202439673888225
+  },
+  "xgboost_tweedie": {
+    "train_time_s": 0.6398873000071035,
+    "latency_ms_per_1k": 0.955285961872756
+  },
+  "catboost_tweedie": {
+    "train_time_s": 51.252864399997634,
+    "latency_ms_per_1k": 1.4602719638782824
+  },
+  "lightgbm_hurdle": {
+    "train_time_s": 0.46011649999854853,
+    "latency_ms_per_1k": 2.0051859749346117
+  },
+  "ft_transformer_ziln": {
+    "train_time_s": 15.59650099999999,
+    "latency_ms_per_1k": 4.07506999001416
+  },
+  "gru_attention_ziln": {
+    "train_time_s": 6.413321799998812,
+    "latency_ms_per_1k": 2.169950673366709
+  },
+  "deep_weibull_survival": {
+    "train_time_s": 3.9274531999981264,
+    "latency_ms_per_1k": 1.0766031189453278
+  }
+}

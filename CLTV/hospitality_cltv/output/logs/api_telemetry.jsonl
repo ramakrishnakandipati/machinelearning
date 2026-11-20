@@ -1,0 +1,5 @@
+{"ts": 1795195123.8151283, "path": "/health", "method": "GET", "status": 200, "latency_ms": 1.51, "n_guests": 0, "model": null, "device": "cuda"}
+{"ts": 1795195123.822127, "path": "/health", "method": "GET", "status": 200, "latency_ms": 0.54, "n_guests": 0, "model": null, "device": "cuda"}
+{"ts": 1795195124.1151934, "path": "/docs", "method": "GET", "status": 200, "latency_ms": 0.22, "n_guests": 0, "model": null, "device": "cuda"}
+{"ts": 1795195125.5233822, "path": "/predict/guest", "method": "POST", "status": 200, "latency_ms": 210.17, "n_guests": 1, "model": "ft_transformer_ziln", "device": "cuda"}
+{"ts": 1795195127.050811, "path": "/predict/batch", "method": "POST", "status": 200, "latency_ms": 39.37, "n_guests": 3, "model": "ft_transformer_ziln", "device": "cuda"}

@@ -1,0 +1,64 @@
+2026-11-20 11:11:11,203 | INFO    | segmentation | Data generated: guests (25000, 27) | events (141077, 7) | sequences (25000, 10, 4)
+2026-11-20 11:11:11,469 | INFO    | segmentation | CUDA device: NVIDIA GeForce RTX 3090 | VRAM total 25.8 GB | torch 2.15.0+cu132 | CUDA 13.2
+2026-11-20 11:11:11,469 | WARNING | segmentation | cuML not installed -> PyTorch GPU K-Means/GMM + sklearn HDBSCAN fallback
+2026-11-20 11:11:11,474 | INFO    | segmentation | START data generation
+2026-11-20 11:11:17,158 | INFO    | segmentation | Data generated: guests (25000, 27) | events (141077, 7) | sequences (25000, 10, 4)
+2026-11-20 11:11:17,162 | INFO    | segmentation | END   data generation (5.69s)
+2026-11-20 11:11:17,162 | INFO    | segmentation | START feature engineering
+2026-11-20 11:11:17,251 | INFO    | segmentation | END   feature engineering (0.09s)
+2026-11-20 11:11:17,252 | INFO    | segmentation | Shapes: X=(25000, 42) | seq cont=(25000, 10, 3) prop=(25000, 10) mask=(25000, 10) | events=(141077, 7)
+2026-11-20 11:11:17,253 | INFO    | segmentation | GPU mem [after data]: allocated 0.0 MB | reserved 0.0 MB
+2026-11-20 11:11:17,954 | INFO    | segmentation | Saved D:\Ramakrishna_D\Python\GitProjects\machinelearning\customer_segmentation\output\data_visualizations\raw_distributions.png
+2026-11-20 11:11:18,976 | INFO    | segmentation | Saved D:\Ramakrishna_D\Python\GitProjects\machinelearning\customer_segmentation\output\data_visualizations\booking_channel_breakdown.png
+2026-11-20 11:11:20,120 | INFO    | segmentation | Saved D:\Ramakrishna_D\Python\GitProjects\machinelearning\customer_segmentation\output\feature_visualizations\feature_correlation_heatmap.png
+2026-11-20 11:11:25,191 | INFO    | segmentation | START train K-Means
+2026-11-20 11:11:25,238 | INFO    | segmentation | END   train K-Means (0.05s)
+2026-11-20 11:11:25,240 | INFO    | segmentation | START train GMM
+2026-11-20 11:11:25,289 | INFO    | segmentation | END   train GMM (0.05s)
+2026-11-20 11:11:25,307 | INFO    | segmentation | START train HDBSCAN
+2026-11-20 11:11:25,329 | INFO    | segmentation | HDBSCAN: using sklearn.cluster.HDBSCAN
+2026-11-20 11:11:33,098 | INFO    | segmentation | END   train HDBSCAN (7.79s)
+2026-11-20 11:11:33,110 | INFO    | segmentation | START train DEC autoencoder
+2026-11-20 11:11:35,876 | INFO    | segmentation | [DEC-pretrain] epoch 1/40 mse=0.34739 (0.78s)
+2026-11-20 11:11:40,389 | INFO    | segmentation | [DEC-pretrain] epoch 11/40 mse=0.13486 (0.42s)
+2026-11-20 11:11:44,857 | INFO    | segmentation | [DEC-pretrain] epoch 21/40 mse=0.12709 (0.55s)
+2026-11-20 11:11:49,272 | INFO    | segmentation | [DEC-pretrain] epoch 31/40 mse=0.12488 (0.40s)
+2026-11-20 11:11:53,421 | INFO    | segmentation | [DEC-pretrain] epoch 40/40 mse=0.12467 (0.47s)
+2026-11-20 11:11:54,079 | INFO    | segmentation | [DEC-finetune] epoch 1/40 total=0.14079 recon=0.12594 kl=0.14843
+2026-11-20 11:11:59,186 | INFO    | segmentation | [DEC-finetune] epoch 11/40 total=0.14721 recon=0.12624 kl=0.20972
+2026-11-20 11:12:01,750 | INFO    | segmentation | [DEC-finetune] epoch 21/40 total=0.14503 recon=0.12498 kl=0.20057
+2026-11-20 11:12:04,211 | INFO    | segmentation | [DEC-finetune] epoch 31/40 total=0.14361 recon=0.12465 kl=0.18954
+2026-11-20 11:12:06,911 | INFO    | segmentation | [DEC-finetune] epoch 40/40 total=0.14135 recon=0.12396 kl=0.17391
+2026-11-20 11:12:06,912 | INFO    | segmentation | END   train DEC autoencoder (33.80s)
+2026-11-20 11:12:07,235 | INFO    | segmentation | Saved D:\Ramakrishna_D\Python\GitProjects\machinelearning\customer_segmentation\output\training_losses\dec_autoencoder_loss.png
+2026-11-20 11:12:07,542 | INFO    | segmentation | START train beta-VAE
+2026-11-20 11:12:07,914 | INFO    | segmentation | [beta-VAE] epoch 1/60 elbo=17.072 recon=16.491 kl=5.809 beta=0.10
+2026-11-20 11:12:11,203 | INFO    | segmentation | [beta-VAE] epoch 11/60 elbo=12.654 recon=8.252 kl=4.002 beta=1.10
+2026-11-20 11:12:14,380 | INFO    | segmentation | [beta-VAE] epoch 21/60 elbo=14.654 recon=9.694 kl=2.480 beta=2.00
+2026-11-20 11:12:17,474 | INFO    | segmentation | [beta-VAE] epoch 31/60 elbo=14.316 recon=9.576 kl=2.370 beta=2.00
+2026-11-20 11:12:20,662 | INFO    | segmentation | [beta-VAE] epoch 41/60 elbo=14.226 recon=9.471 kl=2.378 beta=2.00
+2026-11-20 11:12:23,470 | INFO    | segmentation | [beta-VAE] epoch 51/60 elbo=14.138 recon=9.429 kl=2.355 beta=2.00
+2026-11-20 11:12:25,725 | INFO    | segmentation | [beta-VAE] epoch 60/60 elbo=14.129 recon=9.377 kl=2.376 beta=2.00
+2026-11-20 11:12:25,782 | INFO    | segmentation | END   train beta-VAE (18.24s)
+2026-11-20 11:12:26,107 | INFO    | segmentation | Saved D:\Ramakrishna_D\Python\GitProjects\machinelearning\customer_segmentation\output\training_losses\beta_vae_loss.png
+2026-11-20 11:12:26,420 | INFO    | segmentation | START train Sequence Transformer
+2026-11-20 11:12:27,288 | INFO    | segmentation | [SeqTransformer] epoch 1/25 train=0.9211 val=0.7631
+2026-11-20 11:12:30,232 | INFO    | segmentation | [SeqTransformer] epoch 6/25 train=0.5185 val=0.4777
+2026-11-20 11:12:33,136 | INFO    | segmentation | [SeqTransformer] epoch 11/25 train=0.4617 val=0.4419
+2026-11-20 11:12:36,036 | INFO    | segmentation | [SeqTransformer] epoch 16/25 train=0.4377 val=0.4164
+2026-11-20 11:12:38,983 | INFO    | segmentation | [SeqTransformer] epoch 21/25 train=0.4260 val=0.4075
+2026-11-20 11:12:41,325 | INFO    | segmentation | [SeqTransformer] epoch 25/25 train=0.4244 val=0.4062
+2026-11-20 11:12:41,394 | INFO    | segmentation | END   train Sequence Transformer (14.97s)
+2026-11-20 11:12:41,540 | INFO    | segmentation | Saved D:\Ramakrishna_D\Python\GitProjects\machinelearning\customer_segmentation\output\training_losses\sequence_transformer_loss.png
+2026-11-20 11:12:41,743 | INFO    | segmentation | START evaluation
+2026-11-20 11:12:46,307 | INFO    | segmentation | HDBSCAN: using sklearn.cluster.HDBSCAN
+2026-11-20 11:12:48,816 | INFO    | segmentation | HDBSCAN: using sklearn.cluster.HDBSCAN
+2026-11-20 11:12:53,160 | INFO    | segmentation | HDBSCAN: using sklearn.cluster.HDBSCAN
+2026-11-20 11:12:57,278 | INFO    | segmentation | HDBSCAN: using sklearn.cluster.HDBSCAN
+2026-11-20 11:13:03,537 | INFO    | segmentation | HDBSCAN: using sklearn.cluster.HDBSCAN
+2026-11-20 11:13:16,954 | INFO    | segmentation | END   evaluation (35.21s)
+2026-11-20 11:13:16,955 | INFO    | segmentation | Selected production model: DEC Autoencoder
+2026-11-20 11:13:23,171 | INFO    | segmentation | Saved D:\Ramakrishna_D\Python\GitProjects\machinelearning\customer_segmentation\output\feature_visualizations\feature_importance_anova.png
+2026-11-20 11:13:38,979 | INFO    | segmentation | Saved D:\Ramakrishna_D\Python\GitProjects\machinelearning\customer_segmentation\output\feature_visualizations\latent_space_umap.png
+2026-11-20 11:13:40,045 | INFO    | segmentation | Pipeline finished in 148.6s. Winner: DEC Autoencoder
+2026-11-20 11:13:40,047 | INFO    | segmentation | GPU mem [end]: allocated 0.8 MB | reserved 323.0 MB

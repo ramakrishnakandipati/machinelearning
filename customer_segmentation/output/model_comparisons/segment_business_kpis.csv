@@ -1,0 +1,6 @@
+segment_id,segment_name,size,share_pct,avg_ltv,avg_total_spend,avg_adr,avg_los,avg_lead_time,avg_recency_days,churn_risk,next_best_offer,playbook
+0,Weekend Spa Couples,4285,17.14,21563.26,12612.4,336.66,2.45,35.6,69.8,0.167,Couples spa package + weekend stay,"Spa packages, romantic weekend bundles, Sunday-night extension discounts."
+1,Corporate Road Warriors,6162,24.65,14979.69,6149.1,213.09,2.17,7.0,24.3,0.063,Corporate rate + guaranteed late checkout,"Fast mobile check-in, late checkout, corporate-rate bundles, business-center perks."
+2,OTA Price-Sensitive Travelers,6203,24.81,1626.05,1380.07,117.63,2.55,22.7,148.8,0.31,Member-only direct rate + 500 bonus points,"Push direct-booking incentives, member rates, points sign-up bonus."
+3,Luxury Resort Families,4487,17.95,45984.28,32794.9,468.91,5.62,77.2,110.8,0.246,Suite upgrade + family dining credit,"Villa/suite upgrades, kids club, dining packages, early-booking family offers."
+4,At-Risk Dormant VIPs,3863,15.45,7563.74,31808.22,489.56,3.64,46.2,519.7,0.658,Status-match + win-back points bonus,"Personal outreach, win-back points, status-match, exclusive experiences."

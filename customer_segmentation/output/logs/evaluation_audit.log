@@ -1,0 +1,29 @@
+2026-11-20 11:11:21,648 | K-SWEEP k=3 | {'k': 3, 'inertia': 333970.46875, 'silhouette': 0.36988306045532227, 'davies_bouldin': 1.1193861221473929, 'calinski_harabasz': 12725.919373421726, 'gmm_bic': np.float64(1088948.7359556514)}
+2026-11-20 11:11:22,297 | K-SWEEP k=4 | {'k': 4, 'inertia': 276067.125, 'silhouette': 0.3491749167442322, 'davies_bouldin': 1.2524414233721026, 'calinski_harabasz': 12010.57748508489, 'gmm_bic': np.float64(848172.2696800451)}
+2026-11-20 11:11:22,969 | K-SWEEP k=5 | {'k': 5, 'inertia': 270748.5, 'silhouette': 0.26939213275909424, 'davies_bouldin': 1.9891188695008046, 'calinski_harabasz': 9308.144514381267, 'gmm_bic': np.float64(772288.047743428)}
+2026-11-20 11:11:23,711 | K-SWEEP k=6 | {'k': 6, 'inertia': 240211.4375, 'silhouette': 0.24960972368717194, 'davies_bouldin': 1.868722512444533, 'calinski_harabasz': 9027.770733218487, 'gmm_bic': np.float64(624631.6795818354)}
+2026-11-20 11:11:24,414 | K-SWEEP k=7 | {'k': 7, 'inertia': 236421.890625, 'silhouette': 0.24400581419467926, 'davies_bouldin': 2.2258688749818436, 'calinski_harabasz': 7710.292284077397, 'gmm_bic': np.float64(525787.0332220006)}
+2026-11-20 11:11:25,180 | K-SWEEP k=8 | {'k': 8, 'inertia': 231643.375, 'silhouette': 0.1678820252418518, 'davies_bouldin': 2.390684934586234, 'calinski_harabasz': 6819.130474582654, 'gmm_bic': np.float64(410450.5445922683)}
+2026-11-20 11:11:33,099 | HDBSCAN found 3 clusters; noise/VIP ratio 0.36%
+2026-11-20 11:12:43,309 | MODEL K-Means (GPU)              | K=5 noise=0.0% | sil(common)=0.2694 DB=1.9891 CH=9308.1 | sil(latent)=0.2694 | stability ARI=0.758 | train=46ms infer=0.41ms
+2026-11-20 11:12:43,311 |    segment sizes: {0: 4305, 1: 2137, 2: 4025, 3: 8330, 4: 6203}
+2026-11-20 11:12:44,985 | MODEL GMM (GPU EM)               | K=5 noise=0.0% | sil(common)=0.2037 DB=3.5053 CH=8112.3 | sil(latent)=0.2037 | stability ARI=0.737 | train=48ms infer=0.32ms
+2026-11-20 11:12:44,985 |    segment sizes: {0: 6169, 1: 1846, 2: 8532, 3: 4351, 4: 4102}
+2026-11-20 11:13:09,377 | MODEL HDBSCAN                    | K=3 noise=0.4% | sil(common)=0.3687 DB=1.1169 CH=12808.8 | sil(latent)=0.3687 | stability ARI=0.993 | train=7791ms infer=1.37ms
+2026-11-20 11:13:09,378 |    segment sizes: {-1: 90, 0: 6202, 1: 6152, 2: 12556}
+2026-11-20 11:13:11,579 | MODEL DEC Autoencoder            | K=5 noise=0.0% | sil(common)=0.3428 DB=1.3407 CH=10838.6 | sil(latent)=0.7600 | stability ARI=1.000 | train=33801ms infer=2.16ms
+2026-11-20 11:13:11,579 |    segment sizes: {0: 4285, 1: 6162, 2: 6203, 3: 4487, 4: 3863}
+2026-11-20 11:13:13,903 | MODEL Beta-VAE + K-Means         | K=5 noise=0.0% | sil(common)=0.3416 DB=1.3413 CH=10749.3 | sil(latent)=0.5730 | stability ARI=1.000 | train=18239ms infer=2.49ms
+2026-11-20 11:13:13,904 |    segment sizes: {0: 4463, 1: 6223, 2: 6176, 3: 3866, 4: 4272}
+2026-11-20 11:13:16,946 | MODEL Sequence Transformer       | K=5 noise=0.0% | sil(common)=0.0998 DB=3.8791 CH=4570.5 | sil(latent)=0.2488 | stability ARI=0.964 | train=14974ms infer=32.80ms
+2026-11-20 11:13:16,947 |    segment sizes: {0: 6480, 1: 2479, 2: 5311, 3: 6128, 4: 4602}
+2026-11-20 11:13:16,951 | ====================================================================================================
+2026-11-20 11:13:16,951 | SELECTION: composite = mean rank of (silhouette, Calinski-Harabasz, Davies-Bouldin, stability) on the common standardised feature space; only models with an online `predict` are eligible.
+2026-11-20 11:13:16,953 |    HDBSCAN                    composite=1.50 eligible=False
+2026-11-20 11:13:16,953 |    DEC Autoencoder            composite=1.75 eligible=True
+2026-11-20 11:13:16,954 |    Beta-VAE + K-Means         composite=2.75 eligible=True
+2026-11-20 11:13:16,954 |    K-Means (GPU)              composite=4.25 eligible=True
+2026-11-20 11:13:16,954 |    GMM (GPU EM)               composite=5.25 eligible=True
+2026-11-20 11:13:16,954 |    Sequence Transformer       composite=5.50 eligible=True
+2026-11-20 11:13:16,954 | WINNER: DEC Autoencoder (composite=1.75, silhouette=0.3428, DB=1.3407, CH=10838.6, stability=1.000)
+2026-11-20 11:13:16,978 | PERSONA MAPPING (winner DEC Autoencoder): {0: 'Weekend Spa Couples', 1: 'Corporate Road Warriors', 2: 'OTA Price-Sensitive Travelers', 3: 'Luxury Resort Families', 4: 'At-Risk Dormant VIPs'}

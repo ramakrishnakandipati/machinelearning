@@ -1,0 +1,129 @@
+{
+  "best_model": "ft_transformer_ziln",
+  "ensemble_members": [
+    "gru_attention_ziln",
+    "ft_transformer_ziln",
+    "xgboost_tweedie"
+  ],
+  "n_test": 7501,
+  "tier_cutoffs": {
+    "VIP": 3748.85205078125,
+    "High": 1344.9781494140625,
+    "Medium": 416.9501647949219
+  },
+  "val_normalized_gini": {
+    "bgnbd_gg": 0.7175944989443919,
+    "xgboost_tweedie": 0.7309705219848296,
+    "catboost_tweedie": 0.7064833734692089,
+    "lightgbm_hurdle": 0.7306756320808658,
+    "ft_transformer_ziln": 0.7328237440455821,
+    "gru_attention_ziln": 0.7356331779211421,
+    "deep_weibull_survival": 0.7274183893976927
+  },
+  "metrics": {
+    "bgnbd_gg": {
+      "RMSE": 2192.46736169676,
+      "MAE": 1042.6460661632216,
+      "R2": 0.3865375930948186,
+      "MAPE_nonzero": 90.35158675040087,
+      "Normalized_Gini": 0.7328215307920983,
+      "Spearman": 0.5027676256502613,
+      "Top10_Revenue_Capture_pct": 48.81322281480841,
+      "Calibration_Ratio": 0.9894774605589189,
+      "Train_Time_s": 0.41922429999976885,
+      "Latency_ms_per_1k": 0.20461271850906493,
+      "Val_Normalized_Gini": 0.7175944989443919
+    },
+    "xgboost_tweedie": {
+      "RMSE": 2188.39606658834,
+      "MAE": 979.21482221417,
+      "R2": 0.3888138117491813,
+      "MAPE_nonzero": 87.31774870477003,
+      "Normalized_Gini": 0.7447413884968644,
+      "Spearman": 0.5136318281827396,
+      "Top10_Revenue_Capture_pct": 49.42031545799265,
+      "Calibration_Ratio": 0.886296369647359,
+      "Train_Time_s": 0.6291708999997354,
+      "Latency_ms_per_1k": 1.0314891349725772,
+      "Val_Normalized_Gini": 0.7309705219848296
+    },
+    "catboost_tweedie": {
+      "RMSE": 2378.9491600827,
+      "MAE": 1046.915828837194,
+      "R2": 0.2777425965587549,
+      "MAPE_nonzero": 92.6960134364261,
+      "Normalized_Gini": 0.7213045924698122,
+      "Spearman": 0.4797977850740684,
+      "Top10_Revenue_Capture_pct": 47.90626480685072,
+      "Calibration_Ratio": 0.9829187437112136,
+      "Train_Time_s": 49.52107650000107,
+      "Latency_ms_per_1k": 1.5427143040972087,
+      "Val_Normalized_Gini": 0.7064833734692089
+    },
+    "lightgbm_hurdle": {
+      "RMSE": 2254.7681277572183,
+      "MAE": 991.4626899365126,
+      "R2": 0.351178168103942,
+      "MAPE_nonzero": 85.03917739200546,
+      "Normalized_Gini": 0.7459829393673969,
+      "Spearman": 0.5057715479735487,
+      "Top10_Revenue_Capture_pct": 49.851204303837584,
+      "Calibration_Ratio": 0.8569350645572703,
+      "Train_Time_s": 0.5565412000069045,
+      "Latency_ms_per_1k": 1.5826156508033988,
+      "Val_Normalized_Gini": 0.7306756320808658
+    },
+    "ft_transformer_ziln": {
+      "RMSE": 2185.121868612154,
+      "MAE": 1003.5992196813335,
+      "R2": 0.39064131234799016,
+      "MAPE_nonzero": 88.02215637680403,
+      "Normalized_Gini": 0.7489926170048032,
+      "Spearman": 0.505680448547261,
+      "Top10_Revenue_Capture_pct": 49.638518802793044,
+      "Calibration_Ratio": 0.9768656432166095,
+      "Train_Time_s": 14.179070899997896,
+      "Latency_ms_per_1k": 3.9800026663566634,
+      "Val_Normalized_Gini": 0.7328237440455821
+    },
+    "gru_attention_ziln": {
+      "RMSE": 2177.2614947238044,
+      "MAE": 1054.1261832510518,
+      "R2": 0.39501742721461564,
+      "MAPE_nonzero": 103.35647870563514,
+      "Normalized_Gini": 0.7566471283094572,
+      "Spearman": 0.5191743428339143,
+      "Top10_Revenue_Capture_pct": 50.689627760094986,
+      "Calibration_Ratio": 1.1635990997179682,
+      "Train_Time_s": 4.8746918000033475,
+      "Latency_ms_per_1k": 2.006505798337885,
+      "Val_Normalized_Gini": 0.7356331779211421
+    },
+    "deep_weibull_survival": {
+      "RMSE": 2230.867908480181,
+      "MAE": 985.8643360006566,
+      "R2": 0.36486010546943226,
+      "MAPE_nonzero": 81.42406755058201,
+      "Normalized_Gini": 0.7466117722131859,
+      "Spearman": 0.5021515853374485,
+      "Top10_Revenue_Capture_pct": 49.35363168920574,
+      "Calibration_Ratio": 0.8414399571719302,
+      "Train_Time_s": 3.8790241999959107,
+      "Latency_ms_per_1k": 1.059338754654346,
+      "Val_Normalized_Gini": 0.7274183893976927
+    },
+    "ensemble_top3": {
+      "RMSE": 2146.367122396719,
+      "MAE": 1001.9825733947144,
+      "R2": 0.4120644852324017,
+      "MAPE_nonzero": 91.42994413252612,
+      "Normalized_Gini": 0.7569963813570769,
+      "Spearman": 0.518158065563142,
+      "Top10_Revenue_Capture_pct": 49.83658775081382,
+      "Calibration_Ratio": 1.0089203708606456,
+      "Train_Time_s": 19.68293360000098,
+      "Latency_ms_per_1k": 7.017997599667126,
+      "Val_Normalized_Gini": 0.7395041378795891
+    }
+  }
+}

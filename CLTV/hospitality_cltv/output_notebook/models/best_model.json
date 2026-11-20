@@ -1,0 +1,8 @@
+{
+  "best_model": "ft_transformer_ziln",
+  "ensemble_members": [
+    "gru_attention_ziln",
+    "ft_transformer_ziln",
+    "xgboost_tweedie"
+  ]
+}

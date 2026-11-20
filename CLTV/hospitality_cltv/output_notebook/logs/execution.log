@@ -1,0 +1,44 @@
+2026-11-20 12:24:41,594 | INFO | GPU: NVIDIA GeForce RTX 3090 | VRAM 24.0 GB | torch 2.15.0+cu132 | CUDA 13.2
+2026-11-20 12:24:42,834 | INFO | Data: 50,000 guests | 219,400 bookings | cancel rate 10.5%
+2026-11-20 12:24:43,229 | INFO | Features (50000, 39) | sequences (50000, 16, 14) | splits {'train': 34999, 'val': 7500, 'test': 7501} | zero-spend share 68.0%
+2026-11-20 12:24:43,275 | INFO | GPU: NVIDIA GeForce RTX 3090 | VRAM 24.0 GB | torch 2.15.0+cu132 | CUDA 13.2
+2026-11-20 12:24:43,302 | INFO | === Training bgnbd_gg ===
+2026-11-20 12:24:43,648 | INFO | [bgnbd_gg] BG/NBD r,alpha,a,b=[0.4531 6.7427 1.5494 7.052 ] | GG p,q,gamma=[   2.621    4.928 1377.067] | corr(freq,monetary)=0.076 (independence assumption check)
+2026-11-20 12:24:43,732 | INFO | [bgnbd_gg] trained in 0.4s | latency 0.20 ms/1k guests | saved to D:\Ramakrishna_D\Python\GitProjects\machinelearning\CLTV\hospitality_cltv\output_notebook\models
+2026-11-20 12:24:43,732 | INFO | === Training xgboost_tweedie ===
+2026-11-20 12:24:44,361 | INFO | [xgboost_tweedie] device=cuda best_iter=144
+2026-11-20 12:24:44,445 | INFO | [xgboost_tweedie] trained in 0.6s | latency 1.03 ms/1k guests | saved to D:\Ramakrishna_D\Python\GitProjects\machinelearning\CLTV\hospitality_cltv\output_notebook\models
+2026-11-20 12:24:44,446 | INFO | === Training catboost_tweedie ===
+2026-11-20 12:25:33,968 | INFO | [catboost_tweedie] task_type=GPU best_iter=759
+2026-11-20 12:25:34,092 | INFO | [catboost_tweedie] trained in 49.5s | latency 1.54 ms/1k guests | saved to D:\Ramakrishna_D\Python\GitProjects\machinelearning\CLTV\hospitality_cltv\output_notebook\models
+2026-11-20 12:25:34,092 | INFO | === Training lightgbm_hurdle ===
+2026-11-20 12:25:34,647 | INFO | [lightgbm_hurdle] CPU (LightGBM pip wheel has no CUDA) | clf iters=104 reg iters=69
+2026-11-20 12:25:34,723 | INFO | [lightgbm_hurdle] trained in 0.6s | latency 1.58 ms/1k guests | saved to D:\Ramakrishna_D\Python\GitProjects\machinelearning\CLTV\hospitality_cltv\output_notebook\models
+2026-11-20 12:25:34,724 | INFO | === Training ft_transformer_ziln ===
+2026-11-20 12:25:48,900 | INFO | [ft_transformer_ziln] early stop @ epoch 24 (best val 0.6049)
+2026-11-20 12:25:48,901 | INFO | [ft_transformer_ziln] epochs=24 best_val=0.6049
+2026-11-20 12:25:49,061 | INFO | [ft_transformer_ziln] trained in 14.2s | latency 3.98 ms/1k guests | saved to D:\Ramakrishna_D\Python\GitProjects\machinelearning\CLTV\hospitality_cltv\output_notebook\models
+2026-11-20 12:25:49,061 | INFO | === Training gru_attention_ziln ===
+2026-11-20 12:25:53,934 | INFO | [gru_attention_ziln] early stop @ epoch 14 (best val 0.6058)
+2026-11-20 12:25:53,935 | INFO | [gru_attention_ziln] epochs=14 best_val=0.6058
+2026-11-20 12:25:54,014 | INFO | [gru_attention_ziln] trained in 4.9s | latency 2.01 ms/1k guests | saved to D:\Ramakrishna_D\Python\GitProjects\machinelearning\CLTV\hospitality_cltv\output_notebook\models
+2026-11-20 12:25:54,030 | INFO | === Training deep_weibull_survival ===
+2026-11-20 12:25:57,909 | INFO | [deep_weibull_survival] early stop @ epoch 11 (best val 2.3104)
+2026-11-20 12:25:57,910 | INFO | [deep_weibull_survival] epochs=11 best_val=2.3104
+2026-11-20 12:25:57,955 | INFO | [deep_weibull_survival] trained in 3.9s | latency 1.06 ms/1k guests | saved to D:\Ramakrishna_D\Python\GitProjects\machinelearning\CLTV\hospitality_cltv\output_notebook\models
+2026-11-20 12:25:58,032 | INFO | Evaluation report:
+                model     RMSE      MAE    R2  MAPE_nonzero  Normalized_Gini  Spearman  Top10_Revenue_Capture_pct  Calibration_Ratio  Train_Time_s  Latency_ms_per_1k  Val_Normalized_Gini
+             bgnbd_gg 2192.467 1042.646 0.387        90.352            0.733     0.503                     48.813              0.989         0.419              0.205                0.718
+      xgboost_tweedie 2188.396  979.215 0.389        87.318            0.745     0.514                     49.420              0.886         0.629              1.031                0.731
+     catboost_tweedie 2378.949 1046.916 0.278        92.696            0.721     0.480                     47.906              0.983        49.521              1.543                0.706
+      lightgbm_hurdle 2254.768  991.463 0.351        85.039            0.746     0.506                     49.851              0.857         0.557              1.583                0.731
+  ft_transformer_ziln 2185.122 1003.599 0.391        88.022            0.749     0.506                     49.639              0.977        14.179              3.980                0.733
+   gru_attention_ziln 2177.261 1054.126 0.395       103.356            0.757     0.519                     50.690              1.164         4.875              2.007                0.736
+deep_weibull_survival 2230.868  985.864 0.365        81.424            0.747     0.502                     49.354              0.841         3.879              1.059                0.727
+        ensemble_top3 2146.367 1001.983 0.412        91.430            0.757     0.518                     49.837              1.009        19.683              7.018                0.740
+2026-11-20 12:25:58,033 | INFO | Best model (validation-selected): ft_transformer_ziln | ensemble = ['gru_attention_ziln', 'ft_transformer_ziln', 'xgboost_tweedie']
+2026-11-20 12:25:59,733 | INFO | EDA plots saved to D:\Ramakrishna_D\Python\GitProjects\machinelearning\CLTV\hospitality_cltv\output_notebook\plots\eda
+2026-11-20 12:26:03,731 | INFO | Feature plots saved to D:\Ramakrishna_D\Python\GitProjects\machinelearning\CLTV\hospitality_cltv\output_notebook\plots\features
+2026-11-20 12:26:05,323 | INFO | Training-loss plots saved to D:\Ramakrishna_D\Python\GitProjects\machinelearning\CLTV\hospitality_cltv\output_notebook\plots\training_loss
+2026-11-20 12:26:07,988 | INFO | Comparison plots saved to D:\Ramakrishna_D\Python\GitProjects\machinelearning\CLTV\hospitality_cltv\output_notebook\plots\comparisons
+2026-11-20 12:26:07,989 | INFO | Notebook pipeline finished in 86s

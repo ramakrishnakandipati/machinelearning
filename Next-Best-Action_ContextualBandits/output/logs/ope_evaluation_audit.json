@@ -1,5 +1,5 @@
 {
-  "created": "2026-11-21T12:40:04",
+  "created": "2026-11-21T12:45:48",
   "n_test": 9000,
   "w_clip": 20.0,
   "n_bootstrap": 200,
@@ -10,18 +10,19 @@
     "mode": "full",
     "n_train": 21000,
     "fit_seconds": {
-      "LinUCB-Disjoint": 0.4372544288635254,
-      "LinUCB-Hybrid": 0.11841487884521484,
-      "LinearTS": 0.10074400901794434,
-      "XGBoost-EpsGreedy": 1.1567728519439697,
-      "XGBoost-UCB": 5.662377834320068,
-      "NeuralEpsGreedy": 8.945074319839478,
-      "NeuralLinear": 6.889892816543579,
-      "NeuralTS": 24.67006778717041,
-      "NeuralUCB": 5.799786806106567,
-      "DR-PolicyGradient": 5.136362075805664
+      "LinUCB-Disjoint": 0.33327245712280273,
+      "LinUCB-Hybrid": 0.08271431922912598,
+      "LinearTS": 0.06913375854492188,
+      "XGBoost-EpsGreedy": 0.8869938850402832,
+      "XGBoost-UCB": 3.682853937149048,
+      "NeuralEpsGreedy": 3.9999213218688965,
+      "NeuralLinear": 2.6194908618927,
+      "NeuralTS": 9.71808934211731,
+      "NeuralUCB": 2.6551389694213867,
+      "DR-PolicyGradient": 4.2091474533081055
     },
-    "device": "cuda"
+    "device": "cuda",
+    "entry": "notebook"
   },
   "results": {
     "Logging policy": {

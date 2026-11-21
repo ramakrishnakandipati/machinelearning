@@ -2,6 +2,7 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Next-Best-Action_ContextualBandits" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/recommenders/Two-Tower_model" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="~\anaconda3\envs\causal-gpu" jdkType="Python SDK" />

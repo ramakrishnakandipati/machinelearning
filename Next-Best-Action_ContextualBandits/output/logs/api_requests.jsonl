@@ -1,0 +1,2 @@
+{"ts": "2026-11-21T12:40:54", "type": "predict", "request_id": "0228d8c3ca82", "context": {"loyalty_tier": "Silver", "lead_time": 70, "los": 6, "booking_channel": "Web", "hist_spend": 1800.0, "ancillary_rate": 0.45, "month": 7, "day_of_week": "Sat", "party_size": 4, "guest_archetype": "Family"}, "action": 3, "propensity": 0.9583333333333334, "model": "LinUCB-Disjoint", "latency_ms": 190.91}
+{"ts": "2026-11-21T12:40:54", "type": "reward", "request_id": "0228d8c3ca82", "action": 3, "propensity": 0.9583333333333334, "reward": 450.0, "converted": null, "model_updated": false}

@@ -1,0 +1,14 @@
+numpy
+pandas
+scikit-learn
+torch            # CUDA build recommended
+xgboost>=2.0     # device="cuda" support
+joblib
+matplotlib
+seaborn
+fastapi
+uvicorn
+pydantic>=2
+playwright       # then: python -m playwright install chromium
+requests
+pytest

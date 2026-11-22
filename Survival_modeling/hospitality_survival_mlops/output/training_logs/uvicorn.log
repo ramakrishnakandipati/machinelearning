@@ -1,0 +1,12 @@
+INFO:     Started server process [51828]
+INFO:     Waiting for application startup.
+2026-11-22 15:51:09,670 | INFO    | api | API ready | model=xgboost_aft | device=cuda
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:50198 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50203 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50203 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50203 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50203 - "POST /predict/survival HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50203 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50207 - "POST /predict/survival HTTP/1.1" 200 OK

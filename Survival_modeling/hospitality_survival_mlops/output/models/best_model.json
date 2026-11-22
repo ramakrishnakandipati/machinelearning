@@ -1,0 +1,7 @@
+{
+  "name": "xgboost_aft",
+  "artifact": "xgboost_aft.json",
+  "c_index_uno": 0.6712015644663103,
+  "integrated_brier_score": 0.19833101712396461,
+  "trained_on_device": "cuda"
+}

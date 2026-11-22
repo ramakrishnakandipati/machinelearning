@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+# 7+ GB pickle (RSF with tuned deep trees) - regenerate via the training pipeline
+output/models/random_survival_forest.pkl
+output/training_logs/uvicorn.log
+output/training_logs/full_run_stdout.txt

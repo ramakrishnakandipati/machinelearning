@@ -1,0 +1,82 @@
+seed: 42
+
+paths:
+  data: data/guests.csv
+  models: output/models
+  data_visuals: output/data_visuals
+  training_logs: output/training_logs
+  comparison_graphs: output/comparison_graphs
+  api_screenshots: output/api_screenshots
+
+data:
+  n_samples: 15000
+  target_censoring: 0.30      # fraction of right-censored guests
+  max_follow_up_days: 900     # upper bound for the censoring window
+
+split:
+  test_size: 0.20
+
+time_horizons:
+  api_days: [30, 60, 90, 180, 365]
+  auc_days: [30, 90, 180, 365]
+  deephit_bins: [30, 60, 90, 180, 365]
+  eval_grid_min: 30
+  eval_grid_max: 365
+  eval_grid_points: 12
+
+gpu:
+  use_cuda: true              # falls back to CPU automatically if unavailable
+
+optuna:
+  enabled: true
+  n_trials:
+    coxph: 12
+    rsf: 6
+    xgb_cox: 15
+    xgb_aft: 15
+    deepsurv: 8
+    deephit: 6
+
+models:
+  coxph:
+    penalizer: 0.05
+    l1_ratio: 0.2
+  rsf:
+    n_estimators: 200
+    min_samples_leaf: 15
+    max_depth: 12
+  xgb_cox:
+    n_estimators: 400
+    learning_rate: 0.05
+    max_depth: 4
+    subsample: 0.8
+    colsample_bytree: 0.8
+  xgb_aft:
+    n_estimators: 400
+    learning_rate: 0.05
+    max_depth: 4
+    aft_loss_distribution: normal
+    aft_loss_distribution_scale: 1.0
+  deepsurv:
+    hidden: [128, 64, 32]
+    dropout: 0.2
+    lr: 0.001
+    weight_decay: 0.0001
+    epochs: 150
+    batch_size: 1024
+    patience: 20
+    activation: selu
+  deephit:
+    hidden: [128, 64]
+    dropout: 0.2
+    lr: 0.001
+    weight_decay: 0.0001
+    epochs: 120
+    batch_size: 1024
+    patience: 20
+    alpha: 0.9               # weight of likelihood vs ranking loss
+    sigma: 0.1               # ranking-loss temperature
+
+api:
+  host: 127.0.0.1
+  port: 8000

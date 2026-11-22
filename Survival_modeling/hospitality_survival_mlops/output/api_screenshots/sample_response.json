@@ -1,0 +1,23 @@
+{
+  "model_used": "xgboost_aft",
+  "device": "cuda",
+  "risk_score": 95.7,
+  "raw_risk": -4.01651,
+  "median_survival_days": 55.5,
+  "survival_probabilities": {
+    "30d": 0.5887,
+    "60d": 0.4887,
+    "90d": 0.4301,
+    "180d": 0.335,
+    "365d": 0.2502
+  },
+  "rebooking_probabilities": {
+    "30d": 0.4113,
+    "60d": 0.5113,
+    "90d": 0.5699,
+    "180d": 0.665,
+    "365d": 0.7498
+  },
+  "risk_segment": "Low churn risk / likely to rebook",
+  "recommended_action": "Maintain cadence: standard loyalty newsletter and pre-arrival upsell; avoid discounting."
+}

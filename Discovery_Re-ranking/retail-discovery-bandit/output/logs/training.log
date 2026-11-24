@@ -1,0 +1,152 @@
+2026-11-24 10:06:13,569 | INFO | train | device=cuda | {'cuda_available': True, 'device': 'NVIDIA GeForce RTX 3090', 'torch': '2.15.0+cu132', 'cuda_runtime': '13.2', 'vram_total_mb': 24575.5, 'vram_used_mb': 1239.5, 'torch_allocated_mb': 0.0, 'torch_peak_allocated_mb': 0.0}
+2026-11-24 10:06:13,814 | INFO | train | world: 10000 items (1500 cold, 487 out of stock) | 2000 users | 600000 impressions | CTR=0.0640 BuyRate=0.0181 | cold_eval=45000 (CTR=0.0234)
+2026-11-24 10:06:15,929 | INFO | train | two-tower epoch 00 loss=8.1631 val R@50=nan R@200=nan
+2026-11-24 10:06:16,006 | INFO | train | two-tower epoch 01 loss=8.0350 val R@50=nan R@200=nan
+2026-11-24 10:06:16,169 | INFO | train | two-tower epoch 02 loss=7.9989 val R@50=0.0559 R@200=0.0991
+2026-11-24 10:06:16,263 | INFO | train | two-tower epoch 03 loss=7.9629 val R@50=nan R@200=nan
+2026-11-24 10:06:16,355 | INFO | train | two-tower epoch 04 loss=7.9237 val R@50=nan R@200=nan
+2026-11-24 10:06:16,492 | INFO | train | two-tower epoch 05 loss=7.8818 val R@50=0.0976 R@200=0.1716
+2026-11-24 10:06:16,589 | INFO | train | two-tower epoch 06 loss=7.8439 val R@50=nan R@200=nan
+2026-11-24 10:06:16,679 | INFO | train | two-tower epoch 07 loss=7.7942 val R@50=nan R@200=nan
+2026-11-24 10:06:16,813 | INFO | train | two-tower epoch 08 loss=7.7549 val R@50=0.1120 R@200=0.1923
+2026-11-24 10:06:16,894 | INFO | train | two-tower epoch 09 loss=7.7139 val R@50=nan R@200=nan
+2026-11-24 10:06:16,971 | INFO | train | two-tower epoch 10 loss=7.6728 val R@50=nan R@200=nan
+2026-11-24 10:06:17,090 | INFO | train | two-tower epoch 11 loss=7.6357 val R@50=0.1093 R@200=0.1999
+2026-11-24 10:06:17,221 | INFO | train | retrieval: {'Recall@50': 0.09637012254111575, 'Recall@200': 0.18512307857680319, 'HitRate@200': 0.3752821670428894, 'ColdStart_Recall@200': 0.021725826193390453, 'ColdStart_HitRate@200': 0.03182374541003672, 'ColdStart_Recall@50': 0.0032639738882088943, 'latency_ms': {'p50_ms': 0.19625003915280104, 'p95_ms': 0.24086497141979643, 'p99_ms': 0.47529794857837215, 'target_ms': 10.0, 'meets_target': True}, 'n_train_pairs': 25577, 'n_test_pairs': 4304, 'n_cold_test_pairs': 1055}
+2026-11-24 10:06:18,491 | INFO | train | ranker trained on cuda | click iters=57 buy iters=98
+2026-11-24 10:06:19,294 | INFO | train | ranker test: click AUC=0.6331 PR-AUC=0.1089 | buy AUC=0.6924 | NDCG@5=0.3448 NDCG@10=0.4434
+2026-11-24 10:06:19,295 | INFO | train | COLD-START BOTTLENECK: mean pred click cold=0.0357 vs warm=0.0651 | matched-relevance relative gap=-38.1% | confirmed=True
+2026-11-24 10:06:24,321 | INFO | train | bandits warm-started with 3000 historical impressions
+2026-11-24 10:06:24,321 | INFO | train | === simulating policy pure_ranker (300 requests) ===
+2026-11-24 10:06:30,159 | INFO | train | [pure_ranker] CTR=0.1720 buy/impr=0.0553 reward/impr=0.1069 cold share=0.001 cold conv=0.0000 discovery conv=0.0447 coverage=2.81% ILD=0.952
+2026-11-24 10:06:30,160 | INFO | train | === simulating policy epsilon_greedy (300 requests) ===
+2026-11-24 10:06:35,766 | INFO | train | [epsilon_greedy] CTR=0.1527 buy/impr=0.0493 reward/impr=0.0951 cold share=0.013 cold conv=0.0000 discovery conv=0.0273 coverage=3.87% ILD=0.960
+2026-11-24 10:06:35,766 | INFO | train | === simulating policy linucb_mmr (300 requests) ===
+2026-11-24 10:06:44,878 | INFO | train | [linucb_mmr] CTR=0.1500 buy/impr=0.0533 reward/impr=0.0983 cold share=0.045 cold conv=0.0000 discovery conv=0.0000 coverage=6.06% ILD=1.003
+2026-11-24 10:06:44,878 | INFO | train | === simulating policy linucb_high_expl (300 requests) ===
+2026-11-24 10:06:53,596 | INFO | train | [linucb_high_expl] CTR=0.1260 buy/impr=0.0407 reward/impr=0.0785 cold share=0.169 cold conv=0.0000 discovery conv=0.0088 coverage=6.14% ILD=1.013
+2026-11-24 10:06:53,631 | INFO | train | GPU: {'cuda_available': True, 'device': 'NVIDIA GeForce RTX 3090', 'torch': '2.15.0+cu132', 'cuda_runtime': '13.2', 'vram_total_mb': 24575.5, 'vram_used_mb': 1691.5, 'torch_allocated_mb': 9.6, 'torch_peak_allocated_mb': 18.2}
+2026-11-24 10:06:53,632 | INFO | train | done in 40.1s. Models in D:\Ramakrishna_D\Python\GitProjects\machinelearning\Discovery_Re-ranking\retail-discovery-bandit\output\models
+2026-11-24 10:07:01,929 | INFO | train | device=cuda | {'cuda_available': True, 'device': 'NVIDIA GeForce RTX 3090', 'torch': '2.15.0+cu132', 'cuda_runtime': '13.2', 'vram_total_mb': 24575.5, 'vram_used_mb': 1239.5, 'torch_allocated_mb': 0.0, 'torch_peak_allocated_mb': 0.0}
+2026-11-24 10:07:02,169 | INFO | train | world: 10000 items (1500 cold, 487 out of stock) | 2000 users | 600000 impressions | CTR=0.0640 BuyRate=0.0181 | cold_eval=45000 (CTR=0.0234)
+2026-11-24 10:07:04,359 | INFO | train | two-tower epoch 00 loss=8.1631 val R@50=nan R@200=nan
+2026-11-24 10:07:04,434 | INFO | train | two-tower epoch 01 loss=8.0350 val R@50=nan R@200=nan
+2026-11-24 10:07:04,587 | INFO | train | two-tower epoch 02 loss=7.9989 val R@50=0.0559 R@200=0.0991
+2026-11-24 10:07:04,668 | INFO | train | two-tower epoch 03 loss=7.9629 val R@50=nan R@200=nan
+2026-11-24 10:07:04,737 | INFO | train | two-tower epoch 04 loss=7.9237 val R@50=nan R@200=nan
+2026-11-24 10:07:04,858 | INFO | train | two-tower epoch 05 loss=7.8818 val R@50=0.0976 R@200=0.1716
+2026-11-24 10:07:04,940 | INFO | train | two-tower epoch 06 loss=7.8439 val R@50=nan R@200=nan
+2026-11-24 10:07:05,020 | INFO | train | two-tower epoch 07 loss=7.7942 val R@50=nan R@200=nan
+2026-11-24 10:07:05,134 | INFO | train | two-tower epoch 08 loss=7.7549 val R@50=0.1120 R@200=0.1923
+2026-11-24 10:07:05,208 | INFO | train | two-tower epoch 09 loss=7.7139 val R@50=nan R@200=nan
+2026-11-24 10:07:05,283 | INFO | train | two-tower epoch 10 loss=7.6728 val R@50=nan R@200=nan
+2026-11-24 10:07:05,396 | INFO | train | two-tower epoch 11 loss=7.6357 val R@50=0.1093 R@200=0.1999
+2026-11-24 10:07:05,525 | INFO | train | retrieval: {'Recall@50': 0.09637012254111575, 'Recall@200': 0.18512307857680319, 'HitRate@200': 0.3752821670428894, 'ColdStart_Recall@200': 0.021725826193390453, 'ColdStart_HitRate@200': 0.03182374541003672, 'ColdStart_Recall@50': 0.0032639738882088943, 'latency_ms': {'p50_ms': 0.19515000167302787, 'p95_ms': 0.2643399755470455, 'p99_ms': 0.35744898428674765, 'target_ms': 10.0, 'meets_target': True}, 'n_train_pairs': 25577, 'n_test_pairs': 4304, 'n_cold_test_pairs': 1055}
+2026-11-24 10:07:06,805 | INFO | train | ranker trained on cuda | click iters=57 buy iters=98
+2026-11-24 10:07:07,417 | INFO | train | ranker test: click AUC=0.6331 PR-AUC=0.1089 | buy AUC=0.6924 | NDCG@5=0.3448 NDCG@10=0.4434
+2026-11-24 10:07:07,418 | INFO | train | COLD-START BOTTLENECK: mean pred click cold=0.0357 vs warm=0.0651 | matched-relevance relative gap=-38.1% | confirmed=True
+2026-11-24 10:07:20,480 | INFO | train | bandits warm-started with 20000 historical impressions
+2026-11-24 10:07:20,480 | INFO | train | === simulating policy pure_ranker (3000 requests) ===
+2026-11-24 10:07:33,409 | INFO | train | [pure_ranker] 1000/3000 requests | recent reward/impr=0.0977 | cold share=0.002
+2026-11-24 10:07:47,142 | INFO | train | [pure_ranker] 2000/3000 requests | recent reward/impr=0.0875 | cold share=0.001
+2026-11-24 10:08:01,044 | INFO | train | [pure_ranker] 3000/3000 requests | recent reward/impr=0.0803 | cold share=0.001
+2026-11-24 10:08:01,151 | INFO | train | [pure_ranker] CTR=0.1469 buy/impr=0.0444 reward/impr=0.0885 cold share=0.001 cold conv=0.0000 discovery conv=0.0267 coverage=5.34% ILD=0.942
+2026-11-24 10:08:01,151 | INFO | train | === simulating policy epsilon_greedy (3000 requests) ===
+2026-11-24 10:08:14,938 | INFO | train | [epsilon_greedy] 1000/3000 requests | recent reward/impr=0.0889 | cold share=0.011
+2026-11-24 10:08:28,960 | INFO | train | [epsilon_greedy] 2000/3000 requests | recent reward/impr=0.0812 | cold share=0.014
+2026-11-24 10:08:42,946 | INFO | train | [epsilon_greedy] 3000/3000 requests | recent reward/impr=0.0755 | cold share=0.014
+2026-11-24 10:08:43,042 | INFO | train | [epsilon_greedy] CTR=0.1362 buy/impr=0.0410 reward/impr=0.0819 cold share=0.013 cold conv=0.0152 discovery conv=0.0220 coverage=11.10% ILD=0.953
+2026-11-24 10:08:43,042 | INFO | train | === simulating policy linucb_mmr (3000 requests) ===
+2026-11-24 10:09:03,387 | INFO | train | [linucb_mmr] 1000/3000 requests | recent reward/impr=0.0655 | cold share=0.042
+2026-11-24 10:09:23,190 | INFO | train | [linucb_mmr] 2000/3000 requests | recent reward/impr=0.0663 | cold share=0.039
+2026-11-24 10:09:42,495 | INFO | train | [linucb_mmr] 3000/3000 requests | recent reward/impr=0.0653 | cold share=0.026
+2026-11-24 10:09:42,582 | INFO | train | [linucb_mmr] CTR=0.1043 buy/impr=0.0344 reward/impr=0.0657 cold share=0.036 cold conv=0.0037 discovery conv=0.0052 coverage=17.28% ILD=1.011
+2026-11-24 10:09:42,582 | INFO | train | === simulating policy linucb_high_expl (3000 requests) ===
+2026-11-24 10:10:02,676 | INFO | train | [linucb_high_expl] 1000/3000 requests | recent reward/impr=0.0723 | cold share=0.161
+2026-11-24 10:10:22,052 | INFO | train | [linucb_high_expl] 2000/3000 requests | recent reward/impr=0.0679 | cold share=0.102
+2026-11-24 10:10:42,511 | INFO | train | [linucb_high_expl] 3000/3000 requests | recent reward/impr=0.0653 | cold share=0.092
+2026-11-24 10:10:42,601 | INFO | train | [linucb_high_expl] CTR=0.1085 buy/impr=0.0359 reward/impr=0.0685 cold share=0.118 cold conv=0.0085 discovery conv=0.0125 coverage=16.69% ILD=1.027
+2026-11-24 10:10:42,654 | INFO | train | GPU: {'cuda_available': True, 'device': 'NVIDIA GeForce RTX 3090', 'torch': '2.15.0+cu132', 'cuda_runtime': '13.2', 'vram_total_mb': 24575.5, 'vram_used_mb': 1691.5, 'torch_allocated_mb': 9.6, 'torch_peak_allocated_mb': 18.2}
+2026-11-24 10:10:42,655 | INFO | train | done in 220.7s. Models in D:\Ramakrishna_D\Python\GitProjects\machinelearning\Discovery_Re-ranking\retail-discovery-bandit\output\models
+2026-11-24 10:11:20,148 | INFO | train | device=cuda | {'cuda_available': True, 'device': 'NVIDIA GeForce RTX 3090', 'torch': '2.15.0+cu132', 'cuda_runtime': '13.2', 'vram_total_mb': 24575.5, 'vram_used_mb': 1239.5, 'torch_allocated_mb': 0.0, 'torch_peak_allocated_mb': 0.0}
+2026-11-24 10:11:20,374 | INFO | train | world: 10000 items (1500 cold, 487 out of stock) | 2000 users | 600000 impressions | CTR=0.0640 BuyRate=0.0181 | cold_eval=45000 (CTR=0.0234)
+2026-11-24 10:11:21,781 | INFO | train | two-tower epoch 00 loss=8.1631 val R@50=nan R@200=nan
+2026-11-24 10:11:21,825 | INFO | train | two-tower epoch 01 loss=8.0350 val R@50=nan R@200=nan
+2026-11-24 10:11:21,911 | INFO | train | two-tower epoch 02 loss=7.9989 val R@50=0.0559 R@200=0.0991
+2026-11-24 10:11:21,955 | INFO | train | two-tower epoch 03 loss=7.9629 val R@50=nan R@200=nan
+2026-11-24 10:11:22,006 | INFO | train | two-tower epoch 04 loss=7.9237 val R@50=nan R@200=nan
+2026-11-24 10:11:22,082 | INFO | train | two-tower epoch 05 loss=7.8818 val R@50=0.0976 R@200=0.1716
+2026-11-24 10:11:22,125 | INFO | train | two-tower epoch 06 loss=7.8439 val R@50=nan R@200=nan
+2026-11-24 10:11:22,173 | INFO | train | two-tower epoch 07 loss=7.7942 val R@50=nan R@200=nan
+2026-11-24 10:11:22,249 | INFO | train | two-tower epoch 08 loss=7.7549 val R@50=0.1120 R@200=0.1923
+2026-11-24 10:11:22,292 | INFO | train | two-tower epoch 09 loss=7.7139 val R@50=nan R@200=nan
+2026-11-24 10:11:22,333 | INFO | train | two-tower epoch 10 loss=7.6728 val R@50=nan R@200=nan
+2026-11-24 10:11:22,396 | INFO | train | two-tower epoch 11 loss=7.6357 val R@50=0.1093 R@200=0.1999
+2026-11-24 10:11:22,469 | INFO | train | retrieval: {'Recall@50': 0.09637012254111575, 'Recall@200': 0.18512307857680319, 'HitRate@200': 0.3752821670428894, 'ColdStart_Recall@200': 0.021725826193390453, 'ColdStart_HitRate@200': 0.03182374541003672, 'ColdStart_Recall@50': 0.0032639738882088943, 'latency_ms': {'p50_ms': 0.11660001473501325, 'p95_ms': 0.15460995491594084, 'p99_ms': 0.2107520314166321, 'target_ms': 10.0, 'meets_target': True}, 'n_train_pairs': 25577, 'n_test_pairs': 4304, 'n_cold_test_pairs': 1055}
+2026-11-24 10:11:23,388 | INFO | train | ranker trained on cuda | click iters=57 buy iters=98
+2026-11-24 10:11:23,722 | INFO | train | ranker test: click AUC=0.6331 PR-AUC=0.1089 | buy AUC=0.6924 | NDCG@5=0.3448 NDCG@10=0.4434
+2026-11-24 10:11:23,722 | INFO | train | COLD-START BOTTLENECK: mean pred click cold=0.0357 vs warm=0.0651 | matched-relevance relative gap=-38.1% | confirmed=True
+2026-11-24 10:11:36,586 | INFO | train | bandits warm-started with 20000 historical impressions
+2026-11-24 10:11:36,587 | INFO | train | === simulating policy pure_ranker (3000 requests) ===
+2026-11-24 10:11:49,631 | INFO | train | [pure_ranker] 1000/3000 requests | recent reward/impr=0.0977 | cold share=0.002
+2026-11-24 10:12:03,417 | INFO | train | [pure_ranker] 2000/3000 requests | recent reward/impr=0.0875 | cold share=0.001
+2026-11-24 10:12:17,040 | INFO | train | [pure_ranker] 3000/3000 requests | recent reward/impr=0.0803 | cold share=0.001
+2026-11-24 10:12:17,140 | INFO | train | [pure_ranker] CTR=0.1469 buy/impr=0.0444 reward/impr=0.0885 cold share=0.001 cold conv=0.0000 discovery conv=0.0267 coverage=5.34% ILD=0.942
+2026-11-24 10:12:17,140 | INFO | train | === simulating policy epsilon_greedy (3000 requests) ===
+2026-11-24 10:12:31,435 | INFO | train | [epsilon_greedy] 1000/3000 requests | recent reward/impr=0.0889 | cold share=0.011
+2026-11-24 10:12:45,275 | INFO | train | [epsilon_greedy] 2000/3000 requests | recent reward/impr=0.0812 | cold share=0.014
+2026-11-24 10:12:59,874 | INFO | train | [epsilon_greedy] 3000/3000 requests | recent reward/impr=0.0755 | cold share=0.014
+2026-11-24 10:12:59,978 | INFO | train | [epsilon_greedy] CTR=0.1362 buy/impr=0.0410 reward/impr=0.0819 cold share=0.013 cold conv=0.0152 discovery conv=0.0220 coverage=11.10% ILD=0.953
+2026-11-24 10:12:59,979 | INFO | train | === simulating policy linucb_mmr (3000 requests) ===
+2026-11-24 10:13:19,784 | INFO | train | [linucb_mmr] 1000/3000 requests | recent reward/impr=0.0670 | cold share=0.042
+2026-11-24 10:13:38,884 | INFO | train | [linucb_mmr] 2000/3000 requests | recent reward/impr=0.0638 | cold share=0.046
+2026-11-24 10:13:58,108 | INFO | train | [linucb_mmr] 3000/3000 requests | recent reward/impr=0.0654 | cold share=0.037
+2026-11-24 10:13:58,197 | INFO | train | [linucb_mmr] CTR=0.1025 buy/impr=0.0347 reward/impr=0.0654 cold share=0.042 cold conv=0.0096 discovery conv=0.0049 coverage=17.03% ILD=1.013
+2026-11-24 10:13:58,197 | INFO | train | === simulating policy linucb_high_expl (3000 requests) ===
+2026-11-24 10:14:17,626 | INFO | train | [linucb_high_expl] 1000/3000 requests | recent reward/impr=0.0747 | cold share=0.151
+2026-11-24 10:14:36,828 | INFO | train | [linucb_high_expl] 2000/3000 requests | recent reward/impr=0.0637 | cold share=0.101
+2026-11-24 10:14:56,883 | INFO | train | [linucb_high_expl] 3000/3000 requests | recent reward/impr=0.0650 | cold share=0.095
+2026-11-24 10:14:56,979 | INFO | train | [linucb_high_expl] CTR=0.1069 buy/impr=0.0357 reward/impr=0.0678 cold share=0.116 cold conv=0.0087 discovery conv=0.0138 coverage=16.89% ILD=1.027
+2026-11-24 10:14:57,045 | INFO | train | GPU: {'cuda_available': True, 'device': 'NVIDIA GeForce RTX 3090', 'torch': '2.15.0+cu132', 'cuda_runtime': '13.2', 'vram_total_mb': 24575.5, 'vram_used_mb': 1691.5, 'torch_allocated_mb': 10.0, 'torch_peak_allocated_mb': 19.1}
+2026-11-24 10:14:57,046 | INFO | train | done in 216.9s. Models in D:\Ramakrishna_D\Python\GitProjects\machinelearning\Discovery_Re-ranking\retail-discovery-bandit\output\models
+2026-11-24 10:29:25,515 | INFO | train | device=cuda | {'cuda_available': True, 'device': 'NVIDIA GeForce RTX 3090', 'torch': '2.15.0+cu132', 'cuda_runtime': '13.2', 'vram_total_mb': 24575.5, 'vram_used_mb': 1239.5, 'torch_allocated_mb': 0.0, 'torch_peak_allocated_mb': 0.0}
+2026-11-24 10:29:25,752 | INFO | train | world: 10000 items (1500 cold, 487 out of stock) | 2000 users | 600000 impressions | CTR=0.0640 BuyRate=0.0181 | cold_eval=45000 (CTR=0.0234)
+2026-11-24 10:29:27,162 | INFO | train | two-tower epoch 00 loss=8.1631 val R@50=nan R@200=nan
+2026-11-24 10:29:27,219 | INFO | train | two-tower epoch 01 loss=8.0350 val R@50=nan R@200=nan
+2026-11-24 10:29:27,307 | INFO | train | two-tower epoch 02 loss=7.9989 val R@50=0.0559 R@200=0.0991
+2026-11-24 10:29:27,348 | INFO | train | two-tower epoch 03 loss=7.9629 val R@50=nan R@200=nan
+2026-11-24 10:29:27,389 | INFO | train | two-tower epoch 04 loss=7.9237 val R@50=nan R@200=nan
+2026-11-24 10:29:27,460 | INFO | train | two-tower epoch 05 loss=7.8818 val R@50=0.0976 R@200=0.1716
+2026-11-24 10:29:27,504 | INFO | train | two-tower epoch 06 loss=7.8439 val R@50=nan R@200=nan
+2026-11-24 10:29:27,542 | INFO | train | two-tower epoch 07 loss=7.7942 val R@50=nan R@200=nan
+2026-11-24 10:29:27,603 | INFO | train | two-tower epoch 08 loss=7.7549 val R@50=0.1120 R@200=0.1923
+2026-11-24 10:29:27,646 | INFO | train | two-tower epoch 09 loss=7.7139 val R@50=nan R@200=nan
+2026-11-24 10:29:27,691 | INFO | train | two-tower epoch 10 loss=7.6728 val R@50=nan R@200=nan
+2026-11-24 10:29:27,761 | INFO | train | two-tower epoch 11 loss=7.6357 val R@50=0.1093 R@200=0.1999
+2026-11-24 10:29:27,835 | INFO | train | retrieval: {'Recall@50': 0.09637012254111575, 'Recall@200': 0.18512307857680319, 'HitRate@200': 0.3752821670428894, 'ColdStart_Recall@200': 0.021725826193390453, 'ColdStart_HitRate@200': 0.03182374541003672, 'ColdStart_Recall@50': 0.0032639738882088943, 'latency_ms': {'p50_ms': 0.11935000657103956, 'p95_ms': 0.132744965958409, 'p99_ms': 0.17207797151058904, 'target_ms': 10.0, 'meets_target': True}, 'n_train_pairs': 25577, 'n_test_pairs': 4304, 'n_cold_test_pairs': 1055}
+2026-11-24 10:29:28,749 | INFO | train | ranker trained on cuda | click iters=57 buy iters=98
+2026-11-24 10:29:29,029 | INFO | train | ranker test: click AUC=0.6331 PR-AUC=0.1089 | buy AUC=0.6924 | NDCG@5=0.3448 NDCG@10=0.4434
+2026-11-24 10:29:29,030 | INFO | train | COLD-START BOTTLENECK: mean pred click cold=0.0357 vs warm=0.0651 | matched-relevance relative gap=-38.1% | confirmed=True
+2026-11-24 10:29:42,276 | INFO | train | bandits warm-started with 20000 historical impressions
+2026-11-24 10:29:42,277 | INFO | train | === simulating policy pure_ranker (3000 requests) ===
+2026-11-24 10:29:55,678 | INFO | train | [pure_ranker] 1000/3000 requests | recent reward/impr=0.0977 | cold share=0.002
+2026-11-24 10:30:13,579 | INFO | train | [pure_ranker] 2000/3000 requests | recent reward/impr=0.0875 | cold share=0.001
+2026-11-24 10:30:33,837 | INFO | train | [pure_ranker] 3000/3000 requests | recent reward/impr=0.0803 | cold share=0.001
+2026-11-24 10:30:34,016 | INFO | train | [pure_ranker] CTR=0.1469 buy/impr=0.0444 reward/impr=0.0885 cold share=0.001 cold conv=0.0000 discovery conv=0.0267 coverage=5.34% ILD=0.942
+2026-11-24 10:30:34,017 | INFO | train | === simulating policy epsilon_greedy (3000 requests) ===
+2026-11-24 10:30:51,863 | INFO | train | [epsilon_greedy] 1000/3000 requests | recent reward/impr=0.0889 | cold share=0.011
+2026-11-24 10:31:11,884 | INFO | train | [epsilon_greedy] 2000/3000 requests | recent reward/impr=0.0812 | cold share=0.014
+2026-11-24 10:31:31,797 | INFO | train | [epsilon_greedy] 3000/3000 requests | recent reward/impr=0.0755 | cold share=0.014
+2026-11-24 10:31:31,949 | INFO | train | [epsilon_greedy] CTR=0.1362 buy/impr=0.0410 reward/impr=0.0819 cold share=0.013 cold conv=0.0152 discovery conv=0.0220 coverage=11.10% ILD=0.953
+2026-11-24 10:31:31,949 | INFO | train | === simulating policy linucb_mmr (3000 requests) ===
+2026-11-24 10:32:03,154 | INFO | train | [linucb_mmr] 1000/3000 requests | recent reward/impr=0.0912 | cold share=0.027
+2026-11-24 10:32:34,612 | INFO | train | [linucb_mmr] 2000/3000 requests | recent reward/impr=0.0858 | cold share=0.014
+2026-11-24 10:33:06,813 | INFO | train | [linucb_mmr] 3000/3000 requests | recent reward/impr=0.0795 | cold share=0.011
+2026-11-24 10:33:06,961 | INFO | train | [linucb_mmr] CTR=0.1433 buy/impr=0.0425 reward/impr=0.0855 cold share=0.017 cold conv=0.0153 discovery conv=0.0274 coverage=5.69% ILD=0.967
+2026-11-24 10:33:06,961 | INFO | train | === simulating policy linucb_high_expl (3000 requests) ===
+2026-11-24 10:33:39,016 | INFO | train | [linucb_high_expl] 1000/3000 requests | recent reward/impr=0.0915 | cold share=0.119
+2026-11-24 10:34:10,317 | INFO | train | [linucb_high_expl] 2000/3000 requests | recent reward/impr=0.0867 | cold share=0.039
+2026-11-24 10:34:41,657 | INFO | train | [linucb_high_expl] 3000/3000 requests | recent reward/impr=0.0761 | cold share=0.031
+2026-11-24 10:34:41,811 | INFO | train | [linucb_high_expl] CTR=0.1424 buy/impr=0.0421 reward/impr=0.0848 cold share=0.063 cold conv=0.0180 discovery conv=0.0231 coverage=7.49% ILD=0.991
+2026-11-24 10:34:41,915 | INFO | train | GPU: {'cuda_available': True, 'device': 'NVIDIA GeForce RTX 3090', 'torch': '2.15.0+cu132', 'cuda_runtime': '13.2', 'vram_total_mb': 24575.5, 'vram_used_mb': 1691.5, 'torch_allocated_mb': 10.0, 'torch_peak_allocated_mb': 19.1}
+2026-11-24 10:34:41,915 | INFO | train | done in 316.4s. Models in D:\Ramakrishna_D\Python\GitProjects\machinelearning\Discovery_Re-ranking\retail-discovery-bandit\output\models

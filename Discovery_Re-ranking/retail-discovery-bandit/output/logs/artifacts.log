@@ -1,0 +1,40 @@
+2026-11-24 10:34:57,166 | INFO | artifacts | collecting OPE log (6000 requests, behaviour = Boltzmann(tau=0.10) over pure-ranker utility)
+2026-11-24 10:35:15,077 | INFO | artifacts | OPE log collection 1000/6000
+2026-11-24 10:35:33,716 | INFO | artifacts | OPE log collection 2000/6000
+2026-11-24 10:35:52,173 | INFO | artifacts | OPE log collection 3000/6000
+2026-11-24 10:36:10,502 | INFO | artifacts | OPE log collection 4000/6000
+2026-11-24 10:36:29,366 | INFO | artifacts | OPE log collection 5000/6000
+2026-11-24 10:36:47,841 | INFO | artifacts | OPE log collection 6000/6000
+2026-11-24 10:36:49,283 | INFO | artifacts | OPE pure_ranker       truth=0.0982 | IPS=0.0796 SNIPS=0.0873 DR=0.1071 SwDR=0.1071 DM=0.1332 | ESS=20886 (69.6%) max w=3.3
+2026-11-24 10:36:49,286 | INFO | artifacts | OPE epsilon_greedy    truth=0.0899 | IPS=0.0747 SNIPS=0.0790 DR=0.0969 SwDR=0.0969 DM=0.1224 | ESS=24362 (81.2%) max w=11.6
+2026-11-24 10:36:49,286 | INFO | artifacts | OPE linucb_mmr        truth=0.0924 | IPS=0.0748 SNIPS=0.0811 DR=0.1012 SwDR=0.1012 DM=0.1283 | ESS=22437 (74.8%) max w=4.7
+2026-11-24 10:36:49,286 | INFO | artifacts | OPE linucb_high_expl  truth=0.0800 | IPS=0.0668 SNIPS=0.0698 DR=0.0879 SwDR=0.0879 DM=0.1140 | ESS=26271 (87.6%) max w=6.3
+2026-11-24 10:36:49,300 | INFO | artifacts | rendering plots
+2026-11-24 10:37:29,842 | INFO | artifacts | collecting OPE log (6000 requests, behaviour = Boltzmann(tau=0.10) over pure-ranker utility)
+2026-11-24 10:37:47,982 | INFO | artifacts | OPE log collection 1000/6000
+2026-11-24 10:38:06,816 | INFO | artifacts | OPE log collection 2000/6000
+2026-11-24 10:38:26,017 | INFO | artifacts | OPE log collection 3000/6000
+2026-11-24 10:38:45,223 | INFO | artifacts | OPE log collection 4000/6000
+2026-11-24 10:39:04,225 | INFO | artifacts | OPE log collection 5000/6000
+2026-11-24 10:39:22,251 | INFO | artifacts | OPE log collection 6000/6000
+2026-11-24 10:39:23,610 | INFO | artifacts | OPE pure_ranker       truth=0.0982 | IPS=0.0868 SNIPS=0.0865 DR=0.0865 SwDR=0.0865 DM=0.1149 | ESS=22185 (74.0%) max w=3.3
+2026-11-24 10:39:23,610 | INFO | artifacts | OPE epsilon_greedy    truth=0.0899 | IPS=0.0783 SNIPS=0.0780 DR=0.0778 SwDR=0.0778 DM=0.1045 | ESS=25431 (84.8%) max w=6.4
+2026-11-24 10:39:23,610 | INFO | artifacts | OPE linucb_mmr        truth=0.0924 | IPS=0.0809 SNIPS=0.0806 DR=0.0807 SwDR=0.0807 DM=0.1099 | ESS=23644 (78.8%) max w=4.4
+2026-11-24 10:39:23,610 | INFO | artifacts | OPE linucb_high_expl  truth=0.0800 | IPS=0.0698 SNIPS=0.0697 DR=0.0699 SwDR=0.0699 DM=0.0971 | ESS=27007 (90.0%) max w=5.8
+2026-11-24 10:39:23,617 | INFO | artifacts | rendering plots
+2026-11-24 10:39:52,224 | INFO | artifacts | screenshots saved to D:\Ramakrishna_D\Python\GitProjects\machinelearning\Discovery_Re-ranking\retail-discovery-bandit\output\screenshots
+2026-11-24 10:39:52,356 | INFO | artifacts | artifacts complete in 143.4s (62 files in output/)
+2026-11-24 10:40:10,125 | INFO | artifacts | collecting OPE log (6000 requests, behaviour = Boltzmann(tau=0.10) over pure-ranker utility)
+2026-11-24 10:40:28,002 | INFO | artifacts | OPE log collection 1000/6000
+2026-11-24 10:40:47,180 | INFO | artifacts | OPE log collection 2000/6000
+2026-11-24 10:41:06,059 | INFO | artifacts | OPE log collection 3000/6000
+2026-11-24 10:41:25,346 | INFO | artifacts | OPE log collection 4000/6000
+2026-11-24 10:41:44,672 | INFO | artifacts | OPE log collection 5000/6000
+2026-11-24 10:42:03,578 | INFO | artifacts | OPE log collection 6000/6000
+2026-11-24 10:42:04,977 | INFO | artifacts | OPE pure_ranker       truth=0.0854 | IPS=0.0868 SNIPS=0.0865 DR=0.0865 SwDR=0.0865 DM=0.1149 | ESS=22185 (74.0%) max w=3.3
+2026-11-24 10:42:04,977 | INFO | artifacts | OPE epsilon_greedy    truth=0.0774 | IPS=0.0783 SNIPS=0.0780 DR=0.0778 SwDR=0.0778 DM=0.1045 | ESS=25431 (84.8%) max w=6.4
+2026-11-24 10:42:04,977 | INFO | artifacts | OPE linucb_mmr        truth=0.0798 | IPS=0.0809 SNIPS=0.0806 DR=0.0807 SwDR=0.0807 DM=0.1099 | ESS=23644 (78.8%) max w=4.4
+2026-11-24 10:42:04,977 | INFO | artifacts | OPE linucb_high_expl  truth=0.0692 | IPS=0.0698 SNIPS=0.0697 DR=0.0699 SwDR=0.0699 DM=0.0971 | ESS=27007 (90.0%) max w=5.8
+2026-11-24 10:42:04,985 | INFO | artifacts | rendering plots
+2026-11-24 10:42:31,141 | INFO | artifacts | screenshots saved to D:\Ramakrishna_D\Python\GitProjects\machinelearning\Discovery_Re-ranking\retail-discovery-bandit\output\screenshots
+2026-11-24 10:42:31,256 | INFO | artifacts | artifacts complete in 141.9s (63 files in output/)

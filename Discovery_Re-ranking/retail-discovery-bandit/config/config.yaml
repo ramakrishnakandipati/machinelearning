@@ -1,0 +1,126 @@
+seed: 42
+
+paths:
+  output_dir: output
+
+data:
+  n_items: 10000
+  n_categories: 15
+  subcats_per_category: 4        # 15 x 4 = 60 subcategories
+  n_brands: 150
+  n_users: 2000
+  emb_dim: 32
+  cold_frac: 0.15                # items with days_since_launch <= 14
+  cold_max_days: 14
+  history_days: 90
+  impressions_per_user: 300
+  in_stock_rate: 0.95
+  cold_eval_users_per_item: 30   # held-out impressions of cold items (never used for training)
+  # day windows (feature snapshot / retriever train / ranker train / calibration / test)
+  feature_window: [0, 59]
+  ranker_train_window: [60, 79]
+  ranker_calib_window: [80, 84]
+  ranker_test_window: [85, 89]
+  # ground truth (hidden from models)
+  truth:
+    click_bias: -3.9
+    click_cos: 7.0
+    click_pop: 0.35
+    click_price: 1.0
+    buy_bias: -1.5
+    buy_cos: 3.0
+    buy_price: 0.8
+    curiosity_bonus: 0.45        # extra click logit for relevant item in a never-explored subcategory
+    expo_pop: 1.0
+    expo_cos: 3.0
+    expo_price: 0.5
+
+retrieval:
+  top_n: 200
+  tower_dim: 64
+  hidden: 128
+  id_dim: 32
+  epochs: 12
+  batch_size: 2048
+  lr: 0.002
+  weight_decay: 1.0e-5
+  temperature: 0.1
+  id_dropout: 0.4                # item-ID dropout -> content-only embeddings for cold-start items
+  seed_eval_k: [50, 200]
+
+filtering:
+  recent_purchase_days: 14
+
+ranker:
+  n_estimators: 600
+  max_depth: 6
+  learning_rate: 0.06
+  subsample: 0.85
+  colsample_bytree: 0.85
+  min_child_weight: 3
+  early_stopping_rounds: 40
+
+utility:
+  w1: 1.0        # click
+  w2: 2.0        # buy x margin
+  w3: 0.04       # novelty
+  novelty_unseen_subcat: 1.0
+  novelty_unseen_brand: 0.5
+  novelty_new_sku: 0.25
+  novelty_bought: 0.0
+
+reward:
+  click: 0.3
+  buy: 1.0
+
+bandit:
+  hybrid: true
+  group_by: category             # disjoint arm-groups (one A_g^-1 per category)
+  alpha: 0.35
+  lambda_reg: 10.0
+  use_mean: false                # spec-literal Score = U + alpha*sqrt(x^T A^-1 x); set true to add the learned residual theta^T x
+  residual_target: true          # learn (reward - ranker expected reward) = correction to the primary ranker
+  mean_scale: 3.0                # converts reward units to utility units
+  thompson_v: 0.05
+  refresh_every: 200             # recompute A^-1 with torch.linalg.solve to bound numerical drift
+
+mmr:
+  k: 5
+  lambda: 0.75
+  w_embed_sim: 0.6
+  w_subcat_sim: 0.4
+
+guardrails:
+  max_per_subcategory: 2
+  max_unclicked_impressions_7d: 3
+  impression_window_days: 7
+  price_band: 0.30
+  min_candidates: 12             # fall back to relaxed rules if fewer candidates survive
+
+propensity:
+  tau: 0.06
+
+policies:
+  pure_ranker:      {type: pure_ranker, tau: 0.06, mmr: false}
+  epsilon_greedy:   {type: epsilon_greedy, tau: 0.06, epsilon: 0.15, mmr: false}
+  linucb_mmr:       {type: linucb, alpha: 0.35, tau: 0.06, mmr: true, lambda: 0.75}
+  linucb_high_expl: {type: linucb, alpha: 1.2, tau: 0.08, mmr: true, lambda: 0.6}
+
+simulation:
+  n_requests_per_policy: 3000
+  requests_per_day: 300
+  start_day: 90
+  warm_start_samples: 20000
+
+ope:
+  n_requests: 6000
+  behavior_tau: 0.10
+  clip: 20.0
+  switch_threshold: 10.0
+  n_bootstrap: 1000
+  target_taus: {pure_ranker: 0.06, epsilon_greedy: 0.06, linucb_mmr: 0.06, linucb_high_expl: 0.08}
+
+api:
+  host: 127.0.0.1
+  port: 8000
+  context_cache: 50000

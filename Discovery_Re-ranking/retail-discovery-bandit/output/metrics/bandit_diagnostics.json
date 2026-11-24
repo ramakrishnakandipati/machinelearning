@@ -1,0 +1,10 @@
+{
+  "bandit_inverse_max_error": {
+    "linucb_mmr": 5.5067062021407764e-14,
+    "linucb_high_expl": 4.500007286452908e-14
+  },
+  "bandit_updates": {
+    "linucb_mmr": 35000,
+    "linucb_high_expl": 35000
+  }
+}

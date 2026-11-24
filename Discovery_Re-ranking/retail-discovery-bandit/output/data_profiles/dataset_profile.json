@@ -1,0 +1,46 @@
+{
+  "n_items": 10000,
+  "n_users": 2000,
+  "n_categories": 15,
+  "n_subcategories": 60,
+  "n_brands": 150,
+  "cold_start_items": 1500,
+  "cold_start_share": 0.15,
+  "cold_start_items_with_history": 0,
+  "out_of_stock_share": 0.048699999999999966,
+  "n_impressions": 600000,
+  "ctr": 0.06404666666666667,
+  "buy_rate": 0.018076666666666668,
+  "cold_eval_impressions": 45000,
+  "cold_eval_ctr": 0.023444444444444445,
+  "price": {
+    "count": 10000.0,
+    "mean": 6.16716,
+    "std": 5.451273090960608,
+    "min": 0.24,
+    "25%": 2.33,
+    "50%": 4.3,
+    "75%": 8.4,
+    "max": 45.6
+  },
+  "margin": {
+    "count": 10000.0,
+    "mean": 0.27795985,
+    "std": 0.0956440829745275,
+    "min": 0.05,
+    "25%": 0.2015,
+    "50%": 0.2841,
+    "75%": 0.353425,
+    "max": 0.5836
+  },
+  "days_since_launch": {
+    "count": 10000.0,
+    "mean": 200.7626,
+    "std": 217.44020986406025,
+    "min": 0.0,
+    "25%": 42.0,
+    "50%": 132.0,
+    "75%": 287.25,
+    "max": 2182.0
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "discover_example": {
+    "request_id": 41,
+    "user_id": 7,
+    "policy": "linucb_mmr",
+    "slate": [
+      {
+        "slot": 0,
+        "item_id": 6241,
+        "category": 2,
+        "subcat": 8,
+        "price": 1.340000033378601,
+        "margin": 0.28040000796318054,
+        "p_click": 0.3448275923728943,
+        "p_buy": 0.06578947603702545,
+        "base_utility": 0.39172232151031494,
+        "learned_residual": 0.0,
+        "exploration_bonus": 0.08727798610925674,
+        "mmr_penalty": 0.0,
+        "bandit_score": 0.4790003001689911,
+        "propensity_score": 0.3948062062263489,
+        "novelty_tier": "new_sku",
+        "is_cold_start": false
+      },
+      {
+        "slot": 1,
+        "item_id": 9592,
+        "category": 2,
+        "subcat": 8,
+        "price": 1.690000057220459,
+        "margin": 0.11819999665021896,
+        "p_click": 0.3448275625705719,
+        "p_buy": 0.06578947603702545,
+        "base_utility": 0.3603802025318146,
+        "learned_residual": 0.0,
+        "exploration_bonus": 0.10568010061979294,
+        "mmr_penalty": 0.2680204510688782,
+        "bandit_score": 0.4660603106021881,
+        "propensity_score": 0.3182154893875122,
+        "novelty_tier": "previously_bought",
+        "is_cold_start": false
+      },
+      {
+        "slot": 2,
+        "item_id": 8823,
+        "category": 13,
+        "subcat": 54,
+        "price": 1.2599999904632568,
+        "margin": 0.1679999977350235,
+        "p_click": 0.22962963581085205,
+        "p_buy": 0.06578947603702545,
+        "base_utility": 0.2517349123954773,
+        "learned_residual": 0.0,
+        "exploration_bonus": 0.05789287015795708,
+        "mmr_penalty": 0.10068737715482712,
+        "bandit_score": 0.3096277713775635,
+        "propensity_score": 0.023465236648917198,
+        "novelty_tier": "previously_bought",
+        "is_cold_start": false
+      },
+      {
+        "slot": 3,
+        "item_id": 4928,
+        "category": 13,
+        "subcat": 52,
+        "price": 3.130000114440918,
+        "margin": 0.211899995803833,
+        "p_click": 0.046317894011735916,
+        "p_buy": 0.020672805607318878,
+        "base_utility": 0.07507902383804321,
+        "learned_residual": 0.0,
+        "exploration_bonus": 0.15484634041786194,
+        "mmr_penalty": 0.02517816424369812,
+        "bandit_score": 0.22992536425590515,
+        "propensity_score": 0.0062161218374967575,
+        "novelty_tier": "unseen_brand",
+        "is_cold_start": true
+      },
+      {
+        "slot": 4,
+        "item_id": 1424,
+        "category": 14,
+        "subcat": 56,
+        "price": 3.4100000858306885,
+        "margin": 0.1412999927997589,
+        "p_click": 0.12333965301513672,
+        "p_buy": 0.030333004891872406,
+        "base_utility": 0.17191174626350403,
+        "learned_residual": 0.0,
+        "exploration_bonus": 0.06917273253202438,
+        "mmr_penalty": 0.058626171201467514,
+        "bandit_score": 0.241084486246109,
+        "propensity_score": 0.007486727088689804,
+        "novelty_tier": "unseen_subcategory",
+        "is_cold_start": false
+      }
+    ],
+    "intra_list_diversity": 0.8055839538574219,
+    "n_candidates": 65,
+    "latency_ms": {
+      "1_retrieval": 1.0729999630711973,
+      "2_filtering": 0.13349996879696846,
+      "3_ranking": 8.996099990326911,
+      "4a_utility": 0.9829999762587249,
+      "4b_guardrails": 0.4798000445589423,
+      "4c_context": 1.048400008585304,
+      "4d_bandit": 2.4895999813452363,
+      "4e_propensity": 0.9119000169448555,
+      "4f_mmr": 5.373299994971603,
+      "total": 21.488599944859743
+    },
+    "filter_drop_counts": {
+      "retrieved": 200,
+      "out_of_stock": 8,
+      "recent_purchase_14d": 0,
+      "kept": 192
+    },
+    "guardrails": {
+      "n_in": 192,
+      "dropped_fatigue": 0,
+      "dropped_price_band": 127,
+      "relaxed_price_band": 0,
+      "relaxed_fatigue": 0,
+      "n_out": 65
+    }
+  },
+  "feedback_example": {
+    "updated": true,
+    "policy": "linucb_mmr",
+    "recomputed_context": false,
+    "bandit_updates": 35200
+  },
+  "health": {
+    "status": "ok",
+    "gpu": {
+      "cuda_available": true,
+      "device": "NVIDIA GeForce RTX 3090",
+      "torch": "2.15.0+cu132",
+      "cuda_runtime": "13.2",
+      "vram_total_mb": 24575.5,
+      "vram_used_mb": 1353.5,
+      "torch_allocated_mb": 7.9,
+      "torch_peak_allocated_mb": 17.1
+    },
+    "cuda_available": true,
+    "uptime_s": 6.6,
+    "n_items": 10000,
+    "n_users": 2000,
+    "bandit_updates": {
+      "linucb_mmr": 35200,
+      "linucb_high_expl": 35000
+    }
+  },
+  "metrics": {
+    "gpu": {
+      "cuda_available": true,
+      "device": "NVIDIA GeForce RTX 3090",
+      "torch": "2.15.0+cu132",
+      "cuda_runtime": "13.2",
+      "vram_total_mb": 24575.5,
+      "vram_used_mb": 1353.5,
+      "torch_allocated_mb": 7.9,
+      "torch_peak_allocated_mb": 17.1
+    },
+    "requests": 41,
+    "feedback_events": 200,
+    "impressions": 205,
+    "catalog_coverage_pct": 1.03,
+    "cold_start_impression_share": 0.0098,
+    "discovery_impression_share": 0.5024,
+    "ctr": 0.1463,
+    "purchases": 9,
+    "discovery_purchases": 2,
+    "discovery_conversion_rate": 0.0194,
+    "cold_start_purchases": 0,
+    "latency_ms": {
+      "p50": 15.190999954938889,
+      "p95": 22.928699909243733,
+      "p99": 284.41347995540184
+    },
+    "stage_latency_ms": {
+      "1_retrieval": {
+        "p50": 0.735800014808774,
+        "p95": 1.274599984753877,
+        "p99": 66.13006003899515,
+        "mean": 3.460675612852977,
+        "n": 41
+      },
+      "2_filtering": {
+        "p50": 0.13110000872984529,
+        "p95": 0.1626000157557428,
+        "p99": 0.1895599998533726,
+        "mean": 0.13312926691979532,
+        "n": 41
+      },
+      "3_ranking": {
+        "p50": 4.54699998954311,
+        "p95": 10.053499951027334,
+        "p99": 84.17947998968901,
+        "mean": 8.404517070696938,
+        "n": 41
+      },
+      "4a_utility": {
+        "p50": 0.7908999687060714,
+        "p95": 1.586599973961711,
+        "p99": 8.546739956364053,
+        "mean": 1.1468170701934979,
+        "n": 41
+      },
+      "4b_guardrails": {
+        "p50": 0.3991000121459365,
+        "p95": 0.5860999808646739,
+        "p99": 1.3516000122763225,
+        "mean": 0.4549536643913243,
+        "n": 41
+      },
+      "4c_context": {
+        "p50": 1.0983999818563461,
+        "p95": 1.724999980069697,
+        "p99": 2.345920039806516,
+        "mean": 1.2264829285147532,
+        "n": 41
+      },
+      "4d_bandit": {
+        "p50": 1.9558999920263886,
+        "p95": 2.8396000270731747,
+        "p99": 35.25237997528173,
+        "mean": 3.4139390222773685,
+        "n": 41
+      },
+      "4e_propensity": {
+        "p50": 0.1058999914675951,
+        "p95": 0.26679999427869916,
+        "p99": 10.925959993619497,
+        "mean": 0.571982920874001,
+        "n": 41
+      },
+      "4f_mmr": {
+        "p50": 5.25230000494048,
+        "p95": 7.311500026844442,
+        "p99": 78.17683998728188,
+        "mean": 8.35372925957483,
+        "n": 41
+      },
+      "total": {
+        "p50": 15.190999954938889,
+        "p95": 22.928699909243733,
+        "p99": 284.41347995540184,
+        "mean": 27.166226816295488,
+        "n": 41
+      }
+    },
+    "filter_drop_totals": {
+      "retrieved": 8200,
+      "out_of_stock": 380,
+      "recent_purchase": 3,
+      "kept_after_filter": 7817
+    },
+    "guardrail_totals": {
+      "fatigue": 0,
+      "price_band": 5389,
+      "fallback_relaxed_price": 0,
+      "fallback_relaxed_fatigue": 0,
+      "subcat_cap_violations": 0,
+      "requests": 41
+    },
+    "bandit_updates": {
+      "linucb_mmr": 35200,
+      "linucb_high_expl": 35000
+    }
+  }
+}

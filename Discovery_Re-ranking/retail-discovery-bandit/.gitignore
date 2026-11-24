@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+# large regenerable JSONL logs
+output/logs/*.jsonl
+output/logs/api_server.log
+output/metrics/ope_log.parquet

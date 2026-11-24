@@ -1,0 +1,83 @@
+{
+  "mean_pred_click_cold": 0.035695821046829224,
+  "mean_pred_click_warm": 0.0651366338133812,
+  "mean_true_click_cold": 0.024974767118692398,
+  "mean_true_click_warm": 0.06463602930307388,
+  "mean_pred_buy_cold": 0.0152940284460783,
+  "mean_pred_buy_warm": 0.018651079386472702,
+  "mean_true_buy_cold": 0.005982981529086828,
+  "mean_true_buy_warm": 0.01822538860142231,
+  "calibration_ratio_click_cold": 1.429275393486023,
+  "calibration_ratio_click_warm": 1.0077450275421143,
+  "calibration_ratio_buy_cold": 2.556255340576172,
+  "calibration_ratio_buy_warm": 1.0233570337295532,
+  "matched_relevance_bins": [
+    {
+      "bin": 0,
+      "true_click_lo": 7.031881978036836e-05,
+      "true_click_hi": 0.005709937959909439,
+      "n_cold": 12685,
+      "n_warm": 2990,
+      "pred_cold": 0.033439166843891144,
+      "pred_warm": 0.04631592705845833,
+      "true_cold": 0.003007550025358796,
+      "true_warm": 0.0034397561103105545,
+      "gap_pred_cold_minus_warm": -0.012876760214567184,
+      "rel_gap": -0.27802014350891113
+    },
+    {
+      "bin": 1,
+      "true_click_lo": 0.005709937959909439,
+      "true_click_hi": 0.013128269836306572,
+      "n_cold": 10911,
+      "n_warm": 4763,
+      "pred_cold": 0.03517097607254982,
+      "pred_warm": 0.052171122282743454,
+      "true_cold": 0.008962440304458141,
+      "true_warm": 0.009266883134841919,
+      "gap_pred_cold_minus_warm": -0.017000146210193634,
+      "rel_gap": -0.3258535861968994
+    },
+    {
+      "bin": 2,
+      "true_click_lo": 0.013128269836306572,
+      "true_click_hi": 0.026996736600995073,
+      "n_cold": 9335,
+      "n_warm": 6339,
+      "pred_cold": 0.03621580824255943,
+      "pred_warm": 0.057524435222148895,
+      "true_cold": 0.019022861495614052,
+      "true_warm": 0.01951213739812374,
+      "gap_pred_cold_minus_warm": -0.021308626979589462,
+      "rel_gap": -0.3704274296760559
+    },
+    {
+      "bin": 3,
+      "true_click_lo": 0.026996736600995073,
+      "true_click_hi": 0.060152542591095,
+      "n_cold": 7598,
+      "n_warm": 8076,
+      "pred_cold": 0.03764395788311958,
+      "pred_warm": 0.0646955743432045,
+      "true_cold": 0.040119752287864685,
+      "true_warm": 0.041355859488248825,
+      "gap_pred_cold_minus_warm": -0.027051616460084915,
+      "rel_gap": -0.4181370735168457
+    },
+    {
+      "bin": 4,
+      "true_click_lo": 0.060152542591095,
+      "true_click_hi": 0.7712766538129577,
+      "n_cold": 4471,
+      "n_warm": 11204,
+      "pred_cold": 0.038982849568128586,
+      "pred_warm": 0.08029589056968689,
+      "true_cold": 0.11306560039520264,
+      "true_warm": 0.14681661128997803,
+      "gap_pred_cold_minus_warm": -0.041313041001558304,
+      "rel_gap": -0.5145100355148315
+    }
+  ],
+  "mean_relative_gap_matched": -0.3813896536827087,
+  "bottleneck_confirmed": true
+}

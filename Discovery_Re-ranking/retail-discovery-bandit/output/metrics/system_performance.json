@@ -1,0 +1,50 @@
+{
+  "gpu": {
+    "cuda_available": true,
+    "device": "NVIDIA GeForce RTX 3090",
+    "torch": "2.15.0+cu132",
+    "cuda_runtime": "13.2",
+    "vram_total_mb": 24575.5,
+    "vram_used_mb": 1339.5,
+    "torch_allocated_mb": 7.9,
+    "torch_peak_allocated_mb": 17.1
+  },
+  "latency_total_ms": [
+    {
+      "policy": "pure_ranker",
+      "stage": "total",
+      "p50": 14.289049984654412,
+      "p95": 20.18623496696818,
+      "p99": 24.77265309542417,
+      "mean": 14.571397633951468,
+      "n": 3000
+    },
+    {
+      "policy": "epsilon_greedy",
+      "stage": "total",
+      "p50": 16.645899915602058,
+      "p95": 19.7897249890957,
+      "p99": 22.296217032708206,
+      "mean": 16.36558523294904,
+      "n": 3000
+    },
+    {
+      "policy": "linucb_mmr",
+      "stage": "total",
+      "p50": 18.64515000488609,
+      "p95": 22.24643506342545,
+      "p99": 26.179607915692,
+      "mean": 18.986462667002343,
+      "n": 3000
+    },
+    {
+      "policy": "linucb_high_expl",
+      "stage": "total",
+      "p50": 18.740100029390305,
+      "p95": 21.53190998651553,
+      "p99": 23.293997005675894,
+      "mean": 18.93233726423932,
+      "n": 3000
+    }
+  ]
+}

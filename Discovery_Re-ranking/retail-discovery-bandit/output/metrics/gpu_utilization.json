@@ -1,0 +1,10 @@
+{
+  "cuda_available": true,
+  "device": "NVIDIA GeForce RTX 3090",
+  "torch": "2.15.0+cu132",
+  "cuda_runtime": "13.2",
+  "vram_total_mb": 24575.5,
+  "vram_used_mb": 1691.5,
+  "torch_allocated_mb": 10.0,
+  "torch_peak_allocated_mb": 19.1
+}

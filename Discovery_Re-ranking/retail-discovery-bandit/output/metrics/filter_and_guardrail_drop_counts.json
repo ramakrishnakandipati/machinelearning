@@ -1,0 +1,42 @@
+{
+  "filter_drop_counts_all_requests": {
+    "retrieved": 2400000,
+    "out_of_stock": 116648,
+    "recent_purchase": 3301,
+    "kept_after_filter": 2280051
+  },
+  "guardrail_totals_by_policy": {
+    "pure_ranker": {
+      "fatigue": 124,
+      "price_band": 395859,
+      "fallback_relaxed_price": 0,
+      "fallback_relaxed_fatigue": 0,
+      "subcat_cap_violations": 0,
+      "requests": 3000
+    },
+    "epsilon_greedy": {
+      "fatigue": 207,
+      "price_band": 791739,
+      "fallback_relaxed_price": 0,
+      "fallback_relaxed_fatigue": 0,
+      "subcat_cap_violations": 0,
+      "requests": 6000
+    },
+    "linucb_mmr": {
+      "fatigue": 334,
+      "price_band": 1187498,
+      "fallback_relaxed_price": 0,
+      "fallback_relaxed_fatigue": 0,
+      "subcat_cap_violations": 0,
+      "requests": 9000
+    },
+    "linucb_high_expl": {
+      "fatigue": 444,
+      "price_band": 1583243,
+      "fallback_relaxed_price": 0,
+      "fallback_relaxed_fatigue": 0,
+      "subcat_cap_violations": 0,
+      "requests": 12000
+    }
+  }
+}

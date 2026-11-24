@@ -63,6 +63,18 @@ Switch-DR are within about 1-2% of the simulator's ground truth and preserve the
   Recall@200, because impressions are popularity-biased and noisy.
 - The ranker is weak (AUC 0.63), since the latent affinity is only partly observable through features.
 
+## Known weak spots: are they worth improving?
+
+| Area | Current | Ceiling | Assessment |
+|---|---|---|---|
+| Overall retrieval | Recall@200 0.185 | about 0.28 (ranking by the true hidden affinity) | **Not worth it.** The impressions are popularity-biased and noisy, so little headroom is left and tuning would not change any conclusion. |
+| Cold-start retrieval | ColdStart_Recall@200 0.022 | **not measured yet** | **Check first.** The true ceiling may also be low. If it is well above 0.022, fix it, because cold items reach the ranker only if retrieval surfaces them. Candidate fixes: a content-only item tower, and a reserved slice of the top-200 for new arrivals. |
+| Ranker | click ROC-AUC 0.633 | **not measured yet** | **Check first.** Compare against the AUC of the true click probabilities on the same test rows. If the ceiling is about 0.70 there is little to gain. If it is much higher, the ranker under-uses its features. |
+
+Why the ranker matters: it is the pure-ranker baseline, so a stronger one makes the bandit's gains harder to show, and it is
+the reward model for the direct-method baseline in the off-policy evaluation. Suggested next step: compute the two missing
+oracle ceilings (a few minutes), then spend effort only where the gap to the ceiling is large.
+
 ## Layout
 
 `src/data` synthetic world + ground truth + user state - `src/models` two-tower, ranker - `src/reranker` utility,

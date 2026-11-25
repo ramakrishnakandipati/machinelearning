@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+# regenerable with: python -m src.data_generator && python -m src.feature_engineering
+hospitality-propensity-engine/data/raw/
+hospitality-propensity-engine/data/processed/

@@ -1,0 +1,83 @@
+2026-11-25 12:51:18,630 | INFO | data_generator | wrote guests           rows=    60000 cols=9
+2026-11-25 12:51:18,632 | INFO | data_generator | wrote properties       rows=       45 cols=6
+2026-11-25 12:51:18,753 | INFO | data_generator | wrote bookings         rows=   184716 cols=17
+2026-11-25 12:51:18,814 | INFO | data_generator | wrote folios           rows=   243040 cols=6
+2026-11-25 12:51:18,958 | INFO | data_generator | wrote web_sessions     rows=   488789 cols=11
+2026-11-25 12:51:19,060 | INFO | data_generator | wrote email_monthly    rows=  1421540 cols=5
+2026-11-25 12:51:19,073 | INFO | data_generator | wrote surveys          rows=    54451 cols=6
+2026-11-25 12:51:19,078 | INFO | data_generator | wrote complaints       rows=     8057 cols=6
+2026-11-25 12:51:19,132 | INFO | data_generator | wrote _hidden_latents  rows=    60000 cols=14
+2026-11-25 12:51:19,132 | INFO | data_generator | guests=60000 bookings=184716 (min required 150000)
+2026-11-25 12:51:19,148 | INFO | data_generator | status mix: {'completed': 0.781, 'cancelled': 0.186, 'no_show': 0.034} | channel mix: {'Direct Web': 0.399, 'Mobile App': 0.254, 'OTA': 0.227, 'Corporate': 0.121}
+2026-11-25 12:53:36,063 | INFO | feature_engineering | building guest_churn
+2026-11-25 12:53:37,433 | INFO | feature_engineering |   guest_churn          train snapshots= 5 rows=  52169 pos_rate=0.622
+2026-11-25 12:53:38,215 | INFO | feature_engineering |   guest_churn          val   snapshots= 1 rows=  29294 pos_rate=0.699
+2026-11-25 12:53:39,279 | INFO | feature_engineering |   guest_churn          test  snapshots= 1 rows=  32959 pos_rate=0.699
+2026-11-25 12:55:47,332 | INFO | data_generator | wrote guests           rows=    60000 cols=9
+2026-11-25 12:55:47,333 | INFO | data_generator | wrote properties       rows=       45 cols=6
+2026-11-25 12:55:47,493 | INFO | data_generator | wrote bookings         rows=   259145 cols=17
+2026-11-25 12:55:47,575 | INFO | data_generator | wrote folios           rows=   357036 cols=6
+2026-11-25 12:55:47,754 | INFO | data_generator | wrote web_sessions     rows=   620371 cols=11
+2026-11-25 12:55:47,870 | INFO | data_generator | wrote email_monthly    rows=  1667251 cols=5
+2026-11-25 12:55:47,888 | INFO | data_generator | wrote surveys          rows=    79879 cols=6
+2026-11-25 12:55:47,894 | INFO | data_generator | wrote complaints       rows=    12268 cols=6
+2026-11-25 12:55:47,940 | INFO | data_generator | wrote _hidden_latents  rows=    60000 cols=14
+2026-11-25 12:55:47,940 | INFO | data_generator | guests=60000 bookings=259145 (min required 150000)
+2026-11-25 12:55:47,961 | INFO | data_generator | status mix: {'completed': 0.819, 'cancelled': 0.146, 'no_show': 0.035} | channel mix: {'Direct Web': 0.396, 'Mobile App': 0.254, 'OTA': 0.227, 'Corporate': 0.123}
+2026-11-25 12:55:49,484 | INFO | feature_engineering | building ota_to_direct
+2026-11-25 12:56:05,751 | INFO | feature_engineering |   ota_to_direct        train snapshots=22 rows=  98577 pos_rate=0.224
+2026-11-25 12:56:07,219 | INFO | feature_engineering |   ota_to_direct        val   snapshots= 1 rows=   6671 pos_rate=0.234
+2026-11-25 12:56:09,413 | INFO | feature_engineering |   ota_to_direct        test  snapshots= 1 rows=   7690 pos_rate=0.240
+2026-11-25 12:56:10,448 | INFO | feature_engineering | building booking_abandonment
+2026-11-25 12:56:22,772 | INFO | feature_engineering |   booking_abandonment  train snapshots=23 rows= 132315 pos_rate=0.343
+2026-11-25 12:56:23,626 | INFO | feature_engineering |   booking_abandonment  val   snapshots= 1 rows=   8655 pos_rate=0.368
+2026-11-25 12:56:24,845 | INFO | feature_engineering |   booking_abandonment  test  snapshots= 1 rows=   9218 pos_rate=0.365
+2026-11-25 12:56:25,888 | INFO | feature_engineering | building room_upgrade
+2026-11-25 12:56:36,481 | INFO | feature_engineering |   room_upgrade         train snapshots=23 rows=  84757 pos_rate=0.145
+2026-11-25 12:56:37,287 | INFO | feature_engineering |   room_upgrade         val   snapshots= 1 rows=   9033 pos_rate=0.146
+2026-11-25 12:56:38,596 | INFO | feature_engineering |   room_upgrade         test  snapshots= 1 rows=   9745 pos_rate=0.144
+2026-11-25 12:56:39,318 | INFO | feature_engineering | building ancillary_spend
+2026-11-25 12:56:50,418 | INFO | feature_engineering |   ancillary_spend      train snapshots=23 rows=  84757 pos_rate=0.651
+2026-11-25 12:56:51,303 | INFO | feature_engineering |   ancillary_spend      val   snapshots= 1 rows=   9033 pos_rate=0.675
+2026-11-25 12:56:52,533 | INFO | feature_engineering |   ancillary_spend      test  snapshots= 1 rows=   9745 pos_rate=0.663
+2026-11-25 12:56:53,284 | INFO | feature_engineering | building guest_churn
+2026-11-25 12:56:54,693 | INFO | feature_engineering |   guest_churn          train snapshots= 5 rows=  50488 pos_rate=0.468
+2026-11-25 12:56:55,418 | INFO | feature_engineering |   guest_churn          val   snapshots= 1 rows=  29085 pos_rate=0.544
+2026-11-25 12:56:56,441 | INFO | feature_engineering |   guest_churn          test  snapshots= 1 rows=  35342 pos_rate=0.554
+2026-11-25 12:56:57,098 | INFO | feature_engineering | building property_repeat
+2026-11-25 12:56:58,787 | INFO | feature_engineering |   property_repeat      train snapshots= 5 rows=  50488 pos_rate=0.111
+2026-11-25 12:56:59,590 | INFO | feature_engineering |   property_repeat      val   snapshots= 1 rows=  29085 pos_rate=0.098
+2026-11-25 12:57:00,731 | INFO | feature_engineering |   property_repeat      test  snapshots= 1 rows=  35342 pos_rate=0.093
+2026-11-25 12:57:01,415 | INFO | feature_engineering | building brand_repeat
+2026-11-25 12:57:03,383 | INFO | feature_engineering |   brand_repeat         train snapshots= 5 rows=  50488 pos_rate=0.501
+2026-11-25 12:57:04,264 | INFO | feature_engineering |   brand_repeat         val   snapshots= 1 rows=  29085 pos_rate=0.429
+2026-11-25 12:57:05,489 | INFO | feature_engineering |   brand_repeat         test  snapshots= 1 rows=  35342 pos_rate=0.419
+2026-11-25 12:57:06,135 | INFO | feature_engineering | building cancel_noshow
+2026-11-25 12:57:15,666 | INFO | feature_engineering |   cancel_noshow        train snapshots=22 rows=  94367 pos_rate=0.174
+2026-11-25 12:57:16,433 | INFO | feature_engineering |   cancel_noshow        val   snapshots= 1 rows=   9971 pos_rate=0.162
+2026-11-25 12:57:17,543 | INFO | feature_engineering |   cancel_noshow        test  snapshots= 1 rows=  10724 pos_rate=0.162
+2026-11-25 12:57:25,463 | INFO | feature_engineering | building ancillary_spend
+2026-11-25 12:57:36,462 | INFO | feature_engineering |   ancillary_spend      train snapshots=23 rows=  84757 pos_rate=0.455
+2026-11-25 12:57:37,288 | INFO | feature_engineering |   ancillary_spend      val   snapshots= 1 rows=   9033 pos_rate=0.469
+2026-11-25 12:57:38,580 | INFO | feature_engineering |   ancillary_spend      test  snapshots= 1 rows=   9745 pos_rate=0.460
+2026-11-25 12:57:43,577 | INFO | feature_engineering | building ancillary_spend
+2026-11-25 12:57:54,340 | INFO | feature_engineering |   ancillary_spend      train snapshots=23 rows=  84757 pos_rate=0.325
+2026-11-25 12:57:55,139 | INFO | feature_engineering |   ancillary_spend      val   snapshots= 1 rows=   9033 pos_rate=0.329
+2026-11-25 12:57:56,319 | INFO | feature_engineering |   ancillary_spend      test  snapshots= 1 rows=   9745 pos_rate=0.325
+2026-11-25 13:38:21,763 | INFO | evaluator | leaderboard rows=32
+2026-11-25 13:38:23,924 | INFO | evaluator | plots done: ota_to_direct
+2026-11-25 13:38:25,832 | INFO | evaluator | plots done: booking_abandonment
+2026-11-25 13:38:27,683 | INFO | evaluator | plots done: room_upgrade
+2026-11-25 13:38:29,549 | INFO | evaluator | plots done: ancillary_spend
+2026-11-25 13:38:31,651 | INFO | evaluator | plots done: guest_churn
+2026-11-25 13:38:33,887 | INFO | evaluator | plots done: property_repeat
+2026-11-25 13:38:35,981 | INFO | evaluator | plots done: brand_repeat
+2026-11-25 13:38:37,792 | INFO | evaluator | plots done: cancel_noshow
+2026-11-25 13:38:42,930 | INFO | explainer | SHAP ota_to_direct        model=catboost  top drivers: avg_pages_30d, searches_30d, email_open_rate_3m, month_at_cutoff_sin, days_since_last_session
+2026-11-25 13:38:45,685 | INFO | explainer | SHAP booking_abandonment  model=xgboost   top drivers: searches_30d, pages_viewed, open_sessions_30d, n_searches, avg_pages_30d
+2026-11-25 13:38:47,999 | INFO | explainer | SHAP room_upgrade         model=lightgbm  top drivers: adr_vs_season_mean, channel, room_type, los, children
+2026-11-25 13:38:50,439 | INFO | explainer | SHAP ancillary_spend      model=catboost  top drivers: los, party_size, adults, rate_per_night_total, room_type
+2026-11-25 13:38:52,833 | INFO | explainer | SHAP guest_churn          model=xgboost   top drivers: email_open_trend, email_open_rate_3m, days_since_last_stay_at_property, account_age_days, searches_30d
+2026-11-25 13:38:55,205 | INFO | explainer | SHAP property_repeat      model=catboost  top drivers: stays_at_last_property, email_open_trend, email_open_rate_3m, points_gap_to_free_night, recency_days
+2026-11-25 13:38:57,723 | INFO | explainer | SHAP brand_repeat         model=xgboost   top drivers: email_open_trend, email_open_rate_3m, days_since_last_stay_at_property, account_age_days, searches_30d
+2026-11-25 13:39:00,094 | INFO | explainer | SHAP cancel_noshow        model=catboost  top drivers: rate_plan, days_until_checkin, is_loyalty_member, channel, cancel_rate

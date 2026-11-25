@@ -1,0 +1,56 @@
+2026-11-25 13:04:24,011 | INFO | trainer | CUDA verification: {'cuda_available': True, 'device_name': 'NVIDIA GeForce RTX 3090', 'total_mem_gb': 25.77, 'used_mem_gb': 1.3, 'torch_cuda': '13.2'}
+[LightGBM] [Fatal] CUDA Tree Learner was not enabled in this build.
+Please recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)
+[LightGBM] [Fatal] GPU Tree Learner was not enabled in this build.
+Please recompile with CMake option -DUSE_GPU=1
+LightGBM GPU/CUDA tree learner unavailable in this build -> falling back to CPU
+2026-11-25 13:04:24,045 | INFO | trainer | LightGBM device after probe: cpu
+2026-11-25 13:04:24,045 | INFO | trainer | === ota_to_direct | OTA-to-Direct Booking | window=90d | GPU=True NVIDIA GeForce RTX 3090
+2026-11-25 13:04:25,714 | INFO | trainer |   rows train=98577 val_es=3258 val_cal=3413 test=7690 | features=109 (cat=6) | pos rate train=0.224 test=0.240
+2026-11-25 13:04:40,270 | INFO | trainer |   xgboost     PR-AUC=0.4515 ROC=0.6539 LL=0.5055(raw 0.5085) lift@10=2.45 | tune 10s fit 0.6s | gpu peak 2125 MB | cal=sigmoid
+2026-11-25 13:05:04,297 | INFO | trainer |   lightgbm    PR-AUC=0.4607 ROC=0.6550 LL=0.5043(raw 0.5046) lift@10=2.47 | tune 13s fit 1.9s | gpu peak 2047 MB | cal=sigmoid
+2026-11-25 13:06:23,739 | INFO | trainer |   catboost    PR-AUC=0.4579 ROC=0.6564 LL=0.5046(raw 0.5047) lift@10=2.48 | tune 68s fit 2.0s | gpu peak 7884 MB | cal=sigmoid
+2026-11-25 13:07:28,811 | INFO | trainer |   pytorch_nn  PR-AUC=0.4509 ROC=0.6504 LL=0.5076(raw 0.5072) lift@10=2.55 | tune 50s fit 1.9s | gpu peak 2341 MB | cal=sigmoid
+2026-11-25 13:07:30,316 | INFO | trainer |   uplift T-Learner AUUC=344.7 (baseline-propensity 230.0, random 289.3) segments={'Persuadable': 6971, 'Sleeping Dog': 357, 'Sure Thing': 362}
+2026-11-25 13:07:30,333 | INFO | trainer | === booking_abandonment | Booking Abandonment / Look-to-Book | window=60d | GPU=True NVIDIA GeForce RTX 3090
+2026-11-25 13:07:32,863 | INFO | trainer |   rows train=132315 val_es=4334 val_cal=4321 test=9218 | features=126 (cat=7) | pos rate train=0.343 test=0.365
+2026-11-25 13:07:52,711 | INFO | trainer |   xgboost     PR-AUC=0.8369 ROC=0.8637 LL=0.4130(raw 0.4132) lift@10=2.68 | tune 11s fit 1.2s | gpu peak 2431 MB | cal=sigmoid
+2026-11-25 13:08:43,633 | INFO | trainer |   lightgbm    PR-AUC=0.8360 ROC=0.8637 LL=0.4139(raw 0.4142) lift@10=2.69 | tune 17s fit 8.5s | gpu peak 2546 MB | cal=sigmoid
+2026-11-25 13:12:03,900 | INFO | trainer |   catboost    PR-AUC=0.8368 ROC=0.8642 LL=0.4128(raw 0.4131) lift@10=2.68 | tune 174s fit 4.6s | gpu peak 8259 MB | cal=sigmoid
+2026-11-25 13:15:26,366 | INFO | trainer |   pytorch_nn  PR-AUC=0.8349 ROC=0.8631 LL=0.4147(raw 0.4147) lift@10=2.69 | tune 106s fit 26.6s | gpu peak 2900 MB | cal=sigmoid
+2026-11-25 13:15:26,391 | INFO | trainer | === room_upgrade | Pre-Arrival Room Upgrade | window=60d | GPU=True NVIDIA GeForce RTX 3090
+2026-11-25 13:15:28,834 | INFO | trainer |   rows train=84757 val_es=4619 val_cal=4414 test=9745 | features=134 (cat=9) | pos rate train=0.145 test=0.144
+2026-11-25 13:16:02,741 | INFO | trainer |   xgboost     PR-AUC=0.2450 ROC=0.6542 LL=0.3929(raw 0.3933) lift@10=1.98 | tune 18s fit 1.0s | gpu peak 2945 MB | cal=sigmoid
+2026-11-25 13:16:23,196 | INFO | trainer |   lightgbm    PR-AUC=0.2407 ROC=0.6569 LL=0.3926(raw 0.3929) lift@10=2.01 | tune 13s fit 0.8s | gpu peak 2926 MB | cal=sigmoid
+2026-11-25 13:18:07,369 | INFO | trainer |   catboost    PR-AUC=0.2423 ROC=0.6544 LL=0.3932(raw 0.3934) lift@10=1.98 | tune 88s fit 2.1s | gpu peak 8643 MB | cal=sigmoid
+2026-11-25 13:19:29,159 | INFO | trainer |   pytorch_nn  PR-AUC=0.2448 ROC=0.6580 LL=0.3920(raw 0.3921) lift@10=2.06 | tune 61s fit 3.9s | gpu peak 2931 MB | cal=sigmoid
+2026-11-25 13:19:29,172 | INFO | trainer | === ancillary_spend | Ancillary & Amenity Spend | window=60d | GPU=True NVIDIA GeForce RTX 3090
+2026-11-25 13:19:30,823 | INFO | trainer |   rows train=84757 val_es=4619 val_cal=4414 test=9745 | features=134 (cat=9) | pos rate train=0.325 test=0.325
+2026-11-25 13:19:50,768 | INFO | trainer |   xgboost     PR-AUC=0.5729 ROC=0.7526 LL=0.5381(raw 0.5379) lift@10=2.05 | tune 12s fit 0.8s | gpu peak 2931 MB | cal=sigmoid
+2026-11-25 13:20:11,157 | INFO | trainer |   lightgbm    PR-AUC=0.5706 ROC=0.7539 LL=0.5375(raw 0.5377) lift@10=2.04 | tune 14s fit 0.6s | gpu peak 2931 MB | cal=sigmoid
+2026-11-25 13:21:35,030 | INFO | trainer |   catboost    PR-AUC=0.5730 ROC=0.7540 LL=0.5374(raw 0.5373) lift@10=2.02 | tune 73s fit 1.7s | gpu peak 8643 MB | cal=sigmoid
+2026-11-25 13:22:43,202 | INFO | trainer |   pytorch_nn  PR-AUC=0.5553 ROC=0.7409 LL=0.5473(raw 0.5492) lift@10=2.02 | tune 52s fit 1.6s | gpu peak 2931 MB | cal=sigmoid
+2026-11-25 13:22:43,215 | INFO | trainer | === guest_churn | Guest Churn / Lapsed Booker | window=365d | GPU=True NVIDIA GeForce RTX 3090
+2026-11-25 13:22:44,199 | INFO | trainer |   rows train=50488 val_es=14468 val_cal=14617 test=35342 | features=109 (cat=6) | pos rate train=0.468 test=0.554
+2026-11-25 13:23:00,417 | INFO | trainer |   xgboost     PR-AUC=0.8854 ROC=0.8321 LL=0.4643(raw 0.4651) lift@10=1.80 | tune 10s fit 0.7s | gpu peak 3003 MB | cal=sigmoid
+2026-11-25 13:23:14,550 | INFO | trainer |   lightgbm    PR-AUC=0.8840 ROC=0.8300 LL=0.4680(raw 0.4697) lift@10=1.80 | tune 8s fit 1.0s | gpu peak 2931 MB | cal=sigmoid
+2026-11-25 13:25:57,847 | INFO | trainer |   catboost    PR-AUC=0.8756 ROC=0.8307 LL=0.4675(raw 0.4709) lift@10=1.80 | tune 129s fit 5.6s | gpu peak 8690 MB | cal=isotonic
+2026-11-25 13:26:41,799 | INFO | trainer |   pytorch_nn  PR-AUC=0.8702 ROC=0.8230 LL=0.4807(raw 0.4843) lift@10=1.80 | tune 33s fit 1.7s | gpu peak 2978 MB | cal=isotonic
+2026-11-25 13:26:41,810 | INFO | trainer | === property_repeat | Same-Property Repeat Stay | window=365d | GPU=True NVIDIA GeForce RTX 3090
+2026-11-25 13:26:42,796 | INFO | trainer |   rows train=50488 val_es=14468 val_cal=14617 test=35342 | features=109 (cat=6) | pos rate train=0.111 test=0.093
+2026-11-25 13:26:58,195 | INFO | trainer |   xgboost     PR-AUC=0.3134 ROC=0.8025 LL=0.2525(raw 0.2525) lift@10=3.67 | tune 10s fit 0.5s | gpu peak 3222 MB | cal=sigmoid
+2026-11-25 13:27:09,955 | INFO | trainer |   lightgbm    PR-AUC=0.2832 ROC=0.7915 LL=0.2563(raw 0.2635) lift@10=3.67 | tune 7s fit 0.5s | gpu peak 3014 MB | cal=isotonic
+2026-11-25 13:29:20,293 | INFO | trainer |   catboost    PR-AUC=0.2978 ROC=0.8038 LL=0.2526(raw 0.2544) lift@10=3.76 | tune 107s fit 3.2s | gpu peak 8797 MB | cal=isotonic
+2026-11-25 13:30:00,902 | INFO | trainer |   pytorch_nn  PR-AUC=0.2893 ROC=0.7741 LL=0.2612(raw 0.2614) lift@10=3.64 | tune 26s fit 2.7s | gpu peak 3088 MB | cal=isotonic
+2026-11-25 13:30:00,913 | INFO | trainer | === brand_repeat | Repeat-to-Brand (Cross-Property) | window=365d | GPU=True NVIDIA GeForce RTX 3090
+2026-11-25 13:30:02,043 | INFO | trainer |   rows train=50488 val_es=14468 val_cal=14617 test=35342 | features=109 (cat=6) | pos rate train=0.501 test=0.419
+2026-11-25 13:30:16,490 | INFO | trainer |   xgboost     PR-AUC=0.7304 ROC=0.8198 LL=0.4784(raw 0.4790) lift@10=1.95 | tune 9s fit 0.7s | gpu peak 3157 MB | cal=sigmoid
+2026-11-25 13:30:30,108 | INFO | trainer |   lightgbm    PR-AUC=0.7192 ROC=0.8178 LL=0.4801(raw 0.4870) lift@10=1.95 | tune 7s fit 0.7s | gpu peak 3085 MB | cal=isotonic
+2026-11-25 13:33:12,782 | INFO | trainer |   catboost    PR-AUC=0.7195 ROC=0.8185 LL=0.4800(raw 0.4838) lift@10=1.94 | tune 107s fit 9.1s | gpu peak 8760 MB | cal=isotonic
+2026-11-25 13:33:51,913 | INFO | trainer |   pytorch_nn  PR-AUC=0.6990 ROC=0.8031 LL=0.4981(raw 0.5062) lift@10=1.89 | tune 27s fit 1.8s | gpu peak 3048 MB | cal=isotonic
+2026-11-25 13:33:51,923 | INFO | trainer | === cancel_noshow | Cancellation & No-Show | window=90d | GPU=True NVIDIA GeForce RTX 3090
+2026-11-25 13:33:53,743 | INFO | trainer |   rows train=94367 val_es=5097 val_cal=4874 test=10724 | features=134 (cat=9) | pos rate train=0.174 test=0.162
+2026-11-25 13:34:11,760 | INFO | trainer |   xgboost     PR-AUC=0.3438 ROC=0.7281 LL=0.3981(raw 0.3973) lift@10=2.60 | tune 11s fit 0.8s | gpu peak 3048 MB | cal=sigmoid
+2026-11-25 13:34:36,604 | INFO | trainer |   lightgbm    PR-AUC=0.3391 ROC=0.7268 LL=0.3990(raw 0.3982) lift@10=2.50 | tune 15s fit 1.9s | gpu peak 3048 MB | cal=sigmoid
+2026-11-25 13:36:25,447 | INFO | trainer |   catboost    PR-AUC=0.3454 ROC=0.7296 LL=0.3976(raw 0.3968) lift@10=2.66 | tune 93s fit 2.9s | gpu peak 8760 MB | cal=sigmoid
+2026-11-25 13:38:04,382 | INFO | trainer |   pytorch_nn  PR-AUC=0.3256 ROC=0.7071 LL=0.4059(raw 0.4056) lift@10=2.46 | tune 72s fit 5.9s | gpu peak 3048 MB | cal=sigmoid

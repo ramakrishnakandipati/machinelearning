@@ -1,0 +1,50 @@
+{
+  "ancillary_spend": {
+    "model": "catboost",
+    "val_pr_auc_raw": 0.5792166242205573,
+    "test_pr_auc": 0.573004125424063,
+    "test_roc_auc": 0.7539701825546908
+  },
+  "booking_abandonment": {
+    "model": "xgboost",
+    "val_pr_auc_raw": 0.8396466250276245,
+    "test_pr_auc": 0.8368581778849888,
+    "test_roc_auc": 0.8637060816292639
+  },
+  "brand_repeat": {
+    "model": "xgboost",
+    "val_pr_auc_raw": 0.7284525582988148,
+    "test_pr_auc": 0.7304036150488412,
+    "test_roc_auc": 0.8198339619067352
+  },
+  "cancel_noshow": {
+    "model": "catboost",
+    "val_pr_auc_raw": 0.3086163585988331,
+    "test_pr_auc": 0.3453556763268887,
+    "test_roc_auc": 0.7295959690020714
+  },
+  "guest_churn": {
+    "model": "xgboost",
+    "val_pr_auc_raw": 0.8748655158838199,
+    "test_pr_auc": 0.8853722873226018,
+    "test_roc_auc": 0.8320921574913986
+  },
+  "ota_to_direct": {
+    "model": "catboost",
+    "val_pr_auc_raw": 0.4378181455397885,
+    "test_pr_auc": 0.4579347883268897,
+    "test_roc_auc": 0.6563994260961443
+  },
+  "property_repeat": {
+    "model": "catboost",
+    "val_pr_auc_raw": 0.30415902717602017,
+    "test_pr_auc": 0.29783683286969154,
+    "test_roc_auc": 0.8037632093761891
+  },
+  "room_upgrade": {
+    "model": "lightgbm",
+    "val_pr_auc_raw": 0.24294842114703616,
+    "test_pr_auc": 0.24066933878066954,
+    "test_roc_auc": 0.65691992638877
+  }
+}

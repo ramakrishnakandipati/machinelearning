@@ -1,0 +1,54 @@
+{
+  "scenario": "ota_to_direct",
+  "model": "catboost",
+  "device": "cuda",
+  "lightgbm_device": null,
+  "best_params": {
+    "depth": 6,
+    "learning_rate": 0.18293517328594538,
+    "l2_leaf_reg": 1.9721610970573997,
+    "random_strength": 0.7475992999956501,
+    "bagging_temperature": 1.7772437065861273,
+    "border_count": 128
+  },
+  "n_trials": 15,
+  "n_pruned": 0,
+  "best_trial_value": 0.43453858378968707,
+  "tuning_seconds": 68.39,
+  "final_fit_seconds": 2.01,
+  "best_iteration": 43,
+  "cv": {
+    "folds": 3,
+    "pr_auc_mean": 0.3921439569558833,
+    "pr_auc_std": 0.014942516029851175
+  },
+  "calibration_method": "sigmoid",
+  "calibration_cv_logloss": {
+    "sigmoid": 0.5090482828635716,
+    "isotonic": 0.5215760806519127
+  },
+  "val_pr_auc_raw": 0.4378181455397885,
+  "test_raw": {
+    "roc_auc": 0.6563994260961443,
+    "pr_auc": 0.4579347883268897,
+    "logloss": 0.504676902697933,
+    "brier": 0.16320525078316322,
+    "top_decile_lift": 2.479652740097667,
+    "ece": 0.01496593282329395,
+    "base_rate": 0.23966189856957087
+  },
+  "test_calibrated": {
+    "roc_auc": 0.6563994260961443,
+    "pr_auc": 0.4579347883268897,
+    "logloss": 0.5046053460465045,
+    "brier": 0.16316715895058312,
+    "top_decile_lift": 2.479652740097667,
+    "ece": 0.01662338394626884,
+    "base_rate": 0.23966189856957087
+  },
+  "gpu_peak_mem_mb": 7884.0,
+  "gpu_peak_util_pct": 74.0,
+  "gpu_mem_gb_before": 1.31,
+  "n_train_rows": 98577,
+  "n_features": 109
+}

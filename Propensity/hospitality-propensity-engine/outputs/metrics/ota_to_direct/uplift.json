@@ -1,0 +1,25 @@
+{
+  "auuc_uplift": 344.73525291845925,
+  "auuc_baseline_propensity": 230.00458260311223,
+  "auuc_random": 289.26814493002087,
+  "ate_observed": 0.14575768857393012,
+  "segments": {
+    "Lost Cause": {
+      "n": 2428,
+      "realised_uplift": 0.18165375466172584
+    },
+    "Persuadable": {
+      "n": 2043,
+      "realised_uplift": 0.20833149649915378
+    },
+    "Sleeping Dog": {
+      "n": 502,
+      "realised_uplift": 0.04283559577677232
+    },
+    "Sure Thing": {
+      "n": 2717,
+      "realised_uplift": 0.09062476289576082
+    }
+  },
+  "fit_seconds": 1.41
+}

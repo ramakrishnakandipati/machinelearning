@@ -1,0 +1,80 @@
+seed: 42
+paths:
+  raw: data/raw
+  processed: data/processed
+  models: outputs/models
+  metrics: outputs/metrics
+  plots: outputs/plots
+  logs: outputs/logs
+
+gpu:
+  enabled: true
+  lightgbm_fallback_cpu: true   # LightGBM pip wheels are usually CPU-only; probe + fallback
+
+data:
+  n_guests: 60000
+  n_properties: 45
+  history_start: "2021-01-01"
+  end_date: "2025-08-01"              # last simulated day (labels fully observed for test cutoff + 365d)
+  # Temporal split. Features at each cutoff only see events < cutoff; labels only events in [cutoff, cutoff+window).
+  test_cutoff: "2024-07-01"           # == feature_cutoff_date for the held-out test snapshot
+  val_cutoff: "2023-07-01"
+  train_first_cutoff: "2021-07-01"    # earliest train snapshot (needs >=6m history)
+  max_train_rows: 250000
+  min_bookings_total: 150000
+
+# Each scenario: unit of prediction, label window, eligible cohort
+scenarios:
+  ota_to_direct:
+    title: OTA-to-Direct Booking
+    window_days: 90
+    unit: guest
+    uplift: true
+  booking_abandonment:
+    title: Booking Abandonment / Look-to-Book
+    window_days: 60
+    unit: session
+  room_upgrade:
+    title: Pre-Arrival Room Upgrade
+    window_days: 60
+    unit: booking
+  ancillary_spend:
+    title: Ancillary & Amenity Spend
+    window_days: 60
+    unit: booking
+  guest_churn:
+    title: Guest Churn / Lapsed Booker
+    window_days: 365
+    unit: guest
+  property_repeat:
+    title: Same-Property Repeat Stay
+    window_days: 365
+    unit: guest
+  brand_repeat:
+    title: Repeat-to-Brand (Cross-Property)
+    window_days: 365
+    unit: guest
+  cancel_noshow:
+    title: Cancellation & No-Show
+    window_days: 90
+    unit: booking
+
+training:
+  n_trials: 15
+  cv_folds: 5
+  tune_max_rows: 80000
+  calibration: auto      # chooses isotonic vs sigmoid on validation logloss
+  early_stopping_rounds: 30
+  nn_max_epochs: 25
+  models: [xgboost, lightgbm, catboost, pytorch_nn]
+
+next_best_action:
+  ota_to_direct: {high: "Send direct-booking offer: member rate + free breakfast", low: "Nurture with loyalty-signup content"}
+  booking_abandonment: {high: "Trigger abandoned-search email with price-hold", low: "Retarget with inspiration content"}
+  room_upgrade: {high: "Offer paid upgrade at pre-arrival (T-72h)", low: "Skip upgrade offer"}
+  ancillary_spend: {high: "Pre-sell spa/F&B bundle in pre-arrival email", low: "Show standard amenity menu"}
+  guest_churn: {high: "Win-back: personalised offer + bonus points", low: "Maintain standard cadence"}
+  property_repeat: {high: "Invite to return: anniversary-stay offer", low: "Promote sister properties"}
+  brand_repeat: {high: "Cross-sell portfolio destination package", low: "Loyalty tier-progress nudge"}
+  cancel_noshow: {high: "Request deposit / send reconfirmation + overbooking buffer", low: "No action"}
+nba_high_threshold_decile: 8   # decile >= this => "high" action

@@ -4,6 +4,7 @@ Run:  python tests/capture_api_screenshots.py
 """
 from __future__ import annotations
 
+import json
 import subprocess
 import sys
 import time
@@ -13,8 +14,11 @@ import requests
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "outputs" / "plots"
-OUT.mkdir(parents=True, exist_ok=True)
+OUT = ROOT / "outputs" / "screenshots"
+STR, APIO = OUT / "streamlit", OUT / "api"
+for d in (STR, APIO):
+    d.mkdir(parents=True, exist_ok=True)
+EXAMPLES = json.loads((ROOT / "outputs" / "examples" / "examples.json").read_text())
 API, UI = "http://127.0.0.1:8000", "http://127.0.0.1:8501"
 
 
@@ -45,22 +49,30 @@ def main():
             pg = b.new_page(viewport={"width": 1500, "height": 1000})
             # ---- Swagger UI
             pg.goto(f"{API}/docs"); pg.wait_for_selector(".opblock-summary")
-            pg.screenshot(path=OUT / "api_swagger_docs.png", full_page=True)
+            pg.screenshot(path=APIO / "swagger_docs.png", full_page=True)
             # try-it-out on /predict/guest
             pg.locator(".opblock-summary-path[data-path='/predict/guest']").click(); pg.wait_for_selector("button.try-out__btn")
             pg.click("button.try-out__btn"); pg.click("button.execute"); pg.wait_for_selector(".live-responses-table .response-col_status >> text=200", timeout=60000)
-            pg.locator(".opblock.is-open").first.screenshot(path=OUT / "api_predict_guest_response.png")
+            pg.locator(".opblock.is-open").first.screenshot(path=APIO / "predict_guest_response.png")
             # ---- /health JSON
-            pg.goto(f"{API}/health"); pg.screenshot(path=OUT / "api_health.png")
-            # ---- Streamlit
-            pg.goto(UI); pg.wait_for_selector("text=Guest profile", timeout=120000)
-            pg.wait_for_selector("text=Propensity scores & recommended actions", timeout=120000)
-            time.sleep(2); pg.screenshot(path=OUT / "dashboard_simulator.png", full_page=True)
-            pg.get_by_role("tab", name="Model leaderboard").click(); time.sleep(2)
-            pg.screenshot(path=OUT / "dashboard_leaderboard.png", full_page=True)
-            pg.wait_for_selector("[data-testid=stTab][aria-selected=true] >> text=Model leaderboard"); time.sleep(4)
-            pg.get_by_role("tab", name="Evaluation gallery").click(force=True, timeout=60000); time.sleep(4)
-            pg.screenshot(path=OUT / "dashboard_gallery.png", full_page=False)
+            pg.goto(f"{API}/health"); pg.screenshot(path=APIO / "health.png")
+            # ---- Streamlit: every flow x every example, then the other views
+            pg.set_viewport_size({"width": 1500, "height": 1650})
+            n = 0
+            for scen, exs in EXAMPLES.items():
+                for k in range(1, len(exs) + 1):
+                    pg.goto(f"{UI}/?view=flows&scenario={scen}&example={k}")
+                    pg.wait_for_selector("text=Next-best action", timeout=120000)
+                    pg.wait_for_selector("text=Request payload", timeout=60000)
+                    time.sleep(1.5)
+                    pg.screenshot(path=STR / f"flow_{scen}_{k}.png", full_page=True); n += 1
+            pg.set_viewport_size({"width": 1500, "height": 1250})
+            for view in ("sim", "board", "gallery"):
+                pg.goto(f"{UI}/?view={view}")
+                pg.wait_for_selector({"sim": "text=Propensity scores & recommended actions", "board": "text=Master leaderboard", "gallery": "text=ROC / PR"}[view], timeout=120000)
+                time.sleep(2.5)
+                pg.screenshot(path=STR / f"view_{ {'sim': 'simulator', 'board': 'leaderboard', 'gallery': 'gallery'}[view] }.png", full_page=True)
+            print("flow screenshots:", n)
             b.close()
     except Exception as e:
         ok = False
@@ -68,8 +80,7 @@ def main():
     finally:
         for pr in (api, ui):
             pr.terminate()
-    shots = sorted(OUT.glob("api_*.png")) + sorted(OUT.glob("dashboard_*.png"))
-    print("screenshots:", [s.name for s in shots])
+    print("api:", sorted(p.name for p in APIO.glob("*.png")), "| streamlit:", len(list(STR.glob("*.png"))))
     sys.exit(0 if ok else 1)
 
 

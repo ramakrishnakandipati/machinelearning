@@ -152,5 +152,30 @@
     10,
     4,
     2
+  ],
+  "zero_fill": [
+    "n_stays",
+    "n_nights",
+    "stays_12m",
+    "stays_24m",
+    "nights_24m",
+    "n_ota_12m",
+    "n_booked_12m",
+    "n_surveys",
+    "n_complaints",
+    "n_complaints_12m",
+    "stays_in_upcoming_season",
+    "sessions_30d",
+    "sessions_90d",
+    "searches_30d",
+    "searches_90d",
+    "checkout_reach_30d",
+    "checkout_reach_90d",
+    "web_props_30d",
+    "web_props_90d",
+    "emails_clicked_3m",
+    "last_stay_complaint",
+    "n_upgrades",
+    "n_spa_stays"
   ]
 }

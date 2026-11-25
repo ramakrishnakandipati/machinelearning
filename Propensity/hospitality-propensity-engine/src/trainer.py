@@ -18,7 +18,7 @@ from sklearn.model_selection import StratifiedGroupKFold
 from .calibration import Calibrator
 from .common import cuda_info, get_logger, gpu_enabled, load_config, path_of
 from .evaluator import compute_metrics
-from .feature_engineering import build_preprocessor
+from .feature_engineering import ZERO_FILL, build_preprocessor
 from .models.deep_tabular import TorchTabularModel, suggest_nn
 from .models.gbdt_models import CLASSES, SUGGEST, lightgbm_device
 from .models.uplift_model import TLearnerUplift, auuc
@@ -190,7 +190,7 @@ def run_scenario(scen, cfg, models, fast, force, n_trials, log):
              len(data.tr), len(data.va_es), len(data.va_cal), len(data.te), len(data.cols), len(data.cat), data.y["tr"].mean(), data.y["te"].mean())
     mdir = path_of(cfg, "models") / scen; mdir.mkdir(parents=True, exist_ok=True)
     joblib.dump(data.pre_g, mdir / "preprocessor_gbdt.joblib"); joblib.dump(data.pre_n, mdir / "preprocessor_nn.joblib")
-    (mdir / "schema.json").write_text(json.dumps({**data.schema, "cat_cards": data.cat_cards}, indent=2))
+    (mdir / "schema.json").write_text(json.dumps({**data.schema, "cat_cards": data.cat_cards, "zero_fill": [c for c in ZERO_FILL if c in data.tr and data.tr[c].notna().all()]}, indent=2))
     for name in models:
         if (path_of(cfg, "metrics") / scen / f"{name}.json").exists() and not force:
             log.info("  %-11s skipped (checkpoint exists)", name); continue

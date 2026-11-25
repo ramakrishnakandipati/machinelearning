@@ -1,6 +1,7 @@
 """Interactive Streamlit dashboard.  Run:  streamlit run dashboard/streamlit_app.py"""
 from __future__ import annotations
 
+import json
 import sys
 from pathlib import Path
 
@@ -29,10 +30,76 @@ st.title("Hospitality Propensity Engine")
 st.caption(f"8 lifecycle scenarios · calibrated probabilities · GPU: **{h['gpu_device']}** "
            f"(CUDA {'on' if h['cuda_available'] else 'off'}) · {h['gpu_memory_used_gb']} / {h['gpu_memory_total_gb']} GB used")
 
-tab_sim, tab_board, tab_plots = st.tabs(["Guest simulator", "Model leaderboard", "Evaluation gallery"])
+VIEWS = {"flows": "Scenario flows (examples)", "sim": "Guest simulator", "board": "Model leaderboard", "gallery": "Evaluation gallery"}
+qp = st.query_params
+view_key = st.sidebar.radio("View", list(VIEWS), format_func=VIEWS.get, index=list(VIEWS).index(qp.get("view", "flows")) if qp.get("view", "flows") in VIEWS else 0)
+st.sidebar.caption("Use ?view=flows&scenario=<name>&example=<n> to deep-link.")
+EXAMPLES = json.loads((ROOT / "outputs" / "examples" / "examples.json").read_text()) if (ROOT / "outputs" / "examples" / "examples.json").exists() else {}
+FLOW = {
+    "ota_to_direct": ("Which OTA-reliant guests can we convert to book direct — and for whom does the offer actually *change* behaviour?", "Direct-booking offer (member rate / perk) — only to Persuadables"),
+    "booking_abandonment": ("Which recent site/app visitors who did not book will still book direct within 60 days?", "Abandoned-search email / price hold"),
+    "room_upgrade": ("Which upcoming reservations will buy a paid upgrade?", "Pre-arrival upgrade offer at T-72h"),
+    "ancillary_spend": ("Which upcoming stays will spend ≥ $450 on spa, F&B and experiences?", "Pre-sell spa/F&B/experience bundles"),
+    "guest_churn": ("Which recently active guests will NOT book again in the next 12 months?", "Win-back offer + bonus points"),
+    "property_repeat": ("Which guests will come back to the same property within 12 months?", "Anniversary-stay invitation / sister-property promotion"),
+    "brand_repeat": ("Which guests will stay at a different brand property within 12 months?", "Cross-property destination packages"),
+    "cancel_noshow": ("Which upcoming bookings will be cancelled or no-show?", "Deposit / reconfirmation / overbooking buffer"),
+}
+
+
+@st.cache_data(show_spinner=False)
+def score_examples(scen: str):
+    return eng.predict_scenario(scen, pd.DataFrame([e["payload"] for e in EXAMPLES[scen]]), explain=False)
+
+
+# ----------------------------------------------------------------------------- scenario flows
+if view_key == "flows":
+    scen = st.selectbox("Flow", list(TITLES), format_func=lambda k: f"{list(TITLES).index(k) + 1}. {TITLES[k]}",
+                        index=list(TITLES).index(qp.get("scenario", "ota_to_direct")) if qp.get("scenario") in TITLES else 0)
+    exs = EXAMPLES.get(scen, [])
+    if not exs:
+        st.warning("Run `python -m src.make_examples` to create example guests."); st.stop()
+    q, act = FLOW[scen]
+    st.markdown(f"### {TITLES[scen]}")
+    st.markdown(f"**Question:** {q}  \n**Action:** {act}  \n**Serving model:** `{eng.scen[scen]['name']}` (calibrated) · "
+                f"window {CFG['scenarios'][scen]['window_days']} days · base rate {eng.scen[scen]['base_rate']:.1%}")
+    res = score_examples(scen)
+    ex_idx = int(qp.get("example", 1)) - 1 if str(qp.get("example", "1")).isdigit() and 1 <= int(qp.get("example", 1)) <= len(exs) else 0
+    cmp_col, pick_col = st.columns([1.5, 1])
+    with cmp_col:
+        fig = go.Figure(go.Bar(x=[f"{i + 1}. {e['name']}" for i, e in enumerate(exs)], y=[r["propensity"] for r in res],
+                               marker_color=["#2563eb" if i == ex_idx else "#cbd5e1" for i in range(len(exs))],
+                               text=[f"{r['propensity']:.1%}" for r in res], textposition="outside"))
+        fig.add_hline(y=eng.scen[scen]["base_rate"], line_dash="dot", line_color="#d97706", annotation_text="base rate")
+        fig.update_layout(height=330, margin=dict(l=10, r=10, t=30, b=10), yaxis=dict(tickformat=".0%", range=[0, min(1.1, max(r["propensity"] for r in res) * 1.25 + 0.05)]),
+                          title=f"{len(exs)} example cases — calibrated propensity")
+        st.plotly_chart(fig, use_container_width=True)
+    with pick_col:
+        ex_idx = st.radio("Example", range(len(exs)), index=ex_idx, format_func=lambda i: f"{i + 1}. {exs[i]['name']}")
+    ex, r = exs[ex_idx], res[ex_idx]
+    st.markdown(f"**Case {ex_idx + 1} — {ex['name']}**  \n{ex['story']}")
+    m1, m2, m3, m4 = st.columns(4)
+    m1.metric("Propensity", f"{r['propensity']:.1%}", f"{r['propensity'] / r['base_rate']:.1f}x base rate")
+    m2.metric("Decile (10 = top)", r["decile"])
+    m3.metric("Actual label (test)", "Positive (1)" if ex["observed_y"] == 1 else "Negative (0)")
+    m4.metric("Uplift segment" if r["uplift_segment"] else "Model", r["uplift_segment"] or r["model"])
+    st.success(f"**Next-best action:** {r['next_best_action']}")
+    st.caption(f"What happened next in the held-out data: guest **{ex['observed_outcome']}**.")
+    r = eng.predict_scenario(scen, pd.DataFrame([ex["payload"]]), explain=True)[0]
+    d = pd.DataFrame(r["top_drivers"])
+    figd = go.Figure(go.Bar(x=d["shap"][::-1], y=(d["feature"] + " = " + d["value"].fillna("missing"))[::-1], orientation="h",
+                            marker_color=["#16a34a" if v > 0 else "#dc2626" for v in d["shap"][::-1]]))
+    figd.update_layout(height=320, title="Why this score? Top SHAP drivers (green = pushes propensity up)", margin=dict(l=10, r=10, t=40, b=10))
+    st.plotly_chart(figd, use_container_width=True)
+    with st.expander("Request payload (POST /predict/guest) and cURL"):
+        slim = {k: v for k, v in ex["payload"].items() if k in set(d["feature"]) | {"guest_id"}}
+        st.code(f"curl -X POST http://127.0.0.1:8000/predict/guest -H 'Content-Type: application/json' \\\n  -d '{json.dumps({'guest': slim, 'explain': True})}'", language="bash")
+        st.caption("Trimmed to the top drivers; the full feature row is in outputs/examples/examples.json (omitted fields are treated as missing).")
+
+
 
 # ----------------------------------------------------------------------------- simulator
-with tab_sim:
+if view_key == "sim":
     side, main = st.columns([1, 2.2])
     with side:
         st.subheader("Guest profile")
@@ -116,7 +183,7 @@ with tab_sim:
             st.plotly_chart(figd, use_container_width=True)
 
 # ----------------------------------------------------------------------------- leaderboard
-with tab_board:
+if view_key == "board":
     lb = eng.leaderboard()
     st.subheader("Master leaderboard (held-out temporal test set, calibrated)")
     scen = st.selectbox("Scenario", ["All"] + list(TITLES), format_func=lambda s: "All scenarios" if s == "All" else TITLES[s])
@@ -127,7 +194,7 @@ with tab_board:
     st.plotly_chart(go.Figure(go.Heatmap(z=piv.values, x=piv.columns, y=piv.index, text=piv.round(3).values, texttemplate="%{text}", colorscale="Blues")).update_layout(title="Test PR-AUC", height=380), use_container_width=True)
 
 # ----------------------------------------------------------------------------- gallery
-with tab_plots:
+if view_key == "gallery":
     plots = ROOT / "outputs" / "plots"
     scen = st.selectbox("Scenario", list(TITLES), format_func=lambda s: TITLES[s], key="gal")
     kinds = {"ROC / PR": f"roc_pr_{scen}.png", "Gains & lift": f"gains_lift_{scen}.png", "Calibration": f"calibration_{scen}.png",

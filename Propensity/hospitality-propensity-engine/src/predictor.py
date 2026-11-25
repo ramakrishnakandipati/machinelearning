@@ -6,8 +6,11 @@ per-guest SHAP drivers.
 """
 from __future__ import annotations
 
+import functools
 import json
 import math
+import threading
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import joblib
@@ -21,12 +24,25 @@ from .models.gbdt_models import CLASSES
 from .models.uplift_model import TLearnerUplift
 
 TREE = ["xgboost", "lightgbm", "catboost"]
+_WORKER = "propensity-infer"
+
+
+def _on_worker(fn):
+    """Run on ONE dedicated inference thread. CUDA-backed XGBoost/PyTorch models crash when a model first used
+    on one thread is later used from another (Streamlit reruns and FastAPI worker threads both switch threads)."""
+    @functools.wraps(fn)
+    def wrapper(self, *a, **k):
+        if threading.current_thread().name.startswith(_WORKER):
+            return fn(self, *a, **k)
+        return self._pool.submit(fn, self, *a, **k).result()
+    return wrapper
 
 
 class PropensityEngine:
     def __init__(self, cfg: dict | None = None):
         self.cfg = cfg or load_config()
         self.use_gpu = gpu_enabled(self.cfg)
+        self._pool = ThreadPoolExecutor(max_workers=1, thread_name_prefix=_WORKER)
         self.mroot = path_of(self.cfg, "models")
         best = json.loads((path_of(self.cfg, "metrics") / "best_models.json").read_text())
         self.best = best
@@ -102,13 +118,14 @@ class PropensityEngine:
                 out[c] = df[c]
         for c in sc["schema"]["numeric"]:
             out[c] = pd.to_numeric(out[c], errors="coerce")
-            if c in ZERO_FILL:
+            if c in sc['schema'].get('zero_fill', ZERO_FILL):  # only columns that were never NaN in training
                 out[c] = out[c].fillna(0)
         for c in sc["schema"]["categorical"]:
             out[c] = out[c].map(lambda v: np.nan if v is None or (isinstance(v, float) and math.isnan(v)) else str(v)).astype(object)
         return out
 
     # ------------------------------------------------------------------ scoring
+    @_on_worker
     def score(self, df: pd.DataFrame) -> dict[str, np.ndarray]:
         df = self._derive(df.reset_index(drop=True))
         res = {}
@@ -133,6 +150,7 @@ class PropensityEngine:
                 return "Skip discount (will book direct anyway); send standard member comms"
         return acts["high"] if decile >= self.cfg["nba_high_threshold_decile"] else acts["low"]
 
+    @_on_worker
     def uplift_for(self, df: pd.DataFrame) -> pd.DataFrame | None:
         if self.uplift is None:
             return None
@@ -142,6 +160,26 @@ class PropensityEngine:
         u["segment"] = self.uplift.segment(u)
         return u
 
+    @_on_worker
+    def predict_scenario(self, s: str, df: pd.DataFrame, explain: bool = True, k: int = 6) -> list[dict]:
+        """Score rows for ONE scenario (rows should carry that scenario's features)."""
+        df = self._derive(df.reset_index(drop=True))
+        sc = self.scen[s]
+        p = sc["cal"].predict(sc["model"].predict_proba(sc["pre"].transform(self._frame(s, df))))
+        upl = self.uplift_for(df) if s == "ota_to_direct" else None
+        out = []
+        for i in range(len(df)):
+            d = int(self.decile(s, np.array([p[i]]))[0])
+            seg = str(upl["segment"].iloc[i]) if upl is not None else None
+            r = {"propensity": float(p[i]), "decile": d, "base_rate": sc["base_rate"], "model": sc["name"],
+                 "uplift_segment": seg, "uplift": float(upl["uplift"].iloc[i]) if upl is not None else None,
+                 "next_best_action": self.next_best_action(s, d, seg)}
+            if explain:
+                r["top_drivers"] = self.explain_row(s, df.iloc[[i]], k)
+            out.append(r)
+        return out
+
+    @_on_worker
     def predict_guests(self, df: pd.DataFrame, explain: bool = False) -> list[dict]:
         scores = self.score(df)
         upl = self.uplift_for(df)
@@ -166,6 +204,7 @@ class PropensityEngine:
         return out
 
     # ------------------------------------------------------------------ explanations
+    @_on_worker
     def explain_row(self, s: str, row: pd.DataFrame, k: int = 5) -> list[dict]:
         """Top-k SHAP drivers (log-odds) from the best tree model of the scenario."""
         from .explainer import contributions, load_tree_model
@@ -174,14 +213,14 @@ class PropensityEngine:
             board = pd.read_csv(path_of(self.cfg, "metrics") / "master_leaderboard.csv")
             g = board[(board.scenario == s) & board.model.isin(TREE)].sort_values("val_pr_auc_raw", ascending=False)
             name = sc["name"] if sc["name"] in TREE else g.iloc[0]["model"]
-            w, _ = load_tree_model(self.cfg, s, name)
+            w, _ = load_tree_model(self.cfg, s, name, use_gpu=False)  # CPU copy for per-guest SHAP
             pre = joblib.load(self.mroot / s / "preprocessor_gbdt.joblib")
             self.shap_models[s] = (name, w, pre)
         name, w, pre = self.shap_models[s]
         row = self._derive(row.reset_index(drop=True))
         fr = self._frame(s, row)
         X = pre.transform(fr)
-        vals, _ = contributions(name, w, X)
+        vals, _ = contributions(name, w, X, device="cpu")  # single-row SHAP: CPU is faster and thread-safe under Streamlit
         order = np.argsort(-np.abs(vals[0]))[:k]
         raw = fr.iloc[0]
         return [{"feature": X.columns[j], "shap": round(float(vals[0, j]), 4), "value": None if pd.isna(raw.get(X.columns[j])) else str(raw.get(X.columns[j])),

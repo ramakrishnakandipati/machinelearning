@@ -81,3 +81,39 @@
 2026-11-25 13:38:55,205 | INFO | explainer | SHAP property_repeat      model=catboost  top drivers: stays_at_last_property, email_open_trend, email_open_rate_3m, points_gap_to_free_night, recency_days
 2026-11-25 13:38:57,723 | INFO | explainer | SHAP brand_repeat         model=xgboost   top drivers: email_open_trend, email_open_rate_3m, days_since_last_stay_at_property, account_age_days, searches_30d
 2026-11-25 13:39:00,094 | INFO | explainer | SHAP cancel_noshow        model=catboost  top drivers: rate_plan, days_until_checkin, is_loyalty_member, channel, cancel_rate
+2026-11-25 13:50:43,236 | INFO | make_examples | ancillary_spend      4 examples: [('hot_hit', 0.7123), ('hot_miss', 0.5945), ('middle', 0.3078), ('cold', 0.0191)]
+2026-11-25 13:50:43,252 | INFO | make_examples | booking_abandonment  4 examples: [('hot_hit', 0.9941), ('hot_miss', 0.9329), ('middle', 0.2201), ('cold', 0.0573)]
+2026-11-25 13:50:43,277 | INFO | make_examples | brand_repeat         4 examples: [('hot_hit', 0.9753), ('hot_miss', 0.8469), ('middle', 0.493), ('cold', 0.0052)]
+2026-11-25 13:50:43,294 | INFO | make_examples | cancel_noshow        4 examples: [('hot_hit', 0.2884), ('hot_miss', 0.3515), ('middle', 0.1248), ('cold', 0.0454)]
+2026-11-25 13:50:43,320 | INFO | make_examples | guest_churn          3 examples: [('hot_hit', 0.9957), ('middle', 0.4769), ('cold', 0.1535)]
+2026-11-25 13:50:43,335 | INFO | make_examples | ota_to_direct        6 examples: [('hot_hit', 0.8592), ('hot_miss', 0.3867), ('middle', 0.2124), ('cold', 0.1355), ('persuadable', 0.2502), ('sleeping_dog', 0.7348)]
+2026-11-25 13:50:43,360 | INFO | make_examples | property_repeat      4 examples: [('hot_hit', 0.5245), ('hot_miss', 0.3188), ('middle', 0.0804), ('cold', 0.0)]
+2026-11-25 13:50:43,377 | INFO | make_examples | room_upgrade         4 examples: [('hot_hit', 0.3728), ('hot_miss', 0.2887), ('middle', 0.1228), ('cold', 0.0673)]
+2026-11-25 13:50:43,381 | INFO | make_examples | wrote D:\Ramakrishna_D\Python\GitProjects\machinelearning\Propensity\hospitality-propensity-engine\outputs\examples\examples.json
+2026-11-25 13:50:50,090 | INFO | make_examples | ancillary_spend      4 examples: [('hot_hit', 0.7123), ('hot_miss', 0.5945), ('middle', 0.3078), ('cold', 0.0191)]
+2026-11-25 13:50:50,106 | INFO | make_examples | booking_abandonment  4 examples: [('hot_hit', 0.9941), ('hot_miss', 0.9329), ('middle', 0.2201), ('cold', 0.0573)]
+2026-11-25 13:50:50,132 | INFO | make_examples | brand_repeat         4 examples: [('hot_hit', 0.9753), ('hot_miss', 0.8469), ('middle', 0.493), ('cold', 0.0052)]
+2026-11-25 13:50:50,151 | INFO | make_examples | cancel_noshow        4 examples: [('hot_hit', 0.2884), ('hot_miss', 0.3515), ('middle', 0.1248), ('cold', 0.0454)]
+2026-11-25 13:50:50,177 | INFO | make_examples | guest_churn          4 examples: [('hot_hit', 0.9957), ('hot_miss', 0.7742), ('middle', 0.4799), ('cold', 0.1203)]
+2026-11-25 13:50:50,192 | INFO | make_examples | ota_to_direct        5 examples: [('hot_hit', 0.7856), ('hot_miss', 0.399), ('cold', 0.1368), ('persuadable', 0.2502), ('sleeping_dog', 0.7348)]
+2026-11-25 13:50:50,217 | INFO | make_examples | property_repeat      4 examples: [('hot_hit', 0.2318), ('hot_miss', 0.3188), ('middle', 0.0611), ('cold', 0.0)]
+2026-11-25 13:50:50,233 | INFO | make_examples | room_upgrade         4 examples: [('hot_hit', 0.3824), ('hot_miss', 0.251), ('middle', 0.138), ('cold', 0.0682)]
+2026-11-25 13:50:50,237 | INFO | make_examples | wrote D:\Ramakrishna_D\Python\GitProjects\machinelearning\Propensity\hospitality-propensity-engine\outputs\examples\examples.json
+2026-11-25 13:51:53,636 | INFO | make_examples | ancillary_spend      4 examples: [('hot_hit', 0.7123), ('hot_miss', 0.5945), ('middle', 0.3078), ('cold', 0.0191)]
+2026-11-25 13:51:53,652 | INFO | make_examples | booking_abandonment  4 examples: [('hot_hit', 0.9941), ('hot_miss', 0.9329), ('middle', 0.2201), ('cold', 0.0573)]
+2026-11-25 13:51:53,678 | INFO | make_examples | brand_repeat         4 examples: [('hot_hit', 0.9753), ('hot_miss', 0.8469), ('middle', 0.493), ('cold', 0.0052)]
+2026-11-25 13:51:53,694 | INFO | make_examples | cancel_noshow        4 examples: [('hot_hit', 0.2884), ('hot_miss', 0.3515), ('middle', 0.1248), ('cold', 0.0454)]
+2026-11-25 13:51:53,719 | INFO | make_examples | guest_churn          4 examples: [('hot_hit', 0.9957), ('hot_miss', 0.7742), ('middle', 0.4799), ('cold', 0.1203)]
+2026-11-25 13:51:53,736 | INFO | make_examples | ota_to_direct        5 examples: [('hot_hit', 0.7856), ('hot_miss', 0.399), ('cold', 0.1368), ('persuadable', 0.2502), ('sleeping_dog', 0.7348)]
+2026-11-25 13:51:53,762 | INFO | make_examples | property_repeat      4 examples: [('hot_hit', 0.2318), ('hot_miss', 0.3188), ('middle', 0.0611), ('cold', 0.0)]
+2026-11-25 13:51:53,778 | INFO | make_examples | room_upgrade         4 examples: [('hot_hit', 0.3824), ('hot_miss', 0.251), ('middle', 0.138), ('cold', 0.0682)]
+2026-11-25 13:51:53,782 | INFO | make_examples | wrote D:\Ramakrishna_D\Python\GitProjects\machinelearning\Propensity\hospitality-propensity-engine\outputs\examples\examples.json
+2026-11-25 14:04:11,079 | INFO | make_examples | ancillary_spend      4 examples: [('hot_hit', 0.7123), ('hot_miss', 0.5945), ('middle', 0.3078), ('cold', 0.0191)]
+2026-11-25 14:04:11,094 | INFO | make_examples | booking_abandonment  4 examples: [('hot_hit', 0.9941), ('hot_miss', 0.9329), ('middle', 0.2201), ('cold', 0.0573)]
+2026-11-25 14:04:11,119 | INFO | make_examples | brand_repeat         4 examples: [('hot_hit', 0.9753), ('hot_miss', 0.8469), ('middle', 0.493), ('cold', 0.0052)]
+2026-11-25 14:04:11,135 | INFO | make_examples | cancel_noshow        4 examples: [('hot_hit', 0.2884), ('hot_miss', 0.3515), ('middle', 0.1248), ('cold', 0.0454)]
+2026-11-25 14:04:11,163 | INFO | make_examples | guest_churn          4 examples: [('hot_hit', 0.9957), ('hot_miss', 0.7742), ('middle', 0.4799), ('cold', 0.1203)]
+2026-11-25 14:04:11,178 | INFO | make_examples | ota_to_direct        5 examples: [('hot_hit', 0.7856), ('hot_miss', 0.399), ('cold', 0.1368), ('persuadable', 0.2502), ('sleeping_dog', 0.7348)]
+2026-11-25 14:04:11,203 | INFO | make_examples | property_repeat      4 examples: [('hot_hit', 0.2318), ('hot_miss', 0.3188), ('middle', 0.0611), ('cold', 0.0)]
+2026-11-25 14:04:11,218 | INFO | make_examples | room_upgrade         4 examples: [('hot_hit', 0.3824), ('hot_miss', 0.251), ('middle', 0.138), ('cold', 0.0682)]
+2026-11-25 14:04:11,222 | INFO | make_examples | wrote D:\Ramakrishna_D\Python\GitProjects\machinelearning\Propensity\hospitality-propensity-engine\outputs\examples\examples.json

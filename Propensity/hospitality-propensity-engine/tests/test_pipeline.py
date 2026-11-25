@@ -220,3 +220,41 @@ def test_api_predict_batch_and_validation(client):
     assert client.post("/predict/guest", json={"guest": {"ota_share": 2.0}}).status_code == 422
     assert client.post("/predict/batch", json={"guests": []}).status_code == 422
     assert client.post("/predict/guest", json={"guest": {"channel": "Carrier Pigeon"}}).status_code == 422
+
+
+# ----------------------------------------------------------------------------- examples & thread safety
+EXAMPLES = ROOT / "outputs" / "examples" / "examples.json"
+
+
+@needs_models
+@pytest.mark.skipif(not EXAMPLES.exists(), reason="run src.make_examples first")
+def test_examples_cover_all_flows_and_reproduce_scores():
+    from src.predictor import get_engine
+    ex = json.loads(EXAMPLES.read_text())
+    assert set(ex) == set(SCENS)
+    eng = get_engine()
+    for s, L in ex.items():
+        assert 4 <= len(L) <= 5, s
+        r = eng.predict_scenario(s, pd.DataFrame([e["payload"] for e in L]), explain=False)
+        for rr, e in zip(r, L):  # served score == score recorded on the held-out test set
+            assert abs(rr["propensity"] - e["model_score_at_selection"]) < 0.01, (s, e["id"])
+
+
+@needs_models
+def test_engine_is_safe_across_threads():
+    """XGBoost-on-CUDA models used to crash the process when called from a different thread than first use."""
+    import threading
+    from src.predictor import get_engine
+    eng = get_engine()
+    g = pd.DataFrame([GUEST])
+    errs = []
+
+    def call(explain):
+        try:
+            eng.predict_scenario("booking_abandonment", g, explain=explain)
+            eng.predict_guests(g)
+        except Exception as e:  # pragma: no cover
+            errs.append(e)
+    for ex in (False, True, False):
+        t = threading.Thread(target=call, args=(ex,)); t.start(); t.join()
+    assert not errs

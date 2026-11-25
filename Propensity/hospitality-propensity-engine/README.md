@@ -29,7 +29,8 @@ src/calibration.py         CalibratedClassifierCV(FrozenEstimator) – sigmoid v
 src/trainer.py             Optuna (TPE + MedianPruner), group-aware stratified CV, calibration, GPU monitor, checkpoints
 src/evaluator.py, explainer.py, predictor.py
 api/                       FastAPI app + Pydantic schemas      dashboard/streamlit_app.py
-tests/                     test_pipeline.py (26 tests) · capture_api_screenshots.py (Playwright)
+src/make_examples.py       4-5 real held-out example guests per flow
+tests/                     test_pipeline.py (28 tests) · capture_api_screenshots.py (Playwright)
 ```
 
 **Leakage control.** Every feature is computed at a snapshot date `c` using only events observable before `c` (a booking's cancellation counts only if `cancel_date < c`; a stay is "completed" only if `checkout < c`). Labels come from `[c, c+window)`. Temporal split: train snapshots end at `val_cutoff − window`; validation snapshot = 2023-07-01; test snapshot = 2024-07-01, so label windows never overlap across splits. Tests enforce this, including a test that **deletes all post-cutoff data and verifies every feature is unchanged**, and a shuffled-label test (AUC ≈ 0.5).
@@ -116,6 +117,121 @@ A randomized 50/50 "direct-booking offer" was simulated at the snapshot (persuad
 
 **LightGBM did not run on GPU.** The installed pip wheel reports "CUDA/GPU Tree Learner was not enabled in this build". `lightgbm_device()` probes `cuda`, then `gpu`, then falls back to CPU, logging a warning. A CUDA-enabled LightGBM build would be used automatically if installed.
 
+## Streamlit walkthrough: all 8 flows with example guests
+
+Open the dashboard and pick **Scenario flows (examples)**. Each flow has 4–5 *real held-out test cases* (full feature rows from `data/processed/<scenario>/test.parquet`, saved in `outputs/examples/examples.json`) chosen by score: high score where the event happened, high score where it did not (a false alarm), mid-score, and low score; OTA→Direct additionally shows the most *persuadable* and the most *negative-uplift* guest. For each case the page shows the calibrated propensity vs. the base rate, decile, next-best action, the actual test label, and the SHAP drivers. Deep link: `?view=flows&scenario=<name>&example=<n>`.
+
+All 33 flow screenshots are in [`outputs/screenshots/streamlit/`](outputs/screenshots/streamlit/) (`flow_<scenario>_<n>.png`), plus `view_simulator.png`, `view_leaderboard.png`, `view_gallery.png`; API screenshots are in [`outputs/screenshots/api/`](outputs/screenshots/api/). Regenerate with `python -m src.make_examples` then `python tests/capture_api_screenshots.py`.
+
+Scores are the calibrated probability from the serving model; "Actual" is the observed label in the test snapshot (for churn, *positive = churned*; for cancel/no-show, *positive = cancelled or no-show*).
+
+### 1. OTA-to-Direct Booking
+
+Serving model: `catboost` · base rate 24.0% · high-score action: *Send direct-booking offer: member rate + free breakfast*
+
+| # | Example | Score | Actual | Screenshot |
+|---|---|---|---|---|
+| 1 | High score – event occurred | 78.6% | positive | [flow_ota_to_direct_1.png](outputs/screenshots/streamlit/flow_ota_to_direct_1.png) |
+| 2 | High score – event did not occur | 39.9% | negative | [flow_ota_to_direct_2.png](outputs/screenshots/streamlit/flow_ota_to_direct_2.png) |
+| 3 | Low score – event did not occur | 13.7% | negative | [flow_ota_to_direct_3.png](outputs/screenshots/streamlit/flow_ota_to_direct_3.png) |
+| 4 | Persuadable (highest uplift) | 25.0% | negative | [flow_ota_to_direct_4.png](outputs/screenshots/streamlit/flow_ota_to_direct_4.png) |
+| 5 | Sleeping dog (negative uplift) | 73.5% | positive | [flow_ota_to_direct_5.png](outputs/screenshots/streamlit/flow_ota_to_direct_5.png) |
+
+<img src="outputs/screenshots/streamlit/flow_ota_to_direct_1.png" width="760" alt="OTA-to-Direct Booking – example 1">
+
+### 2. Booking Abandonment / Look-to-Book
+
+Serving model: `xgboost` · base rate 36.5% · high-score action: *Trigger abandoned-search email with price-hold*
+
+| # | Example | Score | Actual | Screenshot |
+|---|---|---|---|---|
+| 1 | High score – event occurred | 99.4% | positive | [flow_booking_abandonment_1.png](outputs/screenshots/streamlit/flow_booking_abandonment_1.png) |
+| 2 | High score – event did not occur | 93.3% | negative | [flow_booking_abandonment_2.png](outputs/screenshots/streamlit/flow_booking_abandonment_2.png) |
+| 3 | Mid-propensity guest | 22.0% | negative | [flow_booking_abandonment_3.png](outputs/screenshots/streamlit/flow_booking_abandonment_3.png) |
+| 4 | Low score – event did not occur | 5.7% | negative | [flow_booking_abandonment_4.png](outputs/screenshots/streamlit/flow_booking_abandonment_4.png) |
+
+<img src="outputs/screenshots/streamlit/flow_booking_abandonment_1.png" width="760" alt="Booking Abandonment / Look-to-Book – example 1">
+
+### 3. Pre-Arrival Room Upgrade
+
+Serving model: `lightgbm` · base rate 14.4% · high-score action: *Offer paid upgrade at pre-arrival (T-72h)*
+
+| # | Example | Score | Actual | Screenshot |
+|---|---|---|---|---|
+| 1 | High score – event occurred | 38.2% | positive | [flow_room_upgrade_1.png](outputs/screenshots/streamlit/flow_room_upgrade_1.png) |
+| 2 | High score – event did not occur | 25.1% | negative | [flow_room_upgrade_2.png](outputs/screenshots/streamlit/flow_room_upgrade_2.png) |
+| 3 | Mid-propensity guest | 13.8% | negative | [flow_room_upgrade_3.png](outputs/screenshots/streamlit/flow_room_upgrade_3.png) |
+| 4 | Low score – event did not occur | 6.8% | negative | [flow_room_upgrade_4.png](outputs/screenshots/streamlit/flow_room_upgrade_4.png) |
+
+<img src="outputs/screenshots/streamlit/flow_room_upgrade_1.png" width="760" alt="Pre-Arrival Room Upgrade – example 1">
+
+### 4. Ancillary & Amenity Spend
+
+Serving model: `catboost` · base rate 32.5% · high-score action: *Pre-sell spa/F&B bundle in pre-arrival email*
+
+| # | Example | Score | Actual | Screenshot |
+|---|---|---|---|---|
+| 1 | High score – event occurred | 71.2% | positive | [flow_ancillary_spend_1.png](outputs/screenshots/streamlit/flow_ancillary_spend_1.png) |
+| 2 | High score – event did not occur | 59.5% | negative | [flow_ancillary_spend_2.png](outputs/screenshots/streamlit/flow_ancillary_spend_2.png) |
+| 3 | Mid-propensity guest | 30.8% | negative | [flow_ancillary_spend_3.png](outputs/screenshots/streamlit/flow_ancillary_spend_3.png) |
+| 4 | Low score – event did not occur | 1.9% | negative | [flow_ancillary_spend_4.png](outputs/screenshots/streamlit/flow_ancillary_spend_4.png) |
+
+<img src="outputs/screenshots/streamlit/flow_ancillary_spend_1.png" width="760" alt="Ancillary & Amenity Spend – example 1">
+
+### 5. Guest Churn / Lapsed Booker
+
+Serving model: `xgboost` · base rate 55.4% · high-score action: *Win-back: personalised offer + bonus points*
+
+| # | Example | Score | Actual | Screenshot |
+|---|---|---|---|---|
+| 1 | High score – event occurred | 99.6% | positive | [flow_guest_churn_1.png](outputs/screenshots/streamlit/flow_guest_churn_1.png) |
+| 2 | High score – event did not occur | 77.4% | negative | [flow_guest_churn_2.png](outputs/screenshots/streamlit/flow_guest_churn_2.png) |
+| 3 | Mid-propensity guest | 48.0% | positive | [flow_guest_churn_3.png](outputs/screenshots/streamlit/flow_guest_churn_3.png) |
+| 4 | Low score – event did not occur | 12.0% | negative | [flow_guest_churn_4.png](outputs/screenshots/streamlit/flow_guest_churn_4.png) |
+
+<img src="outputs/screenshots/streamlit/flow_guest_churn_1.png" width="760" alt="Guest Churn / Lapsed Booker – example 1">
+
+### 6. Same-Property Repeat Stay
+
+Serving model: `catboost` · base rate 9.3% · high-score action: *Invite to return: anniversary-stay offer*
+
+| # | Example | Score | Actual | Screenshot |
+|---|---|---|---|---|
+| 1 | High score – event occurred | 23.2% | positive | [flow_property_repeat_1.png](outputs/screenshots/streamlit/flow_property_repeat_1.png) |
+| 2 | High score – event did not occur | 31.9% | negative | [flow_property_repeat_2.png](outputs/screenshots/streamlit/flow_property_repeat_2.png) |
+| 3 | Mid-propensity guest | 6.1% | negative | [flow_property_repeat_3.png](outputs/screenshots/streamlit/flow_property_repeat_3.png) |
+| 4 | Low score – event did not occur | 0.0% | negative | [flow_property_repeat_4.png](outputs/screenshots/streamlit/flow_property_repeat_4.png) |
+
+<img src="outputs/screenshots/streamlit/flow_property_repeat_1.png" width="760" alt="Same-Property Repeat Stay – example 1">
+
+### 7. Repeat-to-Brand (Cross-Property)
+
+Serving model: `xgboost` · base rate 41.9% · high-score action: *Cross-sell portfolio destination package*
+
+| # | Example | Score | Actual | Screenshot |
+|---|---|---|---|---|
+| 1 | High score – event occurred | 97.5% | positive | [flow_brand_repeat_1.png](outputs/screenshots/streamlit/flow_brand_repeat_1.png) |
+| 2 | High score – event did not occur | 84.7% | negative | [flow_brand_repeat_2.png](outputs/screenshots/streamlit/flow_brand_repeat_2.png) |
+| 3 | Mid-propensity guest | 49.3% | negative | [flow_brand_repeat_3.png](outputs/screenshots/streamlit/flow_brand_repeat_3.png) |
+| 4 | Low score – event did not occur | 0.5% | negative | [flow_brand_repeat_4.png](outputs/screenshots/streamlit/flow_brand_repeat_4.png) |
+
+<img src="outputs/screenshots/streamlit/flow_brand_repeat_1.png" width="760" alt="Repeat-to-Brand (Cross-Property) – example 1">
+
+### 8. Cancellation & No-Show
+
+Serving model: `catboost` · base rate 16.2% · high-score action: *Request deposit / send reconfirmation + overbooking buffer*
+
+| # | Example | Score | Actual | Screenshot |
+|---|---|---|---|---|
+| 1 | High score – event occurred | 28.8% | positive | [flow_cancel_noshow_1.png](outputs/screenshots/streamlit/flow_cancel_noshow_1.png) |
+| 2 | High score – event did not occur | 35.1% | negative | [flow_cancel_noshow_2.png](outputs/screenshots/streamlit/flow_cancel_noshow_2.png) |
+| 3 | Mid-propensity guest | 12.5% | negative | [flow_cancel_noshow_3.png](outputs/screenshots/streamlit/flow_cancel_noshow_3.png) |
+| 4 | Low score – event did not occur | 4.5% | negative | [flow_cancel_noshow_4.png](outputs/screenshots/streamlit/flow_cancel_noshow_4.png) |
+
+<img src="outputs/screenshots/streamlit/flow_cancel_noshow_1.png" width="760" alt="Cancellation & No-Show – example 1">
+
+**What the examples show:** a high score is not a guarantee (every flow includes a high-scoring case where the event did not happen, e.g. cancel/no-show case 2 scored 35% for a guest who completed the stay), and the lift is a *ranking* property: across the top decile the hit rate is what the leaderboard's top-decile lift reports. The OTA→Direct *sleeping dog* case scores high on propensity yet is flagged for **no promotion** because its estimated uplift is negative, which is the reason that flow is driven by uplift rather than propensity.
+
 ## Setup & run
 
 ```bash
@@ -127,8 +243,9 @@ python -m src.feature_engineering          # data/processed/<scenario>/{train,va
 python -m src.trainer                      # all 8 scenarios × 4 models (~35 min on RTX 3090); --fast for smoke test
 python -m src.evaluator                    # leaderboard + plots
 python -m src.explainer                    # SHAP plots
-pytest tests/test_pipeline.py -q           # 26 tests
-python tests/capture_api_screenshots.py    # headless Playwright → outputs/plots/api_*.png, dashboard_*.png
+python -m src.make_examples                # 4-5 real test cases per flow → outputs/examples/examples.json
+pytest tests/test_pipeline.py -q           # 28 tests
+python tests/capture_api_screenshots.py    # headless Playwright → outputs/screenshots/{api,streamlit}/
 
 uvicorn api.app:app --port 8000            # http://127.0.0.1:8000/docs
 streamlit run dashboard/streamlit_app.py   # http://127.0.0.1:8501
@@ -141,7 +258,9 @@ streamlit run dashboard/streamlit_app.py   # http://127.0.0.1:8501
 ## Outputs
 
 - `outputs/metrics/master_leaderboard.csv|json`, `best_models.json`, per-scenario model JSON (best params, CV, calibration, GPU stats), `optuna_*.csv`, `shap_importance.csv`
-- `outputs/plots/`: class balance, per-scenario EDA, ROC/PR overlays, gains + decile lift, before/after reliability diagrams, SHAP beeswarm/bar/dependence, uplift, leaderboard summary, API/dashboard screenshots
+- `outputs/plots/`: class balance, per-scenario EDA, ROC/PR overlays, gains + decile lift, before/after reliability diagrams, SHAP beeswarm/bar/dependence, uplift, leaderboard summary
+- `outputs/screenshots/`: API (Swagger, `/predict/guest` response, `/health`) and Streamlit screenshots (33 flow pages + simulator/leaderboard/gallery)
+- `outputs/examples/examples.json`: the example guests behind the walkthrough
 - `outputs/models/<scenario>/`: `.json` (XGB), `.txt` (LGBM), `.cbm`, `.pt`, calibrators + preprocessors (`.joblib`), uplift T-Learner
 - `outputs/logs/`: `pipeline.log`, `training.log`, uvicorn/streamlit logs
 

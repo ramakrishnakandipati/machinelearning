@@ -1,0 +1,31 @@
+2026-11-25 13:59:52.334 Uvicorn server started on :::8512
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8512
+  Network URL: http://192.168.1.92:8512
+  External URL: http://104.15.7.243:8512
+
+[LightGBM] [Fatal] CUDA Tree Learner was not enabled in this build.
+Please recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)
+[LightGBM] [Fatal] GPU Tree Learner was not enabled in this build.
+Please recompile with CMake option -DUSE_GPU=1
+LightGBM GPU/CUDA tree learner unavailable in this build -> falling back to CPU
+C:\Users\RamaKrishna\anaconda3\envs\causal-gpu\Lib\site-packages\xgboost\core.py:569: UserWarning: [14:00:11] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\common\error_msg.cc:62: Falling back to prediction using DMatrix due to mismatched devices. This might lead to higher memory usage and slower performance. XGBoost is running on: cuda:0, while the input data is on: cpu.
+Potential solutions:
+- Use a data structure that matches the device ordinal in the booster.
+- Set the device for booster before call to inplace_predict.
+
+This warning will only be shown once.
+
+  return func(**kwargs)
+2026-11-25 14:00:11.654 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-11-25 14:00:12.681 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.

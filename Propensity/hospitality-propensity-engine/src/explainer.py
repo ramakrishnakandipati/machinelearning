@@ -26,12 +26,12 @@ warnings.filterwarnings("ignore")
 TREE_MODELS = ["xgboost", "lightgbm", "catboost"]
 
 
-def contributions(name: str, wrapper, X: pd.DataFrame) -> tuple[np.ndarray, np.ndarray]:
+def contributions(name: str, wrapper, X: pd.DataFrame, device: str | None = None) -> tuple[np.ndarray, np.ndarray]:
     """Return (shap_values [n, f], base_value [n]) in log-odds space of the raw model."""
     if name == "xgboost":
         import xgboost as xgb
         booster = wrapper.model.get_booster()
-        booster.set_param({"device": wrapper.device})
+        booster.set_param({"device": device or wrapper.device})
         c = booster.predict(xgb.DMatrix(X), pred_contribs=True)
     elif name == "lightgbm":
         booster = getattr(wrapper, "booster", None) or wrapper.model.booster_
@@ -43,11 +43,11 @@ def contributions(name: str, wrapper, X: pd.DataFrame) -> tuple[np.ndarray, np.n
     return c[:, :-1], c[:, -1]
 
 
-def load_tree_model(cfg, scen: str, name: str):
+def load_tree_model(cfg, scen: str, name: str, use_gpu: bool = True):
     mdir = path_of(cfg, "models") / scen
     schema = json.loads((mdir / "schema.json").read_text())
     cls = CLASSES[name]
-    w = cls.load(mdir / f"{name}.{cls.ext}", schema["categorical"])
+    w = cls.load(mdir / f"{name}.{cls.ext}", schema["categorical"], use_gpu)
     if name == "lightgbm":
         import lightgbm as lgb
         w.booster = lgb.Booster(model_file=str(mdir / f"{name}.{cls.ext}"))

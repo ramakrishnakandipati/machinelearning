@@ -1,0 +1,1640 @@
+{
+ "flows": [
+  {
+   "key": "ota_to_direct",
+   "n": 1,
+   "title": "OTA-to-Direct Booking",
+   "short": "OTA\u2192Direct",
+   "question": "Which OTA-reliant guests can we convert to book direct, and for whom does the offer change behaviour?",
+   "action": "Direct-booking offer, targeted by uplift",
+   "window_days": 90,
+   "unit": "guest",
+   "base_rate": 0.2396618985695708,
+   "best_model": "catboost",
+   "models": {
+    "xgboost": {
+     "roc_auc": 0.6539375712055499,
+     "pr_auc": 0.4514706643644134,
+     "logloss": 0.5055107611266165,
+     "brier": 0.1634241114854012,
+     "top_decile_lift": 2.452523060227889,
+     "ece": 0.014797741750837,
+     "ece_raw": 0.0246419201746718,
+     "logloss_raw": 0.5085284703958929,
+     "train_time_s": 0.59,
+     "tuning_time_s": 9.92,
+     "gpu_peak_mem_mb": 2125.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    },
+    "lightgbm": {
+     "roc_auc": 0.6549842469683383,
+     "pr_auc": 0.4607253472526228,
+     "logloss": 0.5043308478120336,
+     "brier": 0.1629300235900627,
+     "top_decile_lift": 2.4742268041237114,
+     "ece": 0.0202410802059016,
+     "ece_raw": 0.0188736535724548,
+     "logloss_raw": 0.5046066861176205,
+     "train_time_s": 1.93,
+     "tuning_time_s": 13.05,
+     "gpu_peak_mem_mb": 2047.0,
+     "device": "cpu",
+     "calibration": "sigmoid"
+    },
+    "catboost": {
+     "roc_auc": 0.6563994260961443,
+     "pr_auc": 0.4579347883268897,
+     "logloss": 0.5046053460465045,
+     "brier": 0.1631671589505831,
+     "top_decile_lift": 2.479652740097667,
+     "ece": 0.0166233839462688,
+     "ece_raw": 0.0149659328232939,
+     "logloss_raw": 0.504676902697933,
+     "train_time_s": 2.01,
+     "tuning_time_s": 68.39,
+     "gpu_peak_mem_mb": 7884.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    },
+    "pytorch_nn": {
+     "roc_auc": 0.650395679444203,
+     "pr_auc": 0.450922720759989,
+     "logloss": 0.5075630430939558,
+     "brier": 0.1640584439762141,
+     "top_decile_lift": 2.550189907759089,
+     "ece": 0.0273110935838953,
+     "ece_raw": 0.0266838890290849,
+     "logloss_raw": 0.5072235295850069,
+     "train_time_s": 1.92,
+     "tuning_time_s": 50.28,
+     "gpu_peak_mem_mb": 2341.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    }
+   },
+   "decile_lift": [
+    2.479652740097667,
+    1.2154096581660336,
+    1.0146500271296799,
+    0.8410200759631036,
+    0.8464460119370592,
+    0.9169831795984806,
+    0.770482908301682,
+    0.7216494845360825,
+    0.7107976125881714,
+    0.4829083016820402
+   ],
+   "decile_gain": [
+    0.24796527400976667,
+    0.36950623982637004,
+    0.47097124253933803,
+    0.5550732501356483,
+    0.6397178513293543,
+    0.7314161692892024,
+    0.8084644601193706,
+    0.8806294085729789,
+    0.951709169831796,
+    1.0
+   ],
+   "drivers": [
+    {
+     "f": "avg_pages_30d",
+     "v": 0.1005712585347881
+    },
+    {
+     "f": "searches_30d",
+     "v": 0.0982662340088849
+    },
+    {
+     "f": "email_open_rate_3m",
+     "v": 0.0960631918484147
+    },
+    {
+     "f": "month_at_cutoff_sin",
+     "v": 0.0605363080629391
+    },
+    {
+     "f": "days_since_last_session",
+     "v": 0.0477075422939776
+    }
+   ],
+   "ladder": [
+    {
+     "name": "High score \u2013 event occurred",
+     "score": 0.7856,
+     "actual": 1,
+     "outcome": "booked direct in the next 90 days"
+    },
+    {
+     "name": "High score \u2013 event did not occur",
+     "score": 0.399,
+     "actual": 0,
+     "outcome": "did not book direct"
+    },
+    {
+     "name": "Low score \u2013 event did not occur",
+     "score": 0.1368,
+     "actual": 0,
+     "outcome": "did not book direct"
+    },
+    {
+     "name": "Persuadable (highest uplift)",
+     "score": 0.2502,
+     "actual": 0,
+     "outcome": "did not book direct"
+    },
+    {
+     "name": "Sleeping dog (negative uplift)",
+     "score": 0.7348,
+     "actual": 1,
+     "outcome": "booked direct in the next 90 days"
+    }
+   ],
+   "story": {
+    "case_no": 4,
+    "case_name": "Persuadable (highest uplift)",
+    "text": "Non-member guest, 1 completed stays, last stay 584 days ago; 100% of bookings via OTA in the last 12m, email open rate 28%, 1 web sessions in 30d.",
+    "score": 0.2501718499974062,
+    "decile": 8,
+    "base": 0.23966189856957087,
+    "nba": "Send direct-booking incentive (high incremental uplift): member rate + free breakfast",
+    "segment": "Persuadable",
+    "uplift": 0.35719555616378784,
+    "outcome": "did not book direct",
+    "actual": 0,
+    "drivers": [
+     {
+      "f": "avg_pages_30d",
+      "v": "7.0",
+      "dir": "increases",
+      "shap": 0.3381
+     },
+     {
+      "f": "checkout_reach_30d",
+      "v": "1.0",
+      "dir": "increases",
+      "shap": 0.2448
+     },
+     {
+      "f": "corporate_account",
+      "v": "1",
+      "dir": "decreases",
+      "shap": -0.1665
+     },
+     {
+      "f": "days_since_last_session",
+      "v": "22.0",
+      "dir": "decreases",
+      "shap": -0.0889
+     }
+    ],
+    "image": "story_shots/ota_to_direct.png",
+    "img_w": 2120,
+    "img_h": 1290
+   }
+  },
+  {
+   "key": "booking_abandonment",
+   "n": 2,
+   "title": "Booking Abandonment / Look-to-Book",
+   "short": "Abandonment",
+   "question": "Which recent site/app visitors who did not book will still book direct within 60 days?",
+   "action": "Abandoned-search email with price hold",
+   "window_days": 60,
+   "unit": "session",
+   "base_rate": 0.364829681058798,
+   "best_model": "xgboost",
+   "models": {
+    "xgboost": {
+     "roc_auc": 0.8637060816292639,
+     "pr_auc": 0.8368581778849888,
+     "logloss": 0.413010259765528,
+     "brier": 0.1295247053279465,
+     "top_decile_lift": 2.68452013522169,
+     "ece": 0.0070731020902838,
+     "ece_raw": 0.0095714180279473,
+     "logloss_raw": 0.4132218077725501,
+     "train_time_s": 1.2,
+     "tuning_time_s": 11.13,
+     "gpu_peak_mem_mb": 2431.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    },
+    "lightgbm": {
+     "roc_auc": 0.8637134456369905,
+     "pr_auc": 0.8359694109169539,
+     "logloss": 0.4138671958963411,
+     "brier": 0.1299159078796447,
+     "top_decile_lift": 2.690465916252081,
+     "ece": 0.0106486300861196,
+     "ece_raw": 0.0115280857649645,
+     "logloss_raw": 0.4141804641695921,
+     "train_time_s": 8.5,
+     "tuning_time_s": 16.69,
+     "gpu_peak_mem_mb": 2546.0,
+     "device": "cpu",
+     "calibration": "sigmoid"
+    },
+    "catboost": {
+     "roc_auc": 0.864207367410406,
+     "pr_auc": 0.8368377986991489,
+     "logloss": 0.4128079951569743,
+     "brier": 0.1292986440340786,
+     "top_decile_lift": 2.68452013522169,
+     "ece": 0.0115201435890861,
+     "ece_raw": 0.0128531660661873,
+     "logloss_raw": 0.4130550652960273,
+     "train_time_s": 4.64,
+     "tuning_time_s": 174.03,
+     "gpu_peak_mem_mb": 8259.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    },
+    "pytorch_nn": {
+     "roc_auc": 0.8631362090037437,
+     "pr_auc": 0.8348687715749141,
+     "logloss": 0.414693584285259,
+     "brier": 0.1303073322978343,
+     "top_decile_lift": 2.6874930257368854,
+     "ece": 0.0105035884068306,
+     "ece_raw": 0.0105573348927314,
+     "logloss_raw": 0.4147041507322045,
+     "train_time_s": 26.61,
+     "tuning_time_s": 105.8,
+     "gpu_peak_mem_mb": 2900.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    }
+   },
+   "decile_lift": [
+    2.68452013522169,
+    2.366420850095753,
+    1.6796831410855535,
+    0.963216526923397,
+    0.6190326291445871,
+    0.49052693500728556,
+    0.42809623418817644,
+    0.3032348325499583,
+    0.27053303688280594,
+    0.1934476966076835
+   ],
+   "decile_gain": [
+    0.26851025869759143,
+    0.5052036871840618,
+    0.6732084448409158,
+    0.7695509961344038,
+    0.8314005352363961,
+    0.8804638715432649,
+    0.9232827832292596,
+    0.9536128456735058,
+    0.9806720190306274,
+    1.0
+   ],
+   "drivers": [
+    {
+     "f": "searches_30d",
+     "v": 0.49881864
+    },
+    {
+     "f": "pages_viewed",
+     "v": 0.46059167
+    },
+    {
+     "f": "open_sessions_30d",
+     "v": 0.26563266
+    },
+    {
+     "f": "n_searches",
+     "v": 0.24978249
+    },
+    {
+     "f": "avg_pages_30d",
+     "v": 0.22767138
+    }
+   ],
+   "ladder": [
+    {
+     "name": "High score \u2013 event occurred",
+     "score": 0.9941,
+     "actual": 1,
+     "outcome": "completed a direct booking within 60 days"
+    },
+    {
+     "name": "High score \u2013 event did not occur",
+     "score": 0.9329,
+     "actual": 0,
+     "outcome": "never came back to book"
+    },
+    {
+     "name": "Mid-propensity guest",
+     "score": 0.2201,
+     "actual": 0,
+     "outcome": "never came back to book"
+    },
+    {
+     "name": "Low score \u2013 event did not occur",
+     "score": 0.0573,
+     "actual": 0,
+     "outcome": "never came back to book"
+    }
+   ],
+   "story": {
+    "case_no": 1,
+    "case_name": "High score \u2013 event occurred",
+    "text": "Last session 7 days ago on desktop: 4 searches, 12 pages, checkout not reached; Silver loyalty member, 3 completed stays, last stay 206 days ago.",
+    "score": 0.9943831303978967,
+    "decile": 10,
+    "base": 0.364829681058798,
+    "nba": "Trigger abandoned-search email with price-hold",
+    "segment": null,
+    "uplift": null,
+    "outcome": "completed a direct booking within 60 days",
+    "actual": 1,
+    "drivers": [
+     {
+      "f": "pages_viewed",
+      "v": "12",
+      "dir": "increases",
+      "shap": 1.2324
+     },
+     {
+      "f": "searches_30d",
+      "v": "9.0",
+      "dir": "increases",
+      "shap": 0.9492
+     },
+     {
+      "f": "web_props_30d",
+      "v": "1.0",
+      "dir": "increases",
+      "shap": 0.6586
+     },
+     {
+      "f": "open_sessions_30d",
+      "v": "2",
+      "dir": "increases",
+      "shap": 0.6331
+     }
+    ],
+    "image": "story_shots/booking_abandonment.png",
+    "img_w": 2120,
+    "img_h": 1290
+   }
+  },
+  {
+   "key": "room_upgrade",
+   "n": 3,
+   "title": "Pre-Arrival Room Upgrade",
+   "short": "Room Upgrade",
+   "question": "Which upcoming reservations will buy a paid upgrade?",
+   "action": "Pre-arrival upgrade offer at T-72h",
+   "window_days": 60,
+   "unit": "booking",
+   "base_rate": 0.1436634171369933,
+   "best_model": "lightgbm",
+   "models": {
+    "xgboost": {
+     "roc_auc": 0.654153556449542,
+     "pr_auc": 0.2450383105974312,
+     "logloss": 0.3928667432128533,
+     "brier": 0.1181185267596902,
+     "top_decile_lift": 1.9846959706959708,
+     "ece": 0.0095071485988405,
+     "ece_raw": 0.0117351940093803,
+     "logloss_raw": 0.393290767713695,
+     "train_time_s": 1.03,
+     "tuning_time_s": 17.69,
+     "gpu_peak_mem_mb": 2945.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    },
+    "lightgbm": {
+     "roc_auc": 0.65691992638877,
+     "pr_auc": 0.2406693387806695,
+     "logloss": 0.3925672974306282,
+     "brier": 0.1181354516004394,
+     "top_decile_lift": 2.0132527472527477,
+     "ece": 0.0086779826593506,
+     "ece_raw": 0.0107910890699265,
+     "logloss_raw": 0.39288521971926,
+     "train_time_s": 0.76,
+     "tuning_time_s": 13.3,
+     "gpu_peak_mem_mb": 2926.0,
+     "device": "cpu",
+     "calibration": "sigmoid"
+    },
+    "catboost": {
+     "roc_auc": 0.6543830779765472,
+     "pr_auc": 0.242315413417339,
+     "logloss": 0.3932413038799594,
+     "brier": 0.1182042611043912,
+     "top_decile_lift": 1.9775567765567768,
+     "ece": 0.011019417487656,
+     "ece_raw": 0.0124334781794234,
+     "logloss_raw": 0.3934060191203994,
+     "train_time_s": 2.08,
+     "tuning_time_s": 87.8,
+     "gpu_peak_mem_mb": 8643.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    },
+    "pytorch_nn": {
+     "roc_auc": 0.6579846785928272,
+     "pr_auc": 0.2448220340339812,
+     "logloss": 0.3920130863608388,
+     "brier": 0.1179390842782673,
+     "top_decile_lift": 2.0632271062271066,
+     "ece": 0.0075662436757113,
+     "ece_raw": 0.0102412170935527,
+     "logloss_raw": 0.3921276647898769,
+     "train_time_s": 3.87,
+     "tuning_time_s": 61.19,
+     "gpu_peak_mem_mb": 2931.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    }
+   },
+   "decile_lift": [
+    2.0132527472527473,
+    1.4864769727192726,
+    1.2493589743589744,
+    1.2506416837782341,
+    0.9852087912087912,
+    0.8575828688765034,
+    0.613970695970696,
+    0.6288941038427692,
+    0.5425787545787546,
+    0.37161924317981815
+   ],
+   "decile_gain": [
+    0.20142857142857143,
+    0.35,
+    0.475,
+    0.6,
+    0.6985714285714286,
+    0.7842857142857143,
+    0.8457142857142858,
+    0.9085714285714286,
+    0.9628571428571429,
+    1.0
+   ],
+   "drivers": [
+    {
+     "f": "adr_vs_season_mean",
+     "v": 0.1555874228010013
+    },
+    {
+     "f": "channel",
+     "v": 0.1083656108577822
+    },
+    {
+     "f": "room_type",
+     "v": 0.0777521432778639
+    },
+    {
+     "f": "los",
+     "v": 0.0754866726877736
+    },
+    {
+     "f": "children",
+     "v": 0.0716646690927481
+    }
+   ],
+   "ladder": [
+    {
+     "name": "High score \u2013 event occurred",
+     "score": 0.3824,
+     "actual": 1,
+     "outcome": "bought an upgrade"
+    },
+    {
+     "name": "High score \u2013 event did not occur",
+     "score": 0.251,
+     "actual": 0,
+     "outcome": "did not buy an upgrade"
+    },
+    {
+     "name": "Mid-propensity guest",
+     "score": 0.138,
+     "actual": 0,
+     "outcome": "did not buy an upgrade"
+    },
+    {
+     "name": "Low score \u2013 event did not occur",
+     "score": 0.0682,
+     "actual": 0,
+     "outcome": "did not buy an upgrade"
+    }
+   ],
+   "story": {
+    "case_no": 1,
+    "case_name": "High score \u2013 event occurred",
+    "text": "Upcoming Coastal Vacation stay booked via Direct Web (Non-Refundable, Deluxe): 6 nights, 2 adults + 0 children, ADR $397, check-in in 8 days; Silver loyalty member, 1 completed stays, last stay 249 days ago.",
+    "score": 0.38244340191667103,
+    "decile": 10,
+    "base": 0.14366341713699332,
+    "nba": "Offer paid upgrade at pre-arrival (T-72h)",
+    "segment": null,
+    "uplift": null,
+    "outcome": "bought an upgrade",
+    "actual": 1,
+    "drivers": [
+     {
+      "f": "adr_vs_season_mean",
+      "v": "1.6837",
+      "dir": "increases",
+      "shap": 0.5048
+     },
+     {
+      "f": "folio_upgrade_total",
+      "v": "130.13",
+      "dir": "increases",
+      "shap": 0.1526
+     },
+     {
+      "f": "upgrade_rate",
+      "v": "1.0",
+      "dir": "increases",
+      "shap": 0.1334
+     },
+     {
+      "f": "los",
+      "v": "6",
+      "dir": "increases",
+      "shap": 0.1249
+     }
+    ],
+    "image": "story_shots/room_upgrade.png",
+    "img_w": 2120,
+    "img_h": 1340
+   }
+  },
+  {
+   "key": "ancillary_spend",
+   "n": 4,
+   "title": "Ancillary & Amenity Spend",
+   "short": "Ancillary Spend",
+   "question": "Which upcoming stays will spend $450+ on spa, F&B and experiences?",
+   "action": "Pre-sell spa / F&B / experience bundles",
+   "window_days": 60,
+   "unit": "booking",
+   "base_rate": 0.325192406362237,
+   "best_model": "catboost",
+   "models": {
+    "xgboost": {
+     "roc_auc": 0.75263544764173,
+     "pr_auc": 0.5729293135098501,
+     "logloss": 0.5380548289040272,
+     "brier": 0.1820649809897994,
+     "top_decile_lift": 2.0469144193347413,
+     "ece": 0.009849013198255,
+     "ece_raw": 0.0098316902442887,
+     "logloss_raw": 0.5379097093562357,
+     "train_time_s": 0.83,
+     "tuning_time_s": 12.3,
+     "gpu_peak_mem_mb": 2931.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    },
+    "lightgbm": {
+     "roc_auc": 0.7539333531804071,
+     "pr_auc": 0.5705716629432805,
+     "logloss": 0.537451427136642,
+     "brier": 0.181803061040094,
+     "top_decile_lift": 2.0406065166557434,
+     "ece": 0.0094833473250295,
+     "ece_raw": 0.0125937000079511,
+     "logloss_raw": 0.5376895354422654,
+     "train_time_s": 0.57,
+     "tuning_time_s": 14.29,
+     "gpu_peak_mem_mb": 2931.0,
+     "device": "cpu",
+     "calibration": "sigmoid"
+    },
+    "catboost": {
+     "roc_auc": 0.7539701825546908,
+     "pr_auc": 0.573004125424063,
+     "logloss": 0.5374243878923167,
+     "brier": 0.1817354065694325,
+     "top_decile_lift": 2.0216828086187504,
+     "ece": 0.0144838498730711,
+     "ece_raw": 0.0177460384992365,
+     "logloss_raw": 0.5373399565083389,
+     "train_time_s": 1.74,
+     "tuning_time_s": 73.23,
+     "gpu_peak_mem_mb": 8643.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    },
+    "pytorch_nn": {
+     "roc_auc": 0.7409448685140952,
+     "pr_auc": 0.5552832869465465,
+     "logloss": 0.5473315628677196,
+     "brier": 0.1856488646884201,
+     "top_decile_lift": 2.0185288572792515,
+     "ece": 0.0130826618455744,
+     "ece_raw": 0.0246143638042149,
+     "logloss_raw": 0.5491580067511828,
+     "train_time_s": 1.6,
+     "tuning_time_s": 52.16,
+     "gpu_peak_mem_mb": 2931.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    }
+   },
+   "decile_lift": [
+    2.0216828086187504,
+    1.651210099377763,
+    1.542282205014928,
+    1.2470898456103563,
+    1.0313420880161177,
+    0.997671876488285,
+    0.633944219239265,
+    0.4609496644534482,
+    0.27123981519689944,
+    0.1420735267151039
+   ],
+   "decile_gain": [
+    0.20227201009782267,
+    0.36730829914799623,
+    0.5216156516251184,
+    0.6462606500473336,
+    0.7494477753234459,
+    0.849163774061218,
+    0.9125907226254338,
+    0.9586620384979488,
+    0.9857999368886083,
+    1.0
+   ],
+   "drivers": [
+    {
+     "f": "los",
+     "v": 0.6563456934209435
+    },
+    {
+     "f": "party_size",
+     "v": 0.3699425497488008
+    },
+    {
+     "f": "adults",
+     "v": 0.2654590412374298
+    },
+    {
+     "f": "rate_per_night_total",
+     "v": 0.12077730820131
+    },
+    {
+     "f": "room_type",
+     "v": 0.1180911616419433
+    }
+   ],
+   "ladder": [
+    {
+     "name": "High score \u2013 event occurred",
+     "score": 0.7123,
+     "actual": 1,
+     "outcome": "spent \u2265$450 on spa/F&B/experiences"
+    },
+    {
+     "name": "High score \u2013 event did not occur",
+     "score": 0.5945,
+     "actual": 0,
+     "outcome": "spent <$450 on ancillaries"
+    },
+    {
+     "name": "Mid-propensity guest",
+     "score": 0.3078,
+     "actual": 0,
+     "outcome": "spent <$450 on ancillaries"
+    },
+    {
+     "name": "Low score \u2013 event did not occur",
+     "score": 0.0191,
+     "actual": 0,
+     "outcome": "spent <$450 on ancillaries"
+    }
+   ],
+   "story": {
+    "case_no": 1,
+    "case_name": "High score \u2013 event occurred",
+    "text": "Upcoming Coastal Vacation stay booked via Direct Web (Non-Refundable, Deluxe): 7 nights, 2 adults + 0 children, ADR $395, check-in in 27 days; Silver loyalty member, 3 completed stays, last stay 138 days ago.",
+    "score": 0.7123196834345394,
+    "decile": 10,
+    "base": 0.32519240636223706,
+    "nba": "Pre-sell spa/F&B bundle in pre-arrival email",
+    "segment": null,
+    "uplift": null,
+    "outcome": "spent \u2265$450 on spa/F&B/experiences",
+    "actual": 1,
+    "drivers": [
+     {
+      "f": "los",
+      "v": "7",
+      "dir": "increases",
+      "shap": 1.0329
+     },
+     {
+      "f": "spa_rate",
+      "v": "1.0",
+      "dir": "increases",
+      "shap": 0.2094
+     },
+     {
+      "f": "adults",
+      "v": "2",
+      "dir": "increases",
+      "shap": 0.1925
+     },
+     {
+      "f": "rate_plan",
+      "v": "Non-Refundable",
+      "dir": "increases",
+      "shap": 0.1283
+     }
+    ],
+    "image": "story_shots/ancillary_spend.png",
+    "img_w": 2120,
+    "img_h": 1340
+   }
+  },
+  {
+   "key": "guest_churn",
+   "n": 5,
+   "title": "Guest Churn / Lapsed Booker",
+   "short": "Guest Churn",
+   "question": "Which recently active guests will not book again in the next 12 months?",
+   "action": "Win-back offer plus bonus points",
+   "window_days": 365,
+   "unit": "guest",
+   "base_rate": 0.5544677720559108,
+   "best_model": "xgboost",
+   "models": {
+    "xgboost": {
+     "roc_auc": 0.8320921574913986,
+     "pr_auc": 0.8853722873226018,
+     "logloss": 0.4643027392755725,
+     "brier": 0.1606381625680994,
+     "top_decile_lift": 1.8035313329250868,
+     "ece": 0.010811983821046,
+     "ece_raw": 0.0105519834049431,
+     "logloss_raw": 0.4651096497739136,
+     "train_time_s": 0.68,
+     "tuning_time_s": 10.0,
+     "gpu_peak_mem_mb": 3003.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    },
+    "lightgbm": {
+     "roc_auc": 0.8299751156519317,
+     "pr_auc": 0.8839899674782623,
+     "logloss": 0.4679791916043265,
+     "brier": 0.161835572758147,
+     "top_decile_lift": 1.8035313329250868,
+     "ece": 0.0192069569020064,
+     "ece_raw": 0.0170437057242234,
+     "logloss_raw": 0.4697294432043091,
+     "train_time_s": 0.95,
+     "tuning_time_s": 7.57,
+     "gpu_peak_mem_mb": 2931.0,
+     "device": "cpu",
+     "calibration": "sigmoid"
+    },
+    "catboost": {
+     "roc_auc": 0.8306897270371475,
+     "pr_auc": 0.8756272836745784,
+     "logloss": 0.4674999893121263,
+     "brier": 0.1616240252095282,
+     "top_decile_lift": 1.8030211401859284,
+     "ece": 0.0106345504270983,
+     "ece_raw": 0.0144764430091769,
+     "logloss_raw": 0.4709096289512289,
+     "train_time_s": 5.62,
+     "tuning_time_s": 128.93,
+     "gpu_peak_mem_mb": 8690.0,
+     "device": "cuda",
+     "calibration": "isotonic"
+    },
+    "pytorch_nn": {
+     "roc_auc": 0.8230467335256649,
+     "pr_auc": 0.8701839982724466,
+     "logloss": 0.4807165487715085,
+     "brier": 0.1655922138922166,
+     "top_decile_lift": 1.8035313329250868,
+     "ece": 0.0120055971305881,
+     "ece_raw": 0.0223677978293245,
+     "logloss_raw": 0.4843459743723934,
+     "train_time_s": 1.7,
+     "tuning_time_s": 32.61,
+     "gpu_peak_mem_mb": 2978.0,
+     "device": "cuda",
+     "calibration": "isotonic"
+    }
+   },
+   "decile_lift": [
+    1.8035313329250868,
+    1.8035313329250868,
+    1.5830657030938367,
+    1.0609908435628905,
+    0.9032966777808159,
+    0.8035535641745436,
+    0.6986514982383825,
+    0.6210802581125723,
+    0.47665485708885996,
+    0.245472148029702
+   ],
+   "decile_gain": [
+    0.18039395795060217,
+    0.3607368850785875,
+    0.519034496836089,
+    0.6251275770565422,
+    0.7154521330883854,
+    0.7958256787099408,
+    0.8656868748724229,
+    0.9277913859971423,
+    0.9754541743212901,
+    1.0
+   ],
+   "drivers": [
+    {
+     "f": "email_open_trend",
+     "v": 0.86526394
+    },
+    {
+     "f": "email_open_rate_3m",
+     "v": 0.3846979
+    },
+    {
+     "f": "days_since_last_stay_at_property",
+     "v": 0.34629926
+    },
+    {
+     "f": "account_age_days",
+     "v": 0.13589825
+    },
+    {
+     "f": "searches_30d",
+     "v": 0.09209659
+    }
+   ],
+   "ladder": [
+    {
+     "name": "High score \u2013 event occurred",
+     "score": 0.9957,
+     "actual": 1,
+     "outcome": "did NOT book again within 365 days (churned)"
+    },
+    {
+     "name": "High score \u2013 event did not occur",
+     "score": 0.7742,
+     "actual": 0,
+     "outcome": "booked again within 365 days"
+    },
+    {
+     "name": "Mid-propensity guest",
+     "score": 0.4799,
+     "actual": 1,
+     "outcome": "did NOT book again within 365 days (churned)"
+    },
+    {
+     "name": "Low score \u2013 event did not occur",
+     "score": 0.1203,
+     "actual": 0,
+     "outcome": "booked again within 365 days"
+    }
+   ],
+   "story": {
+    "case_no": 1,
+    "case_name": "High score \u2013 event occurred",
+    "text": "Silver loyalty member, 1 completed stays, last stay 360 days ago; 1 distinct properties, tenure 590 days, email open trend +0.00.",
+    "score": 0.9957275637210029,
+    "decile": 10,
+    "base": 0.5544677720559108,
+    "nba": "Win-back: personalised offer + bonus points",
+    "segment": null,
+    "uplift": null,
+    "outcome": "did NOT book again within 365 days (churned)",
+    "actual": 1,
+    "drivers": [
+     {
+      "f": "email_open_trend",
+      "v": null,
+      "dir": "increases",
+      "shap": 3.0328
+     },
+     {
+      "f": "email_open_rate_3m",
+      "v": null,
+      "dir": "increases",
+      "shap": 1.1817
+     },
+     {
+      "f": "days_since_last_stay_at_property",
+      "v": "360.0",
+      "dir": "increases",
+      "shap": 0.6018
+     },
+     {
+      "f": "email_click_rate_3m",
+      "v": null,
+      "dir": "increases",
+      "shap": 0.2433
+     }
+    ],
+    "image": "story_shots/guest_churn.png",
+    "img_w": 2120,
+    "img_h": 1290
+   }
+  },
+  {
+   "key": "property_repeat",
+   "n": 6,
+   "title": "Same-Property Repeat Stay",
+   "short": "Property Repeat",
+   "question": "Which guests will return to the same property within 12 months?",
+   "action": "Anniversary-stay invitation",
+   "window_days": 365,
+   "unit": "guest",
+   "base_rate": 0.0925810650217871,
+   "best_model": "catboost",
+   "models": {
+    "xgboost": {
+     "roc_auc": 0.8025037252327769,
+     "pr_auc": 0.3133766377083903,
+     "logloss": 0.2525224711636361,
+     "brier": 0.0734940723166202,
+     "top_decile_lift": 3.669707223953272,
+     "ece": 0.0098501222059958,
+     "ece_raw": 0.0096266565148902,
+     "logloss_raw": 0.2524884320801062,
+     "train_time_s": 0.52,
+     "tuning_time_s": 9.77,
+     "gpu_peak_mem_mb": 3222.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    },
+    "lightgbm": {
+     "roc_auc": 0.7914675158558258,
+     "pr_auc": 0.2831686899476671,
+     "logloss": 0.256344195987619,
+     "brier": 0.0743194385488026,
+     "top_decile_lift": 3.669707223953272,
+     "ece": 0.0099963923156241,
+     "ece_raw": 0.0205403689370615,
+     "logloss_raw": 0.2634935935711179,
+     "train_time_s": 0.51,
+     "tuning_time_s": 6.79,
+     "gpu_peak_mem_mb": 3014.0,
+     "device": "cpu",
+     "calibration": "isotonic"
+    },
+    "catboost": {
+     "roc_auc": 0.8037632093761891,
+     "pr_auc": 0.2978368328696915,
+     "logloss": 0.2525958870264323,
+     "brier": 0.0734101176882121,
+     "top_decile_lift": 3.758317972908014,
+     "ece": 0.0102329598350945,
+     "ece_raw": 0.0142172970959379,
+     "logloss_raw": 0.2543825479920033,
+     "train_time_s": 3.15,
+     "tuning_time_s": 107.44,
+     "gpu_peak_mem_mb": 8797.0,
+     "device": "cuda",
+     "calibration": "isotonic"
+    },
+    "pytorch_nn": {
+     "roc_auc": 0.7741294591293647,
+     "pr_auc": 0.2893439863855068,
+     "logloss": 0.2611887023709648,
+     "brier": 0.0741435632333312,
+     "top_decile_lift": 3.6360962502118186,
+     "ece": 0.0080278021312006,
+     "ece_raw": 0.009263421586772,
+     "logloss_raw": 0.2613788475101898,
+     "train_time_s": 2.71,
+     "tuning_time_s": 26.39,
+     "gpu_peak_mem_mb": 3088.0,
+     "device": "cuda",
+     "calibration": "isotonic"
+    }
+   },
+   "decile_lift": [
+    3.758317972908014,
+    1.8032805315599907,
+    1.3234245257041968,
+    0.9933324961983,
+    0.892471042738165,
+    0.6661083886942659,
+    0.39733299847932,
+    0.16198960707233814,
+    0.0030564076806101543,
+    0.0
+   ],
+   "decile_gain": [
+    0.3759168704156479,
+    0.5562347188264058,
+    0.6885696821515892,
+    0.7878973105134475,
+    0.8771393643031785,
+    0.9437652811735942,
+    0.9834963325183375,
+    0.9996943765281173,
+    1.0,
+    1.0
+   ],
+   "drivers": [
+    {
+     "f": "stays_at_last_property",
+     "v": 0.3136835584470744
+    },
+    {
+     "f": "email_open_trend",
+     "v": 0.2633799683017148
+    },
+    {
+     "f": "email_open_rate_3m",
+     "v": 0.136176524558449
+    },
+    {
+     "f": "points_gap_to_free_night",
+     "v": 0.1163149405941405
+    },
+    {
+     "f": "recency_days",
+     "v": 0.0955961231687825
+    }
+   ],
+   "ladder": [
+    {
+     "name": "High score \u2013 event occurred",
+     "score": 0.2318,
+     "actual": 1,
+     "outcome": "returned to the same property within 365 days"
+    },
+    {
+     "name": "High score \u2013 event did not occur",
+     "score": 0.3188,
+     "actual": 0,
+     "outcome": "did not return to that property"
+    },
+    {
+     "name": "Mid-propensity guest",
+     "score": 0.0611,
+     "actual": 0,
+     "outcome": "did not return to that property"
+    },
+    {
+     "name": "Low score \u2013 event did not occur",
+     "score": 0.0,
+     "actual": 0,
+     "outcome": "did not return to that property"
+    }
+   ],
+   "story": {
+    "case_no": 1,
+    "case_name": "High score \u2013 event occurred",
+    "text": "Silver loyalty member, 1 completed stays, last stay 3 days ago; 1 distinct properties, tenure 9 days, email open trend +0.00.",
+    "score": 0.2317596566523605,
+    "decile": 10,
+    "base": 0.0925810650217871,
+    "nba": "Invite to return: anniversary-stay offer",
+    "segment": null,
+    "uplift": null,
+    "outcome": "returned to the same property within 365 days",
+    "actual": 1,
+    "drivers": [
+     {
+      "f": "searches_30d",
+      "v": "11.0",
+      "dir": "increases",
+      "shap": 0.4343
+     },
+     {
+      "f": "avg_party_adults",
+      "v": "1.0",
+      "dir": "increases",
+      "shap": 0.1312
+     },
+     {
+      "f": "points_gap_to_free_night",
+      "v": "22102.7",
+      "dir": "increases",
+      "shap": 0.1136
+     },
+     {
+      "f": "stays_at_last_property",
+      "v": "1.0",
+      "dir": "decreases",
+      "shap": -0.1098
+     }
+    ],
+    "image": "story_shots/property_repeat.png",
+    "img_w": 2120,
+    "img_h": 1290
+   }
+  },
+  {
+   "key": "brand_repeat",
+   "n": 7,
+   "title": "Repeat-to-Brand (Cross-Property)",
+   "short": "Brand Repeat",
+   "question": "Which guests will stay at a different brand property within 12 months?",
+   "action": "Cross-property destination packages",
+   "window_days": 365,
+   "unit": "guest",
+   "base_rate": 0.4187935034802784,
+   "best_model": "xgboost",
+   "models": {
+    "xgboost": {
+     "roc_auc": 0.8198339619067352,
+     "pr_auc": 0.7304036150488412,
+     "logloss": 0.4784088748226667,
+     "brier": 0.1662603872972846,
+     "top_decile_lift": 1.9480760264392087,
+     "ece": 0.0108610950864401,
+     "ece_raw": 0.0114740527475404,
+     "logloss_raw": 0.4789912123923923,
+     "train_time_s": 0.65,
+     "tuning_time_s": 8.79,
+     "gpu_peak_mem_mb": 3157.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    },
+    "lightgbm": {
+     "roc_auc": 0.8178086785951267,
+     "pr_auc": 0.7192215897799161,
+     "logloss": 0.4800519744224915,
+     "brier": 0.1668642915536052,
+     "top_decile_lift": 1.9453741179420676,
+     "ece": 0.008393385087651,
+     "ece_raw": 0.0206507008531756,
+     "logloss_raw": 0.4870395671260291,
+     "train_time_s": 0.75,
+     "tuning_time_s": 7.32,
+     "gpu_peak_mem_mb": 3085.0,
+     "device": "cpu",
+     "calibration": "isotonic"
+    },
+    "catboost": {
+     "roc_auc": 0.8184690073647027,
+     "pr_auc": 0.7194669180107178,
+     "logloss": 0.479970371981371,
+     "brier": 0.1667771084433804,
+     "top_decile_lift": 1.9446986408177815,
+     "ece": 0.0083786126314565,
+     "ece_raw": 0.0148210027063461,
+     "logloss_raw": 0.4837911543970538,
+     "train_time_s": 9.15,
+     "tuning_time_s": 107.11,
+     "gpu_peak_mem_mb": 8760.0,
+     "device": "cuda",
+     "calibration": "isotonic"
+    },
+    "pytorch_nn": {
+     "roc_auc": 0.8031179060964784,
+     "pr_auc": 0.6989680289665584,
+     "logloss": 0.4981017027717345,
+     "brier": 0.1729985585570636,
+     "top_decile_lift": 1.8906604708749464,
+     "ece": 0.0171306128174285,
+     "ece_raw": 0.0354295973275611,
+     "logloss_raw": 0.5062125410793684,
+     "train_time_s": 1.81,
+     "tuning_time_s": 27.26,
+     "gpu_peak_mem_mb": 3048.0,
+     "device": "cuda",
+     "calibration": "isotonic"
+    }
+   },
+   "decile_lift": [
+    1.9480760264392087,
+    1.670927609435527,
+    1.4972808663603427,
+    1.3560661998128194,
+    1.226337893702176,
+    1.1219675034381158,
+    0.896611782337624,
+    0.28242933309504664,
+    0.0,
+    0.0
+   ],
+   "decile_gain": [
+    0.19485169920951287,
+    0.36193500439159515,
+    0.5116546179312209,
+    0.6472535639483818,
+    0.7698804134855753,
+    0.8821025606377948,
+    0.9717586649550706,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "drivers": [
+    {
+     "f": "email_open_trend",
+     "v": 0.81761765
+    },
+    {
+     "f": "email_open_rate_3m",
+     "v": 0.31725955
+    },
+    {
+     "f": "days_since_last_stay_at_property",
+     "v": 0.31599808
+    },
+    {
+     "f": "account_age_days",
+     "v": 0.12937772
+    },
+    {
+     "f": "searches_30d",
+     "v": 0.080906145
+    }
+   ],
+   "ladder": [
+    {
+     "name": "High score \u2013 event occurred",
+     "score": 0.9753,
+     "actual": 1,
+     "outcome": "booked another property in the portfolio"
+    },
+    {
+     "name": "High score \u2013 event did not occur",
+     "score": 0.8469,
+     "actual": 0,
+     "outcome": "booked no other property"
+    },
+    {
+     "name": "Mid-propensity guest",
+     "score": 0.493,
+     "actual": 0,
+     "outcome": "booked no other property"
+    },
+    {
+     "name": "Low score \u2013 event did not occur",
+     "score": 0.0052,
+     "actual": 0,
+     "outcome": "booked no other property"
+    }
+   ],
+   "story": {
+    "case_no": 1,
+    "case_name": "High score \u2013 event occurred",
+    "text": "Silver loyalty member, 8 completed stays, last stay 44 days ago; 6 distinct properties, tenure 1189 days, email open trend -0.04.",
+    "score": 0.9752540983095056,
+    "decile": 10,
+    "base": 0.41879350348027844,
+    "nba": "Cross-sell portfolio destination package",
+    "segment": null,
+    "uplift": null,
+    "outcome": "booked another property in the portfolio",
+    "actual": 1,
+    "drivers": [
+     {
+      "f": "searches_30d",
+      "v": "8.0",
+      "dir": "increases",
+      "shap": 0.8989
+     },
+     {
+      "f": "avg_pages_30d",
+      "v": "10.0",
+      "dir": "increases",
+      "shap": 0.502
+     },
+     {
+      "f": "checkout_reach_30d",
+      "v": "2.0",
+      "dir": "increases",
+      "shap": 0.3257
+     },
+     {
+      "f": "avg_pages_90d",
+      "v": "8.333333",
+      "dir": "increases",
+      "shap": 0.2295
+     }
+    ],
+    "image": "story_shots/brand_repeat.png",
+    "img_w": 2120,
+    "img_h": 1290
+   }
+  },
+  {
+   "key": "cancel_noshow",
+   "n": 8,
+   "title": "Cancellation & No-Show",
+   "short": "Cancel / No-Show",
+   "question": "Which upcoming bookings will be cancelled or no-show?",
+   "action": "Deposit, reconfirmation, overbooking buffer",
+   "window_days": 90,
+   "unit": "booking",
+   "base_rate": 0.1621596419246549,
+   "best_model": "catboost",
+   "models": {
+    "xgboost": {
+     "roc_auc": 0.728059224642182,
+     "pr_auc": 0.3438111762232422,
+     "logloss": 0.3980675272307492,
+     "brier": 0.122966044911598,
+     "top_decile_lift": 2.597741522133265,
+     "ece": 0.0172400722018255,
+     "ece_raw": 0.0114796789492772,
+     "logloss_raw": 0.397322541275283,
+     "train_time_s": 0.85,
+     "tuning_time_s": 10.87,
+     "gpu_peak_mem_mb": 3048.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    },
+    "lightgbm": {
+     "roc_auc": 0.7268000497922709,
+     "pr_auc": 0.3390577006090627,
+     "logloss": 0.3990393665413335,
+     "brier": 0.1233199069478866,
+     "top_decile_lift": 2.500038854265421,
+     "ece": 0.0175605901238361,
+     "ece_raw": 0.0094005931502417,
+     "logloss_raw": 0.3981602776934743,
+     "train_time_s": 1.9,
+     "tuning_time_s": 15.07,
+     "gpu_peak_mem_mb": 3048.0,
+     "device": "cpu",
+     "calibration": "sigmoid"
+    },
+    "catboost": {
+     "roc_auc": 0.7295959690020714,
+     "pr_auc": 0.3453556763268887,
+     "logloss": 0.39755207148079,
+     "brier": 0.1228625370219347,
+     "top_decile_lift": 2.655213679702585,
+     "ece": 0.0171799008252,
+     "ece_raw": 0.0128546557583716,
+     "logloss_raw": 0.3967522661601202,
+     "train_time_s": 2.94,
+     "tuning_time_s": 92.64,
+     "gpu_peak_mem_mb": 8760.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    },
+    "pytorch_nn": {
+     "roc_auc": 0.7071023426367439,
+     "pr_auc": 0.3255659238279583,
+     "logloss": 0.4059202192446409,
+     "brier": 0.1250134995329058,
+     "top_decile_lift": 2.4598083439668974,
+     "ece": 0.0162569684288784,
+     "ece_raw": 0.0134342766791743,
+     "logloss_raw": 0.4055964037991554,
+     "train_time_s": 5.93,
+     "tuning_time_s": 71.62,
+     "gpu_peak_mem_mb": 3048.0,
+     "device": "cuda",
+     "calibration": "sigmoid"
+    }
+   },
+   "decile_lift": [
+    2.655213679702585,
+    1.7200205127324848,
+    1.4655400180176608,
+    1.0239586998875663,
+    0.7708453133985048,
+    0.7356436168872963,
+    0.6385360431883137,
+    0.4482828290406962,
+    0.3509071949052895,
+    0.18983503986679595
+   ],
+   "decile_gain": [
+    0.2656699252443933,
+    0.437607820586544,
+    0.5842438182863715,
+    0.6866014951121334,
+    0.7636572742955722,
+    0.8372627947096032,
+    0.9010925819436457,
+    0.9459459459459459,
+    0.9810235767682576,
+    1.0
+   ],
+   "drivers": [
+    {
+     "f": "rate_plan",
+     "v": 0.4815060614058696
+    },
+    {
+     "f": "days_until_checkin",
+     "v": 0.4064856503045507
+    },
+    {
+     "f": "is_loyalty_member",
+     "v": 0.14977799004112
+    },
+    {
+     "f": "channel",
+     "v": 0.135273922765871
+    },
+    {
+     "f": "cancel_rate",
+     "v": 0.0847302497417658
+    }
+   ],
+   "ladder": [
+    {
+     "name": "High score \u2013 event occurred",
+     "score": 0.2884,
+     "actual": 1,
+     "outcome": "cancelled or was a no-show"
+    },
+    {
+     "name": "High score \u2013 event did not occur",
+     "score": 0.3515,
+     "actual": 0,
+     "outcome": "completed the stay"
+    },
+    {
+     "name": "Mid-propensity guest",
+     "score": 0.1248,
+     "actual": 0,
+     "outcome": "completed the stay"
+    },
+    {
+     "name": "Low score \u2013 event did not occur",
+     "score": 0.0454,
+     "actual": 0,
+     "outcome": "completed the stay"
+    }
+   ],
+   "story": {
+    "case_no": 1,
+    "case_name": "High score \u2013 event occurred",
+    "text": "Upcoming Coastal Vacation stay booked via Mobile App (Refundable, Deluxe): 4 nights, 3 adults + 0 children, ADR $548, check-in in 32 days; Non-member guest with no completed stays yet.",
+    "score": 0.2883691306057817,
+    "decile": 10,
+    "base": 0.16215964192465498,
+    "nba": "Request deposit / send reconfirmation + overbooking buffer",
+    "segment": null,
+    "uplift": null,
+    "outcome": "cancelled or was a no-show",
+    "actual": 1,
+    "drivers": [
+     {
+      "f": "rate_plan",
+      "v": "Refundable",
+      "dir": "increases",
+      "shap": 0.3676
+     },
+     {
+      "f": "cancel_rate",
+      "v": "1.0",
+      "dir": "increases",
+      "shap": 0.3074
+     },
+     {
+      "f": "days_until_checkin",
+      "v": "32",
+      "dir": "increases",
+      "shap": 0.2478
+     },
+     {
+      "f": "is_loyalty_member",
+      "v": "0",
+      "dir": "increases",
+      "shap": 0.1534
+     }
+    ],
+    "image": "story_shots/cancel_noshow.png",
+    "img_w": 2120,
+    "img_h": 1340
+   }
+  }
+ ],
+ "agg": {
+  "xgboost": {
+   "roc": 0.7633652157748974,
+   "pr": 0.5474075228324699,
+   "ll": 0.4303430256877062,
+   "brier": 0.13956137395705495,
+   "lift": 2.3984637113663902,
+   "fit_s": 0.79375,
+   "tune_s": 11.30875,
+   "ece": 0.01124878486919046,
+   "ece_raw": 0.012364074259117376,
+   "ll_raw": 0.4308578238450086,
+   "peak_mb": 2857.75,
+   "device": "cuda",
+   "roc_gap_pp": 0.1365653278910528,
+   "pr_gap_pp": 0.13592493632585967,
+   "wins_val": 3.0,
+   "wins_test_roc": 2.0
+  },
+  "lightgbm": {
+   "roc": 0.7619502915087076,
+   "pr": 0.5416717134635545,
+   "ll": 0.43145393710392693,
+   "brier": 0.13989045673983527,
+   "lift": 2.3921504391712665,
+   "fit_s": 1.9837500000000001,
+   "tune_s": 11.760000000000002,
+   "ece": 0.013026045588189861,
+   "ece_raw": 0.015177737134999886,
+   "ll_raw": 0.43347309838045855,
+   "peak_mb": 2816.0,
+   "device": "cpu",
+   "roc_gap_pp": 0.27805775451002074,
+   "pr_gap_pp": 0.7095058732174103,
+   "wins_val": 1.0,
+   "wins_test_roc": 0.0
+  },
+  "catboost": {
+   "roc": 0.7639347458522374,
+   "pr": 0.5435473545936647,
+   "ll": 0.43071216909705934,
+   "brier": 0.1396349073776926,
+   "lift": 2.415582986763649,
+   "fit_s": 3.91625,
+   "tune_s": 104.94624999999999,
+   "ece": 0.012509102326866414,
+   "ece_raw": 0.0142960017672467,
+   "ll_raw": 0.43178919264038806,
+   "peak_mb": 8554.5,
+   "device": "cuda",
+   "roc_gap_pp": 0.07961232015704506,
+   "pr_gap_pp": 0.521941760206385,
+   "wins_val": 4.0,
+   "wins_test_roc": 5.0
+  },
+  "pytorch_nn": {
+   "roc": 0.7524822346178901,
+   "pr": 0.5337448438459876,
+   "ll": 0.43844105622082774,
+   "brier": 0.14196269505703163,
+   "lift": 2.3886919118726353,
+   "fit_s": 5.768750000000001,
+   "tune_s": 53.41374999999999,
+   "ece": 0.013985571002513401,
+   "ece_raw": 0.019073987280301977,
+   "ll_raw": 0.4400933898274223,
+   "peak_mb": 2908.125,
+   "device": "cuda",
+   "roc_gap_pp": 1.2248634435917714,
+   "pr_gap_pp": 1.5021928349740854,
+   "wins_val": 0.0,
+   "wins_test_roc": 1.0
+  }
+ },
+ "cal": {
+  "improved_or_equal": 24,
+  "n": 32,
+  "sigmoid": 24,
+  "isotonic": 8,
+  "ece_raw_mean": 0.015227950110416485,
+  "ece_cal_mean": 0.012692375946690034
+ },
+ "uplift": {
+  "auuc_uplift": 344.73525291845925,
+  "auuc_baseline_propensity": 230.00458260311223,
+  "auuc_random": 289.26814493002087,
+  "ate_observed": 0.14575768857393012,
+  "segments": {
+   "Lost Cause": {
+    "n": 2428,
+    "realised_uplift": 0.18165375466172584
+   },
+   "Persuadable": {
+    "n": 2043,
+    "realised_uplift": 0.20833149649915378
+   },
+   "Sleeping Dog": {
+    "n": 502,
+    "realised_uplift": 0.04283559577677232
+   },
+   "Sure Thing": {
+    "n": 2717,
+    "realised_uplift": 0.09062476289576082
+   }
+  },
+  "fit_seconds": 1.41
+ },
+ "tables": {
+  "guests": 60000,
+  "bookings": 259145,
+  "folios": 357036,
+  "web_sessions": 620371,
+  "email_monthly": 1667251,
+  "surveys": 79879,
+  "complaints": 12268
+ },
+ "models": [
+  "xgboost",
+  "lightgbm",
+  "catboost",
+  "pytorch_nn"
+ ],
+ "n_models": 32,
+ "n_trials": 15,
+ "cuda": "NVIDIA GeForce RTX 3090",
+ "tests": 28
+}

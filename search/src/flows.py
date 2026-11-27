@@ -137,7 +137,7 @@ def _recall(rel_ids, cand_idx, n):
     return float(np.isin(rel_ids, cand_idx).sum() / min(len(rel_ids), n))
 
 
-def run_example(svc, ex: dict) -> dict:
+def run_example(svc, ex: dict, all_models: bool = False) -> dict:
     """Run one example through every stage and score it against simulator ground truth."""
     w, eng, cfg = svc.world, svc.engine, svc.cfg
     truth = ex["truth"]
@@ -215,6 +215,13 @@ def run_example(svc, ex: dict) -> dict:
     orders["D + margin re-rank"] = r_d.order
     orders["E + MMR (final page)"] = r_e.order
     stages = {k: metrics(v) for k, v in orders.items()}
+    per_model = {}
+    if all_models:  # every ranker on the same candidates: ranker-only (B) and full funnel (E)
+        for mname, m in svc.models.items():
+            sc_m = m.predict(X)
+            full = rerank(w, cfg, eng.doc_emb, idx, sc_m, util["expected_profit"], uidx, cons, p.max_price, 20, mw,
+                          True, True, True, bool(p.brand))
+            per_model[mname] = {"B": metrics(np.argsort(-sc_m)), "E": metrics(full.order)}
     ranking_stage = {"ranker": cfg["ranking"]["default_ranker"], "ms": rank_ms,
                      "mean_pCTR@10": float(heads["pctr"][orders["B + LTR ensemble"][:K]].mean()),
                      "mean_pCVR@10": float(heads["pcvr"][orders["B + LTR ensemble"][:K]].mean()),
@@ -228,7 +235,7 @@ def run_example(svc, ex: dict) -> dict:
               "cold": r["is_cold_start"], "route": r["fulfillment"], "E_profit": round(r["scores"]["expected_profit"], 3),
               "flags": r["flags"]} for r in out["results"]]
     res = {"example": {k: v for k, v in ex.items() if k != "truth"}, "truth": truth, "stage1": stage1, "stage2": stage2,
-           "ranking": ranking_stage, "rules": rules_stage, "variants": stages, "final": final, "latency_ms": out["latency_ms"]}
+           "ranking": ranking_stage, "rules": rules_stage, "variants": stages, "per_model": per_model, "final": final, "latency_ms": out["latency_ms"]}
     if "target_idx" in ex:
         ti = ex["target_idx"]
         pos = lambda arr: int(np.where(np.asarray(arr) == ti)[0][0] + 1) if (np.asarray(arr) == ti).any() else None
@@ -239,5 +246,5 @@ def run_example(svc, ex: dict) -> dict:
     return res
 
 
-def run_flow(svc, flow: dict) -> list[dict]:
-    return [run_example(svc, ex) for ex in flow["examples"]]
+def run_flow(svc, flow: dict, all_models: bool = False) -> list[dict]:
+    return [run_example(svc, ex, all_models) for ex in flow["examples"]]

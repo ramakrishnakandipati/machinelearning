@@ -1,0 +1,5533 @@
+{
+ "retrieval": {
+  "sparse_only (BM25+char+learned)": {
+   "recall@200": 0.8192560729490196,
+   "hit_rate": 1.0,
+   "cold_start_recall": 0.7424207309452577,
+   "latency_ms": {
+    "p50": 12.015049996989546,
+    "p95": 13.935690001380863,
+    "p99": 15.389391000862814,
+    "mean": 12.042363200045656
+   },
+   "recall@50": 0.7112318282722283,
+   "cold_start_recall@50": 0.4983665069252431
+  },
+  "dense_only (bge+multimodal)": {
+   "recall@200": 0.8479896401785948,
+   "hit_rate": 1.0,
+   "cold_start_recall": 0.7693804860818261,
+   "latency_ms": {
+    "p50": 12.13350000034552,
+    "p95": 14.22329500237538,
+    "p99": 14.881467998420703,
+    "mean": 12.210870399925625
+   },
+   "recall@50": 0.7507463462743508,
+   "cold_start_recall@50": 0.5216866102135942
+  },
+  "hybrid_rrf": {
+   "recall@200": 0.8513552578904786,
+   "hit_rate": 1.0,
+   "cold_start_recall": 0.7708987450110787,
+   "latency_ms": {
+    "p50": 12.058249998517567,
+    "p95": 13.891805001185274,
+    "p99": 14.874519996737945,
+    "mean": 11.989223999873502
+   },
+   "recall@50": 0.7543734697445916,
+   "cold_start_recall@50": 0.5330427699071663
+  },
+  "hybrid_alpha=0.6": {
+   "recall@200": 0.8493107914576302,
+   "hit_rate": 1.0,
+   "cold_start_recall": 0.7667535808950655,
+   "latency_ms": {
+    "p50": 12.397800001053838,
+    "p95": 14.447415001268382,
+    "p99": 15.612623998240446,
+    "mean": 12.36310079996474
+   },
+   "recall@50": 0.7641733646694963,
+   "cold_start_recall@50": 0.541141921879198
+  }
+ },
+ "ranking": {
+  "retrieval_order (no LTR)": {
+   "paradigm": "baseline",
+   "ndcg_rel@10": 0.854473562734507,
+   "ndcg_eng@10": 0.6889814140752467,
+   "mrr": 0.8487021774521774,
+   "precision@10": 0.7256666666666667,
+   "expected_revenue@10": 117.97504541446138,
+   "expected_margin@10": 43.2315944276786,
+   "oos_rate@10": 0.044333333333333336,
+   "avg_return_prob@10": 0.1655039975579858,
+   "train_s": 0.0
+  },
+  "xgb_pointwise": {
+   "paradigm": "pointwise",
+   "ndcg_rel@10": 0.9156284342645266,
+   "ndcg_eng@10": 0.8828269236704447,
+   "mrr": 0.9392382154882155,
+   "precision@10": 0.8170000000000001,
+   "expected_revenue@10": 173.16497479867095,
+   "expected_margin@10": 67.7775936693562,
+   "oos_rate@10": 0.041666666666666664,
+   "avg_return_prob@10": 0.15451587403044176,
+   "train_s": 1.480759620666504,
+   "infer_ms_per_list": 0.09725266667373944
+  },
+  "lgbm_pointwise": {
+   "paradigm": "pointwise",
+   "ndcg_rel@10": 0.894410185737968,
+   "ndcg_eng@10": 0.8804071203345336,
+   "mrr": 0.9247317927170869,
+   "precision@10": 0.782,
+   "expected_revenue@10": 170.80250860745227,
+   "expected_margin@10": 66.28443145410873,
+   "oos_rate@10": 0.04066666666666666,
+   "avg_return_prob@10": 0.1552421948440638,
+   "train_s": 1.8494093418121338,
+   "infer_ms_per_list": 0.28561499998128664
+  },
+  "xgb_pairwise": {
+   "paradigm": "pairwise",
+   "ndcg_rel@10": 0.9085842698990916,
+   "ndcg_eng@10": 0.8822862433925744,
+   "mrr": 0.9278307446431018,
+   "precision@10": 0.8083333333333333,
+   "expected_revenue@10": 172.09959577164767,
+   "expected_margin@10": 66.43804412889592,
+   "oos_rate@10": 0.041666666666666664,
+   "avg_return_prob@10": 0.15592095355895097,
+   "train_s": 2.920898199081421,
+   "infer_ms_per_list": 0.08582166667717199
+  },
+  "lgbm_lambdamart": {
+   "paradigm": "pairwise (LambdaMART)",
+   "ndcg_rel@10": 0.8972940212681336,
+   "ndcg_eng@10": 0.8791340919647485,
+   "mrr": 0.9257889379139378,
+   "precision@10": 0.7923333333333333,
+   "expected_revenue@10": 168.69405654341531,
+   "expected_margin@10": 64.96237786437048,
+   "oos_rate@10": 0.04266666666666667,
+   "avg_return_prob@10": 0.15657242296648807,
+   "train_s": 2.8877804279327393,
+   "infer_ms_per_list": 0.2781213333461589
+  },
+  "cat_yetirank": {
+   "paradigm": "listwise (YetiRank)",
+   "ndcg_rel@10": 0.8952752718708433,
+   "ndcg_eng@10": 0.8728626523172797,
+   "mrr": 0.9327175925925925,
+   "precision@10": 0.7893333333333333,
+   "expected_revenue@10": 165.02440538420035,
+   "expected_margin@10": 62.82642866260507,
+   "oos_rate@10": 0.04,
+   "avg_return_prob@10": 0.15761707907239633,
+   "train_s": 3.571549892425537,
+   "infer_ms_per_list": 0.03678399999140917
+  },
+  "xgb_listwise": {
+   "paradigm": "listwise (LambdaRank NDCG)",
+   "ndcg_rel@10": 0.8932093441750522,
+   "ndcg_eng@10": 0.8695995296613775,
+   "mrr": 0.9229021164021163,
+   "precision@10": 0.7853333333333334,
+   "expected_revenue@10": 167.23439039732585,
+   "expected_margin@10": 63.999030417789264,
+   "oos_rate@10": 0.03833333333333334,
+   "avg_return_prob@10": 0.1584671090162045,
+   "train_s": 7.048555374145508,
+   "infer_ms_per_list": 0.10566766667276777
+  },
+  "torch_listnet": {
+   "paradigm": "listwise (ListNet)",
+   "ndcg_rel@10": 0.9265007685519239,
+   "ndcg_eng@10": 0.8808126186098779,
+   "mrr": 0.9523809523809522,
+   "precision@10": 0.8366666666666667,
+   "expected_revenue@10": 180.2192911031505,
+   "expected_margin@10": 69.10521100244408,
+   "oos_rate@10": 0.04866666666666667,
+   "avg_return_prob@10": 0.15482770109905358,
+   "train_s": 2.005838632583618,
+   "infer_ms_per_list": 0.0976733333421483
+  },
+  "dcnv2": {
+   "paradigm": "neural DCNv2 (listwise loss)",
+   "ndcg_rel@10": 0.9232832445826841,
+   "ndcg_eng@10": 0.8698480268951255,
+   "mrr": 0.9269841269841269,
+   "precision@10": 0.8343333333333333,
+   "expected_revenue@10": 171.29200211542582,
+   "expected_margin@10": 64.78915313861319,
+   "oos_rate@10": 0.045,
+   "avg_return_prob@10": 0.1571998236229772,
+   "train_s": 4.622925519943237,
+   "infer_ms_per_list": 0.07358466665512726
+  },
+  "ensemble": {
+   "paradigm": "z-score blend of top-4 models by validation NDCG",
+   "ndcg_rel@10": 0.911029108155273,
+   "ndcg_eng@10": 0.8839700316172324,
+   "mrr": 0.9455462962962963,
+   "precision@10": 0.807,
+   "expected_revenue@10": 172.1630813488994,
+   "expected_margin@10": 66.55933885401973,
+   "oos_rate@10": 0.04466666666666667,
+   "avg_return_prob@10": 0.1551679654133547,
+   "train_s": 0.0,
+   "infer_ms_per_list": 0.7499916666711215
+  }
+ },
+ "ablation": {
+  "1. ranker only (no rules)": {
+   "ndcg_rel@10": 0.911029108155273,
+   "ndcg_eng@10": 0.8839700316172324,
+   "mrr": 0.9455462962962963,
+   "precision@10": 0.807,
+   "expected_revenue@10": 172.1630813488994,
+   "expected_margin@10": 66.55933885401973,
+   "oos_rate@10": 0.04466666666666667,
+   "avg_return_prob@10": 0.1551679654133547
+  },
+  "2. + hard filters & soft penalties": {
+   "ndcg_rel@10": 0.9055986633307171,
+   "ndcg_eng@10": 0.868689797291445,
+   "mrr": 0.9408622303622303,
+   "precision@10": 0.8023333333333333,
+   "expected_revenue@10": 165.80044845986515,
+   "expected_margin@10": 66.07088469481361,
+   "oos_rate@10": 0.0,
+   "avg_return_prob@10": 0.12265467178738808
+  },
+  "3. + margin-aware re-rank": {
+   "ndcg_rel@10": 0.9033677359775091,
+   "ndcg_eng@10": 0.8662310492522128,
+   "mrr": 0.9348730158730159,
+   "precision@10": 0.8026666666666668,
+   "expected_revenue@10": 186.0725220668721,
+   "expected_margin@10": 78.17460898625488,
+   "oos_rate@10": 0.0,
+   "avg_return_prob@10": 0.1183393014390834
+  },
+  "4. + MMR diversity (full funnel)": {
+   "ndcg_rel@10": 0.9004377989739709,
+   "ndcg_eng@10": 0.8645296623726911,
+   "mrr": 0.9356269841269841,
+   "precision@10": 0.7986666666666667,
+   "expected_revenue@10": 185.28267113500752,
+   "expected_margin@10": 77.77246815676291,
+   "oos_rate@10": 0.0,
+   "avg_return_prob@10": 0.11881848757057321
+  }
+ },
+ "latency": {
+  "query_understanding_ms": {
+   "p50": 19.035,
+   "p95": 22.051000000000002,
+   "p99": 24.057199999999995,
+   "mean": 16.26185
+  },
+  "retrieval_ms": {
+   "p50": 6.845,
+   "p95": 7.8309999999999995,
+   "p99": 8.481499999999999,
+   "mean": 6.12655
+  },
+  "feature_ms": {
+   "p50": 0.96,
+   "p95": 1.1504999999999996,
+   "p99": 1.2502999999999997,
+   "mean": 0.9358000000000001
+  },
+  "ranking_ms": {
+   "p50": 37.51,
+   "p95": 41.51349999999999,
+   "p99": 42.94139999999998,
+   "mean": 37.72455
+  },
+  "rerank_ms": {
+   "p50": 1.4849999999999999,
+   "p95": 3.3604999999999996,
+   "p99": 3.5722999999999976,
+   "mean": 1.6358999999999997
+  },
+  "total_ms": {
+   "p50": 65.555,
+   "p95": 71.804,
+   "p99": 77.08829999999993,
+   "mean": 62.716449999999995
+  },
+  "budget_ms": {
+   "query_understanding": 30,
+   "retrieval": 25,
+   "ranking": 60,
+   "rerank": 15,
+   "total": 150
+  }
+ },
+ "multitask": {
+  "pCTR_auc": 0.8536978267437978,
+  "pATC_auc(|click)": 0.7576174528149313,
+  "pCVR_auc(|cart)": 0.66760124124689,
+  "pReturn_corr_with_latent": 0.712024794179972
+ },
+ "funnel": {
+  "impressions": 1000000,
+  "clicks": 255476,
+  "add_to_cart": 133654,
+  "purchases": 85733,
+  "returns": 14116
+ },
+ "importance": {
+  "d_bayes_ctr": 0.31919377509464836,
+  "x_fused": 0.13286025244425556,
+  "x_sparse_rank": 0.11297275102154604,
+  "d_log_impr": 0.056563018242943755,
+  "x_bm25_norm": 0.035480512237394214,
+  "x_over_budget": 0.028346675362646612,
+  "x_sub_match": 0.027455026111375725,
+  "x_dense_cos_rel": 0.026668643193480654,
+  "x_price_ratio": 0.021526678938297936,
+  "d_bayes_cvr": 0.016442590124107852,
+  "u_price_dist": 0.0140283605547388,
+  "x_dense_rank": 0.013975871542839273,
+  "x_attr_overlap": 0.012636209527611726,
+  "u_brand_aff": 0.011656515329461282,
+  "u_price_fit": 0.01095072026197296,
+  "q_has_brand": 0.009721118370259293,
+  "d_days_since_launch": 0.009650888635505844,
+  "x_brand_match": 0.00922544240010248,
+  "u_cat_aff": 0.00903160153061921,
+  "d_margin_pct": 0.009017239180290295
+ },
+ "summary": {
+  "elapsed_s": 137.74037051200867,
+  "small": false,
+  "alpha": 0.6,
+  "n_skus": 12000,
+  "n_cold_start": 1779
+ },
+ "world": {
+  "n_skus": 12000,
+  "n_cold": 1779,
+  "n_users": 2000,
+  "n_queries": 3000
+ },
+ "flows": [
+  {
+   "id": "vocab_gap",
+   "title": "1 \u00b7 Vocabulary gap",
+   "blurb": "Colloquial shopper language that never appears in the catalog. Stage 1 expands it; hybrid retrieval bridges the gap.",
+   "n_examples": 4,
+   "stages": {
+    "A retrieval order": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 154.12452937720417,
+     "exp_margin@10": 57.921637129593314,
+     "unfulfillable@10": 0.25,
+     "avg_return_prob@10": 0.20094551388179632
+    },
+    "B + LTR ensemble": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 260.89514765633874,
+     "exp_margin@10": 109.78747763436297,
+     "unfulfillable@10": 0.25,
+     "avg_return_prob@10": 0.17414292552948898
+    },
+    "C + hard rules & penalties": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 239.19940201647336,
+     "exp_margin@10": 108.57659513733185,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.11312449423256299
+    },
+    "D + margin re-rank": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 284.9630182421124,
+     "exp_margin@10": 142.09152096003183,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.09617177475796515
+    },
+    "E + MMR (final page)": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 286.10015434862004,
+     "exp_margin@10": 141.23000374750364,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.1006137877204589
+    }
+   },
+   "stage1_ms": 21.439874999487074,
+   "facet_accuracy": 1.0,
+   "recall200": {
+    "sparse": 0.9212500000000001,
+    "dense": 0.76625,
+    "hybrid": 0.8400000000000001
+   },
+   "recall50": {
+    "sparse": 0.9099999999999999,
+    "dense": 0.79,
+    "hybrid": 0.86
+   },
+   "latency_total": 71.175,
+   "models": {
+    "xgb_pointwise": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 253.0439914725755,
+      "exp_margin@10": 109.57252740370615
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 283.8283341324393,
+      "exp_margin@10": 139.09431935406258
+     }
+    },
+    "lgbm_pointwise": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 237.54409215709288,
+      "exp_margin@10": 98.85863717926131
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 286.55317215705963,
+      "exp_margin@10": 141.6932804584375
+     }
+    },
+    "xgb_pairwise": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 251.25078985822964,
+      "exp_margin@10": 103.50647933350052
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 278.7182643079971,
+      "exp_margin@10": 136.5753894188427
+     }
+    },
+    "lgbm_lambdamart": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 232.6518824847817,
+      "exp_margin@10": 94.19810704539485
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 277.5653670657797,
+      "exp_margin@10": 134.24946694275306
+     }
+    },
+    "cat_yetirank": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 239.89410191889607,
+      "exp_margin@10": 98.91112898962066
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 275.1755764504284,
+      "exp_margin@10": 134.09368979841213
+     }
+    },
+    "xgb_listwise": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 227.0884039672408,
+      "exp_margin@10": 92.69803644064368
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 273.82119638169263,
+      "exp_margin@10": 132.65782331073882
+     }
+    },
+    "torch_listnet": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 292.79810554097344,
+      "exp_margin@10": 129.54651293415986
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 296.0246830956341,
+      "exp_margin@10": 146.682451865944
+     }
+    },
+    "dcnv2": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 284.60378954021144,
+      "exp_margin@10": 119.6964481394521
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 289.1911285688479,
+      "exp_margin@10": 142.10438996274007
+     }
+    },
+    "ensemble": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 260.89514765633874,
+      "exp_margin@10": 109.78747763436297
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 286.10015434862004,
+      "exp_margin@10": 141.23000374750364
+     }
+    }
+   },
+   "examples": [
+    {
+     "label": "waterproof trail kicks",
+     "query": "waterproof trail kicks",
+     "user": "U00012",
+     "store": "S1",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "waterproof trail kicks",
+      "edits": [],
+      "intent": "attribute_specific",
+      "intent_conf": 0.9933040429284905,
+      "facet_accuracy": 1.0,
+      "ms": 21.122799997101538
+     },
+     "stage2": {
+      "n_rel": 359,
+      "n_found": 187,
+      "recall200": {
+       "sparse": 0.925,
+       "dense": 0.925,
+       "hybrid": 0.935
+      },
+      "ms": 7.5962000046274625
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 191,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 9
+      },
+      "high_return_flagged": 58,
+      "low_stock_flagged": 9
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 210.55095493619558,
+       "exp_margin@10": 67.6819976015139,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.1920350191691356,
+       "avg_price@10": 126.20899963378906,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 3,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 337.6065470479891,
+       "exp_margin@10": 150.65993559466008,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.11957337021461645,
+       "avg_price@10": 135.98199462890625,
+       "pref_brand_share@10": 0.4,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 328.0848397448892,
+       "exp_margin@10": 149.90416082059085,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.09572501518546667,
+       "avg_price@10": 135.16600036621094,
+       "pref_brand_share@10": 0.6,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 341.28905309910107,
+       "exp_margin@10": 161.69437298864358,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.08736765872240804,
+       "avg_price@10": 142.20001220703125,
+       "pref_brand_share@10": 0.6,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 348.4581629771758,
+       "exp_margin@10": 161.38004625657342,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.09810823244019332,
+       "avg_price@10": 147.6690216064453,
+       "pref_brand_share@10": 0.4,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 21.91,
+      "retrieval_ms": 8.12,
+      "feature_ms": 1.07,
+      "ranking_ms": 39.99,
+      "rerank_ms": 3.65,
+      "total_ms": 74.78
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Nordhaven TR-3288 Gore-Tex Waterproof Lug-Sole Grip Trail Running Sneakers - Olive",
+       "price": 117.9000015258789,
+       "margin_pct": 53.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 37.025,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Nordhaven TR-3915 Gore-Tex Waterproof Lug-Sole Grip Trail Running Sneakers - White",
+       "price": 181.3300018310547,
+       "margin_pct": 45.5,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 37.427,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Nordhaven TR-5646 Gore-Tex Waterproof Breathable Mesh Trail Running Sneakers - Forest Green",
+       "price": 120.9800033569336,
+       "margin_pct": 51.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 30.063,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "Pinecrest TR-6650 Gore-Tex Waterproof Lug-Sole Grip Trail Running Sneakers - Charcoal",
+       "price": 145.22000122070312,
+       "margin_pct": 53.2,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 28.432,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Kestrel TR-5892 Gore-Tex Waterproof Lug-Sole Grip Trail Running Sneakers - Blush Pink",
+       "price": 161.27999877929688,
+       "margin_pct": 45.6,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 28.593,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    },
+    {
+     "label": "breathable gym tee",
+     "query": "breathable gym tee",
+     "user": "U00020",
+     "store": "S2",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "breathable gym tee",
+      "edits": [],
+      "intent": "attribute_specific",
+      "intent_conf": 0.9947360027053379,
+      "facet_accuracy": 1.0,
+      "ms": 22.122700000181794
+     },
+     "stage2": {
+      "n_rel": 351,
+      "n_found": 183,
+      "recall200": {
+       "sparse": 0.92,
+       "dense": 0.905,
+       "hybrid": 0.915
+      },
+      "ms": 7.720800000242889
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 190,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 10
+      },
+      "high_return_flagged": 105,
+      "low_stock_flagged": 11
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 63.97725529583727,
+       "exp_margin@10": 25.932841032401804,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.25562916079908227,
+       "avg_price@10": 38.41499710083008,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 76.11757798360941,
+       "exp_margin@10": 32.071668442137764,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.18978266420898113,
+       "avg_price@10": 34.58799743652344,
+       "pref_brand_share@10": 0.2,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 81.29882824448556,
+       "exp_margin@10": 38.93329903033231,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.11109986538098522,
+       "avg_price@10": 37.44199752807617,
+       "pref_brand_share@10": 0.1,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 94.11786760836162,
+       "exp_margin@10": 53.44795119827582,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.09533797887352995,
+       "avg_price@10": 42.89099884033203,
+       "pref_brand_share@10": 0.1,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 91.73528703974739,
+       "exp_margin@10": 50.66632619776084,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.10236545700571967,
+       "avg_price@10": 40.198997497558594,
+       "pref_brand_share@10": 0.1,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 22.55,
+      "retrieval_ms": 7.98,
+      "feature_ms": 1.1,
+      "ranking_ms": 38.67,
+      "rerank_ms": 3.65,
+      "total_ms": 74.0
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Aeroflux AT-5543 Moisture-Wicking Seamless Performance Tee - Blush Pink",
+       "price": 43.58000183105469,
+       "margin_pct": 65.6,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 10.323,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Cobalt & Co AT-1071 Moisture-Wicking Seamless Performance Tee - Sand",
+       "price": 35.779998779296875,
+       "margin_pct": 63.1,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 9.136,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Aeroflux AT-7994 Seamless Moisture-Wicking Performance Tee - Cobalt Blue",
+       "price": 38.130001068115234,
+       "margin_pct": 70.8,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 10.269,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "Lumora AT-8675 Anti-Odor Moisture-Wicking Athletic T-Shirt - Black",
+       "price": 50.43000030517578,
+       "margin_pct": 57.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 9.585,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Aeroflux AT-8713 Moisture-Wicking Athletic T-Shirt - Olive",
+       "price": 40.939998626708984,
+       "margin_pct": 66.2,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 8.646,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    },
+    {
+     "label": "office chic heels",
+     "query": "office chic heels",
+     "user": "U00033",
+     "store": "S3",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "office chic heels",
+      "edits": [],
+      "intent": "attribute_specific",
+      "intent_conf": 0.9669152966719341,
+      "facet_accuracy": 1.0,
+      "ms": 22.09489999950165
+     },
+     "stage2": {
+      "n_rel": 354,
+      "n_found": 135,
+      "recall200": {
+       "sparse": 0.925,
+       "dense": 0.52,
+       "hybrid": 0.675
+      },
+      "ms": 6.943300002603792
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 190,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 10
+      },
+      "high_return_flagged": 60,
+      "low_stock_flagged": 10
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 145.1422356224487,
+       "exp_margin@10": 49.6680322831865,
+       "unfulfillable@10": 1,
+       "avg_return_prob@10": 0.22308493624057807,
+       "avg_price@10": 102.53299713134766,
+       "pref_brand_share@10": 0.2,
+       "cold_in_top10": 2,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 301.2777483938234,
+       "exp_margin@10": 100.85013286543342,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.22986091944662182,
+       "avg_price@10": 119.47599029541016,
+       "pref_brand_share@10": 0.4,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 218.87418747081406,
+       "exp_margin@10": 78.99477773932232,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.13939389078074146,
+       "avg_price@10": 95.24200439453125,
+       "pref_brand_share@10": 0.4,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 269.80103120440054,
+       "exp_margin@10": 125.48212032067663,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.09015248857988795,
+       "avg_price@10": 124.5669937133789,
+       "pref_brand_share@10": 0.1,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 268.9508919668376,
+       "exp_margin@10": 124.80832268054738,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.09015248857988796,
+       "avg_price@10": 124.56700134277344,
+       "pref_brand_share@10": 0.1,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 20.41,
+      "retrieval_ms": 6.99,
+      "feature_ms": 0.96,
+      "ranking_ms": 35.84,
+      "rerank_ms": 3.44,
+      "total_ms": 67.67
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Kestrel H-2446 Block Heel Stiletto Dress Pumps - Black",
+       "price": 104.54000091552734,
+       "margin_pct": 50.3,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 23.816,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "TerraPeak H-6207 Cushioned Insole Block Heel Dress Pumps - White",
+       "price": 165.5800018310547,
+       "margin_pct": 55.4,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 32.896,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Marlow H-6818 Block Heel Stiletto Dress Pumps - Storm Gray",
+       "price": 124.68000030517578,
+       "margin_pct": 33.3,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 18.27,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "Nordhaven H-6923 Cushioned Insole Block Heel Dress Pumps - Sand",
+       "price": 179.86000061035156,
+       "margin_pct": 52.4,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 31.296,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "TerraPeak H-1806 Cushioned Insole Stiletto Dress Pumps - Navy",
+       "price": 83.30000305175781,
+       "margin_pct": 59.2,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 17.501,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    },
+    {
+     "label": "warm winter puffer",
+     "query": "warm winter puffer",
+     "user": "U00045",
+     "store": "S4",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "warm winter puffer",
+      "edits": [],
+      "intent": "attribute_specific",
+      "intent_conf": 0.9963510501097245,
+      "facet_accuracy": 1.0,
+      "ms": 20.419100001163315
+     },
+     "stage2": {
+      "n_rel": 309,
+      "n_found": 167,
+      "recall200": {
+       "sparse": 0.915,
+       "dense": 0.715,
+       "hybrid": 0.835
+      },
+      "ms": 7.186900002125185
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 189,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 11
+      },
+      "high_return_flagged": 29,
+      "low_stock_flagged": 12
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 196.82767165433512,
+       "exp_margin@10": 88.40367760127106,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.13303293931838928,
+       "avg_price@10": 205.12399291992188,
+       "pref_brand_share@10": 0.4,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 328.57871719993295,
+       "exp_margin@10": 155.5681736352206,
+       "unfulfillable@10": 1,
+       "avg_return_prob@10": 0.15735474824773657,
+       "avg_price@10": 196.8000030517578,
+       "pref_brand_share@10": 0.5,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 328.53975260570456,
+       "exp_margin@10": 166.47414295908195,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.10627920558305862,
+       "avg_price@10": 195.59201049804688,
+       "pref_brand_share@10": 0.6,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 434.6441210565863,
+       "exp_margin@10": 227.74163933253132,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.11182897285603469,
+       "avg_price@10": 236.0,
+       "pref_brand_share@10": 0.4,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 435.25627541071935,
+       "exp_margin@10": 228.06531985513297,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.11182897285603469,
+       "avg_price@10": 236.0,
+       "pref_brand_share@10": 0.4,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 20.95,
+      "retrieval_ms": 7.36,
+      "feature_ms": 0.88,
+      "ranking_ms": 35.63,
+      "rerank_ms": 3.4,
+      "total_ms": 68.25
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Nordhaven PJ-4591 Insulated Down Packable Insulated Puffer Coat - Forest Green",
+       "price": 316.70001220703125,
+       "margin_pct": 65.2,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 62.506,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "TerraPeak PJ-8889 Insulated Down Hooded Insulated Puffer Coat - Blush Pink",
+       "price": 293.760009765625,
+       "margin_pct": 58.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 48.822,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Nordhaven PJ-3000 Packable Insulated Down Insulated Puffer Coat - White",
+       "price": 263.95001220703125,
+       "margin_pct": 57.6,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 43.414,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "TerraPeak PJ-4077 Packable Insulated Down Insulated Puffer Coat - Navy",
+       "price": 382.6700134277344,
+       "margin_pct": 54.8,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 47.944,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Nordhaven PJ-2280 Insulated Down Water-Repellent Insulated Puffer Coat - Storm Gray",
+       "price": 212.07000732421875,
+       "margin_pct": 53.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 31.284,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    }
+   ]
+  },
+  {
+   "id": "typo_price",
+   "title": "2 \u00b7 Typos + price constraint",
+   "blurb": "Misspellings are fixed against catalog vocabulary and 'under $N' becomes a hard price filter.",
+   "n_examples": 4,
+   "stages": {
+    "A retrieval order": {
+     "ndcg@10": 0.7242883513304135,
+     "precision@10": 0.47500000000000003,
+     "exp_revenue@10": 93.99989592880272,
+     "exp_margin@10": 33.009407760477046,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.21760715920768836
+    },
+    "B + LTR ensemble": {
+     "ndcg@10": 0.8626435195910057,
+     "precision@10": 0.825,
+     "exp_revenue@10": 145.60856541994355,
+     "exp_margin@10": 60.87876190036894,
+     "unfulfillable@10": 0.75,
+     "avg_return_prob@10": 0.19184992963400285
+    },
+    "C + hard rules & penalties": {
+     "ndcg@10": 0.9124565889087581,
+     "precision@10": 0.925,
+     "exp_revenue@10": 132.8398680915506,
+     "exp_margin@10": 57.40474197877587,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.154178546463454
+    },
+    "D + margin re-rank": {
+     "ndcg@10": 0.9121533753900283,
+     "precision@10": 0.8999999999999999,
+     "exp_revenue@10": 137.4364539190153,
+     "exp_margin@10": 61.86298135972019,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.14846092218532075
+    },
+    "E + MMR (final page)": {
+     "ndcg@10": 0.9106298685375345,
+     "precision@10": 0.8999999999999999,
+     "exp_revenue@10": 138.00196398093243,
+     "exp_margin@10": 62.89912650626614,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.14614980692812235
+    }
+   },
+   "stage1_ms": 19.472149997454835,
+   "facet_accuracy": 1.0,
+   "recall200": {
+    "sparse": 0.48024644223327395,
+    "dense": 0.425175083227486,
+    "hybrid": 0.4867304929214977
+   },
+   "recall50": {
+    "sparse": 0.37,
+    "dense": 0.37,
+    "hybrid": 0.33
+   },
+   "latency_total": 65.44,
+   "models": {
+    "xgb_pointwise": {
+     "B": {
+      "ndcg@10": 0.8562370558579308,
+      "exp_revenue@10": 157.00077188317854,
+      "exp_margin@10": 67.37211655925219
+     },
+     "E": {
+      "ndcg@10": 0.9247666836043281,
+      "exp_revenue@10": 143.35938985837947,
+      "exp_margin@10": 64.89377281345445
+     }
+    },
+    "lgbm_pointwise": {
+     "B": {
+      "ndcg@10": 0.7691872603288887,
+      "exp_revenue@10": 163.87672039964178,
+      "exp_margin@10": 73.22602032863527
+     },
+     "E": {
+      "ndcg@10": 0.9081057552070501,
+      "exp_revenue@10": 137.06531569304576,
+      "exp_margin@10": 62.50923860077217
+     }
+    },
+    "xgb_pairwise": {
+     "B": {
+      "ndcg@10": 0.8556971415954857,
+      "exp_revenue@10": 158.34266785393567,
+      "exp_margin@10": 69.24008007906943
+     },
+     "E": {
+      "ndcg@10": 0.9230812406775069,
+      "exp_revenue@10": 137.20258250884868,
+      "exp_margin@10": 62.412147113856065
+     }
+    },
+    "lgbm_lambdamart": {
+     "B": {
+      "ndcg@10": 0.8751443124504835,
+      "exp_revenue@10": 142.38376298316837,
+      "exp_margin@10": 59.137707845878886
+     },
+     "E": {
+      "ndcg@10": 0.9126967071220909,
+      "exp_revenue@10": 131.83315493630224,
+      "exp_margin@10": 60.00070704894817
+     }
+    },
+    "cat_yetirank": {
+     "B": {
+      "ndcg@10": 0.8858084134208578,
+      "exp_revenue@10": 143.29462173778828,
+      "exp_margin@10": 61.035083363446645
+     },
+     "E": {
+      "ndcg@10": 0.9121533753900284,
+      "exp_revenue@10": 136.07645221093247,
+      "exp_margin@10": 61.11709287413737
+     }
+    },
+    "xgb_listwise": {
+     "B": {
+      "ndcg@10": 0.8260381396639869,
+      "exp_revenue@10": 136.35155525555172,
+      "exp_margin@10": 56.22318799680326
+     },
+     "E": {
+      "ndcg@10": 0.9010234868552063,
+      "exp_revenue@10": 132.32083721616684,
+      "exp_margin@10": 59.86050598848578
+     }
+    },
+    "torch_listnet": {
+     "B": {
+      "ndcg@10": 0.8565612208677821,
+      "exp_revenue@10": 143.61499391120222,
+      "exp_margin@10": 57.973029838497226
+     },
+     "E": {
+      "ndcg@10": 0.9156655386880731,
+      "exp_revenue@10": 139.21820763950612,
+      "exp_margin@10": 62.702188127107775
+     }
+    },
+    "dcnv2": {
+     "B": {
+      "ndcg@10": 0.8963502061188156,
+      "exp_revenue@10": 143.75240911692788,
+      "exp_margin@10": 58.129237327253506
+     },
+     "E": {
+      "ndcg@10": 0.9499319696621917,
+      "exp_revenue@10": 146.20375738781644,
+      "exp_margin@10": 65.26841480627431
+     }
+    },
+    "ensemble": {
+     "B": {
+      "ndcg@10": 0.8626435195910057,
+      "exp_revenue@10": 145.60856541994355,
+      "exp_margin@10": 60.87876190036894
+     },
+     "E": {
+      "ndcg@10": 0.9106298685375345,
+      "exp_revenue@10": 138.00196398093243,
+      "exp_margin@10": 62.89912650626614
+     }
+    }
+   },
+   "examples": [
+    {
+     "label": "gortex snekers under $100",
+     "query": "gortex snekers under $100",
+     "user": "U00012",
+     "store": "S1",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "gore-tex sneakers under $100",
+      "edits": [
+       [
+        "gortex",
+        "gore-tex"
+       ],
+       [
+        "snekers",
+        "sneakers"
+       ]
+      ],
+      "intent": "attribute_specific",
+      "intent_conf": 0.9959136763004655,
+      "facet_accuracy": 1.0,
+      "ms": 18.307099999219645
+     },
+     "stage2": {
+      "n_rel": 59,
+      "n_found": 29,
+      "recall200": {
+       "sparse": 0.4915254237288136,
+       "dense": 0.3389830508474576,
+       "hybrid": 0.4915254237288136
+      },
+      "ms": 7.205499998235609
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 38,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 14,
+       "over_price_constraint": 148
+      },
+      "high_return_flagged": 54,
+      "low_stock_flagged": 14
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 0.5708047582986255,
+       "precision@10": 0.2,
+       "exp_revenue@10": 87.61973189230544,
+       "exp_margin@10": 30.732705304125375,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.21632761918810126,
+       "avg_price@10": 114.92799377441406,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 2,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 0.8163385452814882,
+       "precision@10": 0.7,
+       "exp_revenue@10": 186.67176590553328,
+       "exp_margin@10": 83.83032223763915,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.16027617254526053,
+       "avg_price@10": 101.21400451660156,
+       "pref_brand_share@10": 0.2,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 0.932801483732564,
+       "precision@10": 0.9,
+       "exp_revenue@10": 165.81142466491198,
+       "exp_margin@10": 71.55258631717632,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.14968873112519665,
+       "avg_price@10": 91.19400024414062,
+       "pref_brand_share@10": 0.2,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 0.918752830540385,
+       "precision@10": 0.9,
+       "exp_revenue@10": 161.21725521950663,
+       "exp_margin@10": 70.46451848676409,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.14510934123706665,
+       "avg_price@10": 92.66200256347656,
+       "pref_brand_share@10": 0.2,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 0.918752830540385,
+       "precision@10": 0.9,
+       "exp_revenue@10": 161.21725521950663,
+       "exp_margin@10": 70.46451848676409,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.14510934123706665,
+       "avg_price@10": 92.66200256347656,
+       "pref_brand_share@10": 0.2,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 18.42,
+      "retrieval_ms": 7.15,
+      "feature_ms": 1.04,
+      "ranking_ms": 34.69,
+      "rerank_ms": 1.11,
+      "total_ms": 62.46
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Nordhaven TR-8903 Breathable Mesh Gore-Tex Waterproof Trail Running Sneakers - Forest Green",
+       "price": 92.19999694824219,
+       "margin_pct": 47.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 20.619,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Aeroflux TR-4890 Rock Plate Gore-Tex Waterproof Trail Running Sneakers - Olive",
+       "price": 99.12999725341797,
+       "margin_pct": 52.7,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 20.249,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Pinecrest TR-8254 Breathable Mesh Gore-Tex Waterproof Trail Running Sneakers - Forest Green",
+       "price": 93.66999816894531,
+       "margin_pct": 47.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 16.621,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "Aeroflux TR-7950 Lug-Sole Grip Rock Plate Trail Running Sneakers - White",
+       "price": 92.69999694824219,
+       "margin_pct": 47.8,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 17.655,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Cobalt & Co TR-7042 Gore-Tex Waterproof Breathable Mesh Trail Running Sneakers - Storm Gray",
+       "price": 88.2300033569336,
+       "margin_pct": 44.0,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 14.272,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    },
+    {
+     "label": "breathble gym tee under $30",
+     "query": "breathble gym tee under $30",
+     "user": "U00021",
+     "store": "S5",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "breathable gym tee under $30",
+      "edits": [
+       [
+        "breathble",
+        "breathable"
+       ]
+      ],
+      "intent": "attribute_specific",
+      "intent_conf": 0.998376611139935,
+      "facet_accuracy": 1.0,
+      "ms": 21.113499999046326
+     },
+     "stage2": {
+      "n_rel": 115,
+      "n_found": 55,
+      "recall200": {
+       "sparse": 0.45217391304347826,
+       "dense": 0.43478260869565216,
+       "hybrid": 0.4782608695652174
+      },
+      "ms": 7.465700000466313
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 56,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 11,
+       "over_price_constraint": 133
+      },
+      "high_return_flagged": 111,
+      "low_stock_flagged": 12
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 0.655538397064801,
+       "precision@10": 0.4,
+       "exp_revenue@10": 23.137319647907145,
+       "exp_margin@10": 9.172400167029963,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.24763173264866462,
+       "avg_price@10": 36.06100082397461,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 0.9636452638863133,
+       "precision@10": 0.9,
+       "exp_revenue@10": 42.29837185886662,
+       "exp_margin@10": 17.074529792372978,
+       "unfulfillable@10": 1,
+       "avg_return_prob@10": 0.1922452136009452,
+       "avg_price@10": 29.417001724243164,
+       "pref_brand_share@10": 0.1,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 37.74146037224228,
+       "exp_margin@10": 15.750566035871532,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.15056127130929656,
+       "avg_price@10": 26.83099937438965,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 38.21469103390811,
+       "exp_margin@10": 16.441512323593,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.15249744148484728,
+       "avg_price@10": 27.006999969482422,
+       "pref_brand_share@10": 0.1,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 38.5895248404069,
+       "exp_margin@10": 16.53098322267025,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.14479037797094155,
+       "avg_price@10": 26.725000381469727,
+       "pref_brand_share@10": 0.1,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 21.02,
+      "retrieval_ms": 7.64,
+      "feature_ms": 1.04,
+      "ranking_ms": 36.81,
+      "rerank_ms": 1.37,
+      "total_ms": 67.92
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Bluebird AT-6592 Moisture-Wicking Seamless Performance Tee - Crimson",
+       "price": 29.110000610351562,
+       "margin_pct": 45.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 3.954,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Stridewell AT-5172 Seamless Moisture-Wicking Performance Tee - White",
+       "price": 28.540000915527344,
+       "margin_pct": 54.5,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 3.758,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Everyday Basics AT-2951 Uv Protection Moisture-Wicking Performance Tee - White",
+       "price": 24.329999923706055,
+       "margin_pct": 45.4,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 3.066,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "Stridewell AT-3010 Moisture-Wicking Anti-Odor Performance Tee - Forest Green",
+       "price": 22.329999923706055,
+       "margin_pct": 58.0,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 3.2,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Stridewell AT-7550 Uv Protection Moisture-Wicking Performance Tee - Storm Gray",
+       "price": 26.670000076293945,
+       "margin_pct": 48.5,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 2.942,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    },
+    {
+     "label": "warm pufer jaket below $200",
+     "query": "warm pufer jaket below $200",
+     "user": "U00046",
+     "store": "S3",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "warm puffer jacket below $200",
+      "edits": [
+       [
+        "pufer",
+        "puffer"
+       ],
+       [
+        "jaket",
+        "jacket"
+       ]
+      ],
+      "intent": "attribute_specific",
+      "intent_conf": 0.9974393355905936,
+      "facet_accuracy": 1.0,
+      "ms": 20.566499995766208
+     },
+     "stage2": {
+      "n_rel": 199,
+      "n_found": 85,
+      "recall200": {
+       "sparse": 0.457286432160804,
+       "dense": 0.3869346733668342,
+       "hybrid": 0.4271356783919598
+      },
+      "ms": 7.429599994793534
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 128,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 8,
+       "over_price_constraint": 64
+      },
+      "high_return_flagged": 26,
+      "low_stock_flagged": 8
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 0.894456970601414,
+       "precision@10": 0.8,
+       "exp_revenue@10": 211.3594939060915,
+       "exp_margin@10": 70.70002311769406,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.17049792197384936,
+       "avg_price@10": 165.35299682617188,
+       "pref_brand_share@10": 1.0,
+       "cold_in_top10": 2,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 0.6705902691962214,
+       "precision@10": 0.7,
+       "exp_revenue@10": 265.3714958905841,
+       "exp_margin@10": 105.67374628871956,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.23361075687270927,
+       "avg_price@10": 159.93301391601562,
+       "pref_brand_share@10": 0.8,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 0.7170248719024683,
+       "precision@10": 0.8,
+       "exp_revenue@10": 244.20163807494671,
+       "exp_margin@10": 103.38658718560366,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.17173588323957462,
+       "avg_price@10": 149.10400390625,
+       "pref_brand_share@10": 0.7,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 0.7298606710197283,
+       "precision@10": 0.7,
+       "exp_revenue@10": 262.371674252455,
+       "exp_margin@10": 116.54320203481133,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.17794953551778556,
+       "avg_price@10": 155.28500366210938,
+       "pref_brand_share@10": 0.7,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 0.7237666436097532,
+       "precision@10": 0.7,
+       "exp_revenue@10": 265.7075851167997,
+       "exp_margin@10": 121.31026893147593,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.16928393169142533,
+       "avg_price@10": 160.67999267578125,
+       "pref_brand_share@10": 0.6,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 20.1,
+      "retrieval_ms": 7.35,
+      "feature_ms": 0.92,
+      "ranking_ms": 35.31,
+      "rerank_ms": 2.58,
+      "total_ms": 66.29
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "TerraPeak PJ-6849 Packable Insulated Down Down Puffer Jacket - Black",
+       "price": 167.41000366210938,
+       "margin_pct": 57.6,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 43.387,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "ValueLoop PJ-7205 Packable Hooded Insulated Puffer Coat - Charcoal",
+       "price": 163.47000122070312,
+       "margin_pct": 45.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 30.519,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "ValueLoop PJ-5035 Hooded Packable Insulated Puffer Coat - White",
+       "price": 143.5800018310547,
+       "margin_pct": 51.2,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 24.683,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "Kestrel PJ-6502 Packable Insulated Down Down Puffer Jacket - Burgundy",
+       "price": 158.49000549316406,
+       "margin_pct": 54.3,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 27.309,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "ValueLoop PJ-2225 Insulated Down Packable Down Puffer Jacket - Burgundy",
+       "price": 194.11000061035156,
+       "margin_pct": 42.1,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 26.356,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    },
+    {
+     "label": "legings with pockets under $60",
+     "query": "legings with pockets under $60",
+     "user": "U00058",
+     "store": "S2",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "leggings with pockets under $60",
+      "edits": [
+       [
+        "legings",
+        "leggings"
+       ]
+      ],
+      "intent": "attribute_specific",
+      "intent_conf": 0.9960292804155068,
+      "facet_accuracy": 1.0,
+      "ms": 17.901499995787162
+     },
+     "stage2": {
+      "n_rel": 260,
+      "n_found": 110,
+      "recall200": {
+       "sparse": 0.52,
+       "dense": 0.54,
+       "hybrid": 0.55
+      },
+      "ms": 7.380700000794604
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 117,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 12,
+       "over_price_constraint": 71
+      },
+      "high_return_flagged": 107,
+      "low_stock_flagged": 15
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 0.7763532793568138,
+       "precision@10": 0.5,
+       "exp_revenue@10": 53.88303826890675,
+       "exp_margin@10": 21.4325024530588,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.23597136302013827,
+       "avg_price@10": 63.24500274658203,
+       "pref_brand_share@10": 0.2,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 88.09262802479016,
+       "exp_margin@10": 36.93644928274408,
+       "unfulfillable@10": 2,
+       "avg_return_prob@10": 0.1812675755170964,
+       "avg_price@10": 50.5,
+       "pref_brand_share@10": 0.4,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 83.60494925410146,
+       "exp_margin@10": 38.92922837645195,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.14472830017974816,
+       "avg_price@10": 50.63399887084961,
+       "pref_brand_share@10": 0.3,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 87.94219517019141,
+       "exp_margin@10": 44.00269259371235,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.1182873705015836,
+       "avg_price@10": 54.54999923706055,
+       "pref_brand_share@10": 0.3,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 86.49349074701647,
+       "exp_margin@10": 43.29073538415429,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.1254155768130559,
+       "avg_price@10": 52.592002868652344,
+       "pref_brand_share@10": 0.3,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 18.78,
+      "retrieval_ms": 7.76,
+      "feature_ms": 0.98,
+      "ranking_ms": 35.2,
+      "rerank_ms": 2.34,
+      "total_ms": 65.09
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Aeroflux L-2185 Pockets High-Waisted Yoga Leggings - Forest Green",
+       "price": 48.45000076293945,
+       "margin_pct": 66.4,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 10.588,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Cobalt & Co L-2666 High-Waisted Pockets Yoga Leggings - Olive",
+       "price": 53.720001220703125,
+       "margin_pct": 57.6,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 9.699,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Marlow L-8928 High-Waisted Pockets Training Leggings - Cobalt Blue",
+       "price": 59.04999923706055,
+       "margin_pct": 47.8,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 9.678,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "Aeroflux L-5432 High-Waisted Pockets Yoga Leggings - Sand",
+       "price": 57.15999984741211,
+       "margin_pct": 50.4,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 9.023,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Quillon L-1674 Pockets Squat-Proof Opaque Yoga Leggings - Charcoal",
+       "price": 54.0,
+       "margin_pct": 55.1,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 8.15,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    }
+   ]
+  },
+  {
+   "id": "navigational",
+   "title": "3 \u00b7 Navigational (brand) intent",
+   "blurb": "Brand-led queries: the intent classifier flags navigational intent, brand features dominate, and the brand diversity cap is lifted.",
+   "n_examples": 4,
+   "stages": {
+    "A retrieval order": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 187.11274076471187,
+     "exp_margin@10": 70.66934305998794,
+     "unfulfillable@10": 0.5,
+     "avg_return_prob@10": 0.112434125288964
+    },
+    "B + LTR ensemble": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 281.13460102635287,
+     "exp_margin@10": 117.73407602425692,
+     "unfulfillable@10": 0.5,
+     "avg_return_prob@10": 0.09730390403883632
+    },
+    "C + hard rules & penalties": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 279.7553455509239,
+     "exp_margin@10": 119.02208394412885,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.08639994463960428
+    },
+    "D + margin re-rank": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 386.35705058236465,
+     "exp_margin@10": 167.28424904006113,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.07969772514032214
+    },
+    "E + MMR (final page)": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 387.2583477080375,
+     "exp_margin@10": 165.96108142089696,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.08187950639560838
+    }
+   },
+   "stage1_ms": 17.10102500146604,
+   "facet_accuracy": 1.0,
+   "recall200": {
+    "sparse": 0.98,
+    "dense": 0.9802534965034966,
+    "hybrid": 0.985
+   },
+   "recall50": {
+    "sparse": 0.94,
+    "dense": 0.9199999999999999,
+    "hybrid": 0.9349999999999999
+   },
+   "latency_total": 64.385,
+   "models": {
+    "xgb_pointwise": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 285.517168472747,
+      "exp_margin@10": 119.08337503085633
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 383.15432727713636,
+      "exp_margin@10": 165.05426364830208
+     }
+    },
+    "lgbm_pointwise": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 280.94789964162396,
+      "exp_margin@10": 119.91509514458451
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 379.1466552806172,
+      "exp_margin@10": 163.53832402472105
+     }
+    },
+    "xgb_pairwise": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 298.9707038228461,
+      "exp_margin@10": 125.88435988596147
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 381.23720590090755,
+      "exp_margin@10": 163.46152495635505
+     }
+    },
+    "lgbm_lambdamart": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 266.1497957784154,
+      "exp_margin@10": 111.5454292594954
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 374.465067907029,
+      "exp_margin@10": 159.88654322684565
+     }
+    },
+    "cat_yetirank": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 259.8101732735252,
+      "exp_margin@10": 107.478674861685
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 375.91927324642506,
+      "exp_margin@10": 160.20506986779753
+     }
+    },
+    "xgb_listwise": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 256.8355022345249,
+      "exp_margin@10": 109.14729026196468
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 374.16891506804484,
+      "exp_margin@10": 159.79452818414725
+     }
+    },
+    "torch_listnet": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 338.6903585488419,
+      "exp_margin@10": 140.88404344353748
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 403.0842186002714,
+      "exp_margin@10": 172.43393903039888
+     }
+    },
+    "dcnv2": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 295.64850387878124,
+      "exp_margin@10": 112.3011505222253
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 368.3594135662286,
+      "exp_margin@10": 150.38691201134935
+     }
+    },
+    "ensemble": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 281.13460102635287,
+      "exp_margin@10": 117.73407602425692
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 387.2583477080375,
+      "exp_margin@10": 165.96108142089696
+     }
+    }
+   },
+   "examples": [
+    {
+     "label": "aeroflux running shoes",
+     "query": "aeroflux running shoes",
+     "user": "U00005",
+     "store": "S1",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "aeroflux running shoes",
+      "edits": [],
+      "intent": "navigational",
+      "intent_conf": 0.6325310200044592,
+      "facet_accuracy": 1.0,
+      "ms": 17.530500001157634
+     },
+     "stage2": {
+      "n_rel": 143,
+      "n_found": 143,
+      "recall200": {
+       "sparse": 1.0,
+       "dense": 0.986013986013986,
+       "hybrid": 1.0
+      },
+      "ms": 7.180300002801232
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 191,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 9
+      },
+      "high_return_flagged": 53,
+      "low_stock_flagged": 10
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 168.77583593355158,
+       "exp_margin@10": 69.71032155342965,
+       "unfulfillable@10": 2,
+       "avg_return_prob@10": 0.21067958540010073,
+       "avg_price@10": 163.27200317382812,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 178.736299809043,
+       "exp_margin@10": 83.64132707505863,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.14584481027933524,
+       "avg_price@10": 92.64500427246094,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 178.736299809043,
+       "exp_margin@10": 83.64132707505863,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.14584481027933524,
+       "avg_price@10": 92.64500427246094,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 258.64715612688286,
+       "exp_margin@10": 126.50658085743031,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.13844646779895353,
+       "avg_price@10": 139.718994140625,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 258.64715612688286,
+       "exp_margin@10": 126.50658085743031,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.13844646779895353,
+       "avg_price@10": 139.718994140625,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 16.84,
+      "retrieval_ms": 7.05,
+      "feature_ms": 0.97,
+      "ranking_ms": 36.01,
+      "rerank_ms": 1.25,
+      "total_ms": 62.15
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Aeroflux RR-5952 Lightweight Carbon Plate Road Running Sneakers - Olive",
+       "price": 124.5999984741211,
+       "margin_pct": 52.0,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 25.989,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Aeroflux TR-2259 Lug-Sole Grip Trail Running Shoes - White",
+       "price": 206.3800048828125,
+       "margin_pct": 59.5,
+       "cold": false,
+       "route": "bopis:S1",
+       "E_profit": 33.44,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Aeroflux RR-8407 Max Cushion Carbon Plate Road Running Sneakers - Olive",
+       "price": 228.75999450683594,
+       "margin_pct": 54.9,
+       "cold": false,
+       "route": "bopis:S1",
+       "E_profit": 31.443,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "Aeroflux RR-7817 Carbon Plate Max Cushion Running Shoes - Olive",
+       "price": 103.37000274658203,
+       "margin_pct": 59.0,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 22.893,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Aeroflux RR-7504 Lightweight Max Cushion Road Running Sneakers - White",
+       "price": 106.2699966430664,
+       "margin_pct": 51.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 19.748,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    },
+    {
+     "label": "terrapeak jackets",
+     "query": "terrapeak jackets",
+     "user": "U00014",
+     "store": "S4",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "terrapeak jackets",
+      "edits": [],
+      "intent": "attribute_specific",
+      "intent_conf": 0.668965546647693,
+      "facet_accuracy": 1.0,
+      "ms": 17.081900004995987
+     },
+     "stage2": {
+      "n_rel": 278,
+      "n_found": 188,
+      "recall200": {
+       "sparse": 0.92,
+       "dense": 0.935,
+       "hybrid": 0.94
+      },
+      "ms": 7.306300001800992
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 192,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 8
+      },
+      "high_return_flagged": 32,
+      "low_stock_flagged": 8
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 178.79622977942958,
+       "exp_margin@10": 79.41204891295928,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.12503813839595823,
+       "avg_price@10": 99.91300201416016,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 403.2071452251945,
+       "exp_margin@10": 201.09669140687456,
+       "unfulfillable@10": 1,
+       "avg_return_prob@10": 0.12933890187865202,
+       "avg_price@10": 170.57699584960938,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 390.5328817194304,
+       "exp_margin@10": 205.13139397084436,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.08867594007484757,
+       "avg_price@10": 173.93299865722656,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 546.0752722230762,
+       "exp_margin@10": 288.65175872989835,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.09083103346581056,
+       "avg_price@10": 235.7580108642578,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 537.0723755534376,
+       "exp_margin@10": 279.89122077683635,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.09083103346581056,
+       "avg_price@10": 235.7580108642578,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 16.6,
+      "retrieval_ms": 7.13,
+      "feature_ms": 1.09,
+      "ranking_ms": 35.67,
+      "rerank_ms": 1.3,
+      "total_ms": 61.82
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "TerraPeak PJ-9346 Hooded Insulated Down Down Puffer Jacket - Forest Green",
+       "price": 289.3399963378906,
+       "margin_pct": 54.7,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 62.72,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "TerraPeak RJ-1009 Waterproof Breathable Pit Zips Rain Jacket - Navy",
+       "price": 195.97000122070312,
+       "margin_pct": 54.3,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 49.977,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "TerraPeak PJ-6540 Insulated Down Down Puffer Jacket - Forest Green",
+       "price": 388.510009765625,
+       "margin_pct": 64.6,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 80.651,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "TerraPeak PJ-6849 Packable Insulated Down Down Puffer Jacket - Black",
+       "price": 167.41000366210938,
+       "margin_pct": 57.6,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 45.294,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "TerraPeak PJ-7725 Insulated Down Packable Down Puffer Jacket - Blush Pink",
+       "price": 306.45001220703125,
+       "margin_pct": 57.7,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 61.289,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    },
+    {
+     "label": "hearthly bedding",
+     "query": "hearthly bedding",
+     "user": "U00027",
+     "store": "S5",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "hearthly bedding",
+      "edits": [],
+      "intent": "attribute_specific",
+      "intent_conf": 0.9356995032701353,
+      "facet_accuracy": 1.0,
+      "ms": 16.980899999907706
+     },
+     "stage2": {
+      "n_rel": 78,
+      "n_found": 78,
+      "recall200": {
+       "sparse": 1.0,
+       "dense": 1.0,
+       "hybrid": 1.0
+      },
+      "ms": 6.876799998281058
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 195,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 5
+      },
+      "high_return_flagged": 3,
+      "low_stock_flagged": 5
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 162.78294376456643,
+       "exp_margin@10": 60.26675205933812,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.08199021255073957,
+       "avg_price@10": 126.43099212646484,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 252.33540637927678,
+       "exp_margin@10": 97.3705719892848,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.08059013393025502,
+       "avg_price@10": 116.51200103759766,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 252.33540637927678,
+       "exp_margin@10": 97.3705719892848,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.08059013393025502,
+       "avg_price@10": 116.51200103759766,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 283.4840781369028,
+       "exp_margin@10": 114.41864946800335,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.06197743778572973,
+       "avg_price@10": 134.85400390625,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 283.3318885333007,
+       "exp_margin@10": 114.33196932154281,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.06197743778572973,
+       "avg_price@10": 134.85400390625,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 17.22,
+      "retrieval_ms": 7.06,
+      "feature_ms": 0.96,
+      "ranking_ms": 40.42,
+      "rerank_ms": 2.36,
+      "total_ms": 68.06
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Hearthly BS-3132 Cooling High Thread Count Duvet Cover Set - Olive",
+       "price": 156.19000244140625,
+       "margin_pct": 39.6,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 28.98,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Hearthly BS-6190 Organic Cotton Cooling Duvet Cover Set - Blush Pink",
+       "price": 139.92999267578125,
+       "margin_pct": 38.4,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 20.103,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Hearthly BS-1970 Organic Cotton Cooling Duvet Cover Set - Black",
+       "price": 154.25999450683594,
+       "margin_pct": 53.0,
+       "cold": true,
+       "route": "ship",
+       "E_profit": 26.793,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "Hearthly BS-9239 Organic Cotton High Thread Count Duvet Cover Set - White",
+       "price": 208.1699981689453,
+       "margin_pct": 47.0,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 29.41,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Hearthly BS-3350 Cooling High Thread Count Cotton Sheet Set - Charcoal",
+       "price": 106.58000183105469,
+       "margin_pct": 47.2,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 17.92,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    },
+    {
+     "label": "voltra headphones",
+     "query": "voltra headphones",
+     "user": "U00039",
+     "store": "S2",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "voltra headphones",
+      "edits": [],
+      "intent": "navigational",
+      "intent_conf": 0.595763652027203,
+      "facet_accuracy": 1.0,
+      "ms": 16.81079999980284
+     },
+     "stage2": {
+      "n_rel": 64,
+      "n_found": 64,
+      "recall200": {
+       "sparse": 1.0,
+       "dense": 1.0,
+       "hybrid": 1.0
+      },
+      "ms": 7.090700004482642
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 191,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 9
+      },
+      "high_return_flagged": 2,
+      "low_stock_flagged": 11
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 238.09595358129985,
+       "exp_margin@10": 73.28824971422472,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.03202856480905747,
+       "avg_price@10": 157.05999755859375,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 290.2595526918972,
+       "exp_margin@10": 88.82771362580966,
+       "unfulfillable@10": 1,
+       "avg_return_prob@10": 0.03344177006710304,
+       "avg_price@10": 164.24600219726562,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 297.41679429594546,
+       "exp_margin@10": 89.94504274132765,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.030488894273979317,
+       "avg_price@10": 165.51699829101562,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 457.2216958425969,
+       "exp_margin@10": 139.5600071049125,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.027535961510794717,
+       "avg_price@10": 198.52000427246094,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 469.98197061852903,
+       "exp_margin@10": 143.1145547277784,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.036263086531939694,
+       "avg_price@10": 218.2779998779297,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 18.19,
+      "retrieval_ms": 7.43,
+      "feature_ms": 1.01,
+      "ranking_ms": 36.67,
+      "rerank_ms": 2.17,
+      "total_ms": 65.51
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Voltra H-1744 Water-Resistant Active Noise-Cancelling Over-Ear Headphones - Sand",
+       "price": 404.44000244140625,
+       "margin_pct": 30.1,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 39.704,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Voltra H-7829 Active Noise-Cancelling Water-Resistant Over-Ear Headphones - Burgundy",
+       "price": 305.1700134277344,
+       "margin_pct": 30.1,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 33.367,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Voltra H-9362 Active Noise-Cancelling 30 Hour Battery Wireless Headphones - Blush Pink",
+       "price": 131.52000427246094,
+       "margin_pct": 36.8,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 22.433,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "Voltra H-3181 Active Noise-Cancelling Wireless Headphones - Cobalt Blue",
+       "price": 183.14999389648438,
+       "margin_pct": 29.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 24.199,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Voltra H-5566 30 Hour Battery Multipoint Bluetooth Wireless Headphones - Blush Pink",
+       "price": 321.4100036621094,
+       "margin_pct": 35.8,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 31.244,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    }
+   ]
+  },
+  {
+   "id": "regional",
+   "title": "4 \u00b7 Regional stock & BOPIS",
+   "blurb": "Buy-online-pick-up-in-store: only items stocked at (or near) the shopper's store may be shown. Compare unfulfillable results before vs after rules.",
+   "n_examples": 3,
+   "stages": {
+    "A retrieval order": {
+     "ndcg@10": 0.7737981902315235,
+     "precision@10": 0.7333333333333333,
+     "exp_revenue@10": 173.4053052859107,
+     "exp_margin@10": 68.8107619376156,
+     "unfulfillable@10": 3.6666666666666665,
+     "avg_return_prob@10": 0.17232587370802535
+    },
+    "B + LTR ensemble": {
+     "ndcg@10": 0.9097194921758961,
+     "precision@10": 0.8666666666666667,
+     "exp_revenue@10": 288.6227222340686,
+     "exp_margin@10": 114.75276025982656,
+     "unfulfillable@10": 3.6666666666666665,
+     "avg_return_prob@10": 0.16278617795990186
+    },
+    "C + hard rules & penalties": {
+     "ndcg@10": 0.8791344642011598,
+     "precision@10": 0.8333333333333334,
+     "exp_revenue@10": 268.9544639752541,
+     "exp_margin@10": 110.94694557167425,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.14971332653133224
+    },
+    "D + margin re-rank": {
+     "ndcg@10": 0.9045567300959384,
+     "precision@10": 0.9,
+     "exp_revenue@10": 321.798573057845,
+     "exp_margin@10": 142.66311010037575,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.12929675233655655
+    },
+    "E + MMR (final page)": {
+     "ndcg@10": 0.8863793620390951,
+     "precision@10": 0.8666666666666667,
+     "exp_revenue@10": 319.4528051049571,
+     "exp_margin@10": 141.39837618965012,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.13355496877976944
+    }
+   },
+   "stage1_ms": 19.62419999957395,
+   "facet_accuracy": 1.0,
+   "recall200": {
+    "sparse": 0.6749999999999999,
+    "dense": 0.7733333333333334,
+    "hybrid": 0.7133333333333334
+   },
+   "recall50": {
+    "sparse": 0.5,
+    "dense": 0.7933333333333333,
+    "hybrid": 0.6733333333333333
+   },
+   "latency_total": 68.75333333333333,
+   "models": {
+    "xgb_pointwise": {
+     "B": {
+      "ndcg@10": 0.9170686328658387,
+      "exp_revenue@10": 270.1604821357439,
+      "exp_margin@10": 107.6792395055814
+     },
+     "E": {
+      "ndcg@10": 0.8377132635250968,
+      "exp_revenue@10": 307.438896729987,
+      "exp_margin@10": 133.2976204919047
+     }
+    },
+    "lgbm_pointwise": {
+     "B": {
+      "ndcg@10": 0.8950118514117059,
+      "exp_revenue@10": 273.69168928141147,
+      "exp_margin@10": 108.12878557430203
+     },
+     "E": {
+      "ndcg@10": 0.8631709842035162,
+      "exp_revenue@10": 307.36657602167986,
+      "exp_margin@10": 135.39912735256326
+     }
+    },
+    "xgb_pairwise": {
+     "B": {
+      "ndcg@10": 0.8706852463712429,
+      "exp_revenue@10": 275.9898577107786,
+      "exp_margin@10": 106.32190706310769
+     },
+     "E": {
+      "ndcg@10": 0.8532775572142763,
+      "exp_revenue@10": 308.0602500006349,
+      "exp_margin@10": 132.79603603502702
+     }
+    },
+    "lgbm_lambdamart": {
+     "B": {
+      "ndcg@10": 0.8907897140460707,
+      "exp_revenue@10": 279.7185534073689,
+      "exp_margin@10": 106.69547073254125
+     },
+     "E": {
+      "ndcg@10": 0.8343477790844509,
+      "exp_revenue@10": 302.08048655076544,
+      "exp_margin@10": 130.09203702055743
+     }
+    },
+    "cat_yetirank": {
+     "B": {
+      "ndcg@10": 0.8043321572791382,
+      "exp_revenue@10": 258.7332366460449,
+      "exp_margin@10": 101.81705180742932
+     },
+     "E": {
+      "ndcg@10": 0.8325381757168907,
+      "exp_revenue@10": 308.18159425025914,
+      "exp_margin@10": 133.7889478143167
+     }
+    },
+    "xgb_listwise": {
+     "B": {
+      "ndcg@10": 0.8803091537461621,
+      "exp_revenue@10": 279.22493770365713,
+      "exp_margin@10": 108.94315543163499
+     },
+     "E": {
+      "ndcg@10": 0.83322415046657,
+      "exp_revenue@10": 303.87974970827133,
+      "exp_margin@10": 130.44288047562583
+     }
+    },
+    "torch_listnet": {
+     "B": {
+      "ndcg@10": 0.9148493433936423,
+      "exp_revenue@10": 311.39725228929774,
+      "exp_margin@10": 133.57638012444394
+     },
+     "E": {
+      "ndcg@10": 0.8693766835272542,
+      "exp_revenue@10": 326.8931965336996,
+      "exp_margin@10": 144.50310118859673
+     }
+    },
+    "dcnv2": {
+     "B": {
+      "ndcg@10": 0.9056749573008228,
+      "exp_revenue@10": 257.4235682349292,
+      "exp_margin@10": 105.63242401748893
+     },
+     "E": {
+      "ndcg@10": 0.9099535570065761,
+      "exp_revenue@10": 318.46989174078647,
+      "exp_margin@10": 140.40135521321642
+     }
+    },
+    "ensemble": {
+     "B": {
+      "ndcg@10": 0.9097194921758961,
+      "exp_revenue@10": 288.6227222340686,
+      "exp_margin@10": 114.75276025982656
+     },
+     "E": {
+      "ndcg@10": 0.8863793620390951,
+      "exp_revenue@10": 319.4528051049571,
+      "exp_margin@10": 141.39837618965012
+     }
+    }
+   },
+   "examples": [
+    {
+     "label": "running shoes \u00b7 BOPIS Chicago (S3)",
+     "query": "running shoes",
+     "user": "U00008",
+     "store": "S3",
+     "fulfillment": "bopis",
+     "stage1": {
+      "corrected": "running shoes",
+      "edits": [],
+      "intent": "navigational",
+      "intent_conf": 0.43102789890931265,
+      "facet_accuracy": 1.0,
+      "ms": 18.108800002664793
+     },
+     "stage2": {
+      "n_rel": 1342,
+      "n_found": 187,
+      "recall200": {
+       "sparse": 0.93,
+       "dense": 0.94,
+       "hybrid": 0.935
+      },
+      "ms": 7.175899998401292
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 124,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 76
+      },
+      "high_return_flagged": 50,
+      "low_stock_flagged": 11
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 208.5359883881577,
+       "exp_margin@10": 84.0657978051311,
+       "unfulfillable@10": 6,
+       "avg_return_prob@10": 0.14690205331379377,
+       "avg_price@10": 133.27999877929688,
+       "pref_brand_share@10": 0.3,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 234.0421479062519,
+       "exp_margin@10": 113.57975232828883,
+       "unfulfillable@10": 5,
+       "avg_return_prob@10": 0.13037617638641064,
+       "avg_price@10": 101.12300109863281,
+       "pref_brand_share@10": 0.5,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 222.85977527838324,
+       "exp_margin@10": 100.74205012864911,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.1607445597320414,
+       "avg_price@10": 105.73600006103516,
+       "pref_brand_share@10": 0.2,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 285.14751013154483,
+       "exp_margin@10": 132.18367052688387,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.14482895365901144,
+       "avg_price@10": 138.28799438476562,
+       "pref_brand_share@10": 0.5,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 293.3897818841539,
+       "exp_margin@10": 135.99661614724388,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.13098810532511085,
+       "avg_price@10": 149.3149871826172,
+       "pref_brand_share@10": 0.4,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 17.23,
+      "retrieval_ms": 7.0,
+      "feature_ms": 0.89,
+      "ranking_ms": 34.16,
+      "rerank_ms": 2.29,
+      "total_ms": 61.59
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Aeroflux RR-7817 Carbon Plate Max Cushion Running Shoes - Olive",
+       "price": 103.37000274658203,
+       "margin_pct": 59.0,
+       "cold": false,
+       "route": "bopis:S3",
+       "E_profit": 29.236,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Nordhaven RR-9798 Max Cushion Running Shoes - Charcoal",
+       "price": 110.52999877929688,
+       "margin_pct": 54.9,
+       "cold": false,
+       "route": "bopis:S3",
+       "E_profit": 25.446,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "TerraPeak RR-5260 Lightweight Max Cushion Running Shoes - Crimson",
+       "price": 209.47999572753906,
+       "margin_pct": 52.0,
+       "cold": false,
+       "route": "bopis:S3",
+       "E_profit": 34.915,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "TerraPeak RR-1746 Max Cushion Running Shoes - Crimson",
+       "price": 82.3499984741211,
+       "margin_pct": 54.9,
+       "cold": false,
+       "route": "bopis:S3",
+       "E_profit": 23.392,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "TerraPeak RR-8914 Max Cushion Carbon Plate Running Shoes - Navy",
+       "price": 143.86000061035156,
+       "margin_pct": 59.1,
+       "cold": false,
+       "route": "bopis:S3",
+       "E_profit": 29.981,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    },
+    {
+     "label": "winter boots \u00b7 BOPIS Denver (S5)",
+     "query": "warm winter boots",
+     "user": "U00016",
+     "store": "S5",
+     "fulfillment": "bopis",
+     "stage1": {
+      "corrected": "warm winter boots",
+      "edits": [],
+      "intent": "attribute_specific",
+      "intent_conf": 0.9820523005209921,
+      "facet_accuracy": 1.0,
+      "ms": 20.378999994136393
+     },
+     "stage2": {
+      "n_rel": 451,
+      "n_found": 151,
+      "recall200": {
+       "sparse": 0.655,
+       "dense": 0.87,
+       "hybrid": 0.755
+      },
+      "ms": 7.191499993496109
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 141,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 59
+      },
+      "high_return_flagged": 44,
+      "low_stock_flagged": 14
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 0.9432106656105237,
+       "precision@10": 0.9,
+       "exp_revenue@10": 201.85820352271227,
+       "exp_margin@10": 87.59632487381846,
+       "unfulfillable@10": 2,
+       "avg_return_prob@10": 0.1789901571575932,
+       "avg_price@10": 146.42800903320312,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 288.98911615511656,
+       "exp_margin@10": 104.03093200026714,
+       "unfulfillable@10": 3,
+       "avg_return_prob@10": 0.21615164961845362,
+       "avg_price@10": 127.85099792480469,
+       "pref_brand_share@10": 0.4,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 264.1197166990072,
+       "exp_margin@10": 109.9583161208234,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.12936156694288678,
+       "avg_price@10": 121.63999938964844,
+       "pref_brand_share@10": 0.2,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 294.9214563191271,
+       "exp_margin@10": 133.08780671114926,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.11971906396655976,
+       "avg_price@10": 145.59400939941406,
+       "pref_brand_share@10": 0.1,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 294.97574135371985,
+       "exp_margin@10": 133.10699983767898,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.11971906396655976,
+       "avg_price@10": 145.59400939941406,
+       "pref_brand_share@10": 0.1,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 19.92,
+      "retrieval_ms": 7.34,
+      "feature_ms": 0.98,
+      "ranking_ms": 33.8,
+      "rerank_ms": 2.77,
+      "total_ms": 64.84
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Nordhaven WB-6939 Insulated Snow Boots - Charcoal",
+       "price": 145.22999572753906,
+       "margin_pct": 54.7,
+       "cold": false,
+       "route": "bopis:S5",
+       "E_profit": 27.1,
+       "flags": [
+        "recently_purchased_durable"
+       ]
+      },
+      {
+       "rank": 2,
+       "title": "Aeroflux WB-6959 Waterproof Leather Insulated Insulated Winter Boots - Navy",
+       "price": 141.4199981689453,
+       "margin_pct": 55.0,
+       "cold": false,
+       "route": "bopis:S5",
+       "E_profit": 28.091,
+       "flags": [
+        "recently_purchased_durable"
+       ]
+      },
+      {
+       "rank": 3,
+       "title": "Marlow WB-7915 Traction Outsole Insulated Insulated Winter Boots - Crimson",
+       "price": 119.58999633789062,
+       "margin_pct": 49.9,
+       "cold": false,
+       "route": "bopis:S5",
+       "E_profit": 23.244,
+       "flags": [
+        "recently_purchased_durable"
+       ]
+      },
+      {
+       "rank": 4,
+       "title": "Kestrel WB-2866 Insulated Waterproof Leather Insulated Winter Boots - Forest Green",
+       "price": 157.4199981689453,
+       "margin_pct": 40.2,
+       "cold": false,
+       "route": "bopis:S5",
+       "E_profit": 24.368,
+       "flags": [
+        "recently_purchased_durable"
+       ]
+      },
+      {
+       "rank": 5,
+       "title": "TerraPeak WB-2556 Waterproof Leather Traction Outsole Insulated Winter Boots - Blush Pink",
+       "price": 196.6300048828125,
+       "margin_pct": 52.3,
+       "cold": false,
+       "route": "bopis:S5",
+       "E_profit": 29.474,
+       "flags": [
+        "recently_purchased_durable"
+       ]
+      }
+     ],
+     "cold_target": null
+    },
+    {
+     "label": "office chair \u00b7 BOPIS Austin (S2)",
+     "query": "back friendly desk chair",
+     "user": "U00024",
+     "store": "S2",
+     "fulfillment": "bopis",
+     "stage1": {
+      "corrected": "back friendly desk chair",
+      "edits": [],
+      "intent": "attribute_specific",
+      "intent_conf": 0.9911798908515782,
+      "facet_accuracy": 1.0,
+      "ms": 20.384800001920667
+     },
+     "stage2": {
+      "n_rel": 267,
+      "n_found": 90,
+      "recall200": {
+       "sparse": 0.44,
+       "dense": 0.51,
+       "hybrid": 0.45
+      },
+      "ms": 7.051800006593112
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 141,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 59
+      },
+      "high_return_flagged": 8,
+      "low_stock_flagged": 13
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 0.37818390508404653,
+       "precision@10": 0.3,
+       "exp_revenue@10": 109.82172394686222,
+       "exp_margin@10": 34.770163133897206,
+       "unfulfillable@10": 3,
+       "avg_return_prob@10": 0.19108541065268914,
+       "avg_price@10": 277.03497314453125,
+       "pref_brand_share@10": 0.3,
+       "cold_in_top10": 3,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 0.7291584765276885,
+       "precision@10": 0.6,
+       "exp_revenue@10": 342.83690264083737,
+       "exp_margin@10": 126.64759645092369,
+       "unfulfillable@10": 3,
+       "avg_return_prob@10": 0.1418307078748413,
+       "avg_price@10": 239.61599731445312,
+       "pref_brand_share@10": 0.8,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 0.6374033926034793,
+       "precision@10": 0.5,
+       "exp_revenue@10": 319.8838999483717,
+       "exp_margin@10": 122.1404704655503,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.15903385291906852,
+       "avg_price@10": 258.12896728515625,
+       "pref_brand_share@10": 0.7,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 0.7136701902878152,
+       "precision@10": 0.7,
+       "exp_revenue@10": 385.326752722863,
+       "exp_margin@10": 162.71785306309414,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.12334223938409838,
+       "avg_price@10": 283.9999694824219,
+       "pref_brand_share@10": 0.7,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 0.6591380861172852,
+       "precision@10": 0.6,
+       "exp_revenue@10": 369.9928920769977,
+       "exp_margin@10": 155.09151258402753,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.14995773704763768,
+       "avg_price@10": 293.197998046875,
+       "pref_brand_share@10": 0.6,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 19.93,
+      "retrieval_ms": 7.36,
+      "feature_ms": 1.04,
+      "ranking_ms": 48.66,
+      "rerank_ms": 2.8,
+      "total_ms": 79.83
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Lumora OC-6597 Breathable Mesh Back Headrest Ergonomic Office Chair - Navy",
+       "price": 472.4700012207031,
+       "margin_pct": 54.8,
+       "cold": false,
+       "route": "bopis:S2",
+       "E_profit": 56.513,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Quillon OC-7540 Headrest Breathable Mesh Back Mesh Desk Chair - Forest Green",
+       "price": 372.3699951171875,
+       "margin_pct": 40.8,
+       "cold": false,
+       "route": "bopis:S2",
+       "E_profit": 51.251,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Quillon OC-1739 Breathable Mesh Back Adjustable Armrests Mesh Desk Chair - Burgundy",
+       "price": 321.69000244140625,
+       "margin_pct": 46.7,
+       "cold": false,
+       "route": "bopis:S2",
+       "E_profit": 53.333,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "Quillon OC-9706 Headrest Lumbar Support Mesh Desk Chair - Burgundy",
+       "price": 194.3000030517578,
+       "margin_pct": 40.8,
+       "cold": false,
+       "route": "bopis:S2",
+       "E_profit": 33.603,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Quillon OC-9097 Adjustable Armrests Breathable Mesh Back Mesh Desk Chair - Charcoal",
+       "price": 261.07000732421875,
+       "margin_pct": 44.7,
+       "cold": false,
+       "route": "bopis:S2",
+       "E_profit": 34.878,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    }
+   ]
+  },
+  {
+   "id": "cold_start",
+   "title": "5 \u00b7 Cold-start SKUs",
+   "blurb": "Brand-new drops with zero interaction history are retrieved from text+image+tabular content embeddings and still reach the page.",
+   "n_examples": 3,
+   "stages": {
+    "A retrieval order": {
+     "ndcg@10": 0.9688798098234516,
+     "precision@10": 0.5,
+     "exp_revenue@10": 189.2464746289844,
+     "exp_margin@10": 83.83660093431422,
+     "unfulfillable@10": 0.3333333333333333,
+     "avg_return_prob@10": 0.14263226615926758
+    },
+    "B + LTR ensemble": {
+     "ndcg@10": 0.8024563329592667,
+     "precision@10": 0.3333333333333333,
+     "exp_revenue@10": 224.62159521316073,
+     "exp_margin@10": 96.34835191585576,
+     "unfulfillable@10": 0.3333333333333333,
+     "avg_return_prob@10": 0.12925450249835682
+    },
+    "C + hard rules & penalties": {
+     "ndcg@10": 0.8376167433619784,
+     "precision@10": 0.3333333333333333,
+     "exp_revenue@10": 224.62385713530844,
+     "exp_margin@10": 98.91471911827436,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.11320558154147065
+    },
+    "D + margin re-rank": {
+     "ndcg@10": 0.9008023151589396,
+     "precision@10": 0.4000000000000001,
+     "exp_revenue@10": 268.61621380806434,
+     "exp_margin@10": 122.44839986928464,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.1019716348801936
+    },
+    "E + MMR (final page)": {
+     "ndcg@10": 0.887126546377881,
+     "precision@10": 0.3666666666666667,
+     "exp_revenue@10": 267.30397232052553,
+     "exp_margin@10": 121.67205601618896,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.10891725970738993
+    }
+   },
+   "stage1_ms": 19.155466667143628,
+   "facet_accuracy": 1.0,
+   "recall200": {
+    "sparse": 1.0,
+    "dense": 1.0,
+    "hybrid": 1.0
+   },
+   "recall50": {
+    "sparse": 1.0,
+    "dense": 1.0,
+    "hybrid": 1.0
+   },
+   "latency_total": 80.22000000000001,
+   "models": {
+    "xgb_pointwise": {
+     "B": {
+      "ndcg@10": 0.8265579202001341,
+      "exp_revenue@10": 226.62355052730356,
+      "exp_margin@10": 98.11071476648084
+     },
+     "E": {
+      "ndcg@10": 0.9032115570133862,
+      "exp_revenue@10": 269.8609132563602,
+      "exp_margin@10": 122.57819382157773
+     }
+    },
+    "lgbm_pointwise": {
+     "B": {
+      "ndcg@10": 0.7843746169436834,
+      "exp_revenue@10": 215.90782703383027,
+      "exp_margin@10": 91.52365556732025
+     },
+     "E": {
+      "ndcg@10": 0.8826701882148043,
+      "exp_revenue@10": 262.34688232033795,
+      "exp_margin@10": 119.22180747184312
+     }
+    },
+    "xgb_pairwise": {
+     "B": {
+      "ndcg@10": 0.8816582706030145,
+      "exp_revenue@10": 229.32431746551484,
+      "exp_margin@10": 97.17632586004764
+     },
+     "E": {
+      "ndcg@10": 0.8898356453359432,
+      "exp_revenue@10": 265.7620045447216,
+      "exp_margin@10": 121.3171668056126
+     }
+    },
+    "lgbm_lambdamart": {
+     "B": {
+      "ndcg@10": 0.705490722846981,
+      "exp_revenue@10": 196.7314282470437,
+      "exp_margin@10": 83.18056227552177
+     },
+     "E": {
+      "ndcg@10": 0.8818060385436888,
+      "exp_revenue@10": 267.72121691625097,
+      "exp_margin@10": 121.94422375619986
+     }
+    },
+    "cat_yetirank": {
+     "B": {
+      "ndcg@10": 0.8023075047920359,
+      "exp_revenue@10": 227.05232458513683,
+      "exp_margin@10": 96.02731887917703
+     },
+     "E": {
+      "ndcg@10": 0.8816536006669248,
+      "exp_revenue@10": 265.8063341376248,
+      "exp_margin@10": 121.0953130473657
+     }
+    },
+    "xgb_listwise": {
+     "B": {
+      "ndcg@10": 0.8141068804362502,
+      "exp_revenue@10": 213.64518805029232,
+      "exp_margin@10": 90.60136287801824
+     },
+     "E": {
+      "ndcg@10": 0.903511414117002,
+      "exp_revenue@10": 266.0005710868217,
+      "exp_margin@10": 121.25400906529337
+     }
+    },
+    "torch_listnet": {
+     "B": {
+      "ndcg@10": 0.805934766045444,
+      "exp_revenue@10": 241.76940129802028,
+      "exp_margin@10": 102.82968939062305
+     },
+     "E": {
+      "ndcg@10": 0.8972729601724021,
+      "exp_revenue@10": 269.252864454223,
+      "exp_margin@10": 123.0772825756427
+     }
+    },
+    "dcnv2": {
+     "B": {
+      "ndcg@10": 0.8858245829352467,
+      "exp_revenue@10": 235.89045149551418,
+      "exp_margin@10": 100.08081244265793
+     },
+     "E": {
+      "ndcg@10": 0.9023661934202704,
+      "exp_revenue@10": 266.4153364181214,
+      "exp_margin@10": 120.66045108985081
+     }
+    },
+    "ensemble": {
+     "B": {
+      "ndcg@10": 0.8024563329592667,
+      "exp_revenue@10": 224.62159521316073,
+      "exp_margin@10": 96.34835191585576
+     },
+     "E": {
+      "ndcg@10": 0.887126546377881,
+      "exp_revenue@10": 267.30397232052553,
+      "exp_margin@10": 121.67205601618896
+     }
+    }
+   },
+   "examples": [
+    {
+     "label": "new drop: Aeroflux H-9211 Block Heel Pointed Toe Stiletto ",
+     "query": "navy heels aeroflux",
+     "user": "U00237",
+     "store": "S1",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "navy heels aeroflux",
+      "edits": [],
+      "intent": "attribute_specific",
+      "intent_conf": 0.8479195743643013,
+      "facet_accuracy": 1.0,
+      "ms": 20.145000002230518
+     },
+     "stage2": {
+      "n_rel": 4,
+      "n_found": 4,
+      "recall200": {
+       "sparse": 1.0,
+       "dense": 1.0,
+       "hybrid": 1.0
+      },
+      "ms": 6.805900004110299
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 188,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 12
+      },
+      "high_return_flagged": 41,
+      "low_stock_flagged": 13
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 0.4,
+       "exp_revenue@10": 154.25474820200378,
+       "exp_margin@10": 63.12508897548128,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.18127610712215286,
+       "avg_price@10": 130.9659881591797,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 3,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 0.853629898199732,
+       "precision@10": 0.3,
+       "exp_revenue@10": 178.4157736159862,
+       "exp_margin@10": 76.66449374751434,
+       "unfulfillable@10": 1,
+       "avg_return_prob@10": 0.11611814808883006,
+       "avg_price@10": 102.61600494384766,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 2,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 0.8560480945720564,
+       "precision@10": 0.3,
+       "exp_revenue@10": 177.90204243826219,
+       "exp_margin@10": 77.01000569946646,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.09814298187515595,
+       "avg_price@10": 101.34199523925781,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 2,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 0.9278511210730239,
+       "precision@10": 0.3,
+       "exp_revenue@10": 187.09690382445115,
+       "exp_margin@10": 82.49552042415074,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.09814298187515594,
+       "avg_price@10": 101.34199523925781,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 2,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 0.9278511210730239,
+       "precision@10": 0.3,
+       "exp_revenue@10": 187.09690382445115,
+       "exp_margin@10": 82.49552042415074,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.09814298187515594,
+       "avg_price@10": 101.34199523925781,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 2,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 20.34,
+      "retrieval_ms": 7.0,
+      "feature_ms": 1.06,
+      "ranking_ms": 48.15,
+      "rerank_ms": 2.5,
+      "total_ms": 79.09
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Aeroflux H-1639 Stiletto Block Heel Stiletto Heels - Navy",
+       "price": 146.3300018310547,
+       "margin_pct": 45.3,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 27.884,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Aeroflux H-9211 Block Heel Pointed Toe Stiletto Heels - Navy",
+       "price": 139.16000366210938,
+       "margin_pct": 57.4,
+       "cold": true,
+       "route": "ship",
+       "E_profit": 22.447,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Aeroflux H-7106 Cushioned Insole Stiletto Dress Pumps - Navy",
+       "price": 112.02999877929688,
+       "margin_pct": 55.1,
+       "cold": true,
+       "route": "ship",
+       "E_profit": 18.803,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "Aeroflux H-2423 Pointed Toe Cushioned Insole Block Heel Pumps - Olive",
+       "price": 148.36000061035156,
+       "margin_pct": 52.6,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 17.902,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Aeroflux H-5748 Block Heel Cushioned Insole Dress Pumps - Olive",
+       "price": 72.81999969482422,
+       "margin_pct": 52.1,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 13.072,
+       "flags": []
+      }
+     ],
+     "cold_target": {
+      "title": "Aeroflux H-9211 Block Heel Pointed Toe Stiletto Heels - Navy",
+      "impressions": 0,
+      "days_since_launch": 36,
+      "rank_sparse": 2,
+      "rank_dense": 2,
+      "rank_hybrid": 3,
+      "rank_final": 2
+     }
+    },
+    {
+     "label": "new drop: Quillon OC-2081 Breathable Mesh Back Adjustable ",
+     "query": "cobalt blue office chairs quillon",
+     "user": "U00210",
+     "store": "S1",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "cobalt blue office chairs quillon",
+      "edits": [],
+      "intent": "attribute_specific",
+      "intent_conf": 0.9288967495877252,
+      "facet_accuracy": 1.0,
+      "ms": 17.121000004408415
+     },
+     "stage2": {
+      "n_rel": 6,
+      "n_found": 6,
+      "recall200": {
+       "sparse": 1.0,
+       "dense": 1.0,
+       "hybrid": 1.0
+      },
+      "ms": 7.46909999725176
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 195,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 5
+      },
+      "high_return_flagged": 22,
+      "low_stock_flagged": 7
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 0.7,
+       "exp_revenue@10": 185.40062028852162,
+       "exp_margin@10": 72.22980957093766,
+       "unfulfillable@10": 1,
+       "avg_return_prob@10": 0.08572022796689234,
+       "avg_price@10": 271.90301513671875,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 2,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 0.7865871530681459,
+       "precision@10": 0.4,
+       "exp_revenue@10": 279.3719438273561,
+       "exp_margin@10": 110.63514451362836,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.10357100627131739,
+       "avg_price@10": 269.0250244140625,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 0.7865871530681459,
+       "precision@10": 0.4,
+       "exp_revenue@10": 279.3719438273561,
+       "exp_margin@10": 110.63514451362836,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.10357100627131739,
+       "avg_price@10": 269.0250244140625,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 0.8514927433693104,
+       "precision@10": 0.5,
+       "exp_revenue@10": 338.9130031944454,
+       "exp_margin@10": 136.6130355063144,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.07814750757156909,
+       "avg_price@10": 312.0040283203125,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 0.8104654370261344,
+       "precision@10": 0.4,
+       "exp_revenue@10": 334.976278731829,
+       "exp_margin@10": 134.28400394702732,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.0989843820531581,
+       "avg_price@10": 311.67901611328125,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 16.95,
+      "retrieval_ms": 7.4,
+      "feature_ms": 1.02,
+      "ranking_ms": 51.24,
+      "rerank_ms": 2.78,
+      "total_ms": 79.43
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Quillon OC-7448 Lumbar Support Adjustable Armrests Ergonomic Office Chair - Cobalt Blue",
+       "price": 360.8999938964844,
+       "margin_pct": 45.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 34.273,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Quillon OC-1201 Lumbar Support Adjustable Armrests Ergonomic Office Chair - Cobalt Blue",
+       "price": 440.1199951171875,
+       "margin_pct": 38.7,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 30.225,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Quillon OC-1739 Breathable Mesh Back Adjustable Armrests Mesh Desk Chair - Burgundy",
+       "price": 321.69000244140625,
+       "margin_pct": 46.7,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 21.335,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "Quillon OC-7540 Headrest Breathable Mesh Back Mesh Desk Chair - Forest Green",
+       "price": 372.3699951171875,
+       "margin_pct": 40.8,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 20.703,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Quillon OC-6724 Headrest Lumbar Support Ergonomic Office Chair - White",
+       "price": 451.9100036621094,
+       "margin_pct": 43.6,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 22.569,
+       "flags": []
+      }
+     ],
+     "cold_target": {
+      "title": "Quillon OC-2081 Breathable Mesh Back Adjustable Armrests Mesh Desk Chair - Cobalt Blue",
+      "impressions": 0,
+      "days_since_launch": 37,
+      "rank_sparse": 6,
+      "rank_dense": 6,
+      "rank_hybrid": 6,
+      "rank_final": 8
+     }
+    },
+    {
+     "label": "new drop: TerraPeak RJ-5763 Pit Zips Waterproof Rain Shell",
+     "query": "black rain jackets terrapeak",
+     "user": "U00186",
+     "store": "S1",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "black rain jackets terrapeak",
+      "edits": [],
+      "intent": "attribute_specific",
+      "intent_conf": 0.8827970202158192,
+      "facet_accuracy": 1.0,
+      "ms": 20.20039999479195
+     },
+     "stage2": {
+      "n_rel": 4,
+      "n_found": 4,
+      "recall200": {
+       "sparse": 1.0,
+       "dense": 1.0,
+       "hybrid": 1.0
+      },
+      "ms": 7.46689999505179
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 192,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 8
+      },
+      "high_return_flagged": 29,
+      "low_stock_flagged": 10
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 0.9066394294703547,
+       "precision@10": 0.4,
+       "exp_revenue@10": 228.0840553964278,
+       "exp_margin@10": 116.15490425652372,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.16090046338875755,
+       "avg_price@10": 185.51800537109375,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 2,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 0.7671519476099223,
+       "precision@10": 0.3,
+       "exp_revenue@10": 216.07706819613983,
+       "exp_margin@10": 101.74541748642457,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.16807435313492305,
+       "avg_price@10": 159.9219970703125,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 0.8702149824457329,
+       "precision@10": 0.3,
+       "exp_revenue@10": 216.59758514030702,
+       "exp_margin@10": 109.09900714172825,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.1379027564779386,
+       "avg_price@10": 162.33900451660156,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 0.9230630810344848,
+       "precision@10": 0.4,
+       "exp_revenue@10": 279.83873440529646,
+       "exp_margin@10": 148.23664367738883,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.12962441519385576,
+       "avg_price@10": 207.82699584960938,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 0.9230630810344848,
+       "precision@10": 0.4,
+       "exp_revenue@10": 279.83873440529646,
+       "exp_margin@10": 148.23664367738883,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.12962441519385576,
+       "avg_price@10": 207.82699584960938,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 18.41,
+      "retrieval_ms": 7.63,
+      "feature_ms": 1.08,
+      "ranking_ms": 52.57,
+      "rerank_ms": 2.41,
+      "total_ms": 82.14
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "TerraPeak RJ-5763 Pit Zips Waterproof Rain Shell - Black",
+       "price": 373.7699890136719,
+       "margin_pct": 60.5,
+       "cold": true,
+       "route": "ship",
+       "E_profit": 46.356,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "TerraPeak RJ-3947 Waterproof Breathable Packable Waterproof Rain Shell - Burgundy",
+       "price": 155.86000061035156,
+       "margin_pct": 68.0,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 29.264,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "TerraPeak RJ-7978 Pit Zips Waterproof Breathable Rain Jacket - Blush Pink",
+       "price": 143.25999450683594,
+       "margin_pct": 61.2,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 27.123,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "TerraPeak RJ-3238 Packable Pit Zips Rain Jacket - Black",
+       "price": 160.5,
+       "margin_pct": 53.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 23.996,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "TerraPeak RJ-1009 Waterproof Breathable Pit Zips Rain Jacket - Navy",
+       "price": 195.97000122070312,
+       "margin_pct": 54.3,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 26.121,
+       "flags": []
+      }
+     ],
+     "cold_target": {
+      "title": "TerraPeak RJ-5763 Pit Zips Waterproof Rain Shell - Black",
+      "impressions": 0,
+      "days_since_launch": 26,
+      "rank_sparse": 1,
+      "rank_dense": 2,
+      "rank_hybrid": 1,
+      "rank_final": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "margin",
+   "title": "6 \u00b7 Margin-aware re-ranking",
+   "blurb": "Same relevance, higher expected profit: the margin optimiser (weight 0.6 here) re-orders relevant items by E[profit] without crossing the relevance floor.",
+   "n_examples": 3,
+   "stages": {
+    "A retrieval order": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 147.97005175806763,
+     "exp_margin@10": 49.71308644316118,
+     "unfulfillable@10": 0.3333333333333333,
+     "avg_return_prob@10": 0.09676379807120893
+    },
+    "B + LTR ensemble": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 216.86798272486638,
+     "exp_margin@10": 72.58800328386064,
+     "unfulfillable@10": 1.0,
+     "avg_return_prob@10": 0.10073828381447103
+    },
+    "C + hard rules & penalties": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 218.44666474599578,
+     "exp_margin@10": 74.1979197802666,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.0906416319943627
+    },
+    "D + margin re-rank": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 390.6764715183604,
+     "exp_margin@10": 149.82568695704072,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.09730466860939894
+    },
+    "E + MMR (final page)": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 388.81647612931175,
+     "exp_margin@10": 149.4556589820902,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.09513333067725956
+    }
+   },
+   "stage1_ms": 17.937899998893652,
+   "facet_accuracy": 1.0,
+   "recall200": {
+    "sparse": 0.915,
+    "dense": 0.9266666666666666,
+    "hybrid": 0.9183333333333333
+   },
+   "recall50": {
+    "sparse": 0.9133333333333332,
+    "dense": 0.9066666666666667,
+    "hybrid": 0.9133333333333332
+   },
+   "latency_total": 84.81,
+   "models": {
+    "xgb_pointwise": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 255.94603575212378,
+      "exp_margin@10": 85.46980415089438
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 381.3736277305347,
+      "exp_margin@10": 149.26516517749363
+     }
+    },
+    "lgbm_pointwise": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 191.4459222000734,
+      "exp_margin@10": 67.19375844515754
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 389.3716487051713,
+      "exp_margin@10": 149.69257034416444
+     }
+    },
+    "xgb_pairwise": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 227.9356305473681,
+      "exp_margin@10": 75.58420119102428
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 381.3942769698242,
+      "exp_margin@10": 147.81957409392115
+     }
+    },
+    "lgbm_lambdamart": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 210.32399897782162,
+      "exp_margin@10": 72.43156442855285
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 377.2592375238523,
+      "exp_margin@10": 144.80131282702735
+     }
+    },
+    "cat_yetirank": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 220.04375090988876,
+      "exp_margin@10": 73.19606812111645
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 383.7759529261704,
+      "exp_margin@10": 144.94639047033903
+     }
+    },
+    "xgb_listwise": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 201.24946453501934,
+      "exp_margin@10": 70.29370603091454
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 386.86179267683997,
+      "exp_margin@10": 145.55734563063461
+     }
+    },
+    "torch_listnet": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 221.33606187751082,
+      "exp_margin@10": 75.57389974145154
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 386.8010232956535,
+      "exp_margin@10": 148.52948228109184
+     }
+    },
+    "dcnv2": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 155.58110586025296,
+      "exp_margin@10": 59.404141920982966
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 350.7996620466428,
+      "exp_margin@10": 137.44053383293758
+     }
+    },
+    "ensemble": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 216.86798272486638,
+      "exp_margin@10": 72.58800328386064
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 388.81647612931175,
+      "exp_margin@10": 149.4556589820902
+     }
+    }
+   },
+   "examples": [
+    {
+     "label": "running shoes \u00b7 margin weight 0.6",
+     "query": "running shoes",
+     "user": "U00010",
+     "store": "S1",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "running shoes",
+      "edits": [],
+      "intent": "navigational",
+      "intent_conf": 0.43102789890931265,
+      "facet_accuracy": 1.0,
+      "ms": 18.53839999967022
+     },
+     "stage2": {
+      "n_rel": 1342,
+      "n_found": 187,
+      "recall200": {
+       "sparse": 0.93,
+       "dense": 0.94,
+       "hybrid": 0.935
+      },
+      "ms": 7.1882999982335605
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 190,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 10
+      },
+      "high_return_flagged": 50,
+      "low_stock_flagged": 12
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 149.17562184919007,
+       "exp_margin@10": 60.19787174038501,
+       "unfulfillable@10": 1,
+       "avg_return_prob@10": 0.14690205331379377,
+       "avg_price@10": 133.27999877929688,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 180.16041691243439,
+       "exp_margin@10": 78.72715387925876,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.16394778142954763,
+       "avg_price@10": 93.74400329589844,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 181.11400861551206,
+       "exp_margin@10": 81.26733176040327,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.13841747353758554,
+       "avg_price@10": 97.72000122070312,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 239.63761841242035,
+       "exp_margin@10": 111.06592036834277,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.14979566989754114,
+       "avg_price@10": 165.8310089111328,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 239.63761841242035,
+       "exp_margin@10": 111.06592036834277,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.14979566989754114,
+       "avg_price@10": 165.8310089111328,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 17.86,
+      "retrieval_ms": 7.19,
+      "feature_ms": 0.9,
+      "ranking_ms": 55.34,
+      "rerank_ms": 2.73,
+      "total_ms": 84.05
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Aeroflux RR-7817 Carbon Plate Max Cushion Running Shoes - Olive",
+       "price": 103.37000274658203,
+       "margin_pct": 59.0,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 25.134,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Cobalt & Co RR-1945 Carbon Plate Max Cushion Running Shoes - Forest Green",
+       "price": 208.49000549316406,
+       "margin_pct": 51.4,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 26.304,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "TerraPeak RR-7393 Max Cushion Lightweight Running Shoes - White",
+       "price": 125.94999694824219,
+       "margin_pct": 57.8,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 23.512,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "Nordhaven RR-6169 Carbon Plate Max Cushion Running Shoes - Charcoal",
+       "price": 172.35000610351562,
+       "margin_pct": 53.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 23.299,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Nordhaven RR-9798 Max Cushion Running Shoes - Charcoal",
+       "price": 110.52999877929688,
+       "margin_pct": 54.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 21.138,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    },
+    {
+     "label": "headphones \u00b7 margin weight 0.6",
+     "query": "headphones",
+     "user": "U00031",
+     "store": "S2",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "headphones",
+      "edits": [],
+      "intent": "attribute_specific",
+      "intent_conf": 0.503638674865943,
+      "facet_accuracy": 1.0,
+      "ms": 17.648699998972006
+     },
+     "stage2": {
+      "n_rel": 490,
+      "n_found": 183,
+      "recall200": {
+       "sparse": 0.91,
+       "dense": 0.94,
+       "hybrid": 0.915
+      },
+      "ms": 6.818899993959349
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 188,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 12
+      },
+      "high_return_flagged": 1,
+      "low_stock_flagged": 13
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 149.05824986512695,
+       "exp_margin@10": 26.184232979267765,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.060906355289886506,
+       "avg_price@10": 136.8330078125,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 295.03508853487267,
+       "exp_margin@10": 64.8560201542984,
+       "unfulfillable@10": 2,
+       "avg_return_prob@10": 0.05380750275890524,
+       "avg_price@10": 125.54000091552734,
+       "pref_brand_share@10": 0.6,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 309.43806386039586,
+       "exp_margin@10": 70.92616272672306,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.051695527283558106,
+       "avg_price@10": 126.83699798583984,
+       "pref_brand_share@10": 0.4,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 611.3177514652953,
+       "exp_margin@10": 161.71634910075747,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.0841033614449394,
+       "avg_price@10": 252.97702026367188,
+       "pref_brand_share@10": 0.6,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 605.7377652981494,
+       "exp_margin@10": 160.6062651759059,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.07758934764852124,
+       "avg_price@10": 248.552001953125,
+       "pref_brand_share@10": 0.4,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 16.78,
+      "retrieval_ms": 6.62,
+      "feature_ms": 0.88,
+      "ranking_ms": 53.51,
+      "rerank_ms": 3.5,
+      "total_ms": 81.31
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Voltra H-1744 Water-Resistant Active Noise-Cancelling Over-Ear Headphones - Sand",
+       "price": 404.44000244140625,
+       "margin_pct": 30.1,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 41.67,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Aeroflux H-3359 Multipoint Bluetooth Active Noise-Cancelling Over-Ear Headphones - Burgundy",
+       "price": 402.2200012207031,
+       "margin_pct": 33.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 42.632,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Voltra H-7829 Active Noise-Cancelling Water-Resistant Over-Ear Headphones - Burgundy",
+       "price": 305.1700134277344,
+       "margin_pct": 30.1,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 35.148,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "Brightwave H-8197 30 Hour Battery Multipoint Bluetooth Over-Ear Headphones - Olive",
+       "price": 253.5500030517578,
+       "margin_pct": 24.5,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 28.625,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Brightwave H-8734 Water-Resistant Active Noise-Cancelling Wireless Headphones - Black",
+       "price": 152.8000030517578,
+       "margin_pct": 36.0,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 24.143,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    },
+    {
+     "label": "backpacks \u00b7 margin weight 0.6",
+     "query": "backpacks",
+     "user": "U00052",
+     "store": "S3",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "backpacks",
+      "edits": [],
+      "intent": "navigational",
+      "intent_conf": 0.3937696791314052,
+      "facet_accuracy": 1.0,
+      "ms": 17.626599998038728
+     },
+     "stage2": {
+      "n_rel": 532,
+      "n_found": 181,
+      "recall200": {
+       "sparse": 0.905,
+       "dense": 0.9,
+       "hybrid": 0.905
+      },
+      "ms": 7.305300001462456
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 188,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 12
+      },
+      "high_return_flagged": 2,
+      "low_stock_flagged": 14
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 145.67628355988583,
+       "exp_margin@10": 62.757154609830756,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.08248298560994649,
+       "avg_price@10": 79.54100036621094,
+       "pref_brand_share@10": 0.8,
+       "cold_in_top10": 2,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 175.4084427272921,
+       "exp_margin@10": 74.18083581802479,
+       "unfulfillable@10": 1,
+       "avg_return_prob@10": 0.0844595672549602,
+       "avg_price@10": 68.94700622558594,
+       "pref_brand_share@10": 0.7,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 164.78792176207935,
+       "exp_margin@10": 70.4002648536735,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.08181189516194443,
+       "avg_price@10": 66.86600494384766,
+       "pref_brand_share@10": 0.6,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 321.0740446773657,
+       "exp_margin@10": 176.69479140202188,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.05801497448571628,
+       "avg_price@10": 137.9359893798828,
+       "pref_brand_share@10": 0.2,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 321.0740446773657,
+       "exp_margin@10": 176.69479140202188,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.05801497448571628,
+       "avg_price@10": 137.9359893798828,
+       "pref_brand_share@10": 0.2,
+       "cold_in_top10": 1,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 19.15,
+      "retrieval_ms": 7.24,
+      "feature_ms": 0.97,
+      "ranking_ms": 58.13,
+      "rerank_ms": 3.55,
+      "total_ms": 89.07
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Nordhaven B-4806 Water-Resistant Anti-Theft Laptop Backpack - White",
+       "price": 196.6999969482422,
+       "margin_pct": 70.7,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 52.254,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Nordhaven B-3149 Laptop Sleeve Water-Resistant Daypack Backpack - Navy",
+       "price": 175.47000122070312,
+       "margin_pct": 56.1,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 33.904,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "TerraPeak B-7634 Laptop Sleeve Daypack Backpack - Olive",
+       "price": 146.27000427246094,
+       "margin_pct": 59.5,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 30.586,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "TerraPeak B-8995 Anti-Theft Laptop Sleeve Daypack Backpack - Charcoal",
+       "price": 97.58999633789062,
+       "margin_pct": 61.0,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 23.574,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Marlow B-1120 Anti-Theft Water-Resistant Laptop Backpack - Olive",
+       "price": 129.24000549316406,
+       "margin_pct": 43.6,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 22.48,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    }
+   ]
+  },
+  {
+   "id": "personalization",
+   "title": "7 \u00b7 Personalisation",
+   "blurb": "The same query for three different shoppers. User brand/price affinity features change the order; 'preferred-brand share' shows it.",
+   "n_examples": 3,
+   "stages": {
+    "A retrieval order": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 176.41160691591026,
+     "exp_margin@10": 70.74045879074815,
+     "unfulfillable@10": 1.0,
+     "avg_return_prob@10": 0.14690205331379377
+    },
+    "B + LTR ensemble": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 226.6288064659595,
+     "exp_margin@10": 97.0221386805825,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.1664067724728552
+    },
+    "C + hard rules & penalties": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 221.49453336434388,
+     "exp_margin@10": 98.51005096812719,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.14557995305206048
+    },
+    "D + margin re-rank": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 275.5861019328772,
+     "exp_margin@10": 127.72357962248059,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.1335744657339829
+    },
+    "E + MMR (final page)": {
+     "ndcg@10": 1.0,
+     "precision@10": 1.0,
+     "exp_revenue@10": 274.82469309539044,
+     "exp_margin@10": 127.49300976352181,
+     "unfulfillable@10": 0.0,
+     "avg_return_prob@10": 0.13500048904061512
+    }
+   },
+   "stage1_ms": 19.213800003247645,
+   "facet_accuracy": 1.0,
+   "recall200": {
+    "sparse": 0.93,
+    "dense": 0.94,
+    "hybrid": 0.935
+   },
+   "recall50": {
+    "sparse": 0.94,
+    "dense": 0.92,
+    "hybrid": 0.94
+   },
+   "latency_total": 94.63666666666667,
+   "models": {
+    "xgb_pointwise": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 237.81460289207493,
+      "exp_margin@10": 101.37537845047474
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 277.5972921265506,
+      "exp_margin@10": 128.07176741113227
+     }
+    },
+    "lgbm_pointwise": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 206.53608253086145,
+      "exp_margin@10": 89.52558644143555
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 272.7264331723206,
+      "exp_margin@10": 127.43343198407445
+     }
+    },
+    "xgb_pairwise": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 235.45853453660837,
+      "exp_margin@10": 101.43233549832279
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 274.8361219202184,
+      "exp_margin@10": 126.31900824060277
+     }
+    },
+    "lgbm_lambdamart": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 213.9726417432645,
+      "exp_margin@10": 90.25280207375954
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 265.7340592204085,
+      "exp_margin@10": 121.74393027348843
+     }
+    },
+    "cat_yetirank": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 209.46846926930553,
+      "exp_margin@10": 89.84673287097706
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 266.1143393381788,
+      "exp_margin@10": 123.69464589743183
+     }
+    },
+    "xgb_listwise": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 206.17056560954498,
+      "exp_margin@10": 88.51123242777787
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 264.1521920929503,
+      "exp_margin@10": 121.47284663651863
+     }
+    },
+    "torch_listnet": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 238.52887260574687,
+      "exp_margin@10": 108.3515475072976
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 282.44724060307794,
+      "exp_margin@10": 130.01504867613139
+     }
+    },
+    "dcnv2": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 211.43385116977956,
+      "exp_margin@10": 94.71899405833129
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 261.21772161096743,
+      "exp_margin@10": 121.3267768730085
+     }
+    },
+    "ensemble": {
+     "B": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 226.6288064659595,
+      "exp_margin@10": 97.0221386805825
+     },
+     "E": {
+      "ndcg@10": 1.0,
+      "exp_revenue@10": 274.82469309539044,
+      "exp_margin@10": 127.49300976352181
+     }
+    }
+   },
+   "examples": [
+    {
+     "label": "running shoes \u00b7 user U00001",
+     "query": "running shoes",
+     "user": "U00001",
+     "store": "S1",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "running shoes",
+      "edits": [],
+      "intent": "navigational",
+      "intent_conf": 0.43102789890931265,
+      "facet_accuracy": 1.0,
+      "ms": 19.642500003101304
+     },
+     "stage2": {
+      "n_rel": 1342,
+      "n_found": 187,
+      "recall200": {
+       "sparse": 0.93,
+       "dense": 0.94,
+       "hybrid": 0.935
+      },
+      "ms": 7.607999999891035
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 190,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 10
+      },
+      "high_return_flagged": 50,
+      "low_stock_flagged": 12
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 228.9310867302753,
+       "exp_margin@10": 91.09774965969353,
+       "unfulfillable@10": 1,
+       "avg_return_prob@10": 0.14690205331379377,
+       "avg_price@10": 133.27999877929688,
+       "pref_brand_share@10": 0.4,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 312.0483304440468,
+       "exp_margin@10": 126.09846054155453,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.1988833100356494,
+       "avg_price@10": 132.83999633789062,
+       "pref_brand_share@10": 0.2,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 299.9683536532077,
+       "exp_margin@10": 131.0705086640397,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.16285612616404704,
+       "avg_price@10": 130.57901000976562,
+       "pref_brand_share@10": 0.1,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 369.9450420107453,
+       "exp_margin@10": 165.29917327699326,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.14433634484473837,
+       "avg_price@10": 154.65899658203125,
+       "pref_brand_share@10": 0.1,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 369.9450420107453,
+       "exp_margin@10": 165.29917327699326,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.14433634484473837,
+       "avg_price@10": 154.65899658203125,
+       "pref_brand_share@10": 0.1,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 19.22,
+      "retrieval_ms": 7.54,
+      "feature_ms": 1.05,
+      "ranking_ms": 78.28,
+      "rerank_ms": 2.72,
+      "total_ms": 108.86
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Stridewell RR-1041 Max Cushion Lightweight Running Shoes - Burgundy",
+       "price": 160.3699951171875,
+       "margin_pct": 52.1,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 35.472,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Nordhaven RR-6169 Carbon Plate Max Cushion Running Shoes - Charcoal",
+       "price": 172.35000610351562,
+       "margin_pct": 53.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 34.921,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Cobalt & Co RR-1945 Carbon Plate Max Cushion Running Shoes - Forest Green",
+       "price": 208.49000549316406,
+       "margin_pct": 51.4,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 39.201,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "Aeroflux RR-3801 Max Cushion Lightweight Running Shoes - Black",
+       "price": 175.61000061035156,
+       "margin_pct": 56.3,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 35.848,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Aeroflux RR-7817 Carbon Plate Max Cushion Running Shoes - Olive",
+       "price": 103.37000274658203,
+       "margin_pct": 59.0,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 28.269,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    },
+    {
+     "label": "running shoes \u00b7 user U00100",
+     "query": "running shoes",
+     "user": "U00100",
+     "store": "S2",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "running shoes",
+      "edits": [],
+      "intent": "navigational",
+      "intent_conf": 0.43102789890931265,
+      "facet_accuracy": 1.0,
+      "ms": 19.12370000354713
+     },
+     "stage2": {
+      "n_rel": 1342,
+      "n_found": 187,
+      "recall200": {
+       "sparse": 0.93,
+       "dense": 0.94,
+       "hybrid": 0.935
+      },
+      "ms": 7.9670999984955415
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 189,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 11
+      },
+      "high_return_flagged": 50,
+      "low_stock_flagged": 12
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 170.02703434743123,
+       "exp_margin@10": 68.42827208243989,
+       "unfulfillable@10": 1,
+       "avg_return_prob@10": 0.14690205331379377,
+       "avg_price@10": 133.27999877929688,
+       "pref_brand_share@10": 0.5,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 203.75058904733652,
+       "exp_margin@10": 93.8730528350365,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.12314915476496069,
+       "avg_price@10": 94.22200775146484,
+       "pref_brand_share@10": 0.8,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 203.75058904733652,
+       "exp_margin@10": 93.8730528350365,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.12314915476496069,
+       "avg_price@10": 94.22200775146484,
+       "pref_brand_share@10": 0.8,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 251.3286372121521,
+       "exp_margin@10": 121.57492892862729,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.1292952244442126,
+       "avg_price@10": 128.92201232910156,
+       "pref_brand_share@10": 0.9,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 249.0444106996917,
+       "exp_margin@10": 120.88321935175095,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.13357329436410917,
+       "avg_price@10": 133.76100158691406,
+       "pref_brand_share@10": 0.8,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 16.77,
+      "retrieval_ms": 6.97,
+      "feature_ms": 0.93,
+      "ranking_ms": 62.77,
+      "rerank_ms": 2.97,
+      "total_ms": 90.44
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Aeroflux RR-7817 Carbon Plate Max Cushion Running Shoes - Olive",
+       "price": 103.37000274658203,
+       "margin_pct": 59.0,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 28.558,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "TerraPeak RR-7393 Max Cushion Lightweight Running Shoes - White",
+       "price": 125.94999694824219,
+       "margin_pct": 57.8,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 28.541,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Aeroflux RR-3801 Max Cushion Lightweight Running Shoes - Black",
+       "price": 175.61000061035156,
+       "margin_pct": 56.3,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 28.379,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "TerraPeak RR-3185 Lightweight Max Cushion Running Shoes - Navy",
+       "price": 138.91000366210938,
+       "margin_pct": 56.6,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 27.518,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "TerraPeak RR-1746 Max Cushion Running Shoes - Crimson",
+       "price": 82.3499984741211,
+       "margin_pct": 54.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 20.993,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    },
+    {
+     "label": "running shoes \u00b7 user U00200",
+     "query": "running shoes",
+     "user": "U00200",
+     "store": "S3",
+     "fulfillment": "any",
+     "stage1": {
+      "corrected": "running shoes",
+      "edits": [],
+      "intent": "navigational",
+      "intent_conf": 0.43102789890931265,
+      "facet_accuracy": 1.0,
+      "ms": 18.875200003094506
+     },
+     "stage2": {
+      "n_rel": 1342,
+      "n_found": 187,
+      "recall200": {
+       "sparse": 0.93,
+       "dense": 0.94,
+       "hybrid": 0.935
+      },
+      "ms": 7.221600004413631
+     },
+     "rules": {
+      "retrieved": 200,
+      "after_hard_filters": 192,
+      "dropped": {
+       "out_of_stock_or_unavailable_in_region": 8
+      },
+      "high_return_flagged": 50,
+      "low_stock_flagged": 11
+     },
+     "variants": {
+      "A retrieval order": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 130.27669967002413,
+       "exp_margin@10": 52.69535463011101,
+       "unfulfillable@10": 1,
+       "avg_return_prob@10": 0.14690205331379377,
+       "avg_price@10": 133.27999877929688,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 1,
+       "shown": 10
+      },
+      "B + LTR ensemble": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 164.08749990649514,
+       "exp_margin@10": 71.09490266515647,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.1771878526179555,
+       "avg_price@10": 99.9000015258789,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "C + hard rules & penalties": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 160.7646573924874,
+       "exp_margin@10": 70.58659140530536,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.15073457822717373,
+       "avg_price@10": 96.76799774169922,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "D + margin re-rank": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 205.48462657573427,
+       "exp_margin@10": 96.29663666182122,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.1270918279129978,
+       "avg_price@10": 129.35401916503906,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      },
+      "E + MMR (final page)": {
+       "ndcg@10": 1.0,
+       "precision@10": 1.0,
+       "exp_revenue@10": 205.48462657573427,
+       "exp_margin@10": 96.29663666182122,
+       "unfulfillable@10": 0,
+       "avg_return_prob@10": 0.1270918279129978,
+       "avg_price@10": 129.35401916503906,
+       "pref_brand_share@10": 0.0,
+       "cold_in_top10": 0,
+       "shown": 10
+      }
+     },
+     "latency": {
+      "query_understanding_ms": 17.42,
+      "retrieval_ms": 6.99,
+      "feature_ms": 0.93,
+      "ranking_ms": 56.68,
+      "rerank_ms": 2.56,
+      "total_ms": 84.61
+     },
+     "final": [
+      {
+       "rank": 1,
+       "title": "Aeroflux RR-7817 Carbon Plate Max Cushion Running Shoes - Olive",
+       "price": 103.37000274658203,
+       "margin_pct": 59.0,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 22.203,
+       "flags": []
+      },
+      {
+       "rank": 2,
+       "title": "Cobalt & Co RR-1945 Carbon Plate Max Cushion Running Shoes - Forest Green",
+       "price": 208.49000549316406,
+       "margin_pct": 51.4,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 25.178,
+       "flags": []
+      },
+      {
+       "rank": 3,
+       "title": "Nordhaven RR-9798 Max Cushion Running Shoes - Charcoal",
+       "price": 110.52999877929688,
+       "margin_pct": 54.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 18.916,
+       "flags": []
+      },
+      {
+       "rank": 4,
+       "title": "TerraPeak RR-7393 Max Cushion Lightweight Running Shoes - White",
+       "price": 125.94999694824219,
+       "margin_pct": 57.8,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 20.917,
+       "flags": []
+      },
+      {
+       "rank": 5,
+       "title": "Nordhaven RR-6169 Carbon Plate Max Cushion Running Shoes - Charcoal",
+       "price": 172.35000610351562,
+       "margin_pct": 53.9,
+       "cold": false,
+       "route": "ship",
+       "E_profit": 21.869,
+       "flags": []
+      }
+     ],
+     "cold_target": null
+    }
+   ]
+  }
+ ],
+ "all_examples": 24,
+ "stage_means_all": {
+  "A retrieval order": {
+   "ndcg@10": 0.9218828085619407,
+   "precision@10": 0.8166666666666668,
+   "exp_revenue@10": 158.41870750206223,
+   "exp_margin@10": 61.071011504906274,
+   "unfulfillable@10": 0.7916666666666666,
+   "avg_return_prob@10": 0.1583257986362784
+  },
+  "B + LTR ensemble": {
+   "ndcg@10": 0.9411292314070631,
+   "precision@10": 0.8708333333333332,
+   "exp_revenue@10": 234.19902401352942,
+   "exp_margin@10": 95.65562602734714,
+   "unfulfillable@10": 0.875,
+   "avg_return_prob@10": 0.14711434362691947
+  },
+  "C + hard rules & penalties": {
+   "ndcg@10": 0.9500033324301853,
+   "precision@10": 0.8833333333333333,
+   "exp_revenue@10": 225.32237584577078,
+   "exp_margin@10": 95.32177460649889,
+   "unfulfillable@10": 0.0,
+   "avg_return_prob@10": 0.12134305919584014
+  },
+  "D + margin re-rank": {
+   "ndcg@10": 0.9610287765551977,
+   "precision@10": 0.8958333333333334,
+   "exp_revenue@10": 291.87742383022544,
+   "exp_margin@10": 129.70572229528324,
+   "unfulfillable@10": 0.0,
+   "avg_return_prob@10": 0.11182351054228452
+  },
+  "E + MMR (final page)": {
+   "ndcg@10": 0.956793216641711,
+   "precision@10": 0.8875000000000001,
+   "exp_revenue@10": 291.5264876708714,
+   "exp_margin@10": 129.18408956470918,
+   "unfulfillable@10": 0.0,
+   "avg_return_prob@10": 0.11384960619966085
+  }
+ },
+ "model_means_all": {
+  "xgb_pointwise": {
+   "B": {
+    "ndcg@10": 0.9439928284429019,
+    "exp_revenue@10": 239.74507255148924,
+    "exp_margin@10": 98.4173952748147
+   },
+   "E": {
+    "ndcg@10": 0.955076716501365,
+    "exp_revenue@10": 289.5908497750882,
+    "exp_margin@10": 128.15865266540007
+   }
+  },
+  "lgbm_pointwise": {
+   "B": {
+    "ndcg@10": 0.9214545185992384,
+    "exp_revenue@10": 224.67580883049854,
+    "exp_margin@10": 93.21309869560712
+   },
+   "E": {
+    "ndcg@10": 0.9529144390867984,
+    "exp_revenue@10": 287.7706330492258,
+    "exp_margin@10": 127.7585076580691
+   }
+  },
+  "xgb_pairwise": {
+   "B": {
+    "ndcg@10": 0.9449924632210299,
+    "exp_revenue@10": 239.18256945503563,
+    "exp_margin@10": 97.33616608465137
+   },
+   "E": {
+    "ndcg@10": 0.9550693570983619,
+    "exp_revenue@10": 286.61625713238374,
+    "exp_margin@10": 126.43965006173777
+   }
+  },
+  "lgbm_lambdamart": {
+   "B": {
+    "ndcg@10": 0.9287257733533787,
+    "exp_revenue@10": 219.45756800466492,
+    "exp_margin@10": 88.21692396392513
+   },
+   "E": {
+    "ndcg@10": 0.9499686783905327,
+    "exp_revenue@10": 282.2433066779281,
+    "exp_margin@10": 123.8454741877503
+   }
+  },
+  "cat_yetirank": {
+   "B": {
+    "ndcg@10": 0.931798026662373,
+    "exp_revenue@10": 221.57870549799864,
+    "exp_margin@10": 89.68171099562953
+   },
+   "E": {
+    "ndcg@10": 0.9496328679463151,
+    "exp_revenue@10": 284.17999456616013,
+    "exp_margin@10": 124.67663757707282
+   }
+  },
+  "xgb_listwise": {
+   "B": {
+    "ndcg@10": 0.932808360883466,
+    "exp_revenue@10": 215.9155130635338,
+    "exp_margin@10": 87.80510121261182
+   },
+   "E": {
+    "ndcg@10": 0.9505958600488142,
+    "exp_revenue@10": 282.66361297326114,
+    "exp_margin@10": 123.55969480657102
+   }
+  },
+  "torch_listnet": {
+   "B": {
+    "ndcg@10": 0.9411915504911827,
+    "exp_revenue@10": 255.81285817565822,
+    "exp_margin@10": 107.27537063150943
+   },
+   "E": {
+    "ndcg@10": 0.9567754619104694,
+    "exp_revenue@10": 297.895475500067,
+    "exp_margin@10": 131.9020441774246
+   }
+  },
+  "dcnv2": {
+   "B": {
+    "ndcg@10": 0.9566624768826446,
+    "exp_revenue@10": 228.2085725177129,
+    "exp_margin@10": 93.33401921975445
+   },
+   "E": {
+    "ndcg@10": 0.9681952970803879,
+    "exp_revenue@10": 283.57187639754693,
+    "exp_margin@10": 124.60525908952063
+   }
+  },
+  "ensemble": {
+   "B": {
+    "ndcg@10": 0.9411292314070631,
+    "exp_revenue@10": 234.19902401352942,
+    "exp_margin@10": 95.65562602734714
+   },
+   "E": {
+    "ndcg@10": 0.956793216641711,
+    "exp_revenue@10": 291.5264876708714,
+    "exp_margin@10": 129.18408956470918
+   }
+  }
+ },
+ "models": [
+  "xgb_pointwise",
+  "lgbm_pointwise",
+  "xgb_pairwise",
+  "lgbm_lambdamart",
+  "cat_yetirank",
+  "xgb_listwise",
+  "torch_listnet",
+  "dcnv2",
+  "ensemble"
+ ]
+}

@@ -44,13 +44,13 @@
       "cold_start_in_results": 0
     },
     "latency_ms": {
-      "query_understanding_ms": 14.21,
-      "retrieval_ms": 3.74,
-      "feature_ms": 0.63,
-      "ranking_ms": 134.75,
-      "rerank_ms": 0.81,
-      "total_ms": 154.52,
-      "wall_ms": 154.7
+      "query_understanding_ms": 23.3,
+      "retrieval_ms": 6.77,
+      "feature_ms": 1.2,
+      "ranking_ms": 163.86,
+      "rerank_ms": 1.16,
+      "total_ms": 197.03,
+      "wall_ms": 197.28
     },
     "results": [
       {
@@ -260,13 +260,13 @@
       "cold_start_in_results": 0
     },
     "latency_ms": {
-      "query_understanding_ms": 17.81,
-      "retrieval_ms": 6.85,
-      "feature_ms": 1.1,
-      "ranking_ms": 22.34,
-      "rerank_ms": 0.39,
-      "total_ms": 48.54,
-      "wall_ms": 48.7
+      "query_understanding_ms": 18.45,
+      "retrieval_ms": 7.1,
+      "feature_ms": 1.13,
+      "ranking_ms": 27.06,
+      "rerank_ms": 0.57,
+      "total_ms": 54.34,
+      "wall_ms": 54.58
     },
     "results": [
       {

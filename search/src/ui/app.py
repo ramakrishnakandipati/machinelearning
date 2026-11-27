@@ -15,6 +15,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 from src.common.utils import resolve
+from src.flows import get_flows, run_example
 from src.search_service import SearchService
 
 st.set_page_config(page_title="Retail Search Funnel", layout="wide", page_icon="🛍️")
@@ -35,7 +36,9 @@ LOCK = threading.Lock()
 
 @st.cache_resource(show_spinner="Loading models (encoder, FAISS, rankers)...")
 def get_service():
-    return SearchService.load()
+    sv = SearchService.load()
+    sv.world.load_latent()  # simulator ground truth: used ONLY to score flows, never by serving
+    return sv
 
 
 svc = get_service()
@@ -94,10 +97,122 @@ with st.sidebar:
 kw = dict(user_id=None if user == "(anonymous)" else user, store_id=store, fulfillment=fulfil, ranker=ranker, fusion=fusion,
           top_k=topk, margin_weight=mw, apply_rules=rules, margin_opt=mopt, diversify=div)
 
-tabs = st.tabs(["🔎 Search", "🪣 Funnel Explorer", "⚖️ Ranker Comparison", "💰 Business Rules & Margin", "🌱 Cold-Start", "📊 Metrics & Latency"])
+tabs = st.tabs(["🧭 End-to-End Flows", "🔎 Search", "🪣 Funnel Explorer", "⚖️ Ranker Comparison", "💰 Business Rules & Margin", "🌱 Cold-Start", "📊 Metrics & Latency"])
+
+
+# ------------------------------------------------------------------------------ end-to-end flows
+STAGES = ["A retrieval order", "B + LTR ensemble", "C + hard rules & penalties", "D + margin re-rank", "E + MMR (final page)"]
+
+
+@st.cache_data(show_spinner="Running flow through every stage...")
+def flow_results(flow_id: str):
+    fl = next(f for f in get_flows(W) if f["id"] == flow_id)
+    with LOCK:
+        return fl, [run_example(svc, ex) for ex in fl["examples"]]
+
+
+def scoreboard():
+    def j(n):
+        p = MET / n
+        return json.loads(p.read_text()) if p.exists() else {}
+
+    ret, rk, ab, lat, mt = j("retrieval_metrics.json"), j("ranking_metrics.json"), j("rerank_ablation.json"), j("latency.json"), j("multitask_metrics.json")
+    hyb = next((v for k, v in ret.items() if k.startswith("hybrid_alpha")), {})
+    sp = next((v for k, v in ret.items() if k.startswith("sparse")), {})
+    ens, base = rk.get("ensemble", {}), rk.get("retrieval_order (no LTR)", {})
+    full, first = ab.get("4. + MMR diversity (full funnel)", {}), ab.get("1. ranker only (no rules)", {})
+    st.markdown("##### Overall funnel scoreboard (offline test split)")
+    c = st.columns(6)
+    c[0].metric("1-2 · Recall@200 (hybrid)", f"{hyb.get('recall@200', 0):.3f}", f"{hyb.get('recall@200', 0) - sp.get('recall@200', 0):+.3f} vs sparse")
+    c[1].metric("Cold-start Recall@50", f"{hyb.get('cold_start_recall@50', 0):.3f}")
+    c[2].metric("3 · NDCG@10 (ensemble)", f"{ens.get('ndcg_rel@10', 0):.3f}", f"{ens.get('ndcg_rel@10', 0) - base.get('ndcg_rel@10', 0):+.3f} vs retrieval order")
+    c[3].metric("3 · pCTR AUC", f"{mt.get('pCTR_auc', 0):.3f}")
+    c[4].metric("4 · Exp. margin@10", f"{full.get('expected_margin@10', 0):.1f}", f"{full.get('expected_margin@10', 0) / max(base.get('expected_margin@10', 1), 1e-9) - 1:+.0%} vs retrieval order")
+    c[5].metric("Unfulfillable in top-10", f"{full.get('oos_rate@10', 0):.1%}", f"{full.get('oos_rate@10', 0) - first.get('oos_rate@10', 0):+.1%} vs no rules", delta_color="inverse")
+    tot = lat.get("total_ms", {})
+    st.caption(f"End-to-end latency p50 / p95 / p99 = {tot.get('p50', 0):.0f} / {tot.get('p95', 0):.0f} / {tot.get('p99', 0):.0f} ms "
+               f"(budget {lat.get('budget_ms', {}).get('total', 150)} ms). Sidebar controls do not affect this tab.")
+
+
+def render_example(r):
+    s1, s2, rk_, ru = r["stage1"], r["stage2"], r["ranking"], r["rules"]
+    v = r["variants"]
+    A, B, E = v[STAGES[0]], v[STAGES[1]], v[STAGES[4]]
+    rt = s2["retrievers"]
+    ex = r["example"]
+    st.caption(f"user **{ex['user_id']}** · store **{ex.get('store_id')}** · fulfilment **{ex.get('fulfillment', 'any')}**"
+               + (f" · margin weight **{ex['margin_weight']}**" if ex.get("margin_weight") is not None else ""))
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        st.markdown("**① Query understanding**")
+        st.metric("Corrected", s1["corrected"][:26] + ("…" if len(s1["corrected"]) > 26 else ""))
+        st.metric("Intent", s1["intent"], f"{s1['intent_conf']:.0%} conf", delta_color="off")
+        st.metric("Facet accuracy vs truth", f"{s1['facet_accuracy']:.0%}")
+        st.caption(f"edits: {', '.join(f'{a}→{b}' for a, b in s1['edits']) or 'none'} · synonyms: {', '.join(s1['synonyms'][:4]) or '–'} · "
+                   f"neighbours: {', '.join(s1['neighbors'][:2]) or '–'} · {s1['ms']:.0f} ms")
+    with c2:
+        st.markdown("**② Hybrid retrieval**")
+        st.metric("Relevant found in 200", f"{s2['n_relevant_in_candidates']}/{min(s2['n_relevant_in_catalog'], 200)}")
+        st.metric("Recall@200 hybrid", f"{rt['hybrid']['recall@200']:.2f}", f"{rt['hybrid']['recall@200'] - max(rt['sparse']['recall@200'], rt['dense']['recall@200']):+.2f} vs best single")
+        st.metric("R@50 sparse / dense / hybrid", f"{rt['sparse']['recall@50']:.2f} / {rt['dense']['recall@50']:.2f} / {rt['hybrid']['recall@50']:.2f}")
+        st.caption(f"cold-start relevant in candidates: {s2['cold_in_candidates']}/{s2['cold_relevant']} · {s2['ms']:.1f} ms")
+    with c3:
+        st.markdown("**③ LTR + multi-task**")
+        st.metric("NDCG@10", f"{B['ndcg@10']:.3f}", f"{B['ndcg@10'] - A['ndcg@10']:+.3f} vs retrieval order")
+        st.metric("Exp. margin@10", f"{B['exp_margin@10']:.1f}", f"{B['exp_margin@10'] - A['exp_margin@10']:+.1f}")
+        st.caption(f"ranker: {rk_['ranker']} · mean pCTR {rk_['mean_pCTR@10']:.2f} · pCVR {rk_['mean_pCVR@10']:.2f} · pReturn {rk_['mean_pReturn@10']:.2f} · {rk_['ms']:.0f} ms")
+    with c4:
+        st.markdown("**④ Business re-rank**")
+        st.metric("Retrieved → after filters", f"{ru['retrieved']} → {ru['after_hard_filters']}")
+        st.metric("Unfulfillable in top-10", f"{E['unfulfillable@10']}", f"{E['unfulfillable@10'] - B['unfulfillable@10']:+d} vs ranker only", delta_color="inverse")
+        st.metric("Exp. margin@10 (final)", f"{E['exp_margin@10']:.1f}", f"{E['exp_margin@10'] / max(A['exp_margin@10'], 1e-9) - 1:+.0%} vs retrieval order")
+        st.caption(f"dropped: {ru['dropped'] or 'none'} · high-return flagged {ru['high_return_flagged']} · low-stock flagged {ru['low_stock_flagged']}")
+    df = pd.DataFrame(v).T.rename(columns={"ndcg@10": "NDCG@10", "precision@10": "Prec@10", "exp_revenue@10": "Exp rev", "exp_margin@10": "Exp margin",
+                                           "unfulfillable@10": "Unfulfillable", "avg_return_prob@10": "Avg P(return)", "avg_price@10": "Avg price",
+                                           "pref_brand_share@10": "Pref-brand share", "cold_in_top10": "Cold in top10"}).drop(columns=["shown"])
+    st.dataframe(df.round(3), use_container_width=True)
+    if "cold_target" in r:
+        ct = r["cold_target"]
+        st.info(f"Target cold SKU **{ct['title']}** ({ct['impressions']} impressions, {ct['days_since_launch']} days old): "
+                f"rank sparse {ct['rank_sparse']} · dense {ct['rank_dense']} · hybrid {ct['rank_hybrid']} · **final page {ct['rank_final']}**")
+    fin = pd.DataFrame(r["final"][:6])
+    if len(fin):
+        fin["flags"] = fin["flags"].apply(lambda x: ", ".join(x))
+        fin["cold"] = fin["cold"].map({True: "🆕", False: ""})
+        st.dataframe(fin, hide_index=True, use_container_width=True)
+    lt = r["latency_ms"]
+    st.caption(f"Served latency: total {lt['total_ms']:.0f} ms (understand {lt['query_understanding_ms']:.0f} · retrieve "
+               f"{lt['retrieval_ms']:.0f} · rank {lt['ranking_ms']:.0f} · rerank {lt['rerank_ms']:.0f})")
+
+
+with tabs[0]:
+    scoreboard()
+    all_flows = get_flows(W)
+    fid = st.selectbox("Flow", [f["id"] for f in all_flows], format_func=lambda i: next(f["title"] for f in all_flows if f["id"] == i), key="flow_sel")
+    fl, res = flow_results(fid)
+    st.markdown(f"### {fl['title']}")
+    st.write(fl["blurb"])
+    cols_ = ["ndcg@10", "precision@10", "exp_revenue@10", "exp_margin@10", "unfulfillable@10", "avg_return_prob@10"]
+    mean = pd.DataFrame({k: {m: np.mean([r["variants"][k][m] for r in res]) for m in cols_} for k in STAGES}).T
+    a, b = st.columns([3, 2])
+    with a:
+        st.markdown(f"**Per-stage mean across {len(res)} examples**")
+        st.dataframe(mean.round(3).rename(columns={"ndcg@10": "NDCG@10", "precision@10": "Prec@10", "exp_revenue@10": "Exp rev",
+                                                    "exp_margin@10": "Exp margin", "unfulfillable@10": "Unfulfillable", "avg_return_prob@10": "Avg P(return)"}),
+                     use_container_width=True)
+    with b:
+        fig = go.Figure()
+        fig.add_bar(x=[s[0] for s in STAGES], y=mean["exp_margin@10"], name="Exp. margin@10", marker_color="#2a6fdb")
+        fig.add_scatter(x=[s[0] for s in STAGES], y=mean["ndcg@10"], name="NDCG@10", yaxis="y2", mode="lines+markers", line=dict(color="#e8710a"))
+        fig.update_layout(height=270, margin=dict(l=0, r=0, t=10, b=0), yaxis2=dict(overlaying="y", side="right", range=[0, 1.05]),
+                          legend=dict(orientation="h", y=1.15), xaxis_title="stage (A retrieval to E final)")
+        st.plotly_chart(fig, use_container_width=True)
+    for r in res:
+        with st.expander(f"Example · {r['example']['label']}  -  query: \"{r['example']['query']}\"", expanded=True):
+            render_example(r)
 
 # ----------------------------------------------------------------------------------------- search
-with tabs[0]:
+with tabs[1]:
     out = run(q, **kw)
     u = out["understanding"]
     a, b, c = st.columns([2, 2, 3])
@@ -115,7 +230,7 @@ with tabs[0]:
     st.plotly_chart(lat_chart(out["latency_ms"]), use_container_width=True)
 
 # ------------------------------------------------------------------------------ funnel explorer
-with tabs[1]:
+with tabs[2]:
     st.subheader(f"Stage by stage for “{q}”")
     ctx = svc.engine.understand(q)
     rows = []
@@ -134,7 +249,7 @@ with tabs[1]:
     st.json({"parsed": out2["understanding"], "dropped": f["dropped_reasons"]})
 
 # ------------------------------------------------------------------------------ ranker comparison
-with tabs[2]:
+with tabs[3]:
     st.subheader("Same candidates, different LTR paradigms")
     res, cols = {}, st.columns(3)
     for i, name in enumerate(svc.models):
@@ -151,7 +266,7 @@ with tabs[2]:
         st.plotly_chart(px.bar(m, x="model", y="ndcg_rel@10", title="Offline NDCG@10 (test lists)", range_y=[0.7, 1.0]), use_container_width=True)
 
 # ------------------------------------------------------------------------------ business rules
-with tabs[3]:
+with tabs[4]:
     st.subheader("Margin weight sweep & rule ablation")
     rows = []
     for w_ in [0.0, 0.2, 0.35, 0.5, 0.7, 0.9]:
@@ -173,7 +288,7 @@ with tabs[3]:
     st.warning(f"With business rules OFF, {oos} of the top {len(o_off['results'])} results are unfulfillable.")
 
 # ------------------------------------------------------------------------------ cold start
-with tabs[4]:
+with tabs[5]:
     st.subheader("Brand-new SKUs (zero interaction history) are retrievable via content embeddings")
     cold = W.catalog[W.catalog.is_cold_start].sample(8, random_state=3)
     pick = st.selectbox("Pick a cold-start SKU", cold.index, format_func=lambda i: W.catalog.title[i][:80])
@@ -194,7 +309,7 @@ with tabs[4]:
     st.dataframe(results_df(o)[["#", "title", "price", "cold-start", "pCTR", "pCVR", "E[profit] $"]], hide_index=True, use_container_width=True)
 
 # ------------------------------------------------------------------------------ metrics
-with tabs[5]:
+with tabs[6]:
     st.subheader("Offline evaluation & latency")
     rp = MET / "retrieval_metrics.csv"
     if rp.exists():

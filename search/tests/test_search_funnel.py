@@ -196,3 +196,15 @@ def test_api_search_roundtrip():
         assert "total_ms" in body["latency_ms"]
         assert c.post("/search", json={"query": "x", "ranker": "nope"}).status_code == 422
         assert c.get("/metrics").status_code == 200
+
+
+@needs_artifacts
+def test_flows_have_three_examples_and_stage_metrics(svc):
+    from src.flows import get_flows, run_example
+
+    flows = get_flows(svc.world)
+    assert len(flows) == 7 and all(len(f["examples"]) >= 3 for f in flows)
+    r = run_example(svc, flows[0]["examples"][0])
+    assert set(r["variants"]) == {"A retrieval order", "B + LTR ensemble", "C + hard rules & penalties",
+                                  "D + margin re-rank", "E + MMR (final page)"}
+    assert r["stage1"]["facet_accuracy"] == 1.0 and r["variants"]["E + MMR (final page)"]["unfulfillable@10"] == 0

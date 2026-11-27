@@ -74,23 +74,40 @@ def main():
             time.sleep(1.5)
             page.locator("#operations-search-search_search_post").scroll_into_view_if_needed()
             page.screenshot(path=str(out / "02_swagger_search_execute.png"), full_page=True)
-            # ---- Streamlit
+            # ---- Streamlit (tall viewport so Streamlit's inner scroll area is captured in full)
+            ctx.close()
+            ctx = b.new_context(viewport={"width": 1600, "height": 3400}, device_scale_factor=1.0)
+            page = ctx.new_page()
             page.goto(UI); page.wait_for_selector("text=GPU-Accelerated Retail Search Funnel", timeout=240000)
-            settle(page, 3)
-            page.screenshot(path=str(out / "03_ui_search_vocab_gap.png"), full_page=True)
+            settle(page, 4)
+            flow_ids = ["vocab_gap", "typo_price", "navigational", "regional", "cold_start", "margin", "personalization"]
+            ft_full = {"vocab_gap": "Vocabulary gap", "typo_price": "Typos + price constraint", "navigational": "Navigational (brand) intent", "regional": "Regional stock & BOPIS", "cold_start": "Cold-start SKUs", "margin": "Margin-aware re-ranking", "personalization": "Personalisation"}
+
+            def pick(label_text, option):
+                page.get_by_role("combobox", name=label_text).click()
+                page.get_by_role("option", name=option).click()
+                settle(page, 3)
+
+            for n, fid in enumerate(flow_ids, 1):
+                if n > 1:
+                    pick("Flow", f"{n} · {ft_full[fid]}")
+                settle(page, 2)
+                page.screenshot(path=str(out / f"{2 + n:02d}_flow_{n}_{fid}.png"), full_page=True)
 
             def pick_example(label):
-                page.get_by_label("Example queries").click()
+                page.get_by_role("combobox", name="Example queries").click()
                 page.get_by_role("option", name=label).click()
                 settle(page, 2)
 
+            page.get_by_role("tab", name="Search", exact=False).click(); settle(page, 2)
+            page.screenshot(path=str(out / "10_ui_search_vocab_gap.png"), full_page=True)
             pick_example("Typos + price: gortex snekers under $100")
-            page.screenshot(path=str(out / "04_ui_search_typo_price.png"), full_page=True)
+            page.screenshot(path=str(out / "11_ui_search_typo_price.png"), full_page=True)
             pick_example("Vocabulary gap: office chic heels")
-            page.screenshot(path=str(out / "05_ui_search_office_heels.png"), full_page=True)
-            for i, (tab, fn) in enumerate([("Funnel Explorer", "06_ui_funnel_explorer"), ("Ranker Comparison", "07_ui_ranker_comparison"),
-                                           ("Business Rules & Margin", "08_ui_business_rules_margin"), ("Cold-Start", "09_ui_cold_start"),
-                                           ("Metrics & Latency", "10_ui_metrics_latency")]):
+            page.screenshot(path=str(out / "12_ui_search_office_heels.png"), full_page=True)
+            for tab, fn in [("Funnel Explorer", "13_ui_funnel_explorer"), ("Ranker Comparison", "14_ui_ranker_comparison"),
+                            ("Business Rules & Margin", "15_ui_business_rules_margin"), ("Cold-Start", "16_ui_cold_start"),
+                            ("Metrics & Latency", "17_ui_metrics_latency")]:
                 page.get_by_role("tab", name=tab, exact=False).click()
                 settle(page, 2.5)
                 page.screenshot(path=str(out / f"{fn}.png"), full_page=True)

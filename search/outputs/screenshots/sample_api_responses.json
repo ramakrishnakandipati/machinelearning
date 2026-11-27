@@ -1,0 +1,424 @@
+{
+  "vocab_gap": {
+    "query": "waterproof trail kicks",
+    "corrected_query": "waterproof trail kicks",
+    "spell_edits": [],
+    "understanding": {
+      "brand": "",
+      "color": "",
+      "category": "Footwear",
+      "subcategories": [
+        "Trail Running Shoes"
+      ],
+      "max_price": 0.0,
+      "gender": "",
+      "intent_type": "attribute_specific",
+      "intent_confidence": 0.9933040429284905,
+      "feature_terms": [
+        "waterproof"
+      ],
+      "synonyms": [
+        "gore-tex",
+        "waterproof breathable",
+        "trail running",
+        "sneakers",
+        "shoes"
+      ],
+      "embedding_neighbors": [
+        "waterproof footwear",
+        "waterproof rock",
+        "waterproof lug-sole"
+      ],
+      "learned_sparse_terms": {}
+    },
+    "ranker": "ensemble",
+    "fusion": "alpha",
+    "store_id": "S1",
+    "funnel": {
+      "retrieved": 200,
+      "after_hard_filters": 191,
+      "returned": 5,
+      "dropped_reasons": {
+        "out_of_stock_or_unavailable_in_region": 9
+      },
+      "cold_start_in_results": 0
+    },
+    "latency_ms": {
+      "query_understanding_ms": 14.21,
+      "retrieval_ms": 3.74,
+      "feature_ms": 0.63,
+      "ranking_ms": 134.75,
+      "rerank_ms": 0.81,
+      "total_ms": 154.52,
+      "wall_ms": 154.7
+    },
+    "results": [
+      {
+        "rank": 1,
+        "sku_id": "SKU002059",
+        "title": "Nordhaven TR-3288 Gore-Tex Waterproof Lug-Sole Grip Trail Running Sneakers - Olive",
+        "brand": "Nordhaven",
+        "category": "Footwear",
+        "subcategory": "Trail Running Shoes",
+        "color": "olive",
+        "price": 117.9000015258789,
+        "gross_margin_pct": 0.5385000109672546,
+        "return_rate": 0.03500000014901161,
+        "is_cold_start": false,
+        "stock_online": 61,
+        "stock_store": 14,
+        "fulfillment": "ship",
+        "scores": {
+          "final": 0.9973605654730642,
+          "ranker": 2.6225307636356456,
+          "relevance_norm": 1.0,
+          "dense_cos": 0.8146897554397583,
+          "bm25": 31.708545684814453,
+          "p_click": 0.9457880258560181,
+          "p_add_to_cart": 0.8184138536453247,
+          "p_purchase_given_cart": 0.7839460372924805,
+          "p_return": 0.03897268697619438,
+          "expected_revenue": 68.75471496582031,
+          "expected_profit": 37.02490997314453
+        },
+        "flags": []
+      },
+      {
+        "rank": 2,
+        "sku_id": "SKU006867",
+        "title": "Nordhaven TR-3915 Gore-Tex Waterproof Lug-Sole Grip Trail Running Sneakers - White",
+        "brand": "Nordhaven",
+        "category": "Footwear",
+        "subcategory": "Trail Running Shoes",
+        "color": "white",
+        "price": 181.3300018310547,
+        "gross_margin_pct": 0.45509999990463257,
+        "return_rate": 0.10140000283718109,
+        "is_cold_start": false,
+        "stock_online": 73,
+        "stock_store": 7,
+        "fulfillment": "ship",
+        "scores": {
+          "final": 0.9897368421052631,
+          "ranker": 1.954798392243885,
+          "relevance_norm": 0.9842105263157894,
+          "dense_cos": 0.8321794867515564,
+          "bm25": 31.708545684814453,
+          "p_click": 0.9098119139671326,
+          "p_add_to_cart": 0.7129077911376953,
+          "p_purchase_given_cart": 0.7722368836402893,
+          "p_return": 0.09449675679206848,
+          "expected_revenue": 82.24229431152344,
+          "expected_profit": 37.426979064941406
+        },
+        "flags": []
+      },
+      {
+        "rank": 3,
+        "sku_id": "SKU006546",
+        "title": "Nordhaven TR-5646 Gore-Tex Waterproof Breathable Mesh Trail Running Sneakers - Forest Green",
+        "brand": "Nordhaven",
+        "category": "Footwear",
+        "subcategory": "Trail Running Shoes",
+        "color": "forest green",
+        "price": 120.9800033569336,
+        "gross_margin_pct": 0.5187000036239624,
+        "return_rate": 0.05999999865889549,
+        "is_cold_start": false,
+        "stock_online": 68,
+        "stock_store": 0,
+        "fulfillment": "ship",
+        "scores": {
+          "final": 0.9423072978082883,
+          "ranker": 2.148653111541986,
+          "relevance_norm": 0.9894736842105263,
+          "dense_cos": 0.8248651623725891,
+          "bm25": 31.524873733520508,
+          "p_click": 0.9170952439308167,
+          "p_add_to_cart": 0.7180606126785278,
+          "p_purchase_given_cart": 0.7721839547157288,
+          "p_return": 0.05784831941127777,
+          "expected_revenue": 57.9603157043457,
+          "expected_profit": 30.06290054321289
+        },
+        "flags": []
+      },
+      {
+        "rank": 4,
+        "sku_id": "SKU003184",
+        "title": "Pinecrest TR-6650 Gore-Tex Waterproof Lug-Sole Grip Trail Running Sneakers - Charcoal",
+        "brand": "Pinecrest",
+        "category": "Footwear",
+        "subcategory": "Trail Running Shoes",
+        "color": "charcoal",
+        "price": 145.22000122070312,
+        "gross_margin_pct": 0.5318999886512756,
+        "return_rate": 0.21610000729560852,
+        "is_cold_start": false,
+        "stock_online": 67,
+        "stock_store": 16,
+        "fulfillment": "ship",
+        "scores": {
+          "final": 0.9233878506199475,
+          "ranker": 1.7451621691944235,
+          "relevance_norm": 0.9789473684210527,
+          "dense_cos": 0.8441922664642334,
+          "bm25": 32.52622985839844,
+          "p_click": 0.8757482767105103,
+          "p_add_to_cart": 0.7224718928337097,
+          "p_purchase_given_cart": 0.7140572667121887,
+          "p_return": 0.18522676825523376,
+          "expected_revenue": 53.45600128173828,
+          "expected_profit": 28.43231964111328
+        },
+        "flags": []
+      },
+      {
+        "rank": 5,
+        "sku_id": "SKU006274",
+        "title": "Kestrel TR-5892 Gore-Tex Waterproof Lug-Sole Grip Trail Running Sneakers - Blush Pink",
+        "brand": "Kestrel",
+        "category": "Footwear",
+        "subcategory": "Trail Running Shoes",
+        "color": "blush pink",
+        "price": 161.27999877929688,
+        "gross_margin_pct": 0.4562000036239624,
+        "return_rate": 0.16519999504089355,
+        "is_cold_start": false,
+        "stock_online": 68,
+        "stock_store": 0,
+        "fulfillment": "ship",
+        "scores": {
+          "final": 0.921170586398157,
+          "ranker": 1.700150631566824,
+          "relevance_norm": 0.9736842105263158,
+          "dense_cos": 0.806045651435852,
+          "bm25": 32.967777252197266,
+          "p_click": 0.8756895065307617,
+          "p_add_to_cart": 0.7158771753311157,
+          "p_purchase_given_cart": 0.7100884914398193,
+          "p_return": 0.12703697383403778,
+          "expected_revenue": 62.67256546020508,
+          "expected_profit": 28.592805862426758
+        },
+        "flags": []
+      }
+    ]
+  },
+  "typo_price": {
+    "query": "gortex snekers under $100",
+    "corrected_query": "gore-tex sneakers under $100",
+    "spell_edits": [
+      [
+        "gortex",
+        "gore-tex"
+      ],
+      [
+        "snekers",
+        "sneakers"
+      ]
+    ],
+    "understanding": {
+      "brand": "",
+      "color": "",
+      "category": "Footwear",
+      "subcategories": [
+        "Road Running Shoes",
+        "Trail Running Shoes"
+      ],
+      "max_price": 100.0,
+      "gender": "",
+      "intent_type": "attribute_specific",
+      "intent_confidence": 0.9959136763004655,
+      "feature_terms": [
+        "gore",
+        "gore-tex",
+        "tex"
+      ],
+      "synonyms": [],
+      "embedding_neighbors": [
+        "gore-tex waterproof",
+        "plate gore-tex",
+        "running sneakers"
+      ],
+      "learned_sparse_terms": {
+        "outerwear": 0.07736422297655607,
+        "jacket": 0.07736422297655607
+      }
+    },
+    "ranker": "ensemble",
+    "fusion": "alpha",
+    "store_id": "S2",
+    "funnel": {
+      "retrieved": 200,
+      "after_hard_filters": 38,
+      "returned": 5,
+      "dropped_reasons": {
+        "out_of_stock_or_unavailable_in_region": 14,
+        "over_price_constraint": 148
+      },
+      "cold_start_in_results": 0
+    },
+    "latency_ms": {
+      "query_understanding_ms": 17.81,
+      "retrieval_ms": 6.85,
+      "feature_ms": 1.1,
+      "ranking_ms": 22.34,
+      "rerank_ms": 0.39,
+      "total_ms": 48.54,
+      "wall_ms": 48.7
+    },
+    "results": [
+      {
+        "rank": 1,
+        "sku_id": "SKU001939",
+        "title": "Aeroflux TR-4890 Rock Plate Gore-Tex Waterproof Trail Running Sneakers - Olive",
+        "brand": "Aeroflux",
+        "category": "Footwear",
+        "subcategory": "Trail Running Shoes",
+        "color": "olive",
+        "price": 99.12999725341797,
+        "gross_margin_pct": 0.5274999737739563,
+        "return_rate": 0.12309999763965607,
+        "is_cold_start": false,
+        "stock_online": 74,
+        "stock_store": 0,
+        "fulfillment": "ship",
+        "scores": {
+          "final": 1.0,
+          "ranker": 2.0607550319648986,
+          "relevance_norm": 1.0,
+          "dense_cos": 0.7440046072006226,
+          "bm25": 24.982608795166016,
+          "p_click": 0.8716288805007935,
+          "p_add_to_cart": 0.7219196557998657,
+          "p_purchase_given_cart": 0.6895219683647156,
+          "p_return": 0.10671275109052658,
+          "expected_revenue": 38.420658111572266,
+          "expected_profit": 20.266481399536133
+        },
+        "flags": []
+      },
+      {
+        "rank": 2,
+        "sku_id": "SKU005004",
+        "title": "Aeroflux TR-7950 Lug-Sole Grip Rock Plate Trail Running Sneakers - White",
+        "brand": "Aeroflux",
+        "category": "Footwear",
+        "subcategory": "Trail Running Shoes",
+        "color": "white",
+        "price": 92.69999694824219,
+        "gross_margin_pct": 0.47839999198913574,
+        "return_rate": 0.1476999968290329,
+        "is_cold_start": false,
+        "stock_online": 72,
+        "stock_store": 12,
+        "fulfillment": "ship",
+        "scores": {
+          "final": 0.9350705893978735,
+          "ranker": 1.9700873055486092,
+          "relevance_norm": 0.9459459459459459,
+          "dense_cos": 0.7347873449325562,
+          "bm25": 20.025680541992188,
+          "p_click": 0.8904785513877869,
+          "p_add_to_cart": 0.758357584476471,
+          "p_purchase_given_cart": 0.7089937329292297,
+          "p_return": 0.13584893941879272,
+          "expected_revenue": 38.353878021240234,
+          "expected_profit": 18.34945297241211
+        },
+        "flags": []
+      },
+      {
+        "rank": 3,
+        "sku_id": "SKU007520",
+        "title": "Nordhaven TR-8903 Breathable Mesh Gore-Tex Waterproof Trail Running Sneakers - Forest Green",
+        "brand": "Nordhaven",
+        "category": "Footwear",
+        "subcategory": "Trail Running Shoes",
+        "color": "forest green",
+        "price": 92.19999694824219,
+        "gross_margin_pct": 0.47920000553131104,
+        "return_rate": 0.0575999990105629,
+        "is_cold_start": false,
+        "stock_online": 81,
+        "stock_store": 6,
+        "fulfillment": "ship",
+        "scores": {
+          "final": 0.9060362590978881,
+          "ranker": 1.891545541265378,
+          "relevance_norm": 0.8918918918918919,
+          "dense_cos": 0.7099441885948181,
+          "bm25": 22.06599998474121,
+          "p_click": 0.882501482963562,
+          "p_add_to_cart": 0.7245223522186279,
+          "p_purchase_given_cart": 0.7070363163948059,
+          "p_return": 0.06221539154648781,
+          "expected_revenue": 39.08795928955078,
+          "expected_profit": 18.73423957824707
+        },
+        "flags": []
+      },
+      {
+        "rank": 4,
+        "sku_id": "SKU009277",
+        "title": "Cobalt & Co TR-7042 Gore-Tex Waterproof Breathable Mesh Trail Running Sneakers - Storm Gray",
+        "brand": "Cobalt & Co",
+        "category": "Footwear",
+        "subcategory": "Trail Running Shoes",
+        "color": "storm gray",
+        "price": 88.2300033569336,
+        "gross_margin_pct": 0.43970000743865967,
+        "return_rate": 0.1987999975681305,
+        "is_cold_start": false,
+        "stock_online": 77,
+        "stock_store": 6,
+        "fulfillment": "ship",
+        "scores": {
+          "final": 0.8994256899731696,
+          "ranker": 2.048261382331273,
+          "relevance_norm": 0.972972972972973,
+          "dense_cos": 0.7215637564659119,
+          "bm25": 23.278459548950195,
+          "p_click": 0.8819249272346497,
+          "p_add_to_cart": 0.752760112285614,
+          "p_purchase_given_cart": 0.7098807096481323,
+          "p_return": 0.17078492045402527,
+          "expected_revenue": 34.479190826416016,
+          "expected_profit": 15.162557601928711
+        },
+        "flags": []
+      },
+      {
+        "rank": 5,
+        "sku_id": "SKU000619",
+        "title": "Pinecrest TR-8254 Breathable Mesh Gore-Tex Waterproof Trail Running Sneakers - Forest Green",
+        "brand": "Pinecrest",
+        "category": "Footwear",
+        "subcategory": "Trail Running Shoes",
+        "color": "forest green",
+        "price": 93.66999816894531,
+        "gross_margin_pct": 0.47940000891685486,
+        "return_rate": 0.1446000039577484,
+        "is_cold_start": false,
+        "stock_online": 74,
+        "stock_store": 6,
+        "fulfillment": "ship",
+        "scores": {
+          "final": 0.8977193218581165,
+          "ranker": 1.901429122870189,
+          "relevance_norm": 0.918918918918919,
+          "dense_cos": 0.7078903317451477,
+          "bm25": 21.42266273498535,
+          "p_click": 0.869861900806427,
+          "p_add_to_cart": 0.7237273454666138,
+          "p_purchase_given_cart": 0.6950141191482544,
+          "p_return": 0.12809306383132935,
+          "expected_revenue": 35.734649658203125,
+          "expected_profit": 17.129135131835938
+        },
+        "flags": []
+      }
+    ]
+  }
+}

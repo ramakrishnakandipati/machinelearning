@@ -1,0 +1,6 @@
+{
+  "pCTR_auc": 0.8536978267437978,
+  "pATC_auc(|click)": 0.7576174528149313,
+  "pCVR_auc(|cart)": 0.66760124124689,
+  "pReturn_corr_with_latent": 0.712024794179972
+}

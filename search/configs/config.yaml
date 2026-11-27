@@ -1,0 +1,88 @@
+seed: 42
+
+paths:
+  data: data
+  models: outputs/models
+  metrics: outputs/metrics
+  logs: outputs/logs
+  screenshots: outputs/screenshots
+
+data:
+  n_skus: 12000
+  n_users: 2000
+  n_sessions: 100000
+  impressions_per_session: 10
+  cold_start_frac: 0.15
+  n_train_queries: 2400
+  n_val_queries: 300
+  n_test_queries: 300
+  misleading_frac: 0.08
+  stores:
+    - {store_id: WH, city: Online Warehouse, zip_code: "00000", lat: 39.8, lon: -98.5}
+    - {store_id: S1, city: Seattle, zip_code: "98101", lat: 47.61, lon: -122.33}
+    - {store_id: S2, city: Austin, zip_code: "78701", lat: 30.27, lon: -97.74}
+    - {store_id: S3, city: Chicago, zip_code: "60601", lat: 41.88, lon: -87.63}
+    - {store_id: S4, city: Boston, zip_code: "02108", lat: 42.36, lon: -71.06}
+    - {store_id: S5, city: Denver, zip_code: "80202", lat: 39.74, lon: -104.99}
+
+latency_budget_ms:
+  query_understanding: 30
+  retrieval: 25
+  ranking: 60
+  rerank: 15
+  total: 150
+
+retrieval:
+  n_candidates: 200
+  n_sparse: 200
+  n_dense: 200
+  fusion: alpha          # alpha | rrf
+  alpha: 0.6             # tuned on validation in the pipeline
+  rrf_k: 60
+  bm25: {k1: 1.4, b: 0.75}
+  field_weights: {title: 3.0, brand: 2.0, attributes: 1.5, description: 1.0}
+  dense_model: BAAI/bge-small-en-v1.5
+  dense_fallback: sentence-transformers/all-MiniLM-L6-v2
+  query_prefix: "Represent this sentence for searching relevant passages: "
+  image_dim: 64
+  fusion_weights: {text: 1.0, image: 0.25, tabular: 0.15}
+  hnsw: {M: 32, efConstruction: 120, efSearch: 96}
+  expansion: {n_neighbors: 3, expansion_weight: 0.4}
+
+ranking:
+  default_ranker: ensemble
+  models:
+    - xgb_pointwise
+    - lgbm_pointwise
+    - xgb_pairwise
+    - lgbm_lambdamart
+    - cat_yetirank
+    - xgb_listwise
+    - torch_listnet
+    - dcnv2
+  ensemble_members: auto   # auto = top-4 models by validation NDCG@10 on engagement labels (or an explicit list)
+  ensemble_size: 4
+  n_train_lists: 1800     # (query,user) lists used for LTR training
+  n_val_lists: 300
+  n_test_lists: 300
+  labeling_impressions: 4
+  gbdt: {n_estimators: 300, learning_rate: 0.06, max_depth: 6}
+  dcn: {cross_layers: 3, hidden: [256, 128], epochs: 14, lr: 0.002, batch_lists: 32, embed_dropout: 0.1}
+  multitask:
+    w_relevance: 0.55      # weight of relevance score in final utility blend
+    w_profit: 0.45
+
+business_rules:
+  max_return_rate: 0.22
+  return_penalty: 0.25
+  low_stock_threshold: 5
+  low_stock_penalty: 0.10
+  bopis_max_km: 60
+  min_relevance_floor: 0.35   # margin optimizer never promotes items below this normalized relevance
+
+rerank:
+  margin_weight: 0.35
+  mmr_lambda: 0.92
+  max_per_brand: 4
+  max_per_subcategory: 12
+  top_k: 20
